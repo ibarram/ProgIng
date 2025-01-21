@@ -16,14 +16,14 @@
   <p align="center">
     Licenciatura en Ingeniería de Datos e Inteligencia Artificial (IS75LI0801)
     <br />
-    <a href="https://github.com/ibarram/AyE"><strong>Explorar la documentación »</strong></a>
+    <a href="https://github.com/ibarram/ProgIng"><strong>Explorar la documentación »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ibarram/AyE">Ver Demo</a>
+    <a href="https://github.com/ibarram/ProgIng">Ver Demo</a>
     ·
-    <a href="https://github.com/ibarram/AyE/issues">Reportar Bug</a>
+    <a href="https://github.com/ibarram/ProgIng/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/ibarram/AyE/issues">Requiere Modificaciones</a>
+    <a href="https://github.com/ibarram/ProgIng/issues">Requiere Modificaciones</a>
   </p>
 </div>
 
