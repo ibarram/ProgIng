@@ -4,7 +4,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/ibarram/ProgIng)](https://github.com/ibarram/ProgIng/issues)
 ![Gitter](https://img.shields.io/gitter/room/ibarram/ProgIng)
 [![Programming Languages: C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#)
-[![License: GPL-3.0](https://img.shields.io/badge/ )](https://fsf.org/)
 ![GitHub License](https://img.shields.io/github/license/ibarram/ProgIng)
 
 <br />
