@@ -15,9 +15,10 @@ int main(int argc, char *argv[])
 	for(i=0, px=(x-1)/(x+1), fct=px, lnx=0; i<n; i++)
 	{
 		lnx += fct;
-		fct*= (px*px)/(2*i+3);
+		fct*= (2*i+1)*(px*px)/(2*i+3);
 
 	}
+	lnx*=2;
 	printf("ln(%f) = %f\n", x, lnx);
 	return 0;
 }
