@@ -6,8 +6,8 @@
 
 int main(int argc, char *argv[])
 {
-	long int n, i, j, aux_i;
-	float X[N], max, min;
+	long int n, i, j;
+	float X[N], max, min, aux;
 	srand(time(NULL));
 	do{
 		printf("Ingrese el numero de elementos: ");
@@ -30,17 +30,18 @@ int main(int argc, char *argv[])
 		X[i] = ((max-min)*rand())/RAND_MAX+min;
 		printf("X[%ld] = %f\n", i+1, X[i]);
 	}
-	for(i=0; i<n-1; i++)
+	for(i=1; i<n; i++)
 	{
-		for(j=i+1, aux_i=i; j<n; j++)
-			if(X[j]<X[aux_i])
-				aux_i = j;
-		if(i!=aux_i)
+		aux = X[i];
+		j = i-1;
+		while(X[j]>aux)
 		{
-			X[i] *= X[aux_i];
-			X[aux_i] = X[i]/X[aux_i];
-			X[i] /= X[aux_i];
+			X[j+1] = X[j];
+			j--;
+			if(j<0)
+				break;
 		}
+		X[j+1]=aux;
 	}
 
 	printf("Ordenados.\n");
