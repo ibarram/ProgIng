@@ -35,6 +35,17 @@ int main(int argc, char *argv[])
 			printf("B[%d][%d] = ", i+1, j+1);
 			while(!scanf("%f", &B[i][j]));
 		}
-
+	if(cA!=rB)
+	{
+		printf("Error: La multiplicacion no puede realizarse\n");
+		return 1;
+	}
+	for(i=0; i<rA; i++)
+		for(j=0; j<cB; j++)
+			for(k=0, C[i][j]=0; k<cA; k++)
+				C[i][j]+=A[i][k]*B[k][j];
+	for(i=0; i<rA; i++)
+		for(j=0; j<cB; j++)
+			printf("C[%d][%d] = %f\n", i+1, j+1, C[i][j]);
 	return 0;
 }
