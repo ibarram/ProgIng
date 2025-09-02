@@ -6,8 +6,8 @@
 
 int main(int argc, char*argv[])
 {
-	int i, j, k, n;
-	float max, min, x[N], aux;
+	int i, j, k, n, nc, cs[N], id[N], ncs;
+	float max, min, x[N], xs[N], aux, rng_c;
 	srand(time(NULL));
 	do{
 		printf("Ingrese el numero de elementos: ");
@@ -43,24 +43,35 @@ int main(int argc, char*argv[])
 	for(i=0; i<n; i++)
 	{
 		x[i] = ((max-min)*rand())/RAND_MAX+min;
+		cs[i] = 0;
 		printf("X[%d] = %f\n", i+1, x[i]);
 	}
-	// Algoritmo de Insercion
-	for(i=1; i<n; i++)
+	// Algoritmo de Bucket
+	nc = 0;
+	aux = n;
+	while(aux>(2*nc+1))
 	{
-		aux = x[i];
-		j=i-1;
-		while(aux<x[j])
-		{
-			x[j+1] = x[j];
-			j--;
-			if(j<0)
-				break;
-		}
-		x[j+1] = aux;
+		aux -= (2*nc+1);
+		nc++;
 	}
+	rng_c = (max-min)/nc;
+	for(i=0; i<n; i++)
+		cs[(int)((x[i]-min)/rng_c)]++;
+	for(i=1, id[0]=0; i<n; i++)
+		id[i] = id[i-1]+cs[i-1];
+	for(i=0; i<n; i++)
+	{
+		ncs = (int)((x[i]-min)/rng_c);
+		xs[id[ncs]] = x[i];
+		id[ncs]++;
+	}
+	printf("%d\t%f\n", nc, rng_c);
+	for(i=0; i<nc; i++)
+		printf("CS[%d] = %d\n", i, cs[i]);
+	for(i=0; i<nc; i++)
+		printf("%f\t", min+rng_c*(i+1));
 	printf("Ordenado.\n");
 	for(i=0; i<n; i++)
-		printf("X[%d] = %f\n", i+1, x[i]);
+		printf("X[%d] = %f\t%d\t%f\n", i+1, x[i], (int)((x[i]-min)/rng_c), xs[i]);
 	return 0;
 }
