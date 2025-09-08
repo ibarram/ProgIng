@@ -6,7 +6,7 @@
 
 int main(int argc, char*argv[])
 {
-	int i, j, k, n, nc, cs[N], id[N], ncs;
+	int i, j, k, l, n, nc, cs[N], id[N], ncs;
 	float max, min, x[N], xs[N], aux, rng_c;
 	srand(time(NULL));
 	do{
@@ -70,8 +70,29 @@ int main(int argc, char*argv[])
 		printf("CS[%d] = %d\n", i, cs[i]);
 	for(i=0; i<nc; i++)
 		printf("%f\t", min+rng_c*(i+1));
-	printf("Ordenado.\n");
+	printf("Pseudo-ordenado.\n");
 	for(i=0; i<n; i++)
 		printf("X[%d] = %f\t%d\t%f\n", i+1, x[i], (int)((x[i]-min)/rng_c), xs[i]);
+	for(i=1, id[0]=0; i<n; i++)
+		id[i] = id[i-1]+cs[i-1];
+	for(l=0; l<nc; l++)
+	{
+		// Algoritmo de Seleccion
+		for(i=id[l]; i<(id[l]+cs[l])-1; i++)
+		{
+			for(j=i+1, k=i; j<(id[l]+cs[l]); j++)
+				if(xs[k]>xs[j])
+					k = j;
+			if(k!=i)
+			{
+				aux = xs[i];
+				xs[i] = xs[k];
+				xs[k] = aux;
+			}
+		}
+	}
+	printf("Ordenado.\n");
+	for(i=0; i<n; i++)
+		printf("X[%d] = %f\n", i+1, xs[i]);
 	return 0;
 }
