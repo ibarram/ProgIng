@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define N 10000
+#define N 1000000
 
 int main(int argc, char*argv[])
 {
@@ -48,38 +48,21 @@ int main(int argc, char*argv[])
 	// Algoritmo de Bidireccional
 	for(i=0; i<n-1; i++)
 	{
-		i%2
-		n-2 1
-		n-3 2
-		n-4 3
-		for(j=(i%2?n-1-i/2:i/2+1); ; i%2?j--:j++)
-	}
-	/*
-	for(i=0; i<n-1; i++)
-	{
-		for(j=i+1; j<n; j++)
+		for(j=(i%2?n-1-i/2:i/2+1); 
+				(i%2?j>=(i/2+1):(j<=n-1-i/2)); 
+				i%2?j--:j++)
 		{
-			if(x[i]>x[j])
+			if(i%2?(x[i%2?n-i/2-1:i/2]<x[j])
+				:(x[i%2?n-i/2-1:i/2]>x[j]))
 			{
-				aux = x[i];
-				x[i] = x[j];
-				x[j] = aux;
+				aux = x[j];
+				x[j] = x[i%2?n-i/2-1:i/2];
+				x[i%2?n-i/2-1:i/2] = aux;
 			}
+//			printf("i=%d\tx[k], k=%d\tj=%d\n", i, 
+//				i%2?n-i/2-1:i/2, j);
 		}
 	}
-	for(i=n-1; i>0; i--)
-	{
-		for(j=i-1; j>-1; j--)
-		{
-			if(x[i]<x[j])
-			{
-				aux = x[i];
-				x[i] = x[j];
-				x[j] = aux;
-			}
-		}
-	}
-	*/
 	printf("Ordenado.\n");
 	for(i=0; i<n; i++)
 		printf("X[%d] = %f\n", i+1, x[i]);
