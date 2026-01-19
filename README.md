@@ -54,4 +54,4 @@
 
 ### Competencia de la UDA
 
-Implementa algoritmos que permiten la solución de problemas matemáticos de alto nivel que le brindarán los conocimientos para el desarrollo de software.
+Desarrolla e implementa programas computacionales en C para abordar problemas complejos en el ámbito de la ingeniería de datos e inteligencia artificial, empleando estructuras de datos avanzadas, la manipulación de memoria dinámica y el manejo eficiente de archivos. La UDA fomenta habilidades éticas y profesionales, así como el uso de metodologías de programación estructurada para desarrollar aplicaciones robustas y eficientes que contribuyan a la solución de problemas relacionados con el análisis de datos, el aprendizaje automático y las simulaciones computacionales.
