@@ -92,7 +92,7 @@ El contenido se organiza en los siguientes ejes:
    - 1D (inicialización, longitud, búsqueda, ordenamiento: fuerza bruta, inserción, conteo)
    - cadenas (longitud, carácter nulo, copiado, concatenado, búsqueda, conversión)
    - 2D y multidimensionales
-6. [**Manipulación de bits**](doc/slide/06_ManipulacionBit.pdf)
+6. [**Manipulación de bits**](doc/slide/06_ManipulacionBits.pdf)
 7. [**Funciones**](doc/slide/07_Funciones.pdf)
    - prototipos, paso por valor/referencia, `main(argc, argv)`, recursividad
 8. **Estructuras y uniones**
