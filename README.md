@@ -86,6 +86,7 @@ El contenido se organiza en los siguientes ejes:
    - alcance
 3. [**Operadores básicos**](https://sway.cloud.microsoft/cKmXp7sYqY0flW6F?ref=Link)
    - aritméticos, comparación, lógicos, binarios
+   [- ejemplos](doc/slide/03_Ejemplos_OperadoresBasicos.pdf)
 4. [**Sentencias de control**](doc/slide/04_SentenciasdeControl.pdf)
    - decisiones (if/switch), ciclos (for/while/do-while), anidamientos
 5. [**Arreglos**](doc/slide/05_Arreglos.pdf)
