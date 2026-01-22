@@ -79,7 +79,7 @@ Esta Unidad de Aprendizaje (UDA) desarrolla bases sólidas de programación **en
 
 El contenido se organiza en los siguientes ejes:
 
-1. **Estructura de un programa en C**
+1. [**Estructura de un programa en C**](https://sway.cloud.microsoft/2VEazTGqwCbPcq1J?ref=Link)
 2. **Variables**
    - reglas para identificadores
    - tipos de datos
@@ -221,7 +221,7 @@ Software sugerido:
 
 [Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20ReconocimientoPatrones) - [DICIS-UG](http://www.posgrados.ugto.mx/Profesores/Perfil.aspx?id=20150) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
 
-Unidad de Aprendizaje Link: [ReconocimientoPatrones](https://github.com/ibarram/ReconocimientoPatrones/)
+Unidad de Aprendizaje Link: [Programación en Ingeniería](https://github.com/ibarram/ProgIng/)
 
 ## Licencia
 
