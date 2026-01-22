@@ -80,11 +80,11 @@ Esta Unidad de Aprendizaje (UDA) desarrolla bases sólidas de programación **en
 El contenido se organiza en los siguientes ejes:
 
 1. [**Estructura de un programa en C**](https://sway.cloud.microsoft/2VEazTGqwCbPcq1J?ref=Link)
-2. **Variables**
+2. [**Variables**](https://sway.cloud.microsoft/LHm4HXq9x0DBVwnx?ref=Link)
    - reglas para identificadores
    - tipos de datos
    - alcance
-3. **Operadores básicos**
+3. [**Operadores básicos**](https://sway.cloud.microsoft/cKmXp7sYqY0flW6F?ref=Link)
    - aritméticos, comparación, lógicos, binarios
 4. **Sentencias de control**
    - decisiones (if/switch), ciclos (for/while/do-while), anidamientos
