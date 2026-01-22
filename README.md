@@ -86,14 +86,14 @@ El contenido se organiza en los siguientes ejes:
    - alcance
 3. [**Operadores básicos**](https://sway.cloud.microsoft/cKmXp7sYqY0flW6F?ref=Link)
    - aritméticos, comparación, lógicos, binarios
-4. **Sentencias de control**
+4. [**Sentencias de control**](doc/slide/04_SentenciasdeControl.pdf)
    - decisiones (if/switch), ciclos (for/while/do-while), anidamientos
-5. **Arreglos**
+5. [**Arreglos**](doc/slide/05_Arreglos.pdf)
    - 1D (inicialización, longitud, búsqueda, ordenamiento: fuerza bruta, inserción, conteo)
    - cadenas (longitud, carácter nulo, copiado, concatenado, búsqueda, conversión)
    - 2D y multidimensionales
-6. **Manipulación de bits**
-7. **Funciones**
+6. [**Manipulación de bits**](doc/slide/06_ManipulacionBit.pdf)
+7. [**Funciones**](doc/slide/07_Funciones.pdf)
    - prototipos, paso por valor/referencia, `main(argc, argv)`, recursividad
 8. **Estructuras y uniones**
 9. **Punteros**
