@@ -28,30 +28,201 @@
   </p>
 </div>
 
-<details><summary>Table of Contents</summary><p>
- 
- * [Introducción](#Introducción)
+<details><summary>Tabla de contenidos</summary><p>
 
- * [Contenido](#Contenido)
+- [Introducción](#introducción)
+- [Datos generales](#datos-generales)
+- [Competencia de la UDA](#competencia-de-la-uda)
+- [Contenido](#contenido)
+- [Entregas y evaluación](#entregas-y-evaluación)
+  - [Tareas](#tareas)
+  - [Prácticas](#prácticas)
+  - [Proyecto final](#proyecto-final)
+  - [Elementos mínimos de los reportes](#elementos-mínimos-de-los-reportes)
+- [Repositorio y plataformas](#repositorio-y-plataformas)
+- [Estructura sugerida del repositorio](#estructura-sugerida-del-repositorio)
+- [Código de ética y conducta profesional](#código-de-ética-y-conducta-profesional)
+- [Bibliografía](#bibliografía)
+- [Contacto](#contacto)
+- [Licencia](#licencia)
 
- * [Competencia de la Unidad de Aprendizaje](#Competencia-de-la-Unidad-de-Aprendizaje)
-
- * [Evaluación](#Evaluación)
-
- * [Presentaciones](#Presentaciones)
-
- * [Listado de Códigos Desarrollados durante la UDA](#listado-de-códigos-desarrollados-durante-la-uda)
-
- * [Contacto](#Contacto)
-
- * [Bibliografía](#Bibliografía)
-
- * [Licencia](https://github.com/ibarram/AyE/blob/main/LICENSE)
-
-</p></details><p></p>
+</p></details>
 
 ## Introducción
 
-### Competencia de la UDA
+Esta Unidad de Aprendizaje (UDA) desarrolla bases sólidas de programación **en C** para resolver problemas de ingeniería con énfasis en:
+- estructuras de datos y algoritmos,
+- memoria dinámica y punteros,
+- manejo eficiente de archivos (texto y binarios),
+- buenas prácticas de programación estructurada,
+- trabajo profesional y ético.
 
-Desarrolla e implementa programas computacionales en C para abordar problemas complejos en el ámbito de la ingeniería de datos e inteligencia artificial, empleando estructuras de datos avanzadas, la manipulación de memoria dinámica y el manejo eficiente de archivos. La UDA fomenta habilidades éticas y profesionales, así como el uso de metodologías de programación estructurada para desarrollar aplicaciones robustas y eficientes que contribuyan a la solución de problemas relacionados con el análisis de datos, el aprendizaje automático y las simulaciones computacionales.
+> Nota: Este repositorio concentra materiales, código, guías y entregables de la UDA.
+
+## Datos generales
+
+- **UDA:** Programación en Ingeniería  
+- **Clave:** IILI06104  
+- **Periodo:** Enero 2026  
+- **Días:** Lunes y Jueves  
+- **Horario:** 12:00–14:00  
+- **Aula:** B101  
+- **Créditos:** 6 (150 horas totales: 72 con profesor/a + 78 autónomas)  
+- **Prerrequisito normativo:** Ninguno  
+- **Prerrequisito recomendable:** Fundamentos de los Sistemas de Información (IILI06061)
+
+## Competencia de la UDA
+
+**Diseña e implementa programas computacionales en C para abordar problemas complejos en ingeniería de datos e inteligencia artificial**, empleando estructuras de datos avanzadas, manipulación de memoria dinámica y manejo eficiente de archivos, con apego a buenas prácticas, ética profesional y metodologías de programación estructurada.
+
+## Contenido
+
+El contenido se organiza en los siguientes ejes:
+
+1. **Estructura de un programa en C**
+2. **Variables**
+   - reglas para identificadores
+   - tipos de datos
+   - alcance
+3. **Operadores básicos**
+   - aritméticos, comparación, lógicos, binarios
+4. **Sentencias de control**
+   - decisiones (if/switch), ciclos (for/while/do-while), anidamientos
+5. **Arreglos**
+   - 1D (inicialización, longitud, búsqueda, ordenamiento: fuerza bruta, inserción, conteo)
+   - cadenas (longitud, carácter nulo, copiado, concatenado, búsqueda, conversión)
+   - 2D y multidimensionales
+6. **Manipulación de bits**
+7. **Funciones**
+   - prototipos, paso por valor/referencia, `main(argc, argv)`, recursividad
+8. **Estructuras y uniones**
+9. **Punteros**
+   - aritmética, punteros a arreglos/cadenas/estructuras/funciones
+   - memoria dinámica
+   - punteros a punteros
+   - listas enlazadas (simples y dobles), árboles binarios
+10. **Manejo de archivos**
+    - conceptos, flujo, posicionamiento
+    - texto y binarios (lectura/escritura/búsqueda/actualización/temporales)
+11. **Directivas de preprocesamiento**
+    - macros, depuración
+12. **Tópicos avanzados**
+    - Unicode, números complejos, hilos (threads)
+
+## Entregas y evaluación
+
+### Ponderaciones
+
+|Elemento|Porcentaje|
+|---|---:|
+|Tareas|8%|
+|Exámenes rápidos|8%|
+|Primera evaluación (1–4)|8%|
+|Primera práctica|10%|
+|Segunda evaluación (5–9)|8%|
+|Segunda práctica|10%|
+|Tercera evaluación (10–13)|8%|
+|Tercera práctica|10%|
+|Código del proyecto final|10%|
+|Presentación del proyecto final|10%|
+|Reporte del proyecto final|10%|
+|**Total**|**100%**|
+
+### Tareas
+
+- **Plataformas:** Microsoft Teams y CSAcademy  
+- **Entrega por correo:** `mibarram@gmail.com`  
+- **Asunto:** `PI 2026 1 T## NUA Apellidos`  
+- **Formato:** reporte **PDF** con diagramas de flujo y simulaciones (cuando aplique)  
+- **Restricción:** **no** entregar ejecutables; **solo** código fuente y reporte  
+- **Fecha de entrega:** 1 semana (a partir de la asignación)
+
+### Prácticas
+
+- **Plataforma:** Microsoft Teams  
+- **Entrega por correo:** `mibarram@gmail.com`  
+- **Asunto:** `PI 2026 1 P# NUA Apellidos`  
+- **Modalidad:** equipo (máximo 3 integrantes)  
+- **Formato:** reporte **PDF** con diagramas de flujo, simulaciones, **tablas de resultados**  
+- **Restricción:** **no** ejecutables; **solo** código fuente y reporte  
+- **Fecha de entrega:** acordada en clase
+
+### Proyecto final
+
+- **Plataforma:** Microsoft Teams  
+- **Entrega por correo:** `mibarram@gmail.com`  
+- **Asunto:** `PI 2026 1 Py ## NUA Apellidos`  
+- **Modalidad:** equipo (máximo 3 integrantes)  
+- **Entregables:**  
+  - reporte **PDF** (diagramas de flujo, simulaciones, tablas y análisis),  
+  - **código fuente**,  
+  - **presentación**,  
+  - sesión de **preguntas y respuestas**.
+
+### Elementos mínimos de los reportes
+
+1. **Introducción**  
+2. **Objetivos**  
+3. **Procedimiento (Algoritmo + Estructura de datos)**  
+4. **Diagrama de flujo**  
+5. **Resultados y análisis**  
+6. **Tablas comparativas** (si aplica)  
+7. **Conclusiones**  
+8. **Bibliografía**
+
+## Repositorio y plataformas
+
+- **Repositorio oficial (GitHub):** https://github.com/ibarram/ProgIng/  
+- **Microsoft Teams (código de equipo):** `co3pdww`  
+- **Repositorio/Materiales (Dropbox):** disponible en el grupo (liga compartida)  
+- **Comunidad (Facebook):** grupo de apoyo (liga compartida en Teams)
+
+Plataformas recomendadas para práctica y competencia:
+- Repl.it, HackerRank, CSAcademy, OmegaUp, Project Euler, Codeforces, Codingame
+
+Software sugerido:
+- Dev-C++, MinGW, Code::Blocks, Visual Studio Community, Visual Studio Code, Eclipse, GNU Emacs, NetBeans
+
+## Estructura sugerida del repositorio
+
+```
+.
+├─ doc/
+│  ├─ pdf/                 # Temario, consideraciones, guías
+│  ├─ slide/               # Presentaciones (PDF)
+│  ├─ img/                 # Imágenes (escudo, figuras)
+│  └─ markdown/            # Notas y guías (Markdown)
+├─ src/
+│  ├─ C/                   # Código en C
+│  ├─ tools/               # Scripts de apoyo (opcional)
+│  └─ templates/           # Plantillas de reporte y estilos
+├─ data/                   # Archivos de entrada/salida
+└─ LICENSE
+```
+
+## Código de ética y conducta profesional
+
+- El código debe ser **original** y debidamente **referenciado**.
+- Se penaliza el **plagio** (copiar-pegar sin atribución) y la **suplantación**.
+- Se fomenta la colaboración en equipo **cuando esté permitida**, respetando las reglas de autoría.
+- El uso de herramientas de apoyo (incluida IA) debe reflejarse con transparencia en el **reporte** (qué se usó y cómo).
+
+## Bibliografía
+
+- Gazi, O. (2024). *Modern C Programming* (1st Ed.). Springer Cham.
+- Horton, I. (2013). *Beginning C* (5th Ed.). Apress.
+- Chavan, S. (2017). *C Recipes* (1st Ed.). Apress.
+- Toppo, N. & Dewan, H. (2013). *Pointers in C* (1st Ed.). Apress.
+- Goyal, A. (2013). *Moving from C to C++* (1st Ed.). Apress.
+- Kalicharan, N. (2017). *Advanced Topics in C* (1st Ed.). Apress.
+- Erickson, J. (2019). *Algorithms* (1st Ed.). University of Illinois.
+
+## Contacto
+
+[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20ReconocimientoPatrones) - [DICIS-UG](http://www.posgrados.ugto.mx/Profesores/Perfil.aspx?id=20150) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
+
+Unidad de Aprendizaje Link: [ReconocimientoPatrones](https://github.com/ibarram/ReconocimientoPatrones/)
+
+## Licencia
+
+Este repositorio se distribuye bajo **GPL-3.0**. Consulta el archivo `LICENSE`.
