@@ -194,7 +194,9 @@ Software sugerido:
 │  ├─ img/                 # Imágenes (escudo, figuras)
 │  └─ markdown/            # Notas y guías (Markdown)
 ├─ src/
-│  ├─ C/                   # Código en C
+│  ├─ 20251/               # Ejemplos desarrollados en la UDA para el periodo E-J 2025
+│  ├─ 20251/               # Ejemplos desarrollados en la UDA para el periodo A-D 2025
+│  ├─ 20251/               # Ejemplos desarrollados en la UDA para el periodo E-J 2026
 │  ├─ tools/               # Scripts de apoyo (opcional)
 │  └─ templates/           # Plantillas de reporte y estilos
 ├─ data/                   # Archivos de entrada/salida
