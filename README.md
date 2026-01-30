@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ibarram/ProgIng">
-    <img src="/doc/img/escudo-png.png" alt="Logo" width="120" height="120">
+    <img src="/doc/img/GitHubPI.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Programación en Ingeniería (IILI06104)</h3>
