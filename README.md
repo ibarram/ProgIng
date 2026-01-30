@@ -15,10 +15,10 @@
   <h3 align="center">Programación en Ingeniería (IILI06104)</h3>
 
   <p align="center">
-    - Licenciatura en Ingeniería en Comunicaciones y Electrónica (IS75LI0303) <br />
-    - Licenciatura en Ingeniería en Mecatrónica (IS75LI0403) <br />
-    - Licenciatura en Ingeniería Sistemas Computacionales (IS75LI0502) <br />
-    - Licenciatura en Ingeniería de Datos e Inteligencia Artificial (IS75LI0801) <br />
+    Licenciatura en Ingeniería en Comunicaciones y Electrónica (IS75LI0303) <br />
+    Licenciatura en Ingeniería en Mecatrónica (IS75LI0403) <br />
+    Licenciatura en Ingeniería Sistemas Computacionales (IS75LI0502) <br />
+    Licenciatura en Ingeniería de Datos e Inteligencia Artificial (IS75LI0801) <br />
     <a href="https://github.com/ibarram/ProgIng"><strong>Explorar la documentación »</strong></a>
     <br />
     <br />
