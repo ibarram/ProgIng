@@ -53,11 +53,11 @@
 ## Introducción
 
 Esta Unidad de Aprendizaje (UDA) desarrolla bases sólidas de programación **en C** para resolver problemas de ingeniería con énfasis en:
-- estructuras de datos y algoritmos,
-- memoria dinámica y punteros,
-- manejo eficiente de archivos (texto y binarios),
-- buenas prácticas de programación estructurada,
-- trabajo profesional y ético.
+- Estructuras de datos y algoritmos,
+- Memoria dinámica y punteros,
+- Manejo eficiente de archivos (texto y binarios),
+- Buenas prácticas de programación estructurada,
+- Trabajo profesional y ético.
 
 > Nota: Este repositorio concentra materiales, código, guías y entregables de la UDA.
 
@@ -83,32 +83,32 @@ El contenido se organiza en los siguientes ejes:
 
 1. [**Estructura de un programa en C**](https://sway.cloud.microsoft/2VEazTGqwCbPcq1J?ref=Link)
 2. [**Variables**](https://sway.cloud.microsoft/LHm4HXq9x0DBVwnx?ref=Link)
-   - reglas para identificadores
-   - tipos de datos
-   - alcance
+   - Reglas para identificadores
+   - Tipos de datos
+   - Alcance
 3. [**Operadores básicos**](https://sway.cloud.microsoft/cKmXp7sYqY0flW6F?ref=Link)
-   - aritméticos, comparación, lógicos, binarios
-   - [ejemplos](doc/slide/03_Ejemplos_OperadoresBasicos.pdf)
+   - Aritméticos, comparación, lógicos, binarios
+   - [Ejemplos](doc/slide/03_Ejemplos_OperadoresBasicos.pdf)
 4. [**Sentencias de control**](doc/slide/04_SentenciasdeControl.pdf)
-   - decisiones (if/switch), ciclos (for/while/do-while), anidamientos
+   - Decisiones (if/switch), ciclos (for/while/do-while), anidamientos
 5. [**Arreglos**](doc/slide/05_Arreglos.pdf)
    - 1D (inicialización, longitud, búsqueda, ordenamiento: fuerza bruta, inserción, conteo)
-   - cadenas (longitud, carácter nulo, copiado, concatenado, búsqueda, conversión)
+   - Cadenas (longitud, carácter nulo, copiado, concatenado, búsqueda, conversión)
    - 2D y multidimensionales
 6. [**Manipulación de bits**](doc/slide/06_ManipulacionBits.pdf)
 7. [**Funciones**](doc/slide/07_Funciones.pdf)
-   - prototipos, paso por valor/referencia, `main(argc, argv)`, recursividad
+   - Prototipos, paso por valor/referencia, `main(argc, argv)`, recursividad
 8. **Estructuras y uniones**
 9. **Punteros**
-   - aritmética, punteros a arreglos/cadenas/estructuras/funciones
-   - memoria dinámica
-   - punteros a punteros
-   - listas enlazadas (simples y dobles), árboles binarios
+   - Aritmética, punteros a arreglos/cadenas/estructuras/funciones
+   - Memoria dinámica
+   - Punteros a punteros
+   - Listas enlazadas (simples y dobles), árboles binarios
 10. **Manejo de archivos**
-    - conceptos, flujo, posicionamiento
-    - texto y binarios (lectura/escritura/búsqueda/actualización/temporales)
+    - Conceptos, flujo, posicionamiento
+    - Texto y binarios (lectura/escritura/búsqueda/actualización/temporales)
 11. **Directivas de preprocesamiento**
-    - macros, depuración
+    - Macros, depuración
 12. **Tópicos avanzados**
     - Unicode, números complejos, hilos (threads)
 
