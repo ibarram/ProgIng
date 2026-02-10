@@ -193,6 +193,7 @@ Este repositorio incluye ejemplos en C documentados con comentarios estilo **Dox
 La documentación se genera en:
 
 - `doc/doxygen/html/index.html`
+- `doc/doxygen/latex/refman.pdf`
 
 ### Requisitos
 
@@ -201,14 +202,18 @@ La documentación se genera en:
 
 Instalación típica:
 
-- **openSUSE**: `sudo zypper install doxygen graphviz`
-- **Ubuntu/Debian**: `sudo apt-get update && sudo apt-get install doxygen graphviz`
-- **macOS (Homebrew)**: `brew install doxygen graphviz`
+- **openSUSE**: `sudo zypper install doxygen graphviz texlive-scheme-medium latexmk`
+- **Ubuntu/Debian**: `sudo apt-get update && sudo apt-get install doxygen graphviz texlive-scheme-medium latexmk`
+- **macOS (Homebrew)**: `brew install doxygen graphviz MacTeX`
 
 ### Generar documentación
 
 ```bash
 make docs
+```
+
+```bash
+make docs-pdf
 ```
 
 ## Estructura sugerida del repositorio

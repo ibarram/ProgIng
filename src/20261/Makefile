@@ -16,7 +16,10 @@ DOXYFILE  := $(REPO_ROOT)/Doxyfile
 DOXY_OUT  := $(REPO_ROOT)/doc/doxygen
 DOXY_HTML := $(DOXY_OUT)/html/index.html
 
-.PHONY: all clean help docs docs-open docs-serve docs-clean doxyfile
+DOXY_LATEX := $(DOXY_OUT)/latex
+DOXY_PDF   := $(DOXY_LATEX)/refman.pdf
+
+.PHONY: all clean help docs docs-open docs-serve docs-clean doxyfile docs-pdf docs-latex-clean
 all: $(EXE)
 
 help:
@@ -66,7 +69,13 @@ doxyfile:
 	@perl -pi -e 's|^\s*CALL_GRAPH\s*=.*|CALL_GRAPH = YES|' "$(DOXYFILE)"
 	@perl -pi -e 's|^\s*CALLER_GRAPH\s*=.*|CALLER_GRAPH = YES|' "$(DOXYFILE)"
 	@perl -pi -e 's|^\s*GENERATE_HTML\s*=.*|GENERATE_HTML = YES|' "$(DOXYFILE)"
-	@perl -pi -e 's|^\s*GENERATE_LATEX\s*=.*|GENERATE_LATEX = NO|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*GENERATE_LATEX\s*=.*|GENERATE_LATEX = YES|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*LATEX_OUTPUT\s*=.*|LATEX_OUTPUT = latex|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*USE_PDFLATEX\s*=.*|USE_PDFLATEX = YES|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*PDF_HYPERLINKS\s*=.*|PDF_HYPERLINKS = YES|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*LATEX_SOURCE_CODE\s*=.*|LATEX_SOURCE_CODE = YES|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*LATEX_BATCHMODE\s*=.*|LATEX_BATCHMODE = YES|' "$(DOXYFILE)"
+	@perl -pi -e 's|^\s*EXTRA_PACKAGES\s*=.*|EXTRA_PACKAGES = amsmath amssymb|' "$(DOXYFILE)"
 	@echo "OK: $(DOXYFILE) configurado."
 
 docs: doxyfile
@@ -86,6 +95,14 @@ docs-open: docs
 docs-serve: docs
 	@echo "Sirviendo en http://localhost:8000/ (Ctrl+C para detener)"
 	@python3 -m http.server 8000 -d "$(DOXY_OUT)/html"
+
+docs-pdf: docs
+	@echo "Compilando PDF LaTeX en $(DOXY_LATEX)..."
+	@$(MAKE) -C "$(DOXY_LATEX)" pdf >/dev/null 2>&1 || $(MAKE) -C "$(DOXY_LATEX)" >/dev/null
+	@echo "OK: $(DOXY_PDF)"
+
+docs-latex-clean:
+	@rm -rf "$(DOXY_LATEX)"
 
 docs-clean:
 	rm -rf "$(DOXY_OUT)"
