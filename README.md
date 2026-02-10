@@ -209,7 +209,7 @@ Instalación típica:
 
 ```bash
 make docs
-
+```
 
 ## Estructura sugerida del repositorio
 
