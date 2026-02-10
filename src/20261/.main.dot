@@ -1,0 +1,30 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x6000034d01e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca float, align 4\l  %12 = alloca float, align 4\l  %13 = alloca float, align 4\l  store i32 0, ptr %3, align 4\l  store i32 %0, ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  br label %14\l}"];
+	Node0x6000034d01e0 -> Node0x6000034d0320;
+	Node0x6000034d0320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{14:\l|  %15 = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  %16 = call i32 (ptr, ...) @scanf(ptr noundef @.str.1, ptr noundef %6)\l  br label %17\l}"];
+	Node0x6000034d0320 -> Node0x6000034d0370;
+	Node0x6000034d0370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{17:\l|  %18 = load i32, ptr %6, align 4\l  %19 = icmp slt i32 %18, 1\l  br i1 %19, label %14, label %20, !llvm.loop !6\l|{<s0>T|<s1>F}}"];
+	Node0x6000034d0370:s0 -> Node0x6000034d0320;
+	Node0x6000034d0370:s1 -> Node0x6000034d03c0;
+	Node0x6000034d03c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{20:\l|  %21 = call i32 (ptr, ...) @printf(ptr noundef @.str.2)\l  %22 = call i32 (ptr, ...) @scanf(ptr noundef @.str.3, ptr noundef %11)\l  store i32 0, ptr %7, align 4\l  store float 0.000000e+00, ptr %12, align 4\l  br label %23\l}"];
+	Node0x6000034d03c0 -> Node0x6000034d0410;
+	Node0x6000034d0410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{23:\l|  %24 = load i32, ptr %7, align 4\l  %25 = load i32, ptr %6, align 4\l  %26 = icmp slt i32 %24, %25\l  br i1 %26, label %27, label %62\l|{<s0>T|<s1>F}}"];
+	Node0x6000034d0410:s0 -> Node0x6000034d0460;
+	Node0x6000034d0410:s1 -> Node0x6000034d0640;
+	Node0x6000034d0460 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{27:\l|  %28 = load i32, ptr %7, align 4\l  %29 = srem i32 %28, 2\l  %30 = mul nsw i32 2, %29\l  %31 = sub nsw i32 1, %30\l  store i32 %31, ptr %10, align 4\l  store i32 0, ptr %8, align 4\l  store float 1.000000e+00, ptr %13, align 4\l  store i32 1, ptr %9, align 4\l  br label %32\l}"];
+	Node0x6000034d0460 -> Node0x6000034d04b0;
+	Node0x6000034d04b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{32:\l|  %33 = load i32, ptr %8, align 4\l  %34 = load i32, ptr %7, align 4\l  %35 = mul nsw i32 2, %34\l  %36 = add nsw i32 %35, 1\l  %37 = icmp slt i32 %33, %36\l  br i1 %37, label %38, label %49\l|{<s0>T|<s1>F}}"];
+	Node0x6000034d04b0:s0 -> Node0x6000034d0500;
+	Node0x6000034d04b0:s1 -> Node0x6000034d05a0;
+	Node0x6000034d0500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{38:\l|  %39 = load float, ptr %11, align 4\l  %40 = load float, ptr %13, align 4\l  %41 = fmul float %40, %39\l  store float %41, ptr %13, align 4\l  %42 = load i32, ptr %8, align 4\l  %43 = add nsw i32 %42, 1\l  %44 = load i32, ptr %9, align 4\l  %45 = mul nsw i32 %44, %43\l  store i32 %45, ptr %9, align 4\l  br label %46\l}"];
+	Node0x6000034d0500 -> Node0x6000034d0550;
+	Node0x6000034d0550 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{46:\l|  %47 = load i32, ptr %8, align 4\l  %48 = add nsw i32 %47, 1\l  store i32 %48, ptr %8, align 4\l  br label %32, !llvm.loop !8\l}"];
+	Node0x6000034d0550 -> Node0x6000034d04b0;
+	Node0x6000034d05a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{49:\l|  %50 = load i32, ptr %10, align 4\l  %51 = sitofp i32 %50 to float\l  %52 = load float, ptr %13, align 4\l  %53 = fmul float %51, %52\l  %54 = load i32, ptr %9, align 4\l  %55 = sitofp i32 %54 to float\l  %56 = fdiv float %53, %55\l  %57 = load float, ptr %12, align 4\l  %58 = fadd float %57, %56\l  store float %58, ptr %12, align 4\l  br label %59\l}"];
+	Node0x6000034d05a0 -> Node0x6000034d05f0;
+	Node0x6000034d05f0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470" fontname="Courier",label="{59:\l|  %60 = load i32, ptr %7, align 4\l  %61 = add nsw i32 %60, 1\l  store i32 %61, ptr %7, align 4\l  br label %23, !llvm.loop !9\l}"];
+	Node0x6000034d05f0 -> Node0x6000034d0410;
+	Node0x6000034d0640 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370" fontname="Courier",label="{62:\l|  %63 = load float, ptr %11, align 4\l  %64 = fpext float %63 to double\l  %65 = load float, ptr %12, align 4\l  %66 = fpext float %65 to double\l  %67 = call i32 (ptr, ...) @printf(ptr noundef @.str.4, double noundef %64,\l... double noundef %66)\l  ret i32 0\l}"];
+}

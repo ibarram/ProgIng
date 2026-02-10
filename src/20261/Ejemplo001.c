@@ -1,36 +1,40 @@
 /**
  * @file Ejemplo001.c
- * @brief Programa mínimo en C que imprime un mensaje en pantalla.
+ * @brief Hola mundo mínimo: imprime un mensaje en consola.
  *
- * Este programa muestra la cadena "Universidad de Guanajuato" y termina.
+ * @details
+ * Programa introductorio en C para verificar compilación y ejecución.
+ *
+ * @par Entrada
+ * Ninguna.
+ *
+ * @par Salida
+ * Imprime la cadena "Universidad de Guanajuato" seguida de salto de línea.
+ *
+ * @par Complejidad
+ * Tiempo: O(1). Memoria: O(1).
+ *
+ * @note
+ * Compilación sugerida:
+ * @code
+ * gcc Ejemplo001.c -o Ejemplo001
+ * ./Ejemplo001
+ * @endcode
  */
 
-#include <stdio.h>  // Biblioteca estándar de entrada/salida: habilita printf(), scanf(), etc.
+#include <stdio.h>
 
 /**
- * @brief Función principal (punto de entrada) del programa.
- *
- * En C, la ejecución inicia en main().
- *
- * @param argc  "argument count": número de argumentos recibidos desde la línea de comandos.
- *              - Siempre es >= 1, porque incluye el nombre del programa.
- * @param argv  "argument vector": arreglo de cadenas (char*) con los argumentos.
- *              - argv[0] suele ser el nombre o ruta del ejecutable.
- *
- * @return 0 si el programa terminó correctamente (convención en C/Unix).
+ * @brief Punto de entrada del programa.
+ * @param argc Cantidad de argumentos de línea de comandos.
+ * @param argv Arreglo de cadenas con argumentos.
+ * @return 0 si termina correctamente.
  */
 int main(int argc, char *argv[])
 {
-    // (Opcional) Evitar advertencias de compilación si no usamos argc/argv
     (void)argc;
     (void)argv;
 
-    /**
-     * printf() imprime texto en la salida estándar (la consola).
-     * "\n" es un salto de línea para que el cursor baje a la siguiente línea.
-     */
     printf("Universidad de Guanajuato\n");
-
-    // Termina el programa indicando "éxito".
     return 0;
 }

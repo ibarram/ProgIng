@@ -1,111 +1,82 @@
-#include <stdio.h>
-#include <math.h>   // sqrt()
+/**
+ * @file Ejemplo005.c
+ * @brief Solución de la ecuación cuadrática con raíces reales o complejas.
+ *
+ * @details
+ * Resuelve:
+ *   a x^2 + b x + c = 0
+ * usando el discriminante:
+ *   Δ = b^2 - 4ac
+ *
+ * Casos:
+ * - Δ > 0: dos raíces reales distintas
+ * - Δ = 0: una raíz real doble
+ * - Δ < 0: dos raíces complejas conjugadas
+ *
+ * Para Δ < 0:
+ *   sqrt(Δ) = i*sqrt(-Δ)
+ * y las raíces se expresan como:
+ *   x = (-b ± i*sqrt(-Δ)) / (2a)
+ *
+ * @par Entrada
+ * Tres valores float, leídos por consola (a, b, c).
+ *
+ * @par Salida
+ * Imprime las dos raíces en forma:
+ *   x = real + imag*i
+ *
+ * @warning
+ * Si a = 0 la ecuación no es cuadrática; este programa divide entre (2a).
+ *
+ * @par Complejidad
+ * Tiempo: O(1). Memoria: O(1).
+ */
 
+#include <stdio.h>
+#include <math.h>   /* sqrt() */
+
+/**
+ * @brief Punto de entrada. Calcula y muestra raíces (reales o complejas).
+ * @param argc No usado.
+ * @param argv No usado.
+ * @return 0 si finaliza correctamente.
+ */
 int main(int argc, char *argv[])
 {
-    /*
-      a, b, c: coeficientes de la ecuación cuadrática
-          a*x^2 + b*x + c = 0
+    (void)argc;
+    (void)argv;
 
-      r: discriminante (también llamado Δ)
-          r = b^2 - 4ac
+    float a, b, c;          /* coeficientes */
+    float r;                /* discriminante Δ */
+    float x1r, x1i, x2r, x2i; /* partes real/imag de cada raíz */
 
-      x1r, x1i: parte real e imaginaria de la raíz x1
-      x2r, x2i: parte real e imaginaria de la raíz x2
-
-      Nota: se usan float (precisión simple). Para mejor precisión numérica,
-      suele preferirse double en problemas reales.
-    */
-    float a, b, c;
-    float r;
-    float x1r, x1i, x2r, x2i;
-
-    /* --- Lectura de coeficientes --- */
-    printf("Ingrese el termino cuadratico: ");   // coeficiente 'a'
+    printf("Ingrese el termino cuadratico: ");
     scanf("%f", &a);
 
-    printf("Ingrese el termino lineal: ");       // coeficiente 'b'
+    printf("Ingrese el termino lineal: ");
     scanf("%f", &b);
 
-    printf("Ingrese el termino independiente: "); // coeficiente 'c'
+    printf("Ingrese el termino independiente: ");
     scanf("%f", &c);
 
-    /*
-      Discriminante:
-        r = b^2 - 4ac
-
-      - Si r > 0: dos raíces reales distintas
-      - Si r = 0: una raíz real doble (ambas iguales)
-      - Si r < 0: dos raíces complejas conjugadas
-    */
+    /* Δ = b^2 - 4ac */
     r = b*b - 4*a*c;
 
     /*
-      Fórmula general:
-        x = (-b ± sqrt(r)) / (2a)
+      Para Δ >= 0:
+        x1 = (-b + sqrt(Δ)) / (2a), parte imaginaria 0
+        x2 = (-b - sqrt(Δ)) / (2a), parte imaginaria 0
 
-      Cuando r < 0, sqrt(r) no es real. Se usa:
-        sqrt(r) = i * sqrt(-r)
-
-      Entonces:
-        x = (-b ± i*sqrt(-r)) / (2a)
-
-      El código maneja ambos casos con un operador ternario:
-
-      - Si r >= 0: usa sqrt(r) en la parte real y parte imaginaria = 0
-      - Si r < 0 : NO suma sqrt(r) (porque no existe real), y calcula la parte
-                   imaginaria con sqrt(-r)/(2a)
-    */
-
-    /* -------------------------------
-       Raíz 1 (x1 = x1r + i*x1i)
-       ------------------------------- */
-
-    /*
-      Parte real de x1:
-      - Si r >= 0: (-b + sqrt(r)) / (2a)
-      - Si r < 0 : (-b + 0)       / (2a) = (-b)/(2a)
+      Para Δ < 0:
+        parte real: (-b)/(2a)
+        parte imag: ± sqrt(-Δ)/(2a)
     */
     x1r = (-b + (r >= 0 ? sqrt(r) : 0)) / (2*a);
-
-    /*
-      Parte imaginaria de x1:
-      - Si r >= 0: 0
-      - Si r < 0 : sqrt(-r) / (2a)
-        (esto implementa:  i*sqrt(-r)/(2a)  como “coeficiente” de i)
-    */
     x1i = (r >= 0 ? 0 : sqrt(-r) / (2*a));
 
-    /* -------------------------------
-       Raíz 2 (x2 = x2r + i*x2i)
-       ------------------------------- */
-
-    /*
-      Parte real de x2:
-      - Si r >= 0: (-b - sqrt(r)) / (2a)
-      - Si r < 0 : (-b - 0)       / (2a) = (-b)/(2a)
-    */
     x2r = (-b - (r >= 0 ? sqrt(r) : 0)) / (2*a);
+    x2i = (r >= 0 ? 0 : -x1i); /* conjugada */
 
-    /*
-      Parte imaginaria de x2:
-      - Si r >= 0: 0
-      - Si r < 0 : -x1i  (conjugada de x1)
-        Porque cuando las raíces son complejas, vienen en pares conjugados:
-          (p + qi) y (p - qi)
-    */
-    x2i = (r >= 0 ? 0 : -x1i);
-
-    /*
-      Impresión:
-      "%.4f%+.4fi" imprime:
-      - parte real con 4 decimales
-      - parte imaginaria con signo explícito (+ o -) y 4 decimales
-
-      Ejemplo:
-        x1 = 1.5000+0.0000i
-        x1 = -2.0000-3.0000i
-    */
     printf("x1 = %.4f%+.4fi\n", x1r, x1i);
     printf("x2 = %.4f%+.4fi\n", x2r, x2i);
 

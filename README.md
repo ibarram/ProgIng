@@ -42,6 +42,7 @@
   - [Proyecto final](#proyecto-final)
   - [Elementos mínimos de los reportes](#elementos-mínimos-de-los-reportes)
 - [Repositorio y plataformas](#repositorio-y-plataformas)
+- [Documentación del código (Doxygen)](#documentación-del-código-doxygen)
 - [Estructura sugerida del repositorio](#estructura-sugerida-del-repositorio)
 - [Código de ética y conducta profesional](#código-de-ética-y-conducta-profesional)
 - [Bibliografía](#bibliografía)
@@ -185,6 +186,30 @@ Plataformas recomendadas para práctica y competencia:
 
 Software sugerido:
 - Dev-C++, MinGW, Code::Blocks, Visual Studio Community, Visual Studio Code, Eclipse, GNU Emacs, NetBeans
+
+## Documentación del código (Doxygen)
+
+Este repositorio incluye ejemplos en C documentados con comentarios estilo **Doxygen**.
+La documentación se genera en:
+
+- `doc/doxygen/html/index.html`
+
+### Requisitos
+
+- **Doxygen**
+- **Graphviz** (opcional, pero recomendado para `CALL_GRAPH` / `CALLER_GRAPH`)
+
+Instalación típica:
+
+- **openSUSE**: `sudo zypper install doxygen graphviz`
+- **Ubuntu/Debian**: `sudo apt-get update && sudo apt-get install doxygen graphviz`
+- **macOS (Homebrew)**: `brew install doxygen graphviz`
+
+### Generar documentación
+
+```bash
+make docs
+
 
 ## Estructura sugerida del repositorio
 
