@@ -23,12 +23,14 @@ DOXY_PDF   := $(DOXY_LATEX)/refman.pdf
 all: $(EXE)
 
 help:
-	@echo "make            Compila $(SRC_DIR)/Ejemplo*.c -> $(BUILD_DIR)/"
-	@echo "make clean      Borra $(BUILD_DIR)/"
-	@echo "make docs       Genera Doxygen en doc/doxygen/html/"
-	@echo "make docs-open  Abre doc/doxygen/html/index.html"
-	@echo "make docs-serve Sirve en http://localhost:8000/"
-	@echo "make docs-clean Borra doc/doxygen/"
+	@echo "make                  Compila $(SRC_DIR)/Ejemplo*.c -> $(BUILD_DIR)/"
+	@echo "make clean            Borra $(BUILD_DIR)/"
+	@echo "make docs             Genera Doxygen en doc/doxygen/html/"
+	@echo "make docs-open        Abre doc/doxygen/html/index.html"
+	@echo "make docs-serve       Sirve en http://localhost:8000/"
+	@echo "make docs-clean       Borra doc/doxygen/"
+	@echo "make docs-pdf         Genera Doxygen en doc/doxygen/latex/refman.pdf"
+	@echo "make docs-latex-clean Borra doc/doxygen/latex/"
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
