@@ -189,7 +189,7 @@ Software sugerido:
 
 ## Documentación del código (Doxygen)
 
-Este repositorio incluye ejemplos en C documentados (HTML y [PDF](doc/pdf/refman.pdf)) con comentarios estilo **Doxygen**.
+Este repositorio incluye ejemplos en C documentados ([HTML](https://ibarram.github.io/docs_ProgIng/index.html) y [PDF](doc/pdf/refman.pdf)) con comentarios estilo **Doxygen**.
 La documentación se genera en:
 
 - `doc/doxygen/html/index.html`
