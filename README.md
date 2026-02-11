@@ -3,7 +3,7 @@
 [![GitHub discussions](https://img.shields.io/github/discussions/ibarram/ProgIng)](https://github.com/ibarram/ProgIng/discussions)
 [![GitHub issues](https://img.shields.io/github/issues/ibarram/ProgIng)](https://github.com/ibarram/ProgIng/issues)
 ![Gitter](https://img.shields.io/gitter/room/ibarram/ProgIng)
-[![Programming Languages: C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#)
+![Programming Languages: C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
 ![GitHub License](https://img.shields.io/github/license/ibarram/ProgIng)
 
 <br />
