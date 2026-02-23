@@ -187,6 +187,132 @@ Plataformas recomendadas para práctica y competencia:
 Software sugerido:
 - Dev-C++, MinGW, Code::Blocks, Visual Studio Community, Visual Studio Code, Eclipse, GNU Emacs, NetBeans
 
+## Instalación del compilador (Windows, macOS y Linux)
+
+En la UDA trabajaremos principalmente con **C**. Necesitas un compilador (recomendado: **GCC** o **Clang**) y una terminal.
+
+### Verificación rápida (en cualquier sistema)
+
+Después de instalar, verifica:
+
+```bash
+gcc --version
+g++ --version
+clang --version
+```
+
+Prueba de compilación:
+
+```bash
+# Compilar
+gcc hello.c -o hello
+
+# Ejecutar (Linux/macOS)
+./hello
+
+# Ejecutar (Windows)
+hello.exe
+```
+
+> Si usas bibliotecas o `math.h`, suele requerirse `-lm`:
+> `gcc main.c -o main -lm`
+
+---
+
+### Windows (recomendado)
+
+**Opción A: MSYS2 (recomendada por estabilidad y paquetes)**
+1. Instala MSYS2 (método estándar para tener terminal + paquetes).
+2. Abre la terminal **MSYS2 UCRT64** o **MSYS2 MINGW64**.
+3. Actualiza e instala el toolchain:
+
+```bash
+pacman -Syu
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+```
+
+4. Agrega al **PATH** de Windows la carpeta de binarios (por ejemplo, `...\msys64\ucrt64\bin`).
+5. Verifica con `gcc --version`.
+
+**Opción B: MinGW-w64 (simple)**
+- Instala MinGW-w64, agrega `bin` al **PATH** y verifica con `gcc --version`.
+
+**Opción C: WSL (Windows Subsystem for Linux)**
+- Si ya usas WSL (Ubuntu/Debian), sigue las instrucciones de Linux (Debian/Ubuntu).
+
+---
+
+### macOS
+
+**Opción A: Xcode Command Line Tools (recomendada)**
+1. Instala las herramientas de línea de comandos:
+
+```bash
+xcode-select --install
+```
+
+2. Verifica con:
+
+```bash
+clang --version
+gcc --version
+```
+
+> En macOS, `gcc` normalmente apunta a **Clang** (es normal). Puedes compilar con `clang` o `gcc`.
+
+**Opción B: Homebrew + GCC (opcional)**
+1. Instala Homebrew (si lo usas en tu equipo).
+2. Instala GCC:
+
+```bash
+brew install gcc
+```
+
+3. Compila usando `gcc-<versión>` (por ejemplo `gcc-14`):
+
+```bash
+gcc-14 hello.c -o hello
+```
+
+---
+
+### Linux
+
+En la mayoría de distribuciones, GCC/Clang se instalan desde el gestor de paquetes.
+
+**Debian/Ubuntu**
+```bash
+sudo apt update
+sudo apt install -y build-essential gdb
+```
+
+**Fedora**
+```bash
+sudo dnf install -y gcc gcc-c++ make gdb
+```
+
+**openSUSE (Leap/Tumbleweed)**
+```bash
+sudo zypper refresh
+sudo zypper install -y gcc gcc-c++ make gdb
+```
+
+**Arch/Manjaro**
+```bash
+sudo pacman -Syu --needed base-devel gcc gdb
+```
+
+---
+
+### Recomendación de editor/IDE (opcional)
+
+- **Visual Studio Code** + extensiones de C/C++ (Microsoft) + CMake Tools (si aplica)
+- **Code::Blocks** o **CLion** (si cuentas con licencia)
+- En Linux/macOS: terminal + `make` es suficiente para iniciar
+
+Software sugerido:
+- Dev-C++, MinGW, Code::Blocks, Visual Studio Community, Visual Studio Code, Eclipse, GNU Emacs, NetBeans
+
 ## Documentación del código (Doxygen)
 
 Este repositorio incluye ejemplos en C documentados ([HTML](https://ibarram.github.io/docs_ProgIng/index.html) y [PDF](doc/pdf/refman.pdf)) con comentarios estilo **Doxygen**.
