@@ -1,0 +1,60 @@
+\doxysection{src/\+20251/\+005\+\_\+rang\+Temp2.c File Reference}
+\hypertarget{005__rang_temp2_8c}{}\label{005__rang_temp2_8c}\index{src/20251/005\_rangTemp2.c@{src/20251/005\_rangTemp2.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 005\+\_\+rang\+Temp2.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{005__rang_temp2_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{005__rang_temp2_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{005__rang_temp2_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{005__rang_temp2_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{005\_rangTemp2.c@{005\_rangTemp2.c}!main@{main}}
+\index{main@{main}!005\_rangTemp2.c@{005\_rangTemp2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{005__rang_temp2_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{005__rang_temp2_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{005__rang_temp2_8c_source}{005\+\_\+rang\+Temp2.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{float}\ T1,\ T2,\ T3,\ T4,\ T;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ B;}
+\DoxyCodeLine{00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ los\ rangos\ de\ temperatura:\ "{}});}
+\DoxyCodeLine{00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f"{}},\ \&T1,\ \&T2,\ \&T3,\ \&T4);}
+\DoxyCodeLine{00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ temperatura:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&T);}
+\DoxyCodeLine{00011\ \ \ \ \ B\ =\ ((T4>T)<<3)|((T3>T)<<2)|((T2>T)<<1)|(T1>T);}
+\DoxyCodeLine{00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ B);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{switch}(B)}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{case}\ 15:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ "{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Baja\(\backslash\)n"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Templada\(\backslash\)n"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ "{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Alta\(\backslash\)n"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}

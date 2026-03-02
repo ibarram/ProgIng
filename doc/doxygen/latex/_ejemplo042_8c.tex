@@ -1,0 +1,73 @@
+\doxysection{src/\+20252/\+\+Ejemplo042.c File Reference}
+\hypertarget{_ejemplo042_8c}{}\label{_ejemplo042_8c}\index{src/20252/Ejemplo042.c@{src/20252/Ejemplo042.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Include dependency graph for Ejemplo042.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo042_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo042_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo042_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_ejemplo042_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_ejemplo042_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo042.c@{Ejemplo042.c}!N@{N}}
+\index{N@{N}!Ejemplo042.c@{Ejemplo042.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{_ejemplo042_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~50}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo042_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{_ejemplo042_8c_source}{Ejemplo042.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo042_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo042_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo042.c@{Ejemplo042.c}!main@{main}}
+\index{main@{main}!Ejemplo042.c@{Ejemplo042.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo042_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo042_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{_ejemplo042_8c_source}{Ejemplo042.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{00009\ \ \ \ \ FILE\ *fp;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ n:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}(argc==2)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ strcpy(filename,\ argv[1]);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ strcpy(filename,\ \textcolor{stringliteral}{"{}Prueba.txt"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ fp\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}wt"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ i+1);}
+\DoxyCodeLine{00022\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

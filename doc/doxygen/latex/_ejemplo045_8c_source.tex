@@ -1,0 +1,98 @@
+\doxysection{Ejemplo045.\+c}
+\hypertarget{_ejemplo045_8c_source}{}\label{_ejemplo045_8c_source}\index{src/20252/Ejemplo045.c@{src/20252/Ejemplo045.c}}
+\doxymbox{\hyperlink{_ejemplo045_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00004}\doxymbox{\hyperlink{_ejemplo045_8c_a0240ac851181b84ac374872dc5434ee4}{00004}}\ \textcolor{preprocessor}{\#define\ N\ \ \ 50}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00006}\doxymbox{\hyperlink{_ejemplo045_8c_a0ddf1224851353fc92bfbff6f499fa97}{00006}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}]\ =\ \textcolor{stringliteral}{"{}full\_data.csv"{}};}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{char}\ *str;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{char}\ c;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ nc,\ nl,\ *ln,\ *Ceremony,\ *Year;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00012}00012\ \ \ \ \ FILE\ *fp;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00013}00013\ \ \ \ \ fp\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}rt"{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ al\ leer\ el\ archivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//fscanf(fp,\ "{}\%s"{},\ str);}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00020}00020\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00021}00021\ \textcolor{comment}{\ \ \ \ for(i=0;\ i<10;\ i++)}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00022}00022\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00023}00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ fgets(str,\ NC-\/1,\ fp);}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ printf("{}\%s"{},\ str);}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00027}00027\ \ \ \ \ j=0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00028}00028\ \ \ \ \ i=0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{while}((c=fgetc(fp))!=EOF)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c==10)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00035}00035\ \ \ \ \ nl\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00036}00036\ \ \ \ \ nc\ =\ j;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00037}00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Num\ L:\ \%d\(\backslash\)n"{}},\ nl);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00038}00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Num\ C:\ \%d\(\backslash\)n"{}},\ nc);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00039}00039\ \ \ \ \ str\ =\ (\textcolor{keywordtype}{char}*)malloc((nc+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(str==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00045}00045\ \ \ \ \ ln\ =\ (\textcolor{keywordtype}{int}*)calloc(nl,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}(ln==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00052}00052\ \ \ \ \ fseek(fp,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1;\ i<nc;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ str[i]\ =\ getc(fp);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(str[i]==10)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ ln[j++]\ =\ i+1;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00059}00059\ \ \ \ \ str[i]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00060}00060\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<nl;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ str[ln[i]-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00063}00063\ \ \ \ \ Ceremony\ =\ (\textcolor{keywordtype}{int}*)malloc((nl-\/1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}(Ceremony==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ free(ln);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00070}00070\ \ \ \ \ Year\ =\ (\textcolor{keywordtype}{int}*)malloc((nl-\/1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}(Year==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ free(Ceremony);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ free(ln);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00077}00077\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<nl;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ Ceremony[i-\/1]\ =\ atoi(str+ln[i]);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ j=0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(str[ln[i]+j]!=9)}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ Year[i-\/1]\ =\ atoi(str+ln[i]+j+1);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%d\(\backslash\)t\%d\(\backslash\)n"{}},\ i,\ Ceremony[i-\/1],\ Year[i-\/1]);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00087}00087\ \ \ \ \ free(Year);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00088}00088\ \ \ \ \ free(Ceremony);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00089}00089\ \ \ \ \ free(ln);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00090}00090\ \ \ \ \ free(str);}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo045_8c_source_l00092}00092\ \}}
+
+\end{DoxyCode}

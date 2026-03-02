@@ -1,0 +1,99 @@
+\doxysection{src/\+20251/\+016\+\_\+\+Seleccion.c File Reference}
+\hypertarget{016___seleccion_8c}{}\label{016___seleccion_8c}\index{src/20251/016\_Seleccion.c@{src/20251/016\_Seleccion.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for 016\+\_\+\+Seleccion.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{016___seleccion_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{016___seleccion_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~1000000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{016___seleccion_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{016___seleccion_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{016___seleccion_8c_a0240ac851181b84ac374872dc5434ee4}\index{016\_Seleccion.c@{016\_Seleccion.c}!N@{N}}
+\index{N@{N}!016\_Seleccion.c@{016\_Seleccion.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{016___seleccion_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~1000000}
+
+
+
+Definition at line \doxymbox{\hyperlink{016___seleccion_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{016___seleccion_8c_source}{016\+\_\+\+Seleccion.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{016___seleccion_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{016___seleccion_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{016\_Seleccion.c@{016\_Seleccion.c}!main@{main}}
+\index{main@{main}!016\_Seleccion.c@{016\_Seleccion.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{016___seleccion_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{016___seleccion_8c_source_l00007}{7}} of file \doxymbox{\hyperlink{016___seleccion_8c_source}{016\+\_\+\+Seleccion.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ i,\ j,\ aux\_i;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ X[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00011\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{00015\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<2||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ le\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00019\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}<\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}*=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%f,\ \%f]\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ X[i]\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n-\/1;\ i++)}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=i+1,\ aux\_i=i;\ j<n;\ j++)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(X[j]<X[aux\_i])}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux\_i\ =\ j;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i!=aux\_i)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ X[i]\ *=\ X[aux\_i];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ X[aux\_i]\ =\ X[i]/X[aux\_i];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ X[i]\ /=\ X[aux\_i];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}

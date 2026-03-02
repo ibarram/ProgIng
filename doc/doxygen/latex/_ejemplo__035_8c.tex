@@ -1,0 +1,134 @@
+\doxysection{src/\+20251/\+\+Ejemplo\+\_\+035.c File Reference}
+\hypertarget{_ejemplo__035_8c}{}\label{_ejemplo__035_8c}\index{src/20251/Ejemplo\_035.c@{src/20251/Ejemplo\_035.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for Ejemplo\+\_\+035.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{_ejemplo__035_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}} (float \texorpdfstring{$\ast$}{*}X, int n)
+\item 
+float \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}} (float \texorpdfstring{$\ast$}{*}X, int n)
+\item 
+int \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo__035_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{Ejemplo\_035.c@{Ejemplo\_035.c}!main@{main}}
+\index{main@{main}!Ejemplo\_035.c@{Ejemplo\_035.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo__035_8c_source_l00015}{15}} of file \doxymbox{\hyperlink{_ejemplo__035_8c_source}{Ejemplo\+\_\+035.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ m,\ i;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ *A;}
+\DoxyCodeLine{00019\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00023\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ muestras:\ "{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&m);}
+\DoxyCodeLine{00027\ \ \ \ \ \}\textcolor{keywordflow}{while}(m<1||m>n);}
+\DoxyCodeLine{00028\ \ \ \ \ A\ =\ (\textcolor{keywordtype}{float}*)malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}(A==NULL)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ A[i]\ =\ (1.0*rand())/RAND\_MAX;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d]\ =\ \%f\(\backslash\)t\%p\(\backslash\)n"{}},\ i+1,\ A[i],\ A+i);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n-\/m;\ i++)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}u(\%d)\ =\ \%f\(\backslash\)n"{}},\ i+1,\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}(A+i,\ m));}
+\DoxyCodeLine{00038\ \ \ \ \ free(A);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}\index{Ejemplo\_035.c@{Ejemplo\_035.c}!media@{media}}
+\index{media@{media}!Ejemplo\_035.c@{Ejemplo\_035.c}}
+\doxysubsubsection{\texorpdfstring{media()}{media()}}
+{\footnotesize\ttfamily \label{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c} 
+float media (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{X}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo__035_8c_source_l00010}{10}} of file \doxymbox{\hyperlink{_ejemplo__035_8c_source}{Ejemplo\+\_\+035.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}}(X,\ n)/n;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}\index{Ejemplo\_035.c@{Ejemplo\_035.c}!sumar@{sumar}}
+\index{sumar@{sumar}!Ejemplo\_035.c@{Ejemplo\_035.c}}
+\doxysubsubsection{\texorpdfstring{sumar()}{sumar()}}
+{\footnotesize\ttfamily \label{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e} 
+float sumar (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{X}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo__035_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{_ejemplo__035_8c_source}{Ejemplo\+\_\+035.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordflow}{return}\ n?X[0]+\doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}}(X+1,n-\/1):0;}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=123pt]{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e_icgraph}
+\end{center}
+\end{figure}

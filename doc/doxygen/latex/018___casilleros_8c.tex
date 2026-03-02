@@ -1,0 +1,139 @@
+\doxysection{src/\+20251/\+018\+\_\+\+Casilleros.c File Reference}
+\hypertarget{018___casilleros_8c}{}\label{018___casilleros_8c}\index{src/20251/018\_Casilleros.c@{src/20251/018\_Casilleros.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for 018\+\_\+\+Casilleros.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{018___casilleros_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{018___casilleros_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~1000000
+\item 
+\+\#define \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}~1000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{018___casilleros_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{018___casilleros_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}\index{018\_Casilleros.c@{018\_Casilleros.c}!M@{M}}
+\index{M@{M}!018\_Casilleros.c@{018\_Casilleros.c}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \label{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0} 
+\+\#define M~1000}
+
+
+
+Definition at line \doxymbox{\hyperlink{018___casilleros_8c_source_l00007}{7}} of file \doxymbox{\hyperlink{018___casilleros_8c_source}{018\+\_\+\+Casilleros.\+c}}.
+
+\Hypertarget{018___casilleros_8c_a0240ac851181b84ac374872dc5434ee4}\index{018\_Casilleros.c@{018\_Casilleros.c}!N@{N}}
+\index{N@{N}!018\_Casilleros.c@{018\_Casilleros.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{018___casilleros_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~1000000}
+
+
+
+Definition at line \doxymbox{\hyperlink{018___casilleros_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{018___casilleros_8c_source}{018\+\_\+\+Casilleros.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{018___casilleros_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{018___casilleros_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{018\_Casilleros.c@{018\_Casilleros.c}!main@{main}}
+\index{main@{main}!018\_Casilleros.c@{018\_Casilleros.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{018___casilleros_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{018___casilleros_8c_source_l00009}{9}} of file \doxymbox{\hyperlink{018___casilleros_8c_source}{018\+\_\+\+Casilleros.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ m,\ i,\ j,\ k,\ car[\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ ind[\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ ind2;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ X[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ aux,\ rg[\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ rng\_int,\ Y[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{00013\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{00017\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<2||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ le\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00019\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00021\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}<\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}*=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%f,\ \%f]\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00029\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ X[i]\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ m\ =\ sqrt(n);}
+\DoxyCodeLine{00036\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Casilleros:\ \%ld\(\backslash\)n"{}},\ m);}
+\DoxyCodeLine{00037\ \ \ \ \ rng\_int\ =\ ceil((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})/m);}
+\DoxyCodeLine{00038\ \ \ \ \ rg[0]\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00039\ \ \ \ \ car[0]\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<m+1;\ i++)}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ rg[i]\ =\ rg[i-\/1]+rng\_int;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ car[i]\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ car[(\textcolor{keywordtype}{int})((X[i]-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})/rng\_int)]++;}
+\DoxyCodeLine{00047\ \ \ \ \ ind[0]=0;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<m;\ i++)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ ind[i]=ind[i-\/1]+car[i-\/1];}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<m;\ i++)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\#[\%f,\ \%f)\ =\ \%ld\(\backslash\)t\%ld\(\backslash\)n"{}},\ rg[i],\ rg[i+1],\ car[i],\ ind[i]);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ ind2\ =\ (int)((X[i]-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})/rng\_int);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ Y[ind[ind2]]\ =\ X[i];}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ind[ind2]++;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Buket.\(\backslash\)n"{}});}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Y[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ Y[i]);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ ind2\ =\ 0;\ k<m;\ k++)}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i=ind2;\ i<(ind2+car[k]-\/1)\ ;\ i++)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=i+1;\ j<(ind2+car[k]);\ j++)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Y[i]>Y[j])}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Y[i]*=Y[j];}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Y[j]=Y[i]/Y[j];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Y[i]/=Y[j];}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ind2\ +=\ car[k];}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Y[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ Y[i]);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}

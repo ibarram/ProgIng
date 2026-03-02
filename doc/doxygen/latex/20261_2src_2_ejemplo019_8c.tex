@@ -1,0 +1,176 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo019.c File Reference}
+\hypertarget{20261_2src_2_ejemplo019_8c}{}\label{20261_2src_2_ejemplo019_8c}\index{src/20261/src/Ejemplo019.c@{src/20261/src/Ejemplo019.c}}
+
+
+Generación y ordenamiento de un arreglo de enteros aleatorios (orden ascendente).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for Ejemplo019.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{20261_2src_2_ejemplo019_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~100000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generación y ordenamiento de un arreglo de enteros aleatorios (orden ascendente). 
+
+El programa:\+ 1) Solicita {\ttfamily n} (1 \texorpdfstring{$<$}{<}= n \texorpdfstring{$<$}{<}= N), y los límites {\ttfamily \doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}} y {\ttfamily \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}. 2) Si {\ttfamily \doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min} \texorpdfstring{$>$}{>} \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}, intercambia los valores. 3) Genera un arreglo {\ttfamily x} de tamaño {\ttfamily n} con enteros aleatorios en \+[min, max]\+. 4) Muestra el arreglo “\+Desordenado”. 5) Ordena el arreglo en orden ascendente mediante un algoritmo O(n\texorpdfstring{$^\wedge$}{\string^}2) basado en comparación e intercambio (similar a selección/\+intercambio):\+
+\begin{DoxyItemize}
+\item Para cada i, compara x\+[i]\+ con x\+[j]\+ (j\texorpdfstring{$>$}{>}i) y si x\+[i]\+ \texorpdfstring{$>$}{>} x\+[j]\+, intercambia. 6) Muestra el arreglo “\+Ordenado”.
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily n} (long int):\+ número de elementos (1..N)
+\item {\ttfamily \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}} (int):\+ valor máximo permitido
+\item {\ttfamily \doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}} (int):\+ valor mínimo permitido
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item Arreglo desordenado (generado).
+\item Arreglo ordenado en forma ascendente.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Restricciones}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{20252_2_ejemplo019_8c_a0240ac851181b84ac374872dc5434ee4}{N} = 100000} (capacidad máxima del arreglo).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+
+\begin{DoxyItemize}
+\item Generación + despliegue:\+ O(n)
+\item Ordenamiento:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2) por los dos ciclos anidados
+\item Memoria:\+ O(\+N)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Para n grande (cerca de 100000), O(n\texorpdfstring{$^\wedge$}{\string^}2) será muy lento. Este ejemplo se usa con propósitos didácticos para mostrar un ordenamiento básico.
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo019.c\ -\/o\ Ejemplo019}
+\DoxyCodeLine{./Ejemplo019}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_source}{Ejemplo019.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo019_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo019_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo019.c@{Ejemplo019.c}!N@{N}}
+\index{N@{N}!Ejemplo019.c@{Ejemplo019.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo019_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~100000}
+
+Tamaño máximo permitido del arreglo. 
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_source_l00048}{48}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_source}{Ejemplo019.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo019_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo019_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo019.c@{Ejemplo019.c}!main@{main}}
+\index{main@{main}!Ejemplo019.c@{Ejemplo019.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo019_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_source_l00050}{50}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo019_8c_source}{Ejemplo019.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00053\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ i,\ j;\ \ \textcolor{comment}{/*\ n:\ tamaño;\ i,j:\ índices\ para\ recorrido/ordenamiento\ */}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};\ \ \ \ \ \ \textcolor{comment}{/*\ límites\ del\ rango\ */}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ arreglo\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ aux;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ auxiliar\ para\ intercambio\ */}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ y\ validar.\ */}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elmentos:\ "{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{00064\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1\ ||\ n\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{/*\ Leer\ límites\ (max\ y\ min).\ */}}
+\DoxyCodeLine{00067\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00068\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00071\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{/*\ Asegurar\ min\ <=\ max\ intercambiando\ si\ es\ necesario.\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ +=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{/*\ Semilla\ para\ valores\ aleatorios\ distintos\ por\ ejecución.\ */}}
+\DoxyCodeLine{00082\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{/*\ Generar\ e\ imprimir\ arreglo\ inicial\ (sin\ ordenar).\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desordenado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ x[i]\ =\ rand()\ \%\ (\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ +\ 1)\ +\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%ld]\ =\ \%d\(\backslash\)n"{}},\ i\ +\ 1,\ x[i]);}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ \ Ordenamiento\ ascendente\ por\ comparación\ e\ intercambio:}}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ \ -\/\ Para\ cada\ i,\ se\ busca\ si\ existe\ algún\ x[j]\ (j>i)\ menor\ que\ x[i].}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ \ -\/\ Si\ x[i]\ >\ x[j],\ se\ intercambian.}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ \ Este\ patrón\ es\ similar\ a\ una\ selección\ por\ intercambios\ y\ tiene\ costo\ O(n\string^2).}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n\ -\/\ 1;\ i++)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ i\ +\ 1;\ j\ <\ n;\ j++)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x[i]\ >\ x[j])}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ x[i];}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x[i]\ =\ x[j];}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x[j]\ =\ aux;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{/*\ Imprimir\ arreglo\ ordenado.\ */}}
+\DoxyCodeLine{00108\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ordenado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%ld]\ =\ \%d\(\backslash\)n"{}},\ i\ +\ 1,\ x[i]);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}

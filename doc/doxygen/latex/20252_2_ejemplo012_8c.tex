@@ -1,0 +1,77 @@
+\doxysection{src/\+20252/\+\+Ejemplo012.c File Reference}
+\hypertarget{20252_2_ejemplo012_8c}{}\label{20252_2_ejemplo012_8c}\index{src/20252/Ejemplo012.c@{src/20252/Ejemplo012.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for Ejemplo012.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{20252_2_ejemplo012_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo012_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo012_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo012_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo012.c@{Ejemplo012.c}!main@{main}}
+\index{main@{main}!Ejemplo012.c@{Ejemplo012.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo012_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo012_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{20252_2_ejemplo012_8c_source}{Ejemplo012.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ x;}
+\DoxyCodeLine{00009\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00013\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00015\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}>\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}*=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}/\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}/=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ x\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%f\(\backslash\)n"{}},\ i+1,\ x);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}

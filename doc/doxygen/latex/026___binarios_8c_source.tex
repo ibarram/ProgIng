@@ -1,0 +1,52 @@
+\doxysection{026\+\_\+\+Binarios.\+c}
+\hypertarget{026___binarios_8c_source}{}\label{026___binarios_8c_source}\index{src/20251/026\_Binarios.c@{src/20251/026\_Binarios.c}}
+\doxymbox{\hyperlink{026___binarios_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00003}\doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{00003}}\ \textcolor{preprocessor}{\#define\ BIT(n)\ \ \ \ \ \ \ \ \ \ \ \ \ \ (1<<(n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00004}\doxymbox{\hyperlink{026___binarios_8c_a7888567f1126d4ea16cd8ac4472ba16d}{00004}}\ \textcolor{preprocessor}{\#define\ BIT\_GET(x,n)\ \ \ \ \ \ \ \ ((x)\&BIT(n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00005}\doxymbox{\hyperlink{026___binarios_8c_ad858f7c97446fb3f7a0caef0baca2afd}{00005}}\ \textcolor{preprocessor}{\#define\ BIT\_SET(x,n)\ \ \ \ \ \ \ \ ((x)\ |=\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00006}\doxymbox{\hyperlink{026___binarios_8c_a9363128e451d6e93a10d34f29b3e5fc5}{00006}}\ \textcolor{preprocessor}{\#define\ BIT\_CLEAR(x,n)\ \ \ \ \ \ ((x)\ \&=\ \string~BIT(n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00007}\doxymbox{\hyperlink{026___binarios_8c_a313efcb9b1da105b05edfe888760db3b}{00007}}\ \textcolor{preprocessor}{\#define\ BIT\_TOGGLE(x,n)\ \ \ \ \ ((x)\ \string^=\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00008}\doxymbox{\hyperlink{026___binarios_8c_aae726527b0f579536565bfd00dcd5c41}{00008}}\ \textcolor{preprocessor}{\#define\ BIT\_WRITE(x,n,v)\ \ \ \ ((v)?BIT\_SET(x,n):BIT\_CLEAR(x,n))}}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00010}\doxymbox{\hyperlink{026___binarios_8c_a0ddf1224851353fc92bfbff6f499fa97}{00010}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n,\ nb;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ xi;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{char}\ x,\ xb;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00015}00015\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00016}00016\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&xi);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00017}00017\ \ \ \ \ x\ =\ (char)xi;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00018}00018\ \ \ \ \ n\ =\ 8*\textcolor{keyword}{sizeof}(x);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{for}(i=n;\ i>0;\ i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d"{}},\ \doxymbox{\hyperlink{026___binarios_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,i-\/1)?1:0);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00021}00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ bit:\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00025}00025\ \ \ \ \ \}\textcolor{keywordflow}{while}(nb<-\/1|nb>=n);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00026}00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{026___binarios_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(x,\ nb));}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ bit:\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00030}00030\ \ \ \ \ \}\textcolor{keywordflow}{while}(nb<-\/1|nb>=n);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00031}00031\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{026___binarios_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\_CLEAR}}(x,\ nb));}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ bit:\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00035}00035\ \ \ \ \ \}\textcolor{keywordflow}{while}(nb<-\/1|nb>=n);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00036}00036\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{026___binarios_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(x,\ nb));}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ bit:\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00040}00040\ \ \ \ \ \}\textcolor{keywordflow}{while}(nb<-\/1|nb>=n);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00041}00041\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ del\ bit:\ "{}});}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00042}00042\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&xi);}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00043}00043\ \ \ \ \ xb\ =\ (char)xi;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00044}00044\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{026___binarios_8c_aae726527b0f579536565bfd00dcd5c41}{BIT\_WRITE}}(x,\ nb,\ xb));\ \ \ }
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{026___binarios_8c_source_l00046}00046\ \}}
+
+\end{DoxyCode}

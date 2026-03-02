@@ -1,0 +1,165 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo018.c File Reference}
+\hypertarget{20261_2src_2_ejemplo018_8c}{}\label{20261_2src_2_ejemplo018_8c}\index{src/20261/src/Ejemplo018.c@{src/20261/src/Ejemplo018.c}}
+
+
+Generación de un arreglo de enteros aleatorios en el rango \+[min, max]\+.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for Ejemplo018.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{20261_2src_2_ejemplo018_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~100000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generación de un arreglo de enteros aleatorios en el rango \+[min, max]\+. 
+
+El programa:\+ 1) Solicita al usuario el número de elementos {\ttfamily n} (1 \texorpdfstring{$<$}{<}= n \texorpdfstring{$<$}{<}= N). 2) Solicita un valor máximo y un valor mínimo. 3) Si el usuario ingresa min \texorpdfstring{$>$}{>} max, los intercambia. 4) Inicializa el generador pseudoaleatorio con {\ttfamily srand(time(\+NULL))}. 5) Genera {\ttfamily n} enteros aleatorios uniformemente distribuidos (aprox.) en el intervalo \+[min, max]\+ usando:\+ rand() \% (max -\/ min + 1) + min 6) Imprime todos los elementos generados.
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily n} (long int):\+ número de elementos (1..N)
+\item {\ttfamily \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}} (int):\+ valor máximo permitido
+\item {\ttfamily \doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}} (int):\+ valor mínimo permitido
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+Imprime el arreglo generado:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{x[1]\ =\ ...}
+\DoxyCodeLine{x[2]\ =\ ...}
+\DoxyCodeLine{...}
+\DoxyCodeLine{x[n]\ =\ ...}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Restricciones}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{20252_2_ejemplo018_8c_a0240ac851181b84ac374872dc5434ee4}{N}} es el tamaño máximo del arreglo (100000).
+\item Se asume que {\ttfamily \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max} -\/ \doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min} + 1} cabe en {\ttfamily int}.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(\+N) por el arreglo estático.
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item La operación {\ttfamily rand() \% rango} puede introducir “sesgo de módulo” si el rango no divide a RAND\+\_\+\+MAX. Para fines didácticos suele ser suficiente.
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo018.c\ -\/o\ Ejemplo018}
+\DoxyCodeLine{./Ejemplo018}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_source}{Ejemplo018.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo018_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo018_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo018.c@{Ejemplo018.c}!N@{N}}
+\index{N@{N}!Ejemplo018.c@{Ejemplo018.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo018_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~100000}
+
+Tamaño máximo permitido del arreglo. 
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_source_l00052}{52}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_source}{Ejemplo018.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo018_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo018_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo018.c@{Ejemplo018.c}!main@{main}}
+\index{main@{main}!Ejemplo018.c@{Ejemplo018.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo018_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_source_l00054}{54}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_source}{Ejemplo018.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00057\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ i;\ \ \ \ \ \ \textcolor{comment}{/*\ n:\ número\ de\ elementos,\ i:\ índice\ de\ recorrido\ */}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ límites\ del\ rango\ */}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ arreglo\ con\ capacidad\ máxima\ N\ */}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ y\ validar\ que\ esté\ en\ el\ rango\ [1,\ N].\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{00067\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1\ ||\ n\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{/*\ Leer\ límites\ del\ rango.\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00071\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00074\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ Si\ el\ usuario\ capturó\ min\ >\ max,\ se\ intercambian.}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ Se\ usa\ intercambio\ sin\ variable\ temporal\ (suma/resta).}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ Nota:\ para\ valores\ extremos\ podría\ haber\ overflow;\ en\ uso\ típico\ es\ OK.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{00082\ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ +=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ Inicializar\ semilla\ del\ generador\ pseudoaleatorio.}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ \ time(NULL)\ cambia\ cada\ segundo,\ así\ que\ los\ valores\ cambian\ en\ cada\ ejecución.}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00092\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ \ Generación:}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ \ rand()\ \%\ (max\ -\/\ min\ +\ 1)\ produce\ valores\ en\ [0,\ max-\/min]}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ \ luego\ +\ min\ desplaza\ al\ intervalo\ [min,\ max].}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ x[i]\ =\ rand()\ \%\ (\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ +\ 1)\ +\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%ld]\ =\ \%d\(\backslash\)n"{}},\ i\ +\ 1,\ x[i]);\ \textcolor{comment}{/*\ se\ imprime\ desde\ 1\ por\ estética\ */}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00106\ \}}
+
+\end{DoxyCode}

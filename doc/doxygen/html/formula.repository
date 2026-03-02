@@ -1,0 +1,15 @@
+\_form#0=49x14:$\arcsin(x)$
+\_form#1=36x14:$|x|<1$
+\_form#2=48x14:\[\arcsin(x)
+\]
+\_form#3=265x36:\[\arcsin(x) = \sum_{i=0}^{\infty}
+\frac{(2i)!}{4^i (i!)^2 (2i+1)}\, x^{2i+1}, \qquad |x| < 1.
+\]
+\_form#4=29x11:$x^{2i+1}$
+\_form#5=20x11:$\times x^2$
+\_form#6=59x20:$C_i=\frac{(2i)!}{4^i(i!)^2}$
+\_form#7=103x26:\[  C_i = C_{i-1}\cdot\frac{2i-1}{2i}.
+\]
+\_form#8=49x30:\[\frac{C_i\,x^{2i+1}}{2i+1}.
+\]
+\_form#9=39x14:$|x|\to 1$

@@ -1,0 +1,197 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo006.c File Reference}
+\hypertarget{20261_2src_2_ejemplo006_8c}{}\label{20261_2src_2_ejemplo006_8c}\index{src/20261/src/Ejemplo006.c@{src/20261/src/Ejemplo006.c}}
+
+
+Etiquetado de una temperatura T usando 4 umbrales (T1\texorpdfstring{$<$}{<}T2\texorpdfstring{$<$}{<}T3\texorpdfstring{$<$}{<}T4) y 5 categorías.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo006.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo006_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Clasifica la temperatura T en 5 regiones usando umbrales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Etiquetado de una temperatura T usando 4 umbrales (T1\texorpdfstring{$<$}{<}T2\texorpdfstring{$<$}{<}T3\texorpdfstring{$<$}{<}T4) y 5 categorías. 
+
+El programa lee cuatro umbrales de temperatura (T1, T2, T3, T4) y luego una temperatura T que se desea clasificar. Se generan 5 regiones:\+
+
+1) T \texorpdfstring{$<$}{<} T1 -\/\texorpdfstring{$>$}{>} "{}\+Muy baja"{} 2) T1 \texorpdfstring{$<$}{<}= T \texorpdfstring{$<$}{<} T2 -\/\texorpdfstring{$>$}{>} "{}\+Baja"{} 3) T2 \texorpdfstring{$<$}{<}= T \texorpdfstring{$<$}{<} T3 -\/\texorpdfstring{$>$}{>} "{}\+Templada"{} 4) T3 \texorpdfstring{$<$}{<}= T \texorpdfstring{$<$}{<} T4 -\/\texorpdfstring{$>$}{>} "{}\+Alta"{} 5) T \texorpdfstring{$>$}{>}= T4 -\/\texorpdfstring{$>$}{>} "{}\+Muy alta"{}
+
+La clasificación se implementa con 4 banderas booleanas (B1..B4) y se empaquetan en un código de 4 bits (B4\+B3\+B2\+B1) para seleccionar el mensaje mediante switch().
+
+\begin{DoxyParagraph}{Entrada}
+Dos lecturas desde stdin:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{T1\ T2\ T3\ T4}
+\DoxyCodeLine{T}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime un código de depuración B (y sus bits) y una etiqueta textual:\+ "{}muy baja"{}, "{}baja"{}, "{}templada"{}, "{}alta"{} o "{}muy alta"{}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Precondiciones}
+
+\begin{DoxyItemize}
+\item Se asume el orden:\+ T1 \texorpdfstring{$<$}{<} T2 \texorpdfstring{$<$}{<} T3 \texorpdfstring{$<$}{<} T4.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(1). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Si los umbrales no están ordenados, pueden aparecer códigos no contemplados y el programa podría no imprimir etiqueta (cae en default). 
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c_source}{Ejemplo006.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo006_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo006_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo006.c@{Ejemplo006.c}!main@{main}}
+\index{main@{main}!Ejemplo006.c@{Ejemplo006.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo006_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Clasifica la temperatura T en 5 regiones usando umbrales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si termina correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c_source_l00048}{48}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c_source}{Ejemplo006.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00051\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ T1,\ T2,\ T3,\ T4:\ Umbrales\ de\ temperatura\ que\ delimitan\ 5\ regiones.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ T1:\ umbral\ inferior\ (más\ frío)}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ T4:\ umbral\ superior\ (más\ caliente)}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Se\ asume\ el\ orden:\ T1\ <\ T2\ <\ T3\ <\ T4}}
+\DoxyCodeLine{00058\ \textcolor{comment}{}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ T:\ temperatura\ a\ clasificar\ (etiquetar).}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ T1,\ T2,\ T3,\ T4,\ T;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ B1..B4\ son\ banderas\ (booleanos\ como\ enteros\ 0/1)\ que\ indican\ si\ T\ es\ menor}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ que\ cada\ umbral,\ usando\ comparaciones\ del\ tipo\ (Ti\ >\ T).}}
+\DoxyCodeLine{00066\ \textcolor{comment}{}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ Ejemplo:}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ B1\ =\ (T1\ >\ T)\ \ -\/>\ 1\ si\ T\ es\ menor\ que\ T1}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0\ si\ T\ es\ mayor\ o\ igual\ que\ T1}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ B1,\ B2,\ B3,\ B4;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ B\ será\ un\ "{}código"{}\ de\ 4\ bits\ (B4\ B3\ B2\ B1)\ que\ identifica\ en\ qué\ intervalo\ cae\ T.}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ Luego\ se\ usa\ switch(B)\ para\ imprimir\ la\ etiqueta.}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ B;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/\ Lectura\ de\ umbrales\ -\/-\/-\/\ */}}
+\DoxyCodeLine{00080\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ los\ rangos\ de\ temperaturas:\ "{}});}
+\DoxyCodeLine{00081\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f"{}},\ \&T1,\ \&T2,\ \&T3,\ \&T4);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/\ Lectura\ de\ la\ temperatura\ a\ evaluar\ -\/-\/-\/\ */}}
+\DoxyCodeLine{00084\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ tempratura:\ "{}});}
+\DoxyCodeLine{00085\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&T);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ \ Se\ calcula\ cada\ bandera:}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B1\ =\ 1\ si\ T\ <\ T1}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B2\ =\ 1\ si\ T\ <\ T2}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B3\ =\ 1\ si\ T\ <\ T3}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B4\ =\ 1\ si\ T\ <\ T4}}
+\DoxyCodeLine{00093\ \textcolor{comment}{}}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ \ (Usa\ Ti\ >\ T,\ que\ es\ equivalente\ a\ T\ <\ Ti)}}
+\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00096\ \ \ \ \ B1\ =\ (T1\ >\ T);}
+\DoxyCodeLine{00097\ \ \ \ \ B2\ =\ (T2\ >\ T);}
+\DoxyCodeLine{00098\ \ \ \ \ B3\ =\ (T3\ >\ T);}
+\DoxyCodeLine{00099\ \ \ \ \ B4\ =\ (T4\ >\ T);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ \ Empaquetar\ (B4\ B3\ B2\ B1)\ en\ un\ entero\ B\ usando\ desplazamientos:}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ B4\ <<\ 3\ \ coloca\ B4\ en\ el\ bit\ 3\ (valor\ 8)}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ B3\ <<\ 2\ \ coloca\ B3\ en\ el\ bit\ 2\ (valor\ 4)}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ B2\ <<\ 1\ \ coloca\ B2\ en\ el\ bit\ 1\ (valor\ 2)}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ B1\ \ \ \ \ \ \ queda\ en\ el\ bit\ 0\ (valor\ 1)}}
+\DoxyCodeLine{00107\ \textcolor{comment}{}}
+\DoxyCodeLine{00108\ \textcolor{comment}{\ \ \ \ \ \ Resultado:}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ B\ =\ (B4*8)\ +\ (B3*4)\ +\ (B2*2)\ +\ (B1*1)}}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00111\ \ \ \ \ B\ =\ (B4\ <<\ 3)\ |\ (B3\ <<\ 2)\ |\ (B2\ <<\ 1)\ |\ (B1);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{/*\ Depuración:\ imprime\ B\ y\ sus\ bits\ B4B3B2B1\ */}}
+\DoxyCodeLine{00114\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ (\%d\%d\%d\%d)\(\backslash\)n"{}},\ B,\ B4,\ B3,\ B2,\ B1);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ printf(\textcolor{stringliteral}{"{}La\ temperatura\ es\ "{}});}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ \ Para\ T1<T2<T3<T4,\ los\ códigos\ típicos\ son:}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ \ \ \ \ T\ <\ T1\ \ \ \ \ \ \ \ -\/>\ 1111\ (15)\ -\/>\ "{}muy\ baja"{}}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ \ \ \ \ \ \ \ T1<=T<T2\ \ \ \ \ \ -\/>\ 1110\ (14)\ -\/>\ "{}baja"{}}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ \ \ \ \ \ \ \ T2<=T<T3\ \ \ \ \ \ -\/>\ 1100\ (12)\ -\/>\ "{}templada"{}}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ \ \ \ \ \ \ \ T3<=T<T4\ \ \ \ \ \ -\/>\ 1000\ (\ 8)\ -\/>\ "{}alta"{}}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ \ \ \ \ \ \ \ T>=T4\ \ \ \ \ \ \ \ \ -\/>\ 0000\ (\ 0)\ -\/>\ "{}muy\ alta"{}}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{switch}\ (B)}
+\DoxyCodeLine{00127\ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 15:}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}muy\ "{}});}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ fall-\/through\ intencional:\ completa\ con\ "{}baja"{}\ */}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}baja\(\backslash\)n"{}});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}templada\(\backslash\)n"{}});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}muy\ "{}});}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ fall-\/through\ intencional:\ completa\ con\ "{}alta"{}\ */}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}alta\(\backslash\)n"{}});}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Código\ no\ contemplado\ (p.ej.\ umbrales\ desordenados)\ */}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}

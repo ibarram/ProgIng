@@ -1,0 +1,42 @@
+\doxysection{src/\+20251/\+002\+\_\+\+Pokemon.c File Reference}
+\hypertarget{002___pokemon_8c}{}\label{002___pokemon_8c}\index{src/20251/002\_Pokemon.c@{src/20251/002\_Pokemon.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 002\+\_\+\+Pokemon.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{002___pokemon_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{002___pokemon_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{002___pokemon_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{002___pokemon_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{002\_Pokemon.c@{002\_Pokemon.c}!main@{main}}
+\index{main@{main}!002\_Pokemon.c@{002\_Pokemon.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{002___pokemon_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{002___pokemon_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{002___pokemon_8c_source}{002\+\_\+\+Pokemon.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ X,\ Y,\ S;}
+\DoxyCodeLine{00006\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ los\ valores:\ "{}});}
+\DoxyCodeLine{00007\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ \&\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \&X,\ \&Y);}
+\DoxyCodeLine{00008\ \ \ \ \ S\ =\ (\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}*Y+\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}})/(X+Y);}
+\DoxyCodeLine{00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Resultado\ =\ \%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}*X<\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}?\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}:S);}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}

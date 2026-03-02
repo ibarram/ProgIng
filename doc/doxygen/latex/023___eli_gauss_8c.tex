@@ -1,0 +1,126 @@
+\doxysection{src/\+20251/\+023\+\_\+\+Eli\+Gauss.c File Reference}
+\hypertarget{023___eli_gauss_8c}{}\label{023___eli_gauss_8c}\index{src/20251/023\_EliGauss.c@{src/20251/023\_EliGauss.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 023\+\_\+\+Eli\+Gauss.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{023___eli_gauss_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{023___eli_gauss_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{023___eli_gauss_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}\index{023\_EliGauss.c@{023\_EliGauss.c}!NV@{NV}}
+\index{NV@{NV}!023\_EliGauss.c@{023\_EliGauss.c}}
+\doxysubsubsection{\texorpdfstring{NV}{NV}}
+{\footnotesize\ttfamily \label{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5} 
+\+\#define NV~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{023___eli_gauss_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{023___eli_gauss_8c_source}{023\+\_\+\+Eli\+Gauss.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{023___eli_gauss_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{023___eli_gauss_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{023\_EliGauss.c@{023\_EliGauss.c}!main@{main}}
+\index{main@{main}!023\_EliGauss.c@{023\_EliGauss.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{023___eli_gauss_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{023___eli_gauss_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{023___eli_gauss_8c_source}{023\+\_\+\+Eli\+Gauss.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j,\ k;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}][\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ b[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ x[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}];}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ variables:\ "{}});}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00012\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1||n>\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}});}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&A[i][j]);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}b[\%d]\ =\ "{}},\ i+1);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b[i]);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)t"{}},\ A[i][j]);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)n"{}},\ b[i]);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<n;\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][0]/A[0][0];}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[0][j]);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[0];}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)t"{}},\ A[i][j]);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)n"{}},\ b[i]);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}(i=2;\ i<n;\ i++)}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][1]/A[1][1];}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[1][j]);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[1];}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)t"{}},\ A[i][j]);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\(\backslash\)n"{}},\ b[i]);}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ x[i]\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{for}(i=n-\/1;\ i>-\/1;\ i-\/-\/)}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ x[i]=b[i];}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i!=j)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x[i]-\/=A[i][j]*x[j];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ x[i]/=A[i][i];}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ x[i]);}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{023___eli_gauss_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

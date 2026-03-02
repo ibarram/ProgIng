@@ -1,0 +1,55 @@
+\doxysection{020\+\_\+\+Burbuja\+BD.\+c}
+\hypertarget{020___burbuja_b_d_8c_source}{}\label{020___burbuja_b_d_8c_source}\index{src/20251/020\_BurbujaBD.c@{src/20251/020\_BurbujaBD.c}}
+\doxymbox{\hyperlink{020___burbuja_b_d_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00005}\doxymbox{\hyperlink{020___burbuja_b_d_8c_a0240ac851181b84ac374872dc5434ee4}{00005}}\ \textcolor{preprocessor}{\#define\ N\ 1000000}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00007}\doxymbox{\hyperlink{020___burbuja_b_d_8c_a0ddf1224851353fc92bfbff6f499fa97}{00007}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ i,\ j,\ k;}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{float}\ X[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00011}00011\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00015}00015\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<2||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ le\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00017}00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00019}00019\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}<\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}*=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00026}00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%f,\ \%f]\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00027}00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ X[i]\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (i=0;\ i<n-\/1;\ i++)}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=(i\%2?n-\/1-\/(i+1)/2:i/2+1);\ (i\%2?j>i/2:j<(n-\/i/2));\ i\%2?j-\/-\/:j++)}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ k\ =\ i\%2?n-\/(i+1)/2:i/2;}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\%2?X[k]<X[j]:X[k]>X[j])}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X[k]*=X[j];}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X[j]=X[k]/X[j];}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ X[k]/=X[j];}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00045}00045\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ordenados.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%ld]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{020___burbuja_b_d_8c_source_l00049}00049\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,136 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo009.c File Reference}
+\hypertarget{20261_2src_2_ejemplo009_8c}{}\label{20261_2src_2_ejemplo009_8c}\index{src/20261/src/Ejemplo009.c@{src/20261/src/Ejemplo009.c}}
+
+
+Aproximación de exp(x) con serie de Taylor (cálculo directo de potencias y factorial).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo009.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo009_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Calcula exp(x) con Taylor y cálculo “desde cero” de cada término. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de exp(x) con serie de Taylor (cálculo directo de potencias y factorial). 
+
+Usa la expansión:\+ exp(x) = sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{∞\} x\texorpdfstring{$^\wedge$}{\string^}i /\+ i!
+
+Este programa aproxima con n términos:\+ exp(x) ≈ sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{n-\/1\} x\texorpdfstring{$^\wedge$}{\string^}i /\+ i!
+
+Para cada término i, calcula:\+
+\begin{DoxyItemize}
+\item num = x\texorpdfstring{$^\wedge$}{\string^}i (multiplicando x repetidamente)
+\item den = i! (multiplicando 1\texorpdfstring{$\ast$}{*}2\texorpdfstring{$\ast$}{*}...\texorpdfstring{$\ast$}{*}i)
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyItemize}
+\item Un entero n \texorpdfstring{$>$}{>}= 1 (número de términos).
+\item Un real x (float).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{exp(x)\ =\ <aprox>}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2) (por el doble ciclo). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+El factorial crece muy rápido; \textquotesingle{}den\textquotesingle{} (long int) puede desbordarse para i moderados. También puede perderse precisión por usar float. 
+\end{DoxyWarning}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo009_8c_source}{Ejemplo009.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo009_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo009.c@{Ejemplo009.c}!main@{main}}
+\index{main@{main}!Ejemplo009.c@{Ejemplo009.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Calcula exp(x) con Taylor y cálculo “desde cero” de cada término. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo009_8c_source_l00042}{42}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo009_8c_source}{Ejemplo009.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00045\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ den;\ \ \ \ \ \textcolor{comment}{/*\ factorial\ i!\ (puede\ desbordar\ para\ i\ grandes)\ */}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ num,\ ex;\ \textcolor{comment}{/*\ num\ =\ x\string^i,\ ex\ =\ acumulador\ */}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00055\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*\ Leer\ x\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00059\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ ex\ acumula\ la\ suma:}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ ex\ =\ sum\_\{i=0\}\string^\{n-\/1\}\ x\string^i\ /\ i!}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ ex\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Para\ el\ término\ i:}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ num\ =\ x\string^i}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ den\ =\ i!}}
+\DoxyCodeLine{00071\ \textcolor{comment}{}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Se\ reinician\ en\ 1\ y\ se\ multiplican\ i\ veces.}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ num\ =\ 1,\ den\ =\ 1;\ j\ <\ i;\ j++)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ x;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ num\ =\ x\string^(j+1)\ al\ avanzar\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ den\ *=\ (j\ +\ 1);\ \ \textcolor{comment}{/*\ den\ =\ (j+1)!\ al\ avanzar\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ ex\ +=\ (num\ /\ den);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,442 @@
+\doxysection{src/\+20252/\+\+Ejemplo040.c File Reference}
+\hypertarget{_ejemplo040_8c}{}\label{_ejemplo040_8c}\index{src/20252/Ejemplo040.c@{src/20252/Ejemplo040.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo040.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo040_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_ejemplo040_8c_a58fd7d43ff72a781dd6ba00170add78b}{crear\+Mat}} (int r, int c)
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb}{crear\+MatC}} (int r, int c)
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_ejemplo040_8c_a3e730ede2352f14a5ef3e89bbcb44065}{crear\+MatD}} (int r, int c)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_a5051952a4a7f19e6360e65f2f6298784}{capturar}} (double \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}, int r, int c, char \texorpdfstring{$\ast$}{*}str)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_a9d61b48902480191f43cf505d9fadeff}{imprimir}} (double \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}, int r, int c)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2}{imprimirM}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}, int r, int c)
+\item 
+double \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_ejemplo040_8c_a83a3a7c89d12e03ac452f5cd43a2e568}{multiplicar}} (double \texorpdfstring{$\ast$}{*}M1, int r1, int c1, double \texorpdfstring{$\ast$}{*}M2, int r2, int c2)
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5}{multiplicarM}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}M1, int r1, int c1, double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}M2, int r2, int c2)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8}{capturarM}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}, int r, int c, char \texorpdfstring{$\ast$}{*}str)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4}{liberar}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}, int r)
+\item 
+int \doxymbox{\hyperlink{_ejemplo040_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo040_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo040_8c_a5051952a4a7f19e6360e65f2f6298784}\index{Ejemplo040.c@{Ejemplo040.c}!capturar@{capturar}}
+\index{capturar@{capturar}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{capturar()}{capturar()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a5051952a4a7f19e6360e65f2f6298784} 
+int capturar (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{M}{, }\item[{int}]{r}{, }\item[{int}]{c}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00052}{52}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c;\ j++)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s[\%d][\%d]\ =\ "{}},\ str,\ i+1,\ j+1);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%lf"{}},\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}+c*i+j);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8}\index{Ejemplo040.c@{Ejemplo040.c}!capturarM@{capturarM}}
+\index{capturarM@{capturarM}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{capturarM()}{capturarM()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8} 
+int capturarM (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{M}{, }\item[{int}]{r}{, }\item[{int}]{c}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00129}{129}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c;\ j++)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s[\%d][\%d]\ =\ "{}},\ str,\ i+1,\ j+1);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%lf"{}},\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]+j);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a58fd7d43ff72a781dd6ba00170add78b}\index{Ejemplo040.c@{Ejemplo040.c}!crearMat@{crearMat}}
+\index{crearMat@{crearMat}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{crearMat()}{crearMat()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a58fd7d43ff72a781dd6ba00170add78b} 
+double \texorpdfstring{$\ast$}{*} crear\+Mat (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{double}\ *\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00007\ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ =\ (\textcolor{keywordtype}{double}*)malloc(r*c*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}==NULL)}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{_ejemplo040_8c_a58fd7d43ff72a781dd6ba00170add78b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb}\index{Ejemplo040.c@{Ejemplo040.c}!crearMatC@{crearMatC}}
+\index{crearMatC@{crearMatC}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{crearMatC()}{crearMatC()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb} 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} crear\+MatC (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00013}{13}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ **\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ =\ (\textcolor{keywordtype}{double}**)malloc(r*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}*));}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}==NULL)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[0]\ =\ (\textcolor{keywordtype}{double}*)malloc(r*c*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[0]==NULL)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<r;\ i++)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]\ =\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i-\/1]+c;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a3e730ede2352f14a5ef3e89bbcb44065}\index{Ejemplo040.c@{Ejemplo040.c}!crearMatD@{crearMatD}}
+\index{crearMatD@{crearMatD}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{crearMatD()}{crearMatD()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a3e730ede2352f14a5ef3e89bbcb44065} 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} crear\+MatD (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00031}{31}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ **\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ =\ (\textcolor{keywordtype}{double}**)malloc(r*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}*));}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}==NULL)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]\ =\ (\textcolor{keywordtype}{double}*)malloc(c*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]==NULL)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(-\/-\/i;\ i>-\/1;\ i-\/-\/)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}};}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{_ejemplo040_8c_a3e730ede2352f14a5ef3e89bbcb44065_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a9d61b48902480191f43cf505d9fadeff}\index{Ejemplo040.c@{Ejemplo040.c}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{imprimir()}{imprimir()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a9d61b48902480191f43cf505d9fadeff} 
+int imprimir (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{M}{, }\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00064}{64}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c;\ j++)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.4lf\(\backslash\)t"{}},\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[c*i+j]);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2}\index{Ejemplo040.c@{Ejemplo040.c}!imprimirM@{imprimirM}}
+\index{imprimirM@{imprimirM}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{imprimirM()}{imprimirM()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2} 
+int imprimirM (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{M}{, }\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00076}{76}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c;\ j++)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.4lf\(\backslash\)t"{}},\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i][j]);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4}\index{Ejemplo040.c@{Ejemplo040.c}!liberar@{liberar}}
+\index{liberar@{liberar}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{liberar()}{liberar()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4} 
+int liberar (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{M}{, }\item[{int}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00141}{141}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r;\ i++)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}[i]);}
+\DoxyCodeLine{00146\ \ \ \ \ free(\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}});}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00148\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo040.c@{Ejemplo040.c}!main@{main}}
+\index{main@{main}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00150}{150}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ rA,\ rB,\ cA,\ cB;}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{double}\ **A,\ **B,\ **C;}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ renglones\ de\ A:\ "{}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&rA);}
+\DoxyCodeLine{00157\ \ \ \ \ \}\textcolor{keywordflow}{while}(rA<1);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ A:\ "{}});}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cA);}
+\DoxyCodeLine{00161\ \ \ \ \ \}\textcolor{keywordflow}{while}(cA<1);}
+\DoxyCodeLine{00162\ \ \ \ \ A\ =\ \doxymbox{\hyperlink{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb}{crearMatC}}(rA,\ cA);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{if}(A==NULL)}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00165\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8}{capturarM}}(A,\ rA,\ cA,\ \textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ renglones\ de\ B:\ "{}});}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&rB);}
+\DoxyCodeLine{00169\ \ \ \ \ \}\textcolor{keywordflow}{while}(rB<1);}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ B:\ "{}});}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cB);}
+\DoxyCodeLine{00173\ \ \ \ \ \}\textcolor{keywordflow}{while}(cB<1);}
+\DoxyCodeLine{00174\ \ \ \ \ B\ =\ \doxymbox{\hyperlink{_ejemplo040_8c_a3e730ede2352f14a5ef3e89bbcb44065}{crearMatD}}(rB,\ cB);}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}(B==NULL)}
+\DoxyCodeLine{00176\ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ free(A[0]);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ free(A);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_a06f7ad9bae1093718f62b1735cbae6d8}{capturarM}}(B,\ rB,\ cB,\ \textcolor{stringliteral}{"{}B"{}});}
+\DoxyCodeLine{00182\ \ \ \ \ C\ =\ \doxymbox{\hyperlink{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5}{multiplicarM}}(A,\ rA,\ cA,\ B,\ rB,\ cB);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{if}(C==NULL)}
+\DoxyCodeLine{00184\ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ free(A[0]);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ free(A);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4}{liberar}}(B,\ rB);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \ \ \ \ printf(\textcolor{stringliteral}{"{}A\(\backslash\)n"{}});}
+\DoxyCodeLine{00191\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2}{imprimirM}}(A,\ rA,\ cA);}
+\DoxyCodeLine{00192\ \ \ \ \ printf(\textcolor{stringliteral}{"{}B\(\backslash\)n"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2}{imprimirM}}(B,\ rB,\ cB);}
+\DoxyCodeLine{00194\ \ \ \ \ printf(\textcolor{stringliteral}{"{}C\(\backslash\)n"{}});}
+\DoxyCodeLine{00195\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_ab78d1aa21332648c36cb3f086ed91fe2}{imprimirM}}(C,\ rA,\ cB);}
+\DoxyCodeLine{00196\ \ \ \ \ free(A[0]);}
+\DoxyCodeLine{00197\ \ \ \ \ free(A);}
+\DoxyCodeLine{00198\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo040_8c_a2522895778db9e090b54cfd71f98cbe4}{liberar}}(B,\ rB);}
+\DoxyCodeLine{00199\ \ \ \ \ free(C);}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00201\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{_ejemplo040_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a83a3a7c89d12e03ac452f5cd43a2e568}\index{Ejemplo040.c@{Ejemplo040.c}!multiplicar@{multiplicar}}
+\index{multiplicar@{multiplicar}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{multiplicar()}{multiplicar()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a83a3a7c89d12e03ac452f5cd43a2e568} 
+double \texorpdfstring{$\ast$}{*} multiplicar (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{M1}{, }\item[{int}]{r1}{, }\item[{int}]{c1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{M2}{, }\item[{int}]{r2}{, }\item[{int}]{c2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00088}{88}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{double}\ *M3;}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{if}(c1!=r2)}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ En\ el\ tamaño\ de\ las\ matrices.\(\backslash\)n"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ M3\ =\ \doxymbox{\hyperlink{_ejemplo040_8c_a58fd7d43ff72a781dd6ba00170add78b}{crearMat}}(r1,\ c2);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{if}(M3==NULL)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r1;\ i++)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c2;\ j++)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ M3[i*c1+j]=0;\ k<c1;\ k++)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M3[i*c2+j]\ +=\ M1[i*c1+k]*M2[k*c2+j];}
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ M3[i][j]\ =\ M3[i][j]+M1[i][k]*M2[k][j]}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ M3[i][j]\ +=\ M1[i][k]*M2[k][j]}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ M3[i*c2+j]\ +=\ M1[i*c1+k]*M2[k*r2+j]}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{return}\ M3;}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{_ejemplo040_8c_a83a3a7c89d12e03ac452f5cd43a2e568_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5}\index{Ejemplo040.c@{Ejemplo040.c}!multiplicarM@{multiplicarM}}
+\index{multiplicarM@{multiplicarM}!Ejemplo040.c@{Ejemplo040.c}}
+\doxysubsubsection{\texorpdfstring{multiplicarM()}{multiplicarM()}}
+{\footnotesize\ttfamily \label{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5} 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} multiplicarM (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{M1}{, }\item[{int}]{r1}{, }\item[{int}]{c1}{, }\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{M2}{, }\item[{int}]{r2}{, }\item[{int}]{c2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo040_8c_source_l00110}{110}} of file \doxymbox{\hyperlink{_ejemplo040_8c_source}{Ejemplo040.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k;}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{double}\ **M3;}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}(c1!=r2)}
+\DoxyCodeLine{00115\ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ En\ el\ tamaño\ de\ las\ matrices.\(\backslash\)n"{}});}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ M3\ =\ \doxymbox{\hyperlink{_ejemplo040_8c_ab24c246dcb7a1f215f12c3a3fa7e0fbb}{crearMatC}}(r1,\ c2);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{if}(M3==NULL)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<r1;\ i++)}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<c2;\ j++)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ M3[i][j]=0;\ k<c1;\ k++)}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M3[i][j]\ +=\ M1[i][k]*M2[k][j];}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ M3;}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_ejemplo040_8c_a0b953a833eaaa3a8a359aefc8beadfb5_icgraph}
+\end{center}
+\end{figure}

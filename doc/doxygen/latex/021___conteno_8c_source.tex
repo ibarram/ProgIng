@@ -1,0 +1,60 @@
+\doxysection{021\+\_\+\+Conteno.\+c}
+\hypertarget{021___conteno_8c_source}{}\label{021___conteno_8c_source}\index{src/20251/021\_Conteno.c@{src/20251/021\_Conteno.c}}
+\doxymbox{\hyperlink{021___conteno_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00005}\doxymbox{\hyperlink{021___conteno_8c_a0240ac851181b84ac374872dc5434ee4}{00005}}\ \textcolor{preprocessor}{\#define\ N\ 1000000}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00007}\doxymbox{\hyperlink{021___conteno_8c_a0ddf1224851353fc92bfbff6f499fa97}{00007}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ X[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ i,\ j,\ rg;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00013}00013\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00014}00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00015}00015\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00017}00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}>\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\string^=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\string^=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\string^=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00024}00024\ \ \ \ \ rg\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00025}00025\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ X[i]\ =\ (rand()\%(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}+1))+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00028}00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desordenado.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%d]\ =\ \%d\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ h[rg+1];}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<rg+1;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ h[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ h[X[i]-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}]++;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00036}00036\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Histograma\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<rg+1;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}h[\%d]\ =\ \%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}+i,\ h[i]);}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=0;\ i<n;\ )}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!h[j])}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(h[j])}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ h[j]-\/-\/;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ X[i++]\ =\ j+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00050}00050\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ordenado.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%d]\ =\ \%d\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{021___conteno_8c_source_l00054}00054\ \}}
+
+\end{DoxyCode}

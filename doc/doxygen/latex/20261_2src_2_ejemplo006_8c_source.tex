@@ -1,0 +1,116 @@
+\doxysection{Ejemplo006.\+c}
+\hypertarget{20261_2src_2_ejemplo006_8c_source}{}\label{20261_2src_2_ejemplo006_8c_source}\index{src/20261/src/Ejemplo006.c@{src/20261/src/Ejemplo006.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00040}00040\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00048}\doxymbox{\hyperlink{20261_2src_2_ejemplo006_8c_a0ddf1224851353fc92bfbff6f499fa97}{00048}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00050}00050\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00051}00051\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ T1,\ T2,\ T3,\ T4:\ Umbrales\ de\ temperatura\ que\ delimitan\ 5\ regiones.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ T1:\ umbral\ inferior\ (más\ frío)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ T4:\ umbral\ superior\ (más\ caliente)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Se\ asume\ el\ orden:\ T1\ <\ T2\ <\ T3\ <\ T4}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00058}00058\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ \ T:\ temperatura\ a\ clasificar\ (etiquetar).}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00060}00060\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{float}\ T1,\ T2,\ T3,\ T4,\ T;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00063}00063\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ B1..B4\ son\ banderas\ (booleanos\ como\ enteros\ 0/1)\ que\ indican\ si\ T\ es\ menor}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ que\ cada\ umbral,\ usando\ comparaciones\ del\ tipo\ (Ti\ >\ T).}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ Ejemplo:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ B1\ =\ (T1\ >\ T)\ \ -\/>\ 1\ si\ T\ es\ menor\ que\ T1}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0\ si\ T\ es\ mayor\ o\ igual\ que\ T1}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00070}00070\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{int}\ B1,\ B2,\ B3,\ B4;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00073}00073\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ B\ será\ un\ "{}código"{}\ de\ 4\ bits\ (B4\ B3\ B2\ B1)\ que\ identifica\ en\ qué\ intervalo\ cae\ T.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ \ Luego\ se\ usa\ switch(B)\ para\ imprimir\ la\ etiqueta.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00076}00076\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{int}\ B;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00079}00079\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/\ Lectura\ de\ umbrales\ -\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00080}00080\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ los\ rangos\ de\ temperaturas:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00081}00081\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f"{}},\ \&T1,\ \&T2,\ \&T3,\ \&T4);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00083}00083\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/\ Lectura\ de\ la\ temperatura\ a\ evaluar\ -\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00084}00084\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ tempratura:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00085}00085\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&T);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00087}00087\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ Se\ calcula\ cada\ bandera:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B1\ =\ 1\ si\ T\ <\ T1}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B2\ =\ 1\ si\ T\ <\ T2}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B3\ =\ 1\ si\ T\ <\ T3}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ -\/\ B4\ =\ 1\ si\ T\ <\ T4}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00093}00093\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ (Usa\ Ti\ >\ T,\ que\ es\ equivalente\ a\ T\ <\ Ti)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00095}00095\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00096}00096\ \ \ \ \ B1\ =\ (T1\ >\ T);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00097}00097\ \ \ \ \ B2\ =\ (T2\ >\ T);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00098}00098\ \ \ \ \ B3\ =\ (T3\ >\ T);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00099}00099\ \ \ \ \ B4\ =\ (T4\ >\ T);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00101}00101\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ \ Empaquetar\ (B4\ B3\ B2\ B1)\ en\ un\ entero\ B\ usando\ desplazamientos:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ B4\ <<\ 3\ \ coloca\ B4\ en\ el\ bit\ 3\ (valor\ 8)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ B3\ <<\ 2\ \ coloca\ B3\ en\ el\ bit\ 2\ (valor\ 4)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ B2\ <<\ 1\ \ coloca\ B2\ en\ el\ bit\ 1\ (valor\ 2)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ B1\ \ \ \ \ \ \ queda\ en\ el\ bit\ 0\ (valor\ 1)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00107}00107\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ \ Resultado:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ B\ =\ (B4*8)\ +\ (B3*4)\ +\ (B2*2)\ +\ (B1*1)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00110}00110\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00111}00111\ \ \ \ \ B\ =\ (B4\ <<\ 3)\ |\ (B3\ <<\ 2)\ |\ (B2\ <<\ 1)\ |\ (B1);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00113}00113\ \ \ \ \ \textcolor{comment}{/*\ Depuración:\ imprime\ B\ y\ sus\ bits\ B4B3B2B1\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00114}00114\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ (\%d\%d\%d\%d)\(\backslash\)n"{}},\ B,\ B4,\ B3,\ B2,\ B1);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00116}00116\ \ \ \ \ printf(\textcolor{stringliteral}{"{}La\ temperatura\ es\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00118}00118\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ \ Para\ T1<T2<T3<T4,\ los\ códigos\ típicos\ son:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ \ \ \ T\ <\ T1\ \ \ \ \ \ \ \ -\/>\ 1111\ (15)\ -\/>\ "{}muy\ baja"{}}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ \ \ \ T1<=T<T2\ \ \ \ \ \ -\/>\ 1110\ (14)\ -\/>\ "{}baja"{}}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00122}00122\ \textcolor{comment}{\ \ \ \ \ \ \ \ T2<=T<T3\ \ \ \ \ \ -\/>\ 1100\ (12)\ -\/>\ "{}templada"{}}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00123}00123\ \textcolor{comment}{\ \ \ \ \ \ \ \ T3<=T<T4\ \ \ \ \ \ -\/>\ 1000\ (\ 8)\ -\/>\ "{}alta"{}}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00124}00124\ \textcolor{comment}{\ \ \ \ \ \ \ \ T>=T4\ \ \ \ \ \ \ \ \ -\/>\ 0000\ (\ 0)\ -\/>\ "{}muy\ alta"{}}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00125}00125\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{switch}\ (B)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00127}00127\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 15:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}muy\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ fall-\/through\ intencional:\ completa\ con\ "{}baja"{}\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}baja\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}templada\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}muy\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ fall-\/through\ intencional:\ completa\ con\ "{}alta"{}\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}alta\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Código\ no\ contemplado\ (p.ej.\ umbrales\ desordenados)\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00151}00151\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo006_8c_source_l00153}00153\ \}}
+
+\end{DoxyCode}

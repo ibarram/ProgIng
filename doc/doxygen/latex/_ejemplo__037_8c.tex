@@ -1,0 +1,149 @@
+\doxysection{src/\+20251/\+\+Ejemplo\+\_\+037.c File Reference}
+\hypertarget{_ejemplo__037_8c}{}\label{_ejemplo__037_8c}\index{src/20251/Ejemplo\_037.c@{src/20251/Ejemplo\_037.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo\+\_\+037.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{_ejemplo__037_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo__037_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo__037_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo__037_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{Ejemplo\_037.c@{Ejemplo\_037.c}!main@{main}}
+\index{main@{main}!Ejemplo\_037.c@{Ejemplo\_037.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo__037_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo__037_8c_source_l00013}{13}} of file \doxymbox{\hyperlink{_ejemplo__037_8c_source}{Ejemplo\+\_\+037.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{float}\ **A,\ **B,\ **C,\ *pA,\ *pC;}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{int}\ nA,\ mA,\ nB,\ mB,\ i,\ j,\ k;}
+\DoxyCodeLine{00017\ \ \ FILE\ *fp;}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ A:\ "{}});}
+\DoxyCodeLine{00020\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nA);}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numro\ de\ renglones\ de\ A:\ "{}});}
+\DoxyCodeLine{00022\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&mA);}
+\DoxyCodeLine{00023\ \ \ \}\textcolor{keywordflow}{while}(nA<1||mA<1);}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00025\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ B:\ "{}});}
+\DoxyCodeLine{00026\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nB);}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numro\ de\ renglones\ de\ B:\ "{}});}
+\DoxyCodeLine{00028\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&mB);}
+\DoxyCodeLine{00029\ \ \ \}\textcolor{keywordflow}{while}(nB<1||mB<1||nB!=mA);}
+\DoxyCodeLine{00030\ \ \ pA\ =\ (\textcolor{keywordtype}{float}*)malloc(nA*mA*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{if}(pA==NULL)}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00033\ \ \ A\ =\ (\textcolor{keywordtype}{float}**)malloc(nA*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordflow}{if}(A==NULL)}
+\DoxyCodeLine{00035\ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00038\ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00040\ \ \ \ \ A[i]\ =\ pA+i*mA;}
+\DoxyCodeLine{00041\ \ \ B\ =\ (\textcolor{keywordtype}{float}**)malloc(nB*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordflow}{if}(B==NULL)}
+\DoxyCodeLine{00043\ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00045\ \ \ \ \ free(A);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00047\ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00049\ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ B[i]\ =\ (\textcolor{keywordtype}{float}*)malloc(mB*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{if}(B[i]==\ NULL)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ free(pA);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ free(A);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(-\/-\/i;\ i>-\/1;\ i-\/-\/)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ free(B);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \}}
+\DoxyCodeLine{00061\ \ \ pC\ =\ (\textcolor{keywordtype}{float}*)malloc(nA*mB*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordflow}{if}(pC==NULL)}
+\DoxyCodeLine{00063\ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00065\ \ \ \ \ free(A);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00068\ \ \ \ \ free(B);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ 5;}
+\DoxyCodeLine{00070\ \ \ \}}
+\DoxyCodeLine{00071\ \ \ C\ =\ (\textcolor{keywordtype}{float}**)malloc(nA*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordflow}{if}(C==NULL)}
+\DoxyCodeLine{00073\ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00075\ \ \ \ \ free(A);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00078\ \ \ \ \ free(B);}
+\DoxyCodeLine{00079\ \ \ \ \ free(pC);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ 6;}
+\DoxyCodeLine{00081\ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00083\ \ \ \ \ C[i]\ =\ pC+i*mB;}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<mA;\ j++)}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ A[i]+j);}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<mB;\ j++)}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}B[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ B[i]+j);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<mB;\ j++)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ C[i][j]=0;\ k<nB;\ k++)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ C[i][j]\ +=\ A[i][k]*B[k][j];}
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<mB;\ j++)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}C[\%d][\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ j+1,\ C[i][j]);}
+\DoxyCodeLine{00103\ \ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}Matriz.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{00105\ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ free(pC);}
+\DoxyCodeLine{00107\ \ \ \ \ free(C);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00110\ \ \ \ \ free(B);}
+\DoxyCodeLine{00111\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00112\ \ \ \ \ free(A);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{return}\ 7;}
+\DoxyCodeLine{00114\ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<mB;\ j++)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%f\ "{}},\ C[i][j]);}
+\DoxyCodeLine{00118\ \ \ fclose(fp);}
+\DoxyCodeLine{00119\ \ \ free(pC);}
+\DoxyCodeLine{00120\ \ \ free(C);}
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00122\ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00123\ \ \ free(B);}
+\DoxyCodeLine{00124\ \ \ free(pA);}
+\DoxyCodeLine{00125\ \ \ free(A);}
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}

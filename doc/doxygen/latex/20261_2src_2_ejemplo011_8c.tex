@@ -1,0 +1,131 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo011.c File Reference}
+\hypertarget{20261_2src_2_ejemplo011_8c}{}\label{20261_2src_2_ejemplo011_8c}\index{src/20261/src/Ejemplo011.c@{src/20261/src/Ejemplo011.c}}
+
+
+Aproximación de exp(x) con Taylor usando recurrencia entre términos (forma eficiente).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo011.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo011_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo011_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Calcula exp(x) con Taylor usando recurrencia O(n). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de exp(x) con Taylor usando recurrencia entre términos (forma eficiente). 
+
+Serie:\+ exp(x) = sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{∞\} x\texorpdfstring{$^\wedge$}{\string^}i /\+ i!
+
+Define el término:\+ t\+\_\+i = x\texorpdfstring{$^\wedge$}{\string^}i /\+ i!
+
+Recurrencia:\+ t\+\_\+0 = 1 t\+\_\+\{i+1\} = t\+\_\+i \texorpdfstring{$\ast$}{*} (x /\+ (i+1))
+
+Con esto se calcula la suma con un solo ciclo:\+ ex = t\+\_\+0 + t\+\_\+1 + ... + t\+\_\+\{n-\/1\}
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyItemize}
+\item Un entero n \texorpdfstring{$>$}{>}= 1 (términos).
+\item Un real x (float).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{exp(x)\ =\ <aprox>}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Esta es la versión más eficiente de (009–011) porque evita recalcular potencias/\+factoriales. 
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo011_8c_source}{Ejemplo011.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo011_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo011_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo011.c@{Ejemplo011.c}!main@{main}}
+\index{main@{main}!Ejemplo011.c@{Ejemplo011.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo011_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Calcula exp(x) con Taylor usando recurrencia O(n). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo011_8c_source_l00044}{44}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo011_8c_source}{Ejemplo011.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00047\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ ex;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00055\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00058\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ Inicialización:}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ fct\ =\ t\_0\ =\ 1}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ ex\ \ =\ 0}}
+\DoxyCodeLine{00064\ \textcolor{comment}{}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ En\ cada\ iteración\ i:}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ ex\ +=\ fct\ \ \ \ \ \ (acumula\ t\_i)}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ fct\ *=\ x/(i+1)\ (convierte\ t\_i\ en\ t\_\{i+1\})}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ ex\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ex\ +=\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (i\ +\ 1));}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo011_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

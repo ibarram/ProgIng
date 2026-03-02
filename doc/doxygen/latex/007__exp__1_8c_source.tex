@@ -1,0 +1,31 @@
+\doxysection{007\+\_\+exp\+\_\+1.\+c}
+\hypertarget{007__exp__1_8c_source}{}\label{007__exp__1_8c_source}\index{src/20251/007\_exp\_1.c@{src/20251/007\_exp\_1.c}}
+\doxymbox{\hyperlink{007__exp__1_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00003}\doxymbox{\hyperlink{007__exp__1_8c_a0ddf1224851353fc92bfbff6f499fa97}{00003}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{float}\ ex,\ x,\ num;}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ i,\ j,\ n,\ den;}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00007}00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00008}00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00010}00010\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00012}00012\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<0);}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ ex=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0,\ num=1,\ den=1;\ j<i;\ j++)}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ num*=x;}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ \ \ for(j=0,\ den=1;\ j<i;\ j++)}}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ den*=(j+1);\ \textcolor{comment}{//den=den*(j+1);}}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ ex\ +=\ num/den;}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00023}00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex);}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{007__exp__1_8c_source_l00025}00025\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,377 @@
+\doxysection{src/\+20252/\+\+Ejemplo029.c File Reference}
+\hypertarget{_ejemplo029_8c}{}\label{_ejemplo029_8c}\index{src/20252/Ejemplo029.c@{src/20252/Ejemplo029.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo029.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo029_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94}{exp1}} (double x, int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2}{exp3}} (double x, int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839}{exp4}} (double x, int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832}{exp5}} (double x, int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a86313a83edd6077f525961630514b553}{potencia}} (double x, int n)
+\item 
+long int \doxymbox{\hyperlink{_ejemplo029_8c_a63b7b4b182c353d5821b056e74e878c6}{factorial}} (int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187}{potencia2}} (double x, int n)
+\item 
+long int \doxymbox{\hyperlink{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2}{factorial2}} (int n)
+\item 
+double \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}} (double x, int n)
+\item 
+int \doxymbox{\hyperlink{_ejemplo029_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo029_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94}\index{Ejemplo029.c@{Ejemplo029.c}!exp1@{exp1}}
+\index{exp1@{exp1}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{exp1()}{exp1()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94} 
+double exp1 (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00062}{62}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ ex;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ ex=0;\ i<n;\ i++)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ ex\ +=\ \doxymbox{\hyperlink{_ejemplo029_8c_a86313a83edd6077f525961630514b553}{potencia}}(x,\ i)/\doxymbox{\hyperlink{_ejemplo029_8c_a63b7b4b182c353d5821b056e74e878c6}{factorial}}(i);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ ex;}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2}\index{Ejemplo029.c@{Ejemplo029.c}!exp3@{exp3}}
+\index{exp3@{exp3}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{exp3()}{exp3()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2} 
+double exp3 (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00050}{50}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{double}\ ex,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ ex=0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}=1;\ i<n;\ i++)}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ex\ +=\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ x/(i+1);}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ ex;}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839}\index{Ejemplo029.c@{Ejemplo029.c}!exp4@{exp4}}
+\index{exp4@{exp4}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{exp4()}{exp4()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839} 
+double exp4 (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00089}{89}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}(n>0)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839}{exp4}}(x,\ n-\/1)+\doxymbox{\hyperlink{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187}{potencia2}}(x,n)/\doxymbox{\hyperlink{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2}{factorial2}}(n);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832}\index{Ejemplo029.c@{Ejemplo029.c}!exp5@{exp5}}
+\index{exp5@{exp5}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{exp5()}{exp5()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832} 
+double exp5 (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00042}{42}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}(n)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832}{exp5}}(x,\ n-\/1)+\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}(x,\ n);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a63b7b4b182c353d5821b056e74e878c6}\index{Ejemplo029.c@{Ejemplo029.c}!factorial@{factorial}}
+\index{factorial@{factorial}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{factorial()}{factorial()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a63b7b4b182c353d5821b056e74e878c6} 
+long int factorial (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00080}{80}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ fn;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ fn=1;\ i<n;\ i++)}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ fn\ *=\ (i+1);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ fn;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{_ejemplo029_8c_a63b7b4b182c353d5821b056e74e878c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2}\index{Ejemplo029.c@{Ejemplo029.c}!factorial2@{factorial2}}
+\index{factorial2@{factorial2}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{factorial2()}{factorial2()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2} 
+long int factorial2 (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00105}{105}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}(n>0)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2}{factorial2}}(n-\/1)*n;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{_ejemplo029_8c_ad674d7925a25991b55eefb10d9144cc2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}\index{Ejemplo029.c@{Ejemplo029.c}!fct@{fct}}
+\index{fct@{fct}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{fct()}{fct()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df} 
+double fct (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00034}{34}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(n!=1)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}(x,\ n-\/1)*(x/n);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=109pt]{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo029.c@{Ejemplo029.c}!main@{main}}
+\index{main@{main}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00013}{13}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ x,\ ex,\ ex2,\ ex3,\ ex4;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00018\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%lf"{}},\ \&x);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ le\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00022\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00023\ \ \ \ \ ex\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_a58aad42b9bf5b065b6c5781865674b94}{exp1}}(x,\ n);}
+\DoxyCodeLine{00024\ \ \ \ \ ex2\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_a576a6f505a280d45d80de8c0fe13a1f2}{exp3}}(x,\ n);}
+\DoxyCodeLine{00025\ \ \ \ \ ex3\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_ae5f93d1f36ce0cc8bf846f19f4e58839}{exp4}}(x,\ n);}
+\DoxyCodeLine{00026\ \ \ \ \ ex4\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_a2fda12db28c0fc229dc4341617e0e832}{exp5}}(x,\ n);}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%lf)\ =\ \%lf\(\backslash\)n"{}},\ x,\ ex);}
+\DoxyCodeLine{00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%lf)\ =\ \%lf\(\backslash\)n"{}},\ x,\ ex2);}
+\DoxyCodeLine{00029\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%lf)\ =\ \%lf\(\backslash\)n"{}},\ x,\ ex3);}
+\DoxyCodeLine{00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%lf)\ =\ \%lf\(\backslash\)n"{}},\ x,\ ex4);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{_ejemplo029_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a86313a83edd6077f525961630514b553}\index{Ejemplo029.c@{Ejemplo029.c}!potencia@{potencia}}
+\index{potencia@{potencia}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{potencia()}{potencia()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a86313a83edd6077f525961630514b553} 
+double potencia (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00071}{71}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ xn;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ xn=1;\ i<n;\ i++)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ xn\ *=\ x;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{return}\ xn;}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{_ejemplo029_8c_a86313a83edd6077f525961630514b553_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187}\index{Ejemplo029.c@{Ejemplo029.c}!potencia2@{potencia2}}
+\index{potencia2@{potencia2}!Ejemplo029.c@{Ejemplo029.c}}
+\doxysubsubsection{\texorpdfstring{potencia2()}{potencia2()}}
+{\footnotesize\ttfamily \label{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187} 
+double potencia2 (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo029_8c_source_l00097}{97}} of file \doxymbox{\hyperlink{_ejemplo029_8c_source}{Ejemplo029.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{if}(n>0)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187}{potencia2}}(x,\ n-\/1)*x;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{_ejemplo029_8c_a87e6f4b821fe36b0134abe30cd753187_icgraph}
+\end{center}
+\end{figure}

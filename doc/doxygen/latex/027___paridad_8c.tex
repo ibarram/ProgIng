@@ -1,0 +1,113 @@
+\doxysection{src/\+20251/\+027\+\_\+\+Paridad.c File Reference}
+\hypertarget{027___paridad_8c}{}\label{027___paridad_8c}\index{src/20251/027\_Paridad.c@{src/20251/027\_Paridad.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+Include dependency graph for 027\+\_\+\+Paridad.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{027___paridad_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{027___paridad_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{027___paridad_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\+\_\+\+TOGGLE}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{027___paridad_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{027___paridad_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{027___paridad_8c_a3a8ea58898cb58fc96013383d39f482c}\index{027\_Paridad.c@{027\_Paridad.c}!BIT@{BIT}}
+\index{BIT@{BIT}!027\_Paridad.c@{027\_Paridad.c}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{027___paridad_8c_a3a8ea58898cb58fc96013383d39f482c} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1<<(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{027___paridad_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{027___paridad_8c_source}{027\+\_\+\+Paridad.\+c}}.
+
+\Hypertarget{027___paridad_8c_a313efcb9b1da105b05edfe888760db3b}\index{027\_Paridad.c@{027\_Paridad.c}!BIT\_TOGGLE@{BIT\_TOGGLE}}
+\index{BIT\_TOGGLE@{BIT\_TOGGLE}!027\_Paridad.c@{027\_Paridad.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_TOGGLE}{BIT\_TOGGLE}}
+{\footnotesize\ttfamily \label{027___paridad_8c_a313efcb9b1da105b05edfe888760db3b} 
+\+\#define BIT\+\_\+\+TOGGLE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \string^=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{027___paridad_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{027___paridad_8c_source}{027\+\_\+\+Paridad.\+c}}.
+
+\Hypertarget{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}\index{027\_Paridad.c@{027\_Paridad.c}!NC@{NC}}
+\index{NC@{NC}!027\_Paridad.c@{027\_Paridad.c}}
+\doxysubsubsection{\texorpdfstring{NC}{NC}}
+{\footnotesize\ttfamily \label{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5} 
+\+\#define NC~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{027___paridad_8c_source_l00007}{7}} of file \doxymbox{\hyperlink{027___paridad_8c_source}{027\+\_\+\+Paridad.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{027___paridad_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{027___paridad_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{027\_Paridad.c@{027\_Paridad.c}!main@{main}}
+\index{main@{main}!027\_Paridad.c@{027\_Paridad.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{027___paridad_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{027___paridad_8c_source_l00009}{9}} of file \doxymbox{\hyperlink{027___paridad_8c_source}{027\+\_\+\+Paridad.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{char}\ msg[\doxymbox{\hyperlink{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}}+1],\ p,\ v;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ nc,\ \_nc,\ \_nb;}
+\DoxyCodeLine{00013\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00014\ \ \ \ \ i=0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ msg[i++]\ =\ getc(stdin);}
+\DoxyCodeLine{00017\ \ \ \ \ \}\textcolor{keywordflow}{while}(msg[i-\/1]!=10\&\&i<\doxymbox{\hyperlink{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}});}
+\DoxyCodeLine{00018\ \ \ \ \ nc\ =\ i-\/1;}
+\DoxyCodeLine{00019\ \ \ \ \ msg[nc]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ p=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ p\string^=msg[i];}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ v=p;\ i<nc;\ i++)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ v\string^=msg[i];}
+\DoxyCodeLine{00024\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s(\%d)-\/\%c-\/\%d\(\backslash\)n"{}},\ msg,\ nc,\ p,\ (\textcolor{keywordtype}{int}\ )v);}
+\DoxyCodeLine{00025\ \ \ \ \ \_nc\ =\ rand()\%nc;}
+\DoxyCodeLine{00026\ \ \ \ \ \_nb\ =\ rand()\%(8*\textcolor{keyword}{sizeof}(char));}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{027___paridad_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(msg[\_nc],\ \_nb);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ v=p;\ i<nc;\ i++)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ v\string^=msg[i];}
+\DoxyCodeLine{00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s(\%d)-\/\%c-\/\%u\(\backslash\)n"{}},\ msg,\ nc,\ p,\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})v);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}

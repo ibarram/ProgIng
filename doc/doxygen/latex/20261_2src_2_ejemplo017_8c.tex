@@ -1,0 +1,174 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo017.c File Reference}
+\hypertarget{20261_2src_2_ejemplo017_8c}{}\label{20261_2src_2_ejemplo017_8c}\index{src/20261/src/Ejemplo017.c@{src/20261/src/Ejemplo017.c}}
+
+
+Aproximación de $\arcsin(x)$ mediante serie de Taylor (Maclaurin) para $|x|<1$.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo017.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo017_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Aproxima $\arcsin(x)$ con {\ttfamily n} términos de la serie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de $\arcsin(x)$ mediante serie de Taylor (Maclaurin) para $|x|<1$. 
+
+Este programa aproxima el seno inverso (arcoseno):\+   \[\arcsin(x)
+\] usando la serie de Maclaurin (Taylor alrededor de 0), válida para $|x|<1$:\+
+
+\[\arcsin(x) = \sum_{i=0}^{\infty}
+\frac{(2i)!}{4^i (i!)^2 (2i+1)}\, x^{2i+1}, \qquad |x| < 1.
+\]
+
+En lugar de calcular factoriales grandes, la implementación construye cada término de forma incremental:\+
+\begin{DoxyItemize}
+\item {\ttfamily num} acumula la potencia $x^{2i+1}$ a partir de la anterior ( $\times x^2$).
+\item {\ttfamily \doxylink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}} acumula el coeficiente $C_i=\frac{(2i)!}{4^i(i!)^2}$ mediante la recurrencia:\+   \[  C_i = C_{i-1}\cdot\frac{2i-1}{2i}.
+\]
+\end{DoxyItemize}
+
+Cada iteración suma:\+   \[\frac{C_i\,x^{2i+1}}{2i+1}.
+\]
+
+\begin{DoxyParagraph}{Entrada estándar}
+1) Un entero {\ttfamily n} (número de términos), con {\ttfamily n \texorpdfstring{$>$}{>}= 1} ~\newline
+ 2) Un real {\ttfamily x} con {\ttfamily -\/1 \texorpdfstring{$<$}{<} x \texorpdfstring{$<$}{<} 1}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+Imprime la aproximación:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{_ejemplo033_8c_a6a85029730d5a524d90a17887b2ec009}{asen}}(x)\ =\ valor}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Precondiciones}
+
+\begin{DoxyItemize}
+\item Se requiere {\ttfamily -\/1 \texorpdfstring{$<$}{<} x \texorpdfstring{$<$}{<} 1}. La serie converge más lentamente cuando $|x|\to 1$.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item El programa usa {\ttfamily float}; si se desea mayor precisión, usar {\ttfamily double}.
+\item El nombre impreso es {\ttfamily asen(x)} (arcoseno). 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source}{Ejemplo017.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo017_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo017_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo017.c@{Ejemplo017.c}!main@{main}}
+\index{main@{main}!Ejemplo017.c@{Ejemplo017.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo017_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Aproxima $\arcsin(x)$ con {\ttfamily n} términos de la serie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source_l00059}{59}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source}{Ejemplo017.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00062\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ n\ \ \ :\ número\ de\ términos\ de\ la\ serie\ (n\ >=\ 1)}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ i\ \ \ :\ índice\ del\ término\ (inicia\ en\ 1\ porque\ el\ término\ i=0\ se\ inicializa\ con\ asx=x)}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ den\ :\ denominador\ impar\ (2i+1)\ del\ término}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ x\ \ \ :\ valor\ para\ evaluar\ arcsin(x),\ con\ -\/1\ <\ x\ <\ 1}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ asx\ :\ acumulador\ de\ la\ suma\ (aproximación\ final)}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ num\ :\ potencia\ acumulada\ x\string^(2i+1)}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ fct\ :\ coeficiente\ acumulado\ C\_i\ =\ (2i)!\ /\ (4\string^i\ (i!)\string^2)}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ den;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ asx,\ num,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00080\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{/*\ Leer\ x\ con\ -\/1\ <\ x\ <\ 1\ */}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00086\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (-\/1\ >=\ x\ ||\ x\ >=\ 1);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ Término\ inicial\ (i\ =\ 0):}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ C\_0\ =\ 1}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ x\string^(2*0+1)\ =\ x}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ (2*0+1)\ =\ 1}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ \ =>\ arcsin(x)\ ≈\ x}}
+\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1,\ asx\ =\ x,\ num\ =\ x,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Actualizar\ coeficiente:}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ C\_i\ =\ C\_\{i-\/1\}\ *\ (2i-\/1)/(2i)}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Se\ usa\ 2*i\ -\/\ 1.0f\ para\ forzar\ división\ en\ punto\ flotante.}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ ((2*i\ -\/\ 1.0f)\ /\ (2*i));}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Actualizar\ potencia:}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ x\string^(2i+1)\ =\ x\string^(2i-\/1)\ *\ x\string^2}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ num\ *=\ (x\ *\ x);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Denominador\ del\ término:\ (2i\ +\ 1)\ */}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ den\ =\ (2*i\ +\ 1);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sumar\ término:\ (C\_i\ *\ x\string^(2i+1))\ /\ (2i+1)\ */}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ asx\ +=\ (\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ num\ /\ den);}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ printf(\textcolor{stringliteral}{"{}asen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ asx);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo017_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

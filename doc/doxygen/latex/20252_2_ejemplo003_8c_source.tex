@@ -1,0 +1,27 @@
+\doxysection{Ejemplo003.\+c}
+\hypertarget{20252_2_ejemplo003_8c_source}{}\label{20252_2_ejemplo003_8c_source}\index{src/20252/Ejemplo003.c@{src/20252/Ejemplo003.c}}
+\doxymbox{\hyperlink{20252_2_ejemplo003_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include<math.h>}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00004}\doxymbox{\hyperlink{20252_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97}{00004}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*argv[])}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b,\ c,\ x1r,\ x2r,\ x1i,\ x2i,\ r;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00007}00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ a:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00008}00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&a);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00009}00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ b:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00010}00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00011}00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ c:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00012}00012\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&c);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00013}00013\ \ \ \ \ r\ =\ b*b-\/4*a*c;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00014}00014\ \ \ \ \ x1r=(-\/b+(r>=0?sqrt(r):0))/(2*a);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00015}00015\ \ \ \ \ x2r=(-\/b-\/(r>=0?sqrt(r):0))/(2*a);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00016}00016\ \ \ \ \ x1i=(r>=0?0:sqrt(-\/r)/(2*a));}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00017}00017\ \ \ \ \ x2i=-\/x1i;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x1=\%.2f\%+.2fi\(\backslash\)n"{}},\ x1r,\ x1i);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00019}00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x2=\%.2f\%+.2fi\(\backslash\)n"{}},\ x2r,\ x2i);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo003_8c_source_l00021}00021\ \}}
+
+\end{DoxyCode}

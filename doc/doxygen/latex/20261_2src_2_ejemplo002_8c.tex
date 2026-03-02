@@ -1,0 +1,146 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo002.c File Reference}
+\hypertarget{20261_2src_2_ejemplo002_8c}{}\label{20261_2src_2_ejemplo002_8c}\index{src/20261/src/Ejemplo002.c@{src/20261/src/Ejemplo002.c}}
+
+
+Codificador de prioridad de interrupción para 4 dispositivos (D1..D4).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo002.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo002_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo002_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Implementa el codificador de prioridad 4→3 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Codificador de prioridad de interrupción para 4 dispositivos (D1..D4). 
+
+Se reciben 4 solicitudes de interrupción (una por dispositivo). La prioridad se asigna de manera que el dispositivo con número más bajo tiene mayor prioridad:\+ D1 \texorpdfstring{$>$}{>} D2 \texorpdfstring{$>$}{>} D3 \texorpdfstring{$>$}{>} D4.
+
+La salida es el número del dispositivo seleccionado codificado en binario (3 bits):\+
+\begin{DoxyItemize}
+\item Ninguno -\/\texorpdfstring{$>$}{>} 0 (000)
+\item D1 -\/\texorpdfstring{$>$}{>} 1 (001)
+\item D2 -\/\texorpdfstring{$>$}{>} 2 (010)
+\item D3 -\/\texorpdfstring{$>$}{>} 3 (011)
+\item D4 -\/\texorpdfstring{$>$}{>} 4 (100)
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada}
+Cuatro enteros (0/\+1) en este orden:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{D4\ D3\ D2\ D1}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Un renglón con:\+
+\begin{DoxyItemize}
+\item el valor decimal seleccionado (0..4)
+\item y los bits de salida (b2 b1 b0) solo como depuración.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Precondiciones}
+Las entradas deben ser booleanas (0 o 1) para que el comportamiento sea el esperado.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(1). Memoria:\+ O(1). 
+\end{DoxyParagraph}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo002_8c_source}{Ejemplo002.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo002_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo002_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo002.c@{Ejemplo002.c}!main@{main}}
+\index{main@{main}!Ejemplo002.c@{Ejemplo002.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo002_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Implementa el codificador de prioridad 4→3 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Cantidad de argumentos de línea de comandos (no se usa). \\
+\hline
+{\em argv} & Argumentos de línea de comandos (no se usa). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente; 1 si falla la lectura. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo002_8c_source_l00043}{43}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo002_8c_source}{Ejemplo002.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00046\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{/*\ Entradas:\ solicitud\ de\ interrupción\ por\ dispositivo\ (0/1).\ */}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ D4,\ D3,\ D2,\ D1;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{/*\ Bits\ de\ salida:\ b2\ b1\ b0\ (representan\ 0..4).\ */}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ b2,\ b1,\ b0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{/*\ Salida\ decimal\ equivalente\ a\ (b2\ b1\ b0).\ */}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ salida;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*\ Se\ leen\ las\ entradas\ en\ el\ orden:\ D4\ D3\ D2\ D1.\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (scanf(\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d"{}},\ \&D4,\ \&D3,\ \&D2,\ \&D1)\ !=\ 4)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ se\ esperaban\ 4\ valores\ (D4\ D3\ D2\ D1).\(\backslash\)n"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ Lógica\ de\ prioridad\ (D1\ mayor\ prioridad):}}
+\DoxyCodeLine{00065\ \textcolor{comment}{}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ Para\ “habilitar”\ un\ dispositivo\ de\ menor\ prioridad,\ se\ exige\ que\ NO\ haya}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ dispositivos\ de\ mayor\ prioridad\ activos.}}
+\DoxyCodeLine{00068\ \textcolor{comment}{}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ b2\ debe\ ser\ 1\ solo\ cuando\ gana\ D4\ (100):}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ b2\ =\ D4\ ·\ ¬D3\ ·\ ¬D2\ ·\ ¬D1}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00072\ \ \ \ \ b2\ =\ D4\ \&\&\ (!D3)\ \&\&\ (!D2)\ \&\&\ (!D1);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ b1\ es\ 1\ cuando\ la\ salida\ es\ 2\ (010)\ o\ 3\ (011):}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Para\ 3:\ D3\ ·\ ¬D2\ ·\ ¬D1}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Para\ 2:\ D2\ ·\ ¬D1}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ =>\ b1\ =\ (D3\ ·\ ¬D2\ ·\ ¬D1)\ +\ (D2\ ·\ ¬D1)}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \ \ b1\ =\ (D3\ \&\&\ (!D2)\ \&\&\ (!D1))\ ||\ (D2\ \&\&\ (!D1));}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ \ b0\ es\ 1\ cuando\ la\ salida\ es\ 1\ (001)\ o\ 3\ (011):}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Para\ 1:\ D1}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/\ Para\ 3:\ D3\ ·\ ¬D2\ ·\ ¬D1}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ \ =>\ b0\ =\ D1\ +\ (D3\ ·\ ¬D2\ ·\ ¬D1)}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00088\ \ \ \ \ b0\ =\ (D1)\ ||\ (D3\ \&\&\ (!D2)\ \&\&\ (!D1));}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{/*\ Convertir\ (b2\ b1\ b0)\ a\ decimal:\ salida\ =\ b2*4\ +\ b1*2\ +\ b0.\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ salida\ =\ (b2\ <<\ 2)\ |\ (b1\ <<\ 1)\ |\ b0;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Salida\ =\ \%d\ (\%1d\ \%1d\ \%1d)\(\backslash\)n"{}},\ salida,\ b2,\ b1,\ b0);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}

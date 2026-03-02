@@ -1,0 +1,137 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo013.c File Reference}
+\hypertarget{20261_2src_2_ejemplo013_8c}{}\label{20261_2src_2_ejemplo013_8c}\index{src/20261/src/Ejemplo013.c@{src/20261/src/Ejemplo013.c}}
+
+
+Aproximación de ln(x) con serie tipo atanh usando recurrencia entre términos.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo013.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo013_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo013_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de ln(x) con serie tipo atanh usando recurrencia entre términos. 
+
+Se usa la misma identidad que en Ejemplo012:\+ ln(x) = 2 \texorpdfstring{$\ast$}{*} sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{∞\} f\texorpdfstring{$^\wedge$}{\string^}\{2i+1\}/\+(2i+1), f = (x -\/ 1) /\+ (x + 1), x \texorpdfstring{$>$}{>} 0.
+
+A diferencia del Ejemplo012, aquí NO se recalcula la potencia desde cero. Se usa la recurrencia de términos:\+ t\+\_\+i = f\texorpdfstring{$^\wedge$}{\string^}\{2i+1\}/\+(2i+1) t\+\_\+\{i+1\} = t\+\_\+i \texorpdfstring{$\ast$}{*} f\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} (2i+1)/\+(2i+3)
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyItemize}
+\item Un entero n \texorpdfstring{$>$}{>}= 1.
+\item Un real x \texorpdfstring{$>$}{>} 0.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ln(x)\ =\ valor}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Precondiciones}
+
+\begin{DoxyItemize}
+\item x \texorpdfstring{$>$}{>} 0.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Converge más rápido cuando x está cerca de 1 (\texorpdfstring{$\vert$}{|}f\texorpdfstring{$\vert$}{|} pequeño). 
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo013_8c_source}{Ejemplo013.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo013_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo013_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo013.c@{Ejemplo013.c}!main@{main}}
+\index{main@{main}!Ejemplo013.c@{Ejemplo013.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo013_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo013_8c_source_l00037}{37}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo013_8c_source}{Ejemplo013.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00040\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ valor\ para\ ln(x)\ */}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ lnx;\ \ \ \ \ \ \textcolor{comment}{/*\ acumulador\ de\ la\ serie\ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \ \ \ \textcolor{comment}{/*\ f\ =\ (x-\/1)/(x+1)\ */}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ fct2;\ \ \ \ \ \textcolor{comment}{/*\ f\string^2\ */}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ suma;\ \ \ \ \ \textcolor{comment}{/*\ término\ actual\ t\_i\ =\ f\string^\{2i+1\}/(2i+1)\ */}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingres\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00053\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{/*\ Leer\ x\ >\ 0\ */}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00059\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (x\ <=\ 0);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ Inicialización:}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ f\ =\ (x-\/1)/(x+1)}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ f2\ =\ f\string^2}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ t0\ =\ f\string^(1)/1\ =\ f}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ lnx\ =\ 0}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ (x\ -\/\ 1)\ /\ (x\ +\ 1),\ lnx\ =\ 0,\ fct2\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ suma\ =\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ i\ <\ n;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ i++)}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Acumular\ término\ t\_i\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ lnx\ +=\ suma;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Actualizar\ al\ siguiente\ término:}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ t\_\{i+1\}\ =\ t\_i\ *\ f\string^2\ *\ (2i+1)/(2i+3)}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ (evita\ recalcular\ potencias\ desde\ cero)}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ suma\ *=\ (fct2\ *\ (2*i\ +\ 1))\ /\ (2*i\ +\ 3);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{/*\ ln(x)\ =\ 2\ *\ serie\ */}}
+\DoxyCodeLine{00084\ \ \ \ \ lnx\ *=\ 2;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ printf(\textcolor{stringliteral}{"{}ln(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ lnx);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo013_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

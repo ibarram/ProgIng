@@ -1,0 +1,103 @@
+\doxysection{src/\+20251/\+028\+\_\+\+Hamming.c File Reference}
+\hypertarget{028___hamming_8c}{}\label{028___hamming_8c}\index{src/20251/028\_Hamming.c@{src/20251/028\_Hamming.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for 028\+\_\+\+Hamming.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{028___hamming_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}~2048
+\item 
+\+\#define \doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{l2}}~log(2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{028___hamming_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{028___hamming_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}\index{028\_Hamming.c@{028\_Hamming.c}!l2@{l2}}
+\index{l2@{l2}!028\_Hamming.c@{028\_Hamming.c}}
+\doxysubsubsection{\texorpdfstring{l2}{l2}}
+{\footnotesize\ttfamily \label{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e} 
+\+\#define l2~log(2)}
+
+
+
+Definition at line \doxymbox{\hyperlink{028___hamming_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{028___hamming_8c_source}{028\+\_\+\+Hamming.\+c}}.
+
+\Hypertarget{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}\index{028\_Hamming.c@{028\_Hamming.c}!MC@{MC}}
+\index{MC@{MC}!028\_Hamming.c@{028\_Hamming.c}}
+\doxysubsubsection{\texorpdfstring{MC}{MC}}
+{\footnotesize\ttfamily \label{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d} 
+\+\#define MC~2048}
+
+
+
+Definition at line \doxymbox{\hyperlink{028___hamming_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{028___hamming_8c_source}{028\+\_\+\+Hamming.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{028___hamming_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{028___hamming_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{028\_Hamming.c@{028\_Hamming.c}!main@{main}}
+\index{main@{main}!028\_Hamming.c@{028\_Hamming.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{028___hamming_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{028___hamming_8c_source_l00007}{7}} of file \doxymbox{\hyperlink{028___hamming_8c_source}{028\+\_\+\+Hamming.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}\ str[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}],\ strP[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}];}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k,\ nc,\ nP;}
+\DoxyCodeLine{00011\ \ \ \ \ i=0;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ str[i++]\ =\ getc(stdin);}
+\DoxyCodeLine{00014\ \ \ \ \ \}\textcolor{keywordflow}{while}(str[i-\/1]!=10);}
+\DoxyCodeLine{00015\ \ \ \ \ str[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00016\ \ \ \ \ nc\ =\ i-\/1;}
+\DoxyCodeLine{00017\ \ \ \ \ nP\ =\ log(nc+log(nc)/\doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{l2}}+1)/\doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{l2}}+1;}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s(\%d,\ \%d)\(\backslash\)n"{}},\ str,\ nc,\ nP);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1,\ k=0;\ i<nc+nP;\ i++)}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i+1)!=j)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ str[k++];}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ j<<=1;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1;\ i<nP;\ i++)}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=j;\ k<=(nc+nP);\ k++)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((k-\/j)\%(2*j))<j)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strP[j-\/1]\string^=strP[k-\/1];}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ printf("{}\%d\(\backslash\)t"{},\ ((k-\/j)\%(2*j))<j);}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ \ printf("{}\(\backslash\)n"{});}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ j<<=1;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ strP[nc+nP]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc+nP;\ i++)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ strP[i]);}
+\DoxyCodeLine{00041\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strP);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{004\+\_\+rang\+Temp.\+c}
+\hypertarget{004__rang_temp_8c_source}{}\label{004__rang_temp_8c_source}\index{src/20251/004\_rangTemp.c@{src/20251/004\_rangTemp.c}}
+\doxymbox{\hyperlink{004__rang_temp_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00003}\doxymbox{\hyperlink{004__rang_temp_8c_a0ddf1224851353fc92bfbff6f499fa97}{00003}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{float}\ T1,\ T2,\ T3,\ T4,\ T;}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{int}\ B;}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00007}00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ los\ rangos\ de\ temperatura:\ "{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00008}00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f"{}},\ \&T1,\ \&T2,\ \&T3,\ \&T4);}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00009}00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ temperatura:\ "{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00010}00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&T);}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00011}00011\ \ \ \ \ B\ =\ ((T4>T)<<3)|((T3>T)<<2)|((T2>T)<<1)|(T1>T);}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00012}00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ B);}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{switch}(B)}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{case}\ 15:}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ Baja\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Baja\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Templada\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ Alta\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Alta"{}});}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{004__rang_temp_8c_source_l00031}00031\ \}}
+
+\end{DoxyCode}

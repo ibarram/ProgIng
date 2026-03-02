@@ -1,0 +1,70 @@
+\doxysection{025\+\_\+\+Cy\+N.\+c}
+\hypertarget{025___cy_n_8c_source}{}\label{025___cy_n_8c_source}\index{src/20251/025\_CyN.c@{src/20251/025\_CyN.c}}
+\doxymbox{\hyperlink{025___cy_n_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00006}\doxymbox{\hyperlink{025___cy_n_8c_a0240ac851181b84ac374872dc5434ee4}{00006}}\ \textcolor{preprocessor}{\#define\ N\ 10000}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00008}\doxymbox{\hyperlink{025___cy_n_8c_a0ddf1224851353fc92bfbff6f499fa97}{00008}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{float}\ X[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ xmin,\ xmax,\ xmed,\ xvar,\ xran;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ flag,\ flag\_e,\ flag\_n,\ flag\_c;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ muestra:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00015}00015\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00017}00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ le\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00019}00019\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}>\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}*=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}/=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00026}00026\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ X[i]\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00032}00032\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Normalización:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00033}00033\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&flag\_n);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00034}00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Centrado:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00035}00035\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&flag\_c);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00036}00036\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Estadistico:\ "{}});}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00037}00037\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&flag\_e);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00038}00038\ \ \ \ \ flag\ =\ ((flag\_c<<1)|flag\_n)<<(flag\_e<<1);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00039}00039\ \ \ \ \ printf(\textcolor{stringliteral}{"{}flag\ =\ \%d\(\backslash\)n"{}},\ flag);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{for}(xmin=X[0],\ xmax=X[0],\ xmed=X[0],\ xvar=X[0]*X[0],\ i=1;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(X[i]<xmin)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ xmin\ =\ X[i];}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(X[i]>xmax)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ xmax\ =\ X[i];}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ xmed\ +=\ X[i];}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ xvar\ +=\ X[i]*X[i];}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00049}00049\ \ \ \ \ xmed/=n;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00050}00050\ \ \ \ \ xvar/=n;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00051}00051\ \ \ \ \ xvar-\/=(xmed*xmed);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00052}00052\ \ \ \ \ xran=xmax-\/xmin;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}((flag\&1)|(flag\&4))}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ X[i]-\/=(flag\&4?xmed:xmin);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}((flag\&2)|(flag\&8))}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ X[i]/=(flag\&8?xvar:xran);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00059}00059\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Maximo:\ \%f\(\backslash\)nMinimo:\ \%f\(\backslash\)nMedia:\ \%f\(\backslash\)nVarianza:\ \%f\(\backslash\)n"{}},\ }
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ xmax,\ xmin,\ xmed,\ xvar);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ X[i]);}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{025___cy_n_8c_source_l00064}00064\ \}}
+
+\end{DoxyCode}

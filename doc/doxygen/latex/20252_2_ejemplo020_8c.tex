@@ -1,0 +1,97 @@
+\doxysection{src/\+20252/\+\+Ejemplo020.c File Reference}
+\hypertarget{20252_2_ejemplo020_8c}{}\label{20252_2_ejemplo020_8c}\index{src/20252/Ejemplo020.c@{src/20252/Ejemplo020.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo020.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo020_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo020_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~100
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo020_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo020_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{20252_2_ejemplo020_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20252_2_ejemplo020_8c_a52037c938e3c1b126c6277da5ca689d0}\index{Ejemplo020.c@{Ejemplo020.c}!M@{M}}
+\index{M@{M}!Ejemplo020.c@{Ejemplo020.c}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo020_8c_a52037c938e3c1b126c6277da5ca689d0} 
+\+\#define M~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source}{Ejemplo020.\+c}}.
+
+\Hypertarget{20252_2_ejemplo020_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo020.c@{Ejemplo020.c}!N@{N}}
+\index{N@{N}!Ejemplo020.c@{Ejemplo020.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo020_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source}{Ejemplo020.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo020_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo020_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo020.c@{Ejemplo020.c}!main@{main}}
+\index{main@{main}!Ejemplo020.c@{Ejemplo020.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo020_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{20252_2_ejemplo020_8c_source}{Ejemplo020.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ B[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ C[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}];}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ m,\ i,\ j;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ filas:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00013\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas:\ "{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&m);}
+\DoxyCodeLine{00017\ \ \ \ \ \}\textcolor{keywordflow}{while}(m<1||m>\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<m;\ j++)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&(A[i][j]));}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<m;\ j++)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}B[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&(B[i][j]));}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<m;\ j++)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ C[i][j]\ =\ A[i][j]\ +\ B[i][j];}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}C[\%d][\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ j+1,\ C[i][j]);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}

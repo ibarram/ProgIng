@@ -1,0 +1,79 @@
+\doxysection{src/\+20251/\+011\+\_\+seno.c File Reference}
+\hypertarget{011__seno_8c}{}\label{011__seno_8c}\index{src/20251/011\_seno.c@{src/20251/011\_seno.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 011\+\_\+seno.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{011__seno_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{011__seno_8c_a2750dfdda752269a036f487a4a34b849}{PI2}}~2\texorpdfstring{$\ast$}{*}3.\+1415926535897932
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{011__seno_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{011__seno_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{011__seno_8c_a2750dfdda752269a036f487a4a34b849}\index{011\_seno.c@{011\_seno.c}!PI2@{PI2}}
+\index{PI2@{PI2}!011\_seno.c@{011\_seno.c}}
+\doxysubsubsection{\texorpdfstring{PI2}{PI2}}
+{\footnotesize\ttfamily \label{011__seno_8c_a2750dfdda752269a036f487a4a34b849} 
+\+\#define PI2~2\texorpdfstring{$\ast$}{*}3.\+1415926535897932}
+
+
+
+Definition at line \doxymbox{\hyperlink{011__seno_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{011__seno_8c_source}{011\+\_\+seno.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{011__seno_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{011__seno_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{011\_seno.c@{011\_seno.c}!main@{main}}
+\index{main@{main}!011\_seno.c@{011\_seno.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{011__seno_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{011__seno_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{011__seno_8c_source}{011\+\_\+seno.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ sx,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i;}
+\DoxyCodeLine{00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00011\ \ \ \ \ x-\/=((int)(x/(\doxymbox{\hyperlink{011__seno_8c_a2750dfdda752269a036f487a4a34b849}{PI2}})))*\doxymbox{\hyperlink{011__seno_8c_a2750dfdda752269a036f487a4a34b849}{PI2}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00015\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ sx=0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}=x;\ i<n;\ i++)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ sx\ +=\ (1-\/2*(i\%2))*\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x/(2*i+2))*(x/(2*i+3));}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sin(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{011__seno_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

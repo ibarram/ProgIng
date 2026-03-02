@@ -1,0 +1,121 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo016.c File Reference}
+\hypertarget{20261_2src_2_ejemplo016_8c}{}\label{20261_2src_2_ejemplo016_8c}\index{src/20261/src/Ejemplo016.c@{src/20261/src/Ejemplo016.c}}
+
+
+Aproximación de sen(x) con Taylor usando recurrencia entre términos (O(n)).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo016.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo016_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo016_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de sen(x) con Taylor usando recurrencia entre términos (O(n)). 
+
+Serie:\+ sen(x) = sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{∞\} (-\/1)\texorpdfstring{$^\wedge$}{\string^}i \texorpdfstring{$\ast$}{*} x\texorpdfstring{$^\wedge$}{\string^}\{2i+1\} /\+ (2i+1)!
+
+Definimos el término positivo:\+ t\+\_\+i = x\texorpdfstring{$^\wedge$}{\string^}\{2i+1\} /\+ (2i+1)! con recurrencia:\+ t\+\_\+0 = x t\+\_\+\{i+1\} = t\+\_\+i \texorpdfstring{$\ast$}{*} (x\texorpdfstring{$^\wedge$}{\string^}2) /\+ \+[(2i+2)(2i+3)]\+
+
+Luego:\+ sen(x) ≈ sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{n-\/1\} (-\/1)\texorpdfstring{$^\wedge$}{\string^}i \texorpdfstring{$\ast$}{*} t\+\_\+i
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyItemize}
+\item Un entero n \texorpdfstring{$>$}{>}= 1.
+\item Un real x.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sen(x)\ =\ valor}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Es la versión más eficiente (respecto a Ejemplo014 y Ejemplo015) porque evita recalcular potencias/\+factoriales en cada término. 
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo016_8c_source}{Ejemplo016.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo016_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo016_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo016.c@{Ejemplo016.c}!main@{main}}
+\index{main@{main}!Ejemplo016.c@{Ejemplo016.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo016_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo016_8c_source_l00038}{38}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo016_8c_source}{Ejemplo016.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00041\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ signo;\ \ \ \textcolor{comment}{/*\ +1\ o\ -\/1\ alternando\ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ sx;\ \ \ \ \textcolor{comment}{/*\ acumulador\ */}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \textcolor{comment}{/*\ término\ positivo\ t\_i\ =\ x\string^(2i+1)/(2i+1)!\ */}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00052\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00055\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ Inicialización:}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ t0\ =\ x}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ sx\ =\ 0}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ En\ cada\ iteración:}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ sx\ +=\ (-\/1)\string^i\ *\ t\_i}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ t\_\{i+1\}\ =\ t\_i\ *\ (x\string^2)/[(2i+2)(2i+3)]}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ sx\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ x;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ signo\ =\ 1\ -\/\ 2*(i\ \%\ 2);\ \ \ \textcolor{comment}{/*\ +1\ si\ i\ par;\ -\/1\ si\ i\ impar\ */}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Actualizar\ al\ siguiente\ término\ positivo\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (2*i\ +\ 2))\ *\ (x\ /\ (2*i\ +\ 3));}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo016_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

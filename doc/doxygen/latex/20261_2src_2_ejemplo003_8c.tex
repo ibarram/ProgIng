@@ -1,0 +1,127 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo003.c File Reference}
+\hypertarget{20261_2src_2_ejemplo003_8c}{}\label{20261_2src_2_ejemplo003_8c}\index{src/20261/src/Ejemplo003.c@{src/20261/src/Ejemplo003.c}}
+
+
+Máximo número de Pokémon que pueden evolucionarse con venta de no evolucionados.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo003.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo003_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Calcula el máximo de evoluciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Máximo número de Pokémon que pueden evolucionarse con venta de no evolucionados. 
+
+Se tienen N Pokémon y M barras de dulce. Evolucionar un Pokémon cuesta X dulces. Vender un Pokémon NO evolucionado produce Y dulces. No se puede vender un Pokémon evolucionado. Se pide el máximo número de evoluciones posibles.
+
+Este código calcula una cota óptima usando la desigualdad:\+ M + (N -\/ P)·Y \texorpdfstring{$>$}{>}= P·X que se transforma en:\+ P \texorpdfstring{$<$}{<}= (M + N·Y) /\+ (X + Y) y finalmente P = min(N, floor((M + N·Y)/\+(X+Y))).
+
+\begin{DoxyParagraph}{Entrada}
+El enunciado indica:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ X\ Y}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+Este programa lee en el orden:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ X\ Y}
+
+\end{DoxyCode}
+ (intercambia N y M respecto al enunciado). Si vas a usar la entrada como está definida en el problema, ajusta el scanf o el orden de variables.
+\end{DoxyWarning}
+\begin{DoxyParagraph}{Salida}
+Un entero:\+ máximo número de Pokémon que se pueden evolucionar.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Restricciones}
+1 ≤ N, M, X, Y ≤ 1e9.
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Con límites de 1e9, productos como N\texorpdfstring{$\ast$}{*}Y pueden exceder 32 bits. Conviene usar tipos de 64 bits (long long) si se requiere robustez numérica.
+\end{DoxyNote}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(1). Memoria:\+ O(1). 
+\end{DoxyParagraph}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo003_8c_source}{Ejemplo003.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo003_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo003.c@{Ejemplo003.c}!main@{main}}
+\index{main@{main}!Ejemplo003.c@{Ejemplo003.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Calcula el máximo de evoluciones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo003_8c_source_l00052}{52}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo003_8c_source}{Ejemplo003.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00055\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ \ VARIABLES\ (según\ como\ ESTE\ código\ está\ leyendo\ la\ entrada):}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ M\ =\ cantidad\ de\ Pokémon\ capturados\ \ \ \ \ \ \ \ (enunciado\ lo\ llama\ N)}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ N\ =\ cantidad\ de\ barras\ de\ dulce\ (candies)\ (enunciado\ lo\ llama\ M)}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ X\ =\ costo\ en\ dulces\ para\ evolucionar\ 1\ Pokémon}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ Y\ =\ dulces\ que\ se\ ganan\ al\ vender\ 1\ Pokémon\ (NO\ evolucionado)}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ P\ =\ número\ máximo\ de\ Pokémon\ que\ se\ pueden\ evolucionar\ (respuesta)}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ X,\ Y,\ P;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{/*\ Lee:\ M\ N\ X\ Y\ (nota:\ el\ enunciado\ usualmente\ pide\ N\ M\ X\ Y).\ */}}
+\DoxyCodeLine{00068\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d"{}},\ \&\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ \&X,\ \&Y);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ Si\ evolucionamos\ P\ Pokémon\ y\ vendemos\ los\ (M\ -\/\ P)\ restantes:}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ dulces\ disponibles\ =\ N\ +\ (M\ -\/\ P)*Y}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ Requisito\ para\ evolucionar\ P:}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ N\ +\ (M\ -\/\ P)*Y\ >=\ P*X}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ =>\ N\ +\ M*Y\ >=\ P*(X\ +\ Y)}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ =>\ P\ <=\ floor((N\ +\ M*Y)/(X\ +\ Y))}}
+\DoxyCodeLine{00077\ \textcolor{comment}{}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ Además,\ P\ no\ puede\ ser\ mayor\ que\ M\ (no\ puedes\ evolucionar\ más\ Pokémon\ de\ los\ que\ tienes).}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \ \ P\ =\ (\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ +\ Y\ *\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}})\ /\ (X\ +\ Y);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{/*\ Imprime\ min(P,\ M).\ */}}
+\DoxyCodeLine{00083\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ P\ >\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ ?\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ :\ P);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}

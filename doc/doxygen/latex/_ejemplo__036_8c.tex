@@ -1,0 +1,86 @@
+\doxysection{src/\+20251/\+\+Ejemplo\+\_\+036.c File Reference}
+\hypertarget{_ejemplo__036_8c}{}\label{_ejemplo__036_8c}\index{src/20251/Ejemplo\_036.c@{src/20251/Ejemplo\_036.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo\+\_\+036.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{_ejemplo__036_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo__036_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo__036_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo__036_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{Ejemplo\_036.c@{Ejemplo\_036.c}!main@{main}}
+\index{main@{main}!Ejemplo\_036.c@{Ejemplo\_036.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo__036_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo__036_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{_ejemplo__036_8c_source}{Ejemplo\+\_\+036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ **A,\ **B,\ **C,\ *pA,\ *pC;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ nA,\ mA,\ nB,\ mB,\ i,\ j,\ k;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ A:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nA);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numro\ de\ renglones\ de\ A:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&mA);}
+\DoxyCodeLine{00013\ \ \ \ \ \}\textcolor{keywordflow}{while}(nA<1||mA<1);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ B:\ "{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nB);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numro\ de\ renglones\ de\ B:\ "{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&mB);}
+\DoxyCodeLine{00019\ \ \ \ \ \}\textcolor{keywordflow}{while}(nB<1||mB<1||nB!=mA);}
+\DoxyCodeLine{00020\ \ \ \ \ pA\ =\ (\textcolor{keywordtype}{float}*)malloc(nA*mA*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}(pA==NULL)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00023\ \ \ \ \ A\ =\ (\textcolor{keywordtype}{float}**)malloc(nA*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}(A==NULL)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ free(pA);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nA;\ i++)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ A[0]\ =\ pA+i*mA;}
+\DoxyCodeLine{00031\ \ \ \ \ B\ =\ (\textcolor{keywordtype}{float}**)malloc(nB*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}(B==NULL)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ free(pA);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ free(A);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nB;\ i++)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ B[i]\ =\ (\textcolor{keywordtype}{float}*)malloc(mB*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(B[i]==\ NULL)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ free(pA);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ free(A);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(-\/-\/i;\ i>-\/1;\ i-\/-\/)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(B[i]);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ free(B);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ free(B);}
+\DoxyCodeLine{00052\ \ \ \ \ free(pA);}
+\DoxyCodeLine{00053\ \ \ \ \ free(A);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}

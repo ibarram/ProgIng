@@ -1,0 +1,126 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo005.c File Reference}
+\hypertarget{20261_2src_2_ejemplo005_8c}{}\label{20261_2src_2_ejemplo005_8c}\index{src/20261/src/Ejemplo005.c@{src/20261/src/Ejemplo005.c}}
+
+
+Solución de la ecuación cuadrática con raíces reales o complejas.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo005.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo005_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Calcula y muestra raíces (reales o complejas). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Solución de la ecuación cuadrática con raíces reales o complejas. 
+
+Resuelve:\+ a x\texorpdfstring{$^\wedge$}{\string^}2 + b x + c = 0 usando el discriminante:\+ Δ = b\texorpdfstring{$^\wedge$}{\string^}2 -\/ 4ac
+
+Casos:\+
+\begin{DoxyItemize}
+\item Δ \texorpdfstring{$>$}{>} 0:\+ dos raíces reales distintas
+\item Δ = 0:\+ una raíz real doble
+\item Δ \texorpdfstring{$<$}{<} 0:\+ dos raíces complejas conjugadas
+\end{DoxyItemize}
+
+Para Δ \texorpdfstring{$<$}{<} 0:\+ sqrt(Δ) = i\texorpdfstring{$\ast$}{*}sqrt(-\/Δ) y las raíces se expresan como:\+ x = (-\/b ± i\texorpdfstring{$\ast$}{*}sqrt(-\/Δ)) /\+ (2a)
+
+\begin{DoxyParagraph}{Entrada}
+Tres valores float, leídos por consola (a, b, c).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime las dos raíces en forma:\+ x = real + imag\texorpdfstring{$\ast$}{*}i
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+Si a = 0 la ecuación no es cuadrática; este programa divide entre (2a).
+\end{DoxyWarning}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(1). Memoria:\+ O(1). 
+\end{DoxyParagraph}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c_source}{Ejemplo005.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo005_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo005.c@{Ejemplo005.c}!main@{main}}
+\index{main@{main}!Ejemplo005.c@{Ejemplo005.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Calcula y muestra raíces (reales o complejas). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c_source_l00044}{44}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c_source}{Ejemplo005.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00047\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b,\ c;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ coeficientes\ */}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ r;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ discriminante\ Δ\ */}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ x1r,\ x1i,\ x2r,\ x2i;\ \textcolor{comment}{/*\ partes\ real/imag\ de\ cada\ raíz\ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ cuadratico:\ "{}});}
+\DoxyCodeLine{00054\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&a);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ lineal:\ "{}});}
+\DoxyCodeLine{00057\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ independiente:\ "{}});}
+\DoxyCodeLine{00060\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&c);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{/*\ Δ\ =\ b\string^2\ -\/\ 4ac\ */}}
+\DoxyCodeLine{00063\ \ \ \ \ r\ =\ b*b\ -\/\ 4*a*c;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ Para\ Δ\ >=\ 0:}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ x1\ =\ (-\/b\ +\ sqrt(Δ))\ /\ (2a),\ parte\ imaginaria\ 0}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ x2\ =\ (-\/b\ -\/\ sqrt(Δ))\ /\ (2a),\ parte\ imaginaria\ 0}}
+\DoxyCodeLine{00069\ \textcolor{comment}{}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ Para\ Δ\ <\ 0:}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ parte\ real:\ (-\/b)/(2a)}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ parte\ imag:\ ±\ sqrt(-\/Δ)/(2a)}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00074\ \ \ \ \ x1r\ =\ (-\/b\ +\ (r\ >=\ 0\ ?\ sqrt(r)\ :\ 0))\ /\ (2*a);}
+\DoxyCodeLine{00075\ \ \ \ \ x1i\ =\ (r\ >=\ 0\ ?\ 0\ :\ sqrt(-\/r)\ /\ (2*a));}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ x2r\ =\ (-\/b\ -\/\ (r\ >=\ 0\ ?\ sqrt(r)\ :\ 0))\ /\ (2*a);}
+\DoxyCodeLine{00078\ \ \ \ \ x2i\ =\ (r\ >=\ 0\ ?\ 0\ :\ -\/x1i);\ \textcolor{comment}{/*\ conjugada\ */}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x1\ =\ \%.4f\%+.4fi\(\backslash\)n"{}},\ x1r,\ x1i);}
+\DoxyCodeLine{00081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x2\ =\ \%.4f\%+.4fi\(\backslash\)n"{}},\ x2r,\ x2i);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

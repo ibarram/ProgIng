@@ -1,0 +1,52 @@
+\doxysection{src/\+20251/\+003\+\_\+cuadratica.c File Reference}
+\hypertarget{003__cuadratica_8c}{}\label{003__cuadratica_8c}\index{src/20251/003\_cuadratica.c@{src/20251/003\_cuadratica.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for 003\+\_\+cuadratica.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{003__cuadratica_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{003__cuadratica_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{003__cuadratica_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{003__cuadratica_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{003\_cuadratica.c@{003\_cuadratica.c}!main@{main}}
+\index{main@{main}!003\_cuadratica.c@{003\_cuadratica.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{003__cuadratica_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{003__cuadratica_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{003__cuadratica_8c_source}{003\+\_\+cuadratica.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b,\ c,\ x1r,\ x1i,\ x2r,\ x2i,\ r;}
+\DoxyCodeLine{00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ cuadratico:\ "{}});}
+\DoxyCodeLine{00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&a);}
+\DoxyCodeLine{00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ lineal:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b);}
+\DoxyCodeLine{00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ independiente:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&c);}
+\DoxyCodeLine{00013\ \ \ \ \ r\ =\ b*b-\/4*a*c;}
+\DoxyCodeLine{00014\ \ \ \ \ x1r\ =\ (-\/b+(r>=0?sqrt(r):0))/(2*a);}
+\DoxyCodeLine{00015\ \ \ \ \ x1i\ =\ r>=0?0:sqrt(-\/r)/(2*a);}
+\DoxyCodeLine{00016\ \ \ \ \ x2r\ =\ (-\/b+(r>=0?-\/sqrt(r):0))/(2*a);}
+\DoxyCodeLine{00017\ \ \ \ \ x2i\ =\ r>=0?0:-\/sqrt(-\/r)/(2*a);}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}X1\ =\ \%f\%+fi\(\backslash\)n"{}},\ x1r,\ x1i);}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}X2\ =\ \%f\%+fi\(\backslash\)n"{}},\ x2r,\ x2i);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}

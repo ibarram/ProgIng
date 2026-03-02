@@ -1,0 +1,52 @@
+\doxysection{src/\+20252/\+\+Ejemplo003.c File Reference}
+\hypertarget{20252_2_ejemplo003_8c}{}\label{20252_2_ejemplo003_8c}\index{src/20252/Ejemplo003.c@{src/20252/Ejemplo003.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo003.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo003_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo003_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo003.c@{Ejemplo003.c}!main@{main}}
+\index{main@{main}!Ejemplo003.c@{Ejemplo003.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo003_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo003_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{20252_2_ejemplo003_8c_source}{Ejemplo003.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b,\ c,\ x1r,\ x2r,\ x1i,\ x2i,\ r;}
+\DoxyCodeLine{00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ a:\ "{}});}
+\DoxyCodeLine{00008\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&a);}
+\DoxyCodeLine{00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ b:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b);}
+\DoxyCodeLine{00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ c:\ "{}});}
+\DoxyCodeLine{00012\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&c);}
+\DoxyCodeLine{00013\ \ \ \ \ r\ =\ b*b-\/4*a*c;}
+\DoxyCodeLine{00014\ \ \ \ \ x1r=(-\/b+(r>=0?sqrt(r):0))/(2*a);}
+\DoxyCodeLine{00015\ \ \ \ \ x2r=(-\/b-\/(r>=0?sqrt(r):0))/(2*a);}
+\DoxyCodeLine{00016\ \ \ \ \ x1i=(r>=0?0:sqrt(-\/r)/(2*a));}
+\DoxyCodeLine{00017\ \ \ \ \ x2i=-\/x1i;}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x1=\%.2f\%+.2fi\(\backslash\)n"{}},\ x1r,\ x1i);}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x2=\%.2f\%+.2fi\(\backslash\)n"{}},\ x2r,\ x2i);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}

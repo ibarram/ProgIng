@@ -1,0 +1,141 @@
+\doxysection{src/\+20252/\+\+Ejemplo045.c File Reference}
+\hypertarget{_ejemplo045_8c}{}\label{_ejemplo045_8c}\index{src/20252/Ejemplo045.c@{src/20252/Ejemplo045.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo045.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo045_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo045_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo045_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_ejemplo045_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_ejemplo045_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo045.c@{Ejemplo045.c}!N@{N}}
+\index{N@{N}!Ejemplo045.c@{Ejemplo045.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{_ejemplo045_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~50}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo045_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{_ejemplo045_8c_source}{Ejemplo045.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo045_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo045_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo045.c@{Ejemplo045.c}!main@{main}}
+\index{main@{main}!Ejemplo045.c@{Ejemplo045.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo045_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo045_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{_ejemplo045_8c_source}{Ejemplo045.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}]\ =\ \textcolor{stringliteral}{"{}full\_data.csv"{}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}\ *str;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{char}\ c;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ nc,\ nl,\ *ln,\ *Ceremony,\ *Year;}
+\DoxyCodeLine{00012\ \ \ \ \ FILE\ *fp;}
+\DoxyCodeLine{00013\ \ \ \ \ fp\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}rt"{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ al\ leer\ el\ archivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//fscanf(fp,\ "{}\%s"{},\ str);}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ for(i=0;\ i<10;\ i++)}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ fgets(str,\ NC-\/1,\ fp);}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ printf("{}\%s"{},\ str);}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00027\ \ \ \ \ j=0;}
+\DoxyCodeLine{00028\ \ \ \ \ i=0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{while}((c=fgetc(fp))!=EOF)}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c==10)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ nl\ =\ i;}
+\DoxyCodeLine{00036\ \ \ \ \ nc\ =\ j;}
+\DoxyCodeLine{00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Num\ L:\ \%d\(\backslash\)n"{}},\ nl);}
+\DoxyCodeLine{00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Num\ C:\ \%d\(\backslash\)n"{}},\ nc);}
+\DoxyCodeLine{00039\ \ \ \ \ str\ =\ (\textcolor{keywordtype}{char}*)malloc((nc+1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}(str==NULL)}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ ln\ =\ (\textcolor{keywordtype}{int}*)calloc(nl,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}(ln==NULL)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ fseek(fp,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1;\ i<nc;\ i++)}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ str[i]\ =\ getc(fp);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(str[i]==10)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ ln[j++]\ =\ i+1;}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ str[i]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00060\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<nl;\ i++)}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ str[ln[i]-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00063\ \ \ \ \ Ceremony\ =\ (\textcolor{keywordtype}{int}*)malloc((nl-\/1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}(Ceremony==NULL)}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ free(ln);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ Year\ =\ (\textcolor{keywordtype}{int}*)malloc((nl-\/1)*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}(Year==NULL)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ free(Ceremony);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ free(ln);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ free(str);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00077\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<nl;\ i++)}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ Ceremony[i-\/1]\ =\ atoi(str+ln[i]);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ j=0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(str[ln[i]+j]!=9)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ Year[i-\/1]\ =\ atoi(str+ln[i]+j+1);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%d\(\backslash\)t\%d\(\backslash\)n"{}},\ i,\ Ceremony[i-\/1],\ Year[i-\/1]);}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ free(Year);}
+\DoxyCodeLine{00088\ \ \ \ \ free(Ceremony);}
+\DoxyCodeLine{00089\ \ \ \ \ free(ln);}
+\DoxyCodeLine{00090\ \ \ \ \ free(str);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}

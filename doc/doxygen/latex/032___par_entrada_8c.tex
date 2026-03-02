@@ -1,0 +1,124 @@
+\doxysection{src/\+20251/\+032\+\_\+\+Par\+Entrada.c File Reference}
+\hypertarget{032___par_entrada_8c}{}\label{032___par_entrada_8c}\index{src/20251/032\_ParEntrada.c@{src/20251/032\_ParEntrada.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 032\+\_\+\+Par\+Entrada.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{032___par_entrada_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{032___par_entrada_8c_aecd6dd5ef59eb63bafa51bd24885788a}{str2int}} (char str\+[$\,$]\+)
+\item 
+float \doxymbox{\hyperlink{032___par_entrada_8c_acb9c030c74798a489dbc6e5aee1f34ba}{str2float}} (char str\+[$\,$]\+)
+\item 
+int \doxymbox{\hyperlink{032___par_entrada_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{032___par_entrada_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{032___par_entrada_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{032\_ParEntrada.c@{032\_ParEntrada.c}!main@{main}}
+\index{main@{main}!032\_ParEntrada.c@{032\_ParEntrada.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{032___par_entrada_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{032___par_entrada_8c_source_l00034}{34}} of file \doxymbox{\hyperlink{032___par_entrada_8c_source}{032\+\_\+\+Par\+Entrada.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ s,\ d;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}(argc==1)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Uso:\ \%s\ A\ B\(\backslash\)n"{}},\ argv[0]);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{for}(i=1,\ s=0;\ i<argc;\ i++)}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ d\ =\ \doxymbox{\hyperlink{032___par_entrada_8c_acb9c030c74798a489dbc6e5aee1f34ba}{str2float}}(argv[i]);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ s\ +=\ d;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d-\/>\ \%f\(\backslash\)t\%f\(\backslash\)n"{}},\ i,\ d,\ s);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Suma\ =\ \%f\(\backslash\)n"{}},\ s);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{032___par_entrada_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{032___par_entrada_8c_acb9c030c74798a489dbc6e5aee1f34ba}\index{032\_ParEntrada.c@{032\_ParEntrada.c}!str2float@{str2float}}
+\index{str2float@{str2float}!032\_ParEntrada.c@{032\_ParEntrada.c}}
+\doxysubsubsection{\texorpdfstring{str2float()}{str2float()}}
+{\footnotesize\ttfamily \label{032___par_entrada_8c_acb9c030c74798a489dbc6e5aee1f34ba} 
+float str2float (\begin{DoxyParamCaption}\item[{char}]{str}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{032___par_entrada_8c_source_l00015}{15}} of file \doxymbox{\hyperlink{032___par_entrada_8c_source}{032\+\_\+\+Par\+Entrada.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ num\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ str[0]==\textcolor{charliteral}{'-\/'}?1:0,\ p10=10;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{while}(str[i]>=\textcolor{charliteral}{'0'}\&\&str[i]<=\textcolor{charliteral}{'9'})}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ num\ *=\ 10;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ num\ +=\ (str[i++]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}(str[i++]!=\textcolor{charliteral}{'.'})}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ str[0]==\textcolor{charliteral}{'-\/'}?-\/num:num;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{while}(str[i]>=\textcolor{charliteral}{'0'}\&\&str[i]<=\textcolor{charliteral}{'9'})}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ num\ +=\ (str[i++]-\/\textcolor{charliteral}{'0'})/((\textcolor{keywordtype}{float})p10);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ p10\ *=\ 10;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ str[0]==\textcolor{charliteral}{'-\/'}?-\/num:num;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{032___par_entrada_8c_acb9c030c74798a489dbc6e5aee1f34ba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{032___par_entrada_8c_aecd6dd5ef59eb63bafa51bd24885788a}\index{032\_ParEntrada.c@{032\_ParEntrada.c}!str2int@{str2int}}
+\index{str2int@{str2int}!032\_ParEntrada.c@{032\_ParEntrada.c}}
+\doxysubsubsection{\texorpdfstring{str2int()}{str2int()}}
+{\footnotesize\ttfamily \label{032___par_entrada_8c_aecd6dd5ef59eb63bafa51bd24885788a} 
+int str2int (\begin{DoxyParamCaption}\item[{char}]{str}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{032___par_entrada_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{032___par_entrada_8c_source}{032\+\_\+\+Par\+Entrada.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ 0;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ str[0]==\textcolor{charliteral}{'-\/'}?1:0;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordflow}{while}(str[i]>=\textcolor{charliteral}{'0'}\&\&str[i]<=\textcolor{charliteral}{'9'})}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ num\ *=\ 10;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ num\ +=\ (str[i++]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{00011\ \ \ \ \ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ str[0]==\textcolor{charliteral}{'-\/'}?-\/num:num;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}

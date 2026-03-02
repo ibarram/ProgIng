@@ -1,0 +1,60 @@
+\doxysection{Ejemplo012.\+c}
+\hypertarget{20261_2src_2_ejemplo012_8c_source}{}\label{20261_2src_2_ejemplo012_8c_source}\index{src/20261/src/Ejemplo012.c@{src/20261/src/Ejemplo012.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo012_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00039}00039\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00041}\doxymbox{\hyperlink{20261_2src_2_ejemplo012_8c_a0ddf1224851353fc92bfbff6f499fa97}{00041}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00043}00043\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00044}00044\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{int}\ den;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ denominador\ impar:\ 1,3,5,...\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ valor\ para\ evaluar\ ln(x)\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{float}\ lnx;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ acumulador\ de\ la\ serie\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ f\ =\ (x-\/1)/(x+1)\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{float}\ num;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ potencia:\ f\string^\{den\}\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingres\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00057}00057\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00059}00059\ \ \ \ \ \textcolor{comment}{/*\ Leer\ x\ >\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00063}00063\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (x\ <=\ 0);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00065}00065\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ f\ =\ (x\ -\/\ 1)\ /\ (x\ +\ 1)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ y\ la\ serie\ es:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ ln(x)\ =\ 2\ *\ sum\_\{i=0\}\string^\{n-\/1\}\ f\string^\{2i+1\}/(2i+1)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00069}00069\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ (x\ -\/\ 1)\ /\ (x\ +\ 1),\ lnx\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ den\ =\ 2*i\ +\ 1;\ \ \textcolor{comment}{/*\ 1,\ 3,\ 5,\ ...\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Calcular\ num\ =\ fct\string^den\ multiplicando\ fct\ den\ veces:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ num\ =\ fct\ *\ fct\ *\ ...\ *\ fct\ \ (den\ factores)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ num\ =\ 1;\ j\ <\ den;\ j++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sumar\ el\ término:\ f\string^\{den\}/den\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ lnx\ +=\ num\ /\ den;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00085}00085\ \ \ \ \ \textcolor{comment}{/*\ Multiplicar\ por\ 2\ según\ la\ identidad\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00086}00086\ \ \ \ \ lnx\ *=\ 2;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00088}00088\ \ \ \ \ printf(\textcolor{stringliteral}{"{}ln(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ lnx);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo012_8c_source_l00090}00090\ \}}
+
+\end{DoxyCode}

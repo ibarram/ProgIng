@@ -1,0 +1,55 @@
+\doxysection{src/\+20252/\+\+Ejemplo009.c File Reference}
+\hypertarget{20252_2_ejemplo009_8c}{}\label{20252_2_ejemplo009_8c}\index{src/20252/Ejemplo009.c@{src/20252/Ejemplo009.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo009.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo009_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo009_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo009.c@{Ejemplo009.c}!main@{main}}
+\index{main@{main}!Ejemplo009.c@{Ejemplo009.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo009_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo009_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo009_8c_source}{Ejemplo009.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n,\ s;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{long}\ den;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ sx,\ num;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00011\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00013\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ num=x,\ den=1,\ sx=0;\ i<n;\ i++)}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ s\ =\ 1-\/2*(i\%2);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ sx\ +=\ (s*num/den);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//printf("{}\%d.\ \%d\ \%f\ \%ld\ \%f\(\backslash\)n"{},\ i,\ s,\ num,\ den,\ sx);}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ num*=(x*x);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ den*=((2*i+2)*(2*i+3));}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sin(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

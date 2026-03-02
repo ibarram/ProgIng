@@ -1,0 +1,30 @@
+\doxysection{Ejemplo042.\+c}
+\hypertarget{_ejemplo042_8c_source}{}\label{_ejemplo042_8c_source}\index{src/20252/Ejemplo042.c@{src/20252/Ejemplo042.c}}
+\doxymbox{\hyperlink{_ejemplo042_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00004}\doxymbox{\hyperlink{_ejemplo042_8c_a0240ac851181b84ac374872dc5434ee4}{00004}}\ \textcolor{preprocessor}{\#define\ N\ 50}}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00006}\doxymbox{\hyperlink{_ejemplo042_8c_a0ddf1224851353fc92bfbff6f499fa97}{00006}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00009}00009\ \ \ \ \ FILE\ *fp;}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00011}00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ n:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00012}00012\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}(argc==2)}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ strcpy(filename,\ argv[1]);}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ strcpy(filename,\ \textcolor{stringliteral}{"{}Prueba.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00017}00017\ \ \ \ \ fp\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}wt"{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ i+1);}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00022}00022\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo042_8c_source_l00024}00024\ \}}
+
+\end{DoxyCode}

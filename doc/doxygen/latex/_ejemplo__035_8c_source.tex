@@ -1,0 +1,46 @@
+\doxysection{Ejemplo\+\_\+035.\+c}
+\hypertarget{_ejemplo__035_8c_source}{}\label{_ejemplo__035_8c_source}\index{src/20251/Ejemplo\_035.c@{src/20251/Ejemplo\_035.c}}
+\doxymbox{\hyperlink{_ejemplo__035_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include<time.h>}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00005}\doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{00005}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}}(\textcolor{keywordtype}{float}\ *X,\ \textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{return}\ n?X[0]+\doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}}(X+1,n-\/1):0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00010}\doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{00010}}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}(\textcolor{keywordtype}{float}\ *X,\ \textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a44f2b2d1e708be5a883f08704fffd99e}{sumar}}(X,\ n)/n;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00015}\doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{00015}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ m,\ i;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{float}\ *A;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00019}00019\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00023}00023\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ muestras:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&m);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00027}00027\ \ \ \ \ \}\textcolor{keywordflow}{while}(m<1||m>n);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00028}00028\ \ \ \ \ A\ =\ (\textcolor{keywordtype}{float}*)malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}(A==NULL)}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ A[i]\ =\ (1.0*rand())/RAND\_MAX;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d]\ =\ \%f\(\backslash\)t\%p\(\backslash\)n"{}},\ i+1,\ A[i],\ A+i);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n-\/m;\ i++)}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}u(\%d)\ =\ \%f\(\backslash\)n"{}},\ i+1,\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}(A+i,\ m));}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00038}00038\ \ \ \ \ free(A);}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_ejemplo__035_8c_source_l00040}00040\ \}}
+
+\end{DoxyCode}

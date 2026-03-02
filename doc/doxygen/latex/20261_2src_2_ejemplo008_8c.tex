@@ -1,0 +1,115 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo008.c File Reference}
+\hypertarget{20261_2src_2_ejemplo008_8c}{}\label{20261_2src_2_ejemplo008_8c}\index{src/20261/src/Ejemplo008.c@{src/20261/src/Ejemplo008.c}}
+
+
+Aproximación de π mediante la serie de Leibniz.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo008.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo008_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Calcula una aproximación de π con n términos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de π mediante la serie de Leibniz. 
+
+Usa la serie:\+ π/\+4 = 1 -\/ 1/\+3 + 1/\+5 -\/ 1/\+7 + ...
+
+Con n términos:\+ π ≈ 4 \texorpdfstring{$\ast$}{*} sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{n-\/1\} (-\/1)\texorpdfstring{$^\wedge$}{\string^}i /\+ (2i+1)
+
+\begin{DoxyParagraph}{Entrada}
+Un entero n \texorpdfstring{$>$}{>}= 1 (número de términos).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime el valor aproximado:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PI\ =\ <valor>}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+La convergencia es lenta:\+ para obtener muchos decimales se requieren muchos términos. 
+\end{DoxyNote}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo008_8c_source}{Ejemplo008.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo008_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo008.c@{Ejemplo008.c}!main@{main}}
+\index{main@{main}!Ejemplo008.c@{Ejemplo008.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Calcula una aproximación de π con n términos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & No usado. \\
+\hline
+{\em argv} & No usado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si finaliza correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo008_8c_source_l00036}{36}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo008_8c_source}{Ejemplo008.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00039\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ pi;\ \ \ \ \ \textcolor{comment}{/*\ acumulador\ para\ π\ */}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;\ \ \ \ \ \textcolor{comment}{/*\ i:\ índice;\ n:\ términos\ */}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ den;\ \ \ \ \ \ \textcolor{comment}{/*\ denominador\ (2i+1)\ */}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ signo;\ \ \ \ \textcolor{comment}{/*\ +1\ o\ -\/1\ alternando\ */}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{/*\ Validar\ n\ >=\ 1\ */}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00050\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ Inicialización:}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ i\ =\ 0}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ pi\ =\ 0\ (acumulador\ de\ π/4\ antes\ de\ multiplicar\ por\ 4)}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ pi\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ den\ =\ 2*i\ +\ 1;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 1,\ 3,\ 5,\ 7,\ ...\ */}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ signo\ =\ 1\ -\/\ 2*(i\ \%\ 2);\ \ \ \textcolor{comment}{/*\ i\ par\ -\/>\ +1,\ i\ impar\ -\/>\ -\/1\ */}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ pi\ +=\ (signo\ *\ 1.0f\ /\ den);}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ pi\ *=\ 4;\ \textcolor{comment}{/*\ π\ =\ 4*(π/4)\ */}}
+\DoxyCodeLine{00065\ \ \ \ \ printf(\textcolor{stringliteral}{"{}PI\ =\ \%f\(\backslash\)n"{}},\ pi);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}

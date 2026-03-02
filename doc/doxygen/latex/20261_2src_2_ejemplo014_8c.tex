@@ -1,0 +1,121 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo014.c File Reference}
+\hypertarget{20261_2src_2_ejemplo014_8c}{}\label{20261_2src_2_ejemplo014_8c}\index{src/20261/src/Ejemplo014.c@{src/20261/src/Ejemplo014.c}}
+
+
+Aproximación de sen(x) con serie de Taylor calculando potencia y factorial desde cero.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo014.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo014_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo014_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aproximación de sen(x) con serie de Taylor calculando potencia y factorial desde cero. 
+
+Serie de Taylor:\+ sen(x) = sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{∞\} (-\/1)\texorpdfstring{$^\wedge$}{\string^}i \texorpdfstring{$\ast$}{*} x\texorpdfstring{$^\wedge$}{\string^}\{2i+1\} /\+ (2i+1)!
+
+Este programa aproxima con n términos:\+ sen(x) ≈ sum\+\_\+\{i=0\}\texorpdfstring{$^\wedge$}{\string^}\{n-\/1\} (-\/1)\texorpdfstring{$^\wedge$}{\string^}i \texorpdfstring{$\ast$}{*} x\texorpdfstring{$^\wedge$}{\string^}\{2i+1\} /\+ (2i+1)!
+
+Implementación:\+
+\begin{DoxyItemize}
+\item Para cada i calcula num = x\texorpdfstring{$^\wedge$}{\string^}\{2i+1\} y den = (2i+1)! con un ciclo interno.
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyItemize}
+\item Un entero n \texorpdfstring{$>$}{>}= 1.
+\item Un real x.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sen(x)\ =\ valor}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2). Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+Para \texorpdfstring{$\vert$}{|}x\texorpdfstring{$\vert$}{|} grande, puede haber pérdida de precisión (no se hace reducción de rango). Además, el factorial crece rápido (aquí se guarda en int). 
+\end{DoxyWarning}
+
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo014_8c_source}{Ejemplo014.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo014_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo014_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo014.c@{Ejemplo014.c}!main@{main}}
+\index{main@{main}!Ejemplo014.c@{Ejemplo014.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo014_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo014_8c_source_l00035}{35}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo014_8c_source}{Ejemplo014.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00038\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ den;\ \ \ \ \ \ \ \textcolor{comment}{/*\ (2i+1)!\ */}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ signo;\ \ \ \ \ \textcolor{comment}{/*\ +1\ o\ -\/1\ */}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ sx;\ \ \ \ \ \ \textcolor{comment}{/*\ acumulador\ de\ sen(x)\ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ num;\ \ \ \ \ \textcolor{comment}{/*\ x\string^(2i+1)\ */}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00050\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00053\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ sx\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ signo\ =\ +1\ si\ i\ par,\ -\/1\ si\ i\ impar\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ signo\ =\ 1\ -\/\ 2*(i\ \%\ 2);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Calcular:}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ num\ =\ x\string^(2i+1)}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ den\ =\ (2i+1)!}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ multiplicando\ desde\ cero\ en\ cada\ término.}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ num\ =\ 1,\ den\ =\ 1;\ j\ <\ (2*i\ +\ 1);\ j++)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ x;\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ acumula\ potencia\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ den\ *=\ (j\ +\ 1);\ \ \textcolor{comment}{/*\ acumula\ factorial\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sumar\ el\ término:\ (-\/1)\string^i\ *\ num/den\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ num\ /\ den);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}

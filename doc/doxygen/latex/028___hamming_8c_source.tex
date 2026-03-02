@@ -1,0 +1,49 @@
+\doxysection{028\+\_\+\+Hamming.\+c}
+\hypertarget{028___hamming_8c_source}{}\label{028___hamming_8c_source}\index{src/20251/028\_Hamming.c@{src/20251/028\_Hamming.c}}
+\doxymbox{\hyperlink{028___hamming_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00004}\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{00004}}\ \textcolor{preprocessor}{\#define\ MC\ 2048}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00005}\doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{00005}}\ \textcolor{preprocessor}{\#define\ l2\ log(2)}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00007}\doxymbox{\hyperlink{028___hamming_8c_a0ddf1224851353fc92bfbff6f499fa97}{00007}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{char}\ str[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}],\ strP[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}];}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k,\ nc,\ nP;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00011}00011\ \ \ \ \ i=0;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ str[i++]\ =\ getc(stdin);}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00014}00014\ \ \ \ \ \}\textcolor{keywordflow}{while}(str[i-\/1]!=10);}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00015}00015\ \ \ \ \ str[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00016}00016\ \ \ \ \ nc\ =\ i-\/1;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00017}00017\ \ \ \ \ nP\ =\ log(nc+log(nc)/\doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{l2}}+1)/\doxymbox{\hyperlink{028___hamming_8c_abf4381d3028f297334a3b2df5e4d1e8e}{l2}}+1;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s(\%d,\ \%d)\(\backslash\)n"{}},\ str,\ nc,\ nP);}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1,\ k=0;\ i<nc+nP;\ i++)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i+1)!=j)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ str[k++];}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ j<<=1;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=1;\ i<nP;\ i++)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=j;\ k<=(nc+nP);\ k++)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((k-\/j)\%(2*j))<j)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strP[j-\/1]\string^=strP[k-\/1];}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00034}00034\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ printf("{}\%d\(\backslash\)t"{},\ ((k-\/j)\%(2*j))<j);}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00035}00035\ \textcolor{comment}{//\ \ \ \ \ \ printf("{}\(\backslash\)n"{});}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ j<<=1;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00038}00038\ \ \ \ \ strP[nc+nP]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc+nP;\ i++)}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ strP[i]);}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00041}00041\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strP);}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{028___hamming_8c_source_l00043}00043\ \}}
+
+\end{DoxyCode}

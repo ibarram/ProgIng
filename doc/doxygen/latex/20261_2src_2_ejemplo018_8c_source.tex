@@ -1,0 +1,67 @@
+\doxysection{Ejemplo018.\+c}
+\hypertarget{20261_2src_2_ejemplo018_8c_source}{}\label{20261_2src_2_ejemplo018_8c_source}\index{src/20261/src/Ejemplo018.c@{src/20261/src/Ejemplo018.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00047}00047\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00048}00048\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00049}00049\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00052}\doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_a0240ac851181b84ac374872dc5434ee4}{00052}}\ \textcolor{preprocessor}{\#define\ N\ 100000}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00054}\doxymbox{\hyperlink{20261_2src_2_ejemplo018_8c_a0ddf1224851353fc92bfbff6f499fa97}{00054}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00056}00056\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00057}00057\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ n,\ i;\ \ \ \ \ \ \textcolor{comment}{/*\ n:\ número\ de\ elementos,\ i:\ índice\ de\ recorrido\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ límites\ del\ rango\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{int}\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ arreglo\ con\ capacidad\ máxima\ N\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00063}00063\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ y\ validar\ que\ esté\ en\ el\ rango\ [1,\ N].\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&n);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00067}00067\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1\ ||\ n\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{/*\ Leer\ límites\ del\ rango.\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00070}00070\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00071}00071\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00073}00073\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00074}00074\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00076}00076\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ Si\ el\ usuario\ capturó\ min\ >\ max,\ se\ intercambian.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ Se\ usa\ intercambio\ sin\ variable\ temporal\ (suma/resta).}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ Nota:\ para\ valores\ extremos\ podría\ haber\ overflow;\ en\ uso\ típico\ es\ OK.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00080}00080\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}})}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ +=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/=\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ Inicializar\ semilla\ del\ generador\ pseudoaleatorio.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ time(NULL)\ cambia\ cada\ segundo,\ así\ que\ los\ valores\ cambian\ en\ cada\ ejecución.}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00091}00091\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00092}00092\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00094}00094\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ Generación:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ \ rand()\ \%\ (max\ -\/\ min\ +\ 1)\ produce\ valores\ en\ [0,\ max-\/min]}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ luego\ +\ min\ desplaza\ al\ intervalo\ [min,\ max].}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00098}00098\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ x[i]\ =\ rand()\ \%\ (\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ +\ 1)\ +\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%ld]\ =\ \%d\(\backslash\)n"{}},\ i\ +\ 1,\ x[i]);\ \textcolor{comment}{/*\ se\ imprime\ desde\ 1\ por\ estética\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo018_8c_source_l00106}00106\ \}}
+
+\end{DoxyCode}

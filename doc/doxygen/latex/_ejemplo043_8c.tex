@@ -1,0 +1,84 @@
+\doxysection{src/\+20252/\+\+Ejemplo043.c File Reference}
+\hypertarget{_ejemplo043_8c}{}\label{_ejemplo043_8c}\index{src/20252/Ejemplo043.c@{src/20252/Ejemplo043.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Include dependency graph for Ejemplo043.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_ejemplo043_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo043_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo043_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_ejemplo043_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_ejemplo043_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo043.c@{Ejemplo043.c}!N@{N}}
+\index{N@{N}!Ejemplo043.c@{Ejemplo043.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{_ejemplo043_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~50}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo043_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{_ejemplo043_8c_source}{Ejemplo043.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo043_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo043_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo043.c@{Ejemplo043.c}!main@{main}}
+\index{main@{main}!Ejemplo043.c@{Ejemplo043.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo043_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo043_8c_source_l00008}{8}} of file \doxymbox{\hyperlink{_ejemplo043_8c_source}{Ejemplo043.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ x;}
+\DoxyCodeLine{00012\ \ \ \ \ FILE\ *fp;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ n:\ "{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00017\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(argc==2)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ strcpy(filename,\ argv[1]);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ strcpy(filename,\ \textcolor{stringliteral}{"{}Prueba.txt"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ fp\ =\ fopen(filename,\ \textcolor{stringliteral}{"{}wt"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}(fp==NULL)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00026\ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ x\ =\ (1.0*rand())/RAND\_MAX;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\(\backslash\)t\%lf\(\backslash\)n"{}},\ i+1,\ x);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%d]\ =\ \%lf\(\backslash\)n"{}},\ i+1,\ x);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

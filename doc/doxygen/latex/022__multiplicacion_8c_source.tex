@@ -1,0 +1,57 @@
+\doxysection{022\+\_\+multiplicacion.\+c}
+\hypertarget{022__multiplicacion_8c_source}{}\label{022__multiplicacion_8c_source}\index{src/20251/022\_multiplicacion.c@{src/20251/022\_multiplicacion.c}}
+\doxymbox{\hyperlink{022__multiplicacion_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00003}\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{00003}}\ \textcolor{preprocessor}{\#define\ Re\ 100}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00004}\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{00004}}\ \textcolor{preprocessor}{\#define\ Co\ 100}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00006}\doxymbox{\hyperlink{022__multiplicacion_8c_a0ddf1224851353fc92bfbff6f499fa97}{00006}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{int}\ rA,\ cA,\ rB,\ cB,\ i,\ j,\ k;}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{Re}}][\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{Co}}],\ B[\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{Re}}][\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{Co}}],\ C[\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{Re}}][\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{Co}}];}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ renglones\ de\ A:\ "{}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&rA);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00013}00013\ \ \ \ \ \}\textcolor{keywordflow}{while}(rA<1||rA>\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{Re}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ A:\ "{}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cA);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00017}00017\ \ \ \ \ \}\textcolor{keywordflow}{while}(cA<1||cA>\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{Co}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<cA;\ i++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<rA;\ j++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&A[i][j]));}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ renglones\ de\ B:\ "{}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&rB);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00027}00027\ \ \ \ \ \}\textcolor{keywordflow}{while}(rB<1||rB>\doxymbox{\hyperlink{022__multiplicacion_8c_a33d8ab1b565d14ecc7933cfc7ebede17}{Re}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas\ de\ B:\ "{}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cB);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00031}00031\ \ \ \ \ \}\textcolor{keywordflow}{while}(cB<1||cB>\doxymbox{\hyperlink{022__multiplicacion_8c_a0c553cda1ae0e014b2ea5d2ef4837d02}{Co}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<cB;\ i++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<rB;\ j++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}B[\%d][\%d]\ =\ "{}},\ i+1,\ j+1);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&B[i][j]));}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}(cA!=rB)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error:\ La\ multiplicacion\ no\ puede\ realizarse\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<rA;\ i++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<cB;\ j++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ C[i][j]=0;\ k<cA;\ k++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ C[i][j]+=A[i][k]*B[k][j];}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<rA;\ i++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<cB;\ j++)}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}C[\%d][\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ j+1,\ C[i][j]);}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{022__multiplicacion_8c_source_l00051}00051\ \}}
+
+\end{DoxyCode}

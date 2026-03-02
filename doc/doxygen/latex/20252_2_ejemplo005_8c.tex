@@ -1,0 +1,56 @@
+\doxysection{src/\+20252/\+\+Ejemplo005.c File Reference}
+\hypertarget{20252_2_ejemplo005_8c}{}\label{20252_2_ejemplo005_8c}\index{src/20252/Ejemplo005.c@{src/20252/Ejemplo005.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo005.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo005_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo005_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo005.c@{Ejemplo005.c}!main@{main}}
+\index{main@{main}!Ejemplo005.c@{Ejemplo005.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo005_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo005_8c_source}{Ejemplo005.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ s\ es\ el\ signo}}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{comment}{//\ d\ es\ el\ denominador}}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ n\ es\ el\ numero\ de\ terminos}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ i\ es\ el\ contador}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ pi\ es\ el\ valor\ de\ pi}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ s,\ d;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ pi;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00015\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<=0);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ pi=0;\ i<n;\ i++)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ s\ =\ 1-\/2*(i\%2);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ d\ =\ 2*i+1;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ pi+=(s*1.0/d);}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ pi*=4;}
+\DoxyCodeLine{00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}PI\ =\ \%f\(\backslash\)n"{}},\ pi);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}

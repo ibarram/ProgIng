@@ -1,0 +1,89 @@
+\doxysection{src/\+20252/\+\+Ejemplo030.c File Reference}
+\hypertarget{_ejemplo030_8c}{}\label{_ejemplo030_8c}\index{src/20252/Ejemplo030.c@{src/20252/Ejemplo030.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo030.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_ejemplo030_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988}{buscar}} (int n)
+\item 
+int \doxymbox{\hyperlink{_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo030_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988}\index{Ejemplo030.c@{Ejemplo030.c}!buscar@{buscar}}
+\index{buscar@{buscar}!Ejemplo030.c@{Ejemplo030.c}}
+\doxysubsubsection{\texorpdfstring{buscar()}{buscar()}}
+{\footnotesize\ttfamily \label{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988} 
+int buscar (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo030_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{_ejemplo030_8c_source}{Ejemplo030.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{return}\ n\%2?n:\doxymbox{\hyperlink{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988}{buscar}}(n/2);}
+\DoxyCodeLine{00006\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo030.c@{Ejemplo030.c}!main@{main}}
+\index{main@{main}!Ejemplo030.c@{Ejemplo030.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo030_8c_source_l00008}{8}} of file \doxymbox{\hyperlink{_ejemplo030_8c_source}{Ejemplo030.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ a,\ b,\ i,\ j,\ x;}
+\DoxyCodeLine{00011\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d"{}},\ \&a,\ \&b);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=a,\ x=0;\ j<=b;\ j++)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ (\%d)\(\backslash\)t"{}},\ j,\ \doxymbox{\hyperlink{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988}{buscar}}(j));}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ x\ +=\ \doxymbox{\hyperlink{_ejemplo030_8c_ad168a5062c0502f7c9f2f99a646cf988}{buscar}}(j);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

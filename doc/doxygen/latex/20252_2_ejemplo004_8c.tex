@@ -1,0 +1,57 @@
+\doxysection{src/\+20252/\+\+Ejemplo004.c File Reference}
+\hypertarget{20252_2_ejemplo004_8c}{}\label{20252_2_ejemplo004_8c}\index{src/20252/Ejemplo004.c@{src/20252/Ejemplo004.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo004.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo004_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo004_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo004_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo004_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo004.c@{Ejemplo004.c}!main@{main}}
+\index{main@{main}!Ejemplo004.c@{Ejemplo004.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo004_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo004_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo004_8c_source}{Ejemplo004.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{float}\ T1,\ T2,\ T3,\ T4,\ T;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ B;}
+\DoxyCodeLine{00007\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f\ \%f"{}},\ \&T1,\ \&T2,\ \&T3,\ \&T4,\ \&T);}
+\DoxyCodeLine{00008\ \ \ \ \ B\ =\ ((T4>T)<<3)|((T3>T)<<2)|((T2>T)<<1)|(T1>T);}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{switch}(B)}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{case}\ 15:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ "{}});}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Baja"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Templada"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Muy\ "{}});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Alta"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ printf(\textcolor{stringliteral}{"{}.\(\backslash\)n"{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

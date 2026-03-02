@@ -1,0 +1,45 @@
+\doxysection{src/\+20251/\+001\+\_\+cod\+\_\+prioridad.c File Reference}
+\hypertarget{001__cod__prioridad_8c}{}\label{001__cod__prioridad_8c}\index{src/20251/001\_cod\_prioridad.c@{src/20251/001\_cod\_prioridad.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 001\+\_\+cod\+\_\+prioridad.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{001__cod__prioridad_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{001__cod__prioridad_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{001__cod__prioridad_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{001__cod__prioridad_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{001\_cod\_prioridad.c@{001\_cod\_prioridad.c}!main@{main}}
+\index{main@{main}!001\_cod\_prioridad.c@{001\_cod\_prioridad.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{001__cod__prioridad_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{001__cod__prioridad_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{001__cod__prioridad_8c_source}{001\+\_\+cod\+\_\+prioridad.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ D4,\ D3,\ D2,\ D1,\ sal,\ b0,\ b1,\ b2;}
+\DoxyCodeLine{00006\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ estado:\ "{}});}
+\DoxyCodeLine{00007\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d"{}},\ \&D4,\ \&D3,\ \&D2,\ \&D1);}
+\DoxyCodeLine{00008\ \ \ \ \ b0\ =\ D1|(\string~D2\&D3);}
+\DoxyCodeLine{00009\ \ \ \ \ b1\ =\ \string~D1\&(D2|D3);}
+\DoxyCodeLine{00010\ \ \ \ \ b2\ =\ \string~D1\&\string~D2\&\string~D3\&D4;}
+\DoxyCodeLine{00011\ \ \ \ \ sal\ =\ 4*b2+2*b1+b0;}
+\DoxyCodeLine{00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Salida\ =\ \%d\ (\%d\%d\%d)\(\backslash\)n"{}},\ sal,\ b2,\ b1,\ b0);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}

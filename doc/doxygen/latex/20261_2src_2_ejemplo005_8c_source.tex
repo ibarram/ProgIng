@@ -1,0 +1,52 @@
+\doxysection{Ejemplo005.\+c}
+\hypertarget{20261_2src_2_ejemplo005_8c_source}{}\label{20261_2src_2_ejemplo005_8c_source}\index{src/20261/src/Ejemplo005.c@{src/20261/src/Ejemplo005.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00035}00035\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <math.h>}\ \ \ \textcolor{comment}{/*\ sqrt()\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00044}\doxymbox{\hyperlink{20261_2src_2_ejemplo005_8c_a0ddf1224851353fc92bfbff6f499fa97}{00044}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00045}00045\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00046}00046\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00047}00047\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b,\ c;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ coeficientes\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{float}\ r;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ discriminante\ Δ\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{float}\ x1r,\ x1i,\ x2r,\ x2i;\ \textcolor{comment}{/*\ partes\ real/imag\ de\ cada\ raíz\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00053}00053\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ cuadratico:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00054}00054\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&a);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00056}00056\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ lineal:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00057}00057\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00059}00059\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ termino\ independiente:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00060}00060\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&c);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00062}00062\ \ \ \ \ \textcolor{comment}{/*\ Δ\ =\ b\string^2\ -\/\ 4ac\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00063}00063\ \ \ \ \ r\ =\ b*b\ -\/\ 4*a*c;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00065}00065\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ Para\ Δ\ >=\ 0:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ x1\ =\ (-\/b\ +\ sqrt(Δ))\ /\ (2a),\ parte\ imaginaria\ 0}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ x2\ =\ (-\/b\ -\/\ sqrt(Δ))\ /\ (2a),\ parte\ imaginaria\ 0}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00069}00069\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ Para\ Δ\ <\ 0:}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ parte\ real:\ (-\/b)/(2a)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ parte\ imag:\ ±\ sqrt(-\/Δ)/(2a)}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00073}00073\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00074}00074\ \ \ \ \ x1r\ =\ (-\/b\ +\ (r\ >=\ 0\ ?\ sqrt(r)\ :\ 0))\ /\ (2*a);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00075}00075\ \ \ \ \ x1i\ =\ (r\ >=\ 0\ ?\ 0\ :\ sqrt(-\/r)\ /\ (2*a));}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00077}00077\ \ \ \ \ x2r\ =\ (-\/b\ -\/\ (r\ >=\ 0\ ?\ sqrt(r)\ :\ 0))\ /\ (2*a);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00078}00078\ \ \ \ \ x2i\ =\ (r\ >=\ 0\ ?\ 0\ :\ -\/x1i);\ \textcolor{comment}{/*\ conjugada\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00080}00080\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x1\ =\ \%.4f\%+.4fi\(\backslash\)n"{}},\ x1r,\ x1i);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00081}00081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x2\ =\ \%.4f\%+.4fi\(\backslash\)n"{}},\ x2r,\ x2i);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo005_8c_source_l00084}00084\ \}}
+
+\end{DoxyCode}

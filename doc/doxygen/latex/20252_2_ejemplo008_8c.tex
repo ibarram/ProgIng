@@ -1,0 +1,61 @@
+\doxysection{src/\+20252/\+\+Ejemplo008.c File Reference}
+\hypertarget{20252_2_ejemplo008_8c}{}\label{20252_2_ejemplo008_8c}\index{src/20252/Ejemplo008.c@{src/20252/Ejemplo008.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo008.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo008_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo008_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo008.c@{Ejemplo008.c}!main@{main}}
+\index{main@{main}!Ejemplo008.c@{Ejemplo008.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo008_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo008_8c_source}{Ejemplo008.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ lnx,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ num;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00010\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ l\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00014\ \ \ \ \ \}\textcolor{keywordflow}{while}(x<=0);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}=(x-\/1)/(x+1),\ num=\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ lnx=0;\ i<n;\ i++)}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ lnx+=(num/(2*i+1));}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ num*=(\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ lnx*=2;}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}ln(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ lnx);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20252_2_ejemplo008_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

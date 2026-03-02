@@ -1,0 +1,113 @@
+\doxysection{src/\+20251/\+029\+\_\+\+Enc.c File Reference}
+\hypertarget{029___enc_8c}{}\label{029___enc_8c}\index{src/20251/029\_Enc.c@{src/20251/029\_Enc.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for 029\+\_\+\+Enc.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{029___enc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{029___enc_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}~2048
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{029___enc_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{029___enc_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{029___enc_8c_a71d9e511e7e302cd831e83581219e70d}\index{029\_Enc.c@{029\_Enc.c}!MC@{MC}}
+\index{MC@{MC}!029\_Enc.c@{029\_Enc.c}}
+\doxysubsubsection{\texorpdfstring{MC}{MC}}
+{\footnotesize\ttfamily \label{029___enc_8c_a71d9e511e7e302cd831e83581219e70d} 
+\+\#define MC~2048}
+
+
+
+Definition at line \doxymbox{\hyperlink{029___enc_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{029___enc_8c_source}{029\+\_\+\+Enc.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{029___enc_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{029___enc_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{029\_Enc.c@{029\_Enc.c}!main@{main}}
+\index{main@{main}!029\_Enc.c@{029\_Enc.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{029___enc_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{029___enc_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{029___enc_8c_source}{029\+\_\+\+Enc.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{char}\ str[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}],\ strE[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}],\ strD[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}],\ aux[\doxymbox{\hyperlink{028___hamming_8c_a71d9e511e7e302cd831e83581219e70d}{MC}}];}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ nc,\ a,\ ai,\ b,\ n;}
+\DoxyCodeLine{00009\ \ \ \ \ a\ =\ 17;}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ ai\ =\ 49;}}
+\DoxyCodeLine{00011\ \ \ \ \ b\ =\ 21;}
+\DoxyCodeLine{00012\ \ \ \ \ n\ =\ 52;}
+\DoxyCodeLine{00013\ \ \ \ \ i=0;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ str[i++]\ =\ getc(stdin);}
+\DoxyCodeLine{00016\ \ \ \ \ \}\textcolor{keywordflow}{while}(str[i-\/1]!=10);}
+\DoxyCodeLine{00017\ \ \ \ \ str[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00018\ \ \ \ \ nc\ =\ i-\/1;}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s\(\backslash\)n"{}},\ str);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ str[i]);}
+\DoxyCodeLine{00022\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ aux[i]\ =\ str[i]-\/\textcolor{charliteral}{'A'}-\/6*(str[i]>=\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ aux[i]);}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ aux[i]\ =\ (a*((int)aux[i])+b)\%n;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ aux[i]);}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ strE[i]\ =\ aux[i]+\textcolor{charliteral}{'A'}+6*(aux[i]>(n/2-\/1));}
+\DoxyCodeLine{00037\ \ \ \ \ strE[nc]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strE);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ aux[i]\ =\ strE[i]-\/\textcolor{charliteral}{'A'}-\/6*(strE[i]>=\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ aux[i]);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ ai=1;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{while}(((ai*a)\%n)!=1)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ ai++;}
+\DoxyCodeLine{00048\ \ \ \ \ printf(\textcolor{stringliteral}{"{}ai\ =\ \%d\(\backslash\)n"{}},\ ai);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ aux[i]\ =\ (ai*((aux[i]<b)*n+aux[i]-\/b))\%n;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ aux[i]);}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<nc;\ i++)}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ strD[i]\ =\ aux[i]+\textcolor{charliteral}{'A'}+6*(aux[i]>25);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ strD[i]);}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ strD[nc]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00061\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00062\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strD);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}

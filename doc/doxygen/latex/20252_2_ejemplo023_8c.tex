@@ -1,0 +1,119 @@
+\doxysection{src/\+20252/\+\+Ejemplo023.c File Reference}
+\hypertarget{20252_2_ejemplo023_8c}{}\label{20252_2_ejemplo023_8c}\index{src/20252/Ejemplo023.c@{src/20252/Ejemplo023.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo023.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{20252_2_ejemplo023_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo023_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~1000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo023_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{20252_2_ejemplo023_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20252_2_ejemplo023_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo023.c@{Ejemplo023.c}!N@{N}}
+\index{N@{N}!Ejemplo023.c@{Ejemplo023.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo023_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~1000}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo023_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{20252_2_ejemplo023_8c_source}{Ejemplo023.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo023_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo023_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo023.c@{Ejemplo023.c}!main@{main}}
+\index{main@{main}!Ejemplo023.c@{Ejemplo023.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo023_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo023_8c_source_l00008}{8}} of file \doxymbox{\hyperlink{20252_2_ejemplo023_8c_source}{Ejemplo023.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ flag,\ op;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ aux,\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ vmx,\ vmn,\ md,\ st,\ z[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ cn,\ nr;}
+\DoxyCodeLine{00012\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ datos:\ "{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00016\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1||n>\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ maximo:\ "{}});}
+\DoxyCodeLine{00018\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ minimo:\ "{}});}
+\DoxyCodeLine{00020\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}<\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ aux\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ aux;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ vmn=\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ vmx=\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ md=0,\ st=0;\ i<n;\ i++)}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ x[i]\ =\ ((\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}-\/\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}})*rand())/RAND\_MAX+\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}X[\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ x[i]);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(vmn>x[i])}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ vmn\ =\ x[i];}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(vmx<x[i])}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ vmx\ =\ x[i];}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ md+=x[i];}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ st+=(x[i]*x[i]);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ md/=n;}
+\DoxyCodeLine{00039\ \ \ \ \ st/=n;}
+\DoxyCodeLine{00040\ \ \ \ \ st-\/=(md*md);}
+\DoxyCodeLine{00041\ \ \ \ \ st=sqrt(st);}
+\DoxyCodeLine{00042\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Max:\ \%f\(\backslash\)n\ Min\ =\ \%f\(\backslash\)n\ Media\ =\ \%f\(\backslash\)n\ D.\ E.\ =\ \%f\(\backslash\)n"{}},\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ vmx,\ vmn,\ md,\ st);}
+\DoxyCodeLine{00044\ \ \ \ \ flag\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desea\ centrar:\ "{}});}
+\DoxyCodeLine{00046\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}(op)}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Por\ rango:\ "{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ flag|=(op?1:4);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Desea\ normalizar:\ "{}});}
+\DoxyCodeLine{00054\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(op)}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Por\ rango:\ "{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ flag|=(op?2:8);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ cn\ =\ (flag\&1)?vmn:(flag\&4?md:0);}
+\DoxyCodeLine{00062\ \ \ \ \ nr\ =\ (flag\&2)?vmx-\/vmn:(flag\&8?st:1);}
+\DoxyCodeLine{00063\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)t\%f\(\backslash\)t\%f\(\backslash\)n"{}},\ flag,\ cn,\ nr);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ z[i]\ =\ (x[i]-\/cn)/nr;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Z[\%d]\ =\ \%f\(\backslash\)n"{}},\ i+1,\ z[i]);}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
