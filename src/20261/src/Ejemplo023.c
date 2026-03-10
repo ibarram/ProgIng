@@ -1,59 +1,70 @@
 /**
  * @file Ejemplo023.c
- * @brief Clasificación por “casilleros” (bucket/distribution) de números reales en un rango [min, max].
+ * @brief Ordenamiento tipo Bucket Sort (distribución por casilleros) + ordenamiento interno por selección.
  *
  * @details
- * Este programa genera `n` números aleatorios (float) dentro del rango [min, max] y los
- * reordena usando un enfoque tipo **bucket / distribution sort**:
+ * Este programa genera `n` números aleatorios (float) en el rango [min, max] y los ordena
+ * usando una estrategia tipo **Bucket Sort**:
  *
- * 1) Se elige el número de divisiones (casilleros) como:
- *      nd = floor(sqrt(n))
+ * 1) Define el número de casilleros (buckets) como:
+ *    \f[
+ *      nd = \lfloor \sqrt{n} \rfloor
+ *    \f]
  *
- * 2) Se calcula el tamaño de casillero:
- *      rango = max - min
- *      Dx    = rango / nd
+ * 2) Divide el rango [min, max] en `nd` intervalos de ancho:
+ *    \f[
+ *      Dx = \frac{max - min}{nd}
+ *    \f]
  *
- * 3) Para cada valor x[i] se calcula el índice del casillero:
- *      j = floor( (x[i] - min) / Dx )
+ * 3) Para cada valor `x[i]`, calcula el casillero:
+ *    \f[
+ *      j = \left\lfloor \frac{x[i]-min}{Dx} \right\rfloor
+ *    \f]
+ *    y se hace un ajuste para el caso `x[i] == max` para evitar `j == nd` (fuera de rango).
  *
- * 4) Se cuenta cuántos elementos caen en cada casillero (histograma).
+ * 4) Usa un arreglo auxiliar `c[]` como estructura compacta:
+ *    - `c[0 .. nd-1]`        : conteo de elementos por casillero
+ *    - `c[nd .. 2*nd-1]`     : posiciones de escritura (inician como prefijos y luego se incrementan)
+ *    - `c[2*nd .. 3*nd-1]`   : copia de los prefijos (inicio fijo de cada casillero en `xc`)
  *
- * 5) Se calcula un arreglo de posiciones iniciales (prefijos) y se construye un nuevo
- *    arreglo `xc[]` colocando cada elemento en su casillero correspondiente.
+ * 5) Distribuye los datos en un arreglo `xc[]` agrupado por casilleros.
  *
- * El arreglo `xc` queda **agrupado por intervalos** (primero todos los del casillero 0,
- * luego los del 1, etc.). **No ordena dentro de cada casillero**, por lo que NO es un
- * ordenamiento total, sino una etapa típica de un bucket sort (faltaría ordenar cada bucket).
+ * 6) Finalmente **ordena cada casillero internamente**:
+ *    - 0 o 1 elemento: no hace nada
+ *    - 2 elementos: una comparación e intercambio
+ *    - >=3 elementos: Selection Sort dentro del segmento del casillero
+ *
+ * El resultado `xc[]` queda totalmente ordenado (ascendente) si cada casillero se ordena.
  *
  * @par Entrada estándar
  * - `n` (int): número de elementos, 1 <= n <= N
- * - `max` (float): valor máximo del rango
- * - `min` (float): valor mínimo del rango
+ * - `max` (float): límite superior del rango
+ * - `min` (float): límite inferior del rango
  *
  * @par Salida estándar
- * - Imprime los valores generados (“Desordenado”).
- * - Imprime el número de casilleros `nd`, rango y `Dx`.
- * - Imprime los intervalos de cada casillero.
- * - Imprime cada elemento con su índice de casillero.
- * - Imprime conteos y prefijos por casillero.
- * - Imprime el arreglo `xc` (reordenado por casilleros) con su casillero.
+ * Imprime (modo “didáctico”, muy verboso):
+ * - Arreglo desordenado.
+ * - Configuración de buckets (`nd`, `rango`, `Dx`).
+ * - Intervalos por casillero.
+ * - Elementos con su casillero.
+ * - Conteos/prefijos.
+ * - Arreglo `xc` tras distribución.
+ * - Arreglo `xc` ya ordenado.
  *
  * @par Precondiciones
- * - Se espera que `min <= max`. Si `min > max`, se intercambian.
- * - `nd > 0` y `Dx > 0` (se cumple si `n >= 1` y `max > min`).
+ * - Idealmente `min <= max`. Si `min > max`, el código los intercambia.
  *
  * @par Complejidad
- * - Conteo por casilleros: O(n)
- * - Cálculo de prefijos: O(nd)
- * - Distribución a `xc`: O(n)
+ * - Generación + distribución: O(n)
+ * - Prefijos: O(nd)
+ * - Ordenamiento por casillero (Selection Sort): peor caso O(n^2) si todo cae en un solo bucket,
+ *   típico mejor si los datos se reparten.
  * - Memoria: O(N)
  *
  * @warning
- * 1) El intercambio `min/max` se hace con multiplicación/división: si alguno es 0,
- *    puede fallar (división entre 0). Para robustez usa una variable auxiliar.
- * 2) Cuando x[i] == max, el índice j puede resultar igual a nd (fuera del rango 0..nd-1).
- *    En código de producción conviene “clamp”:
- *      if (j >= nd) j = nd - 1;
+ * - `x[i] == max` se fuerza a `j = nd-1` para evitar `j == nd`.
+ * - `c[]` se declara con tamaño N y se indexa hasta ~ `3*nd`; como `nd = sqrt(n)`,
+ *   se mantiene seguro para `n <= 100000`.
  *
  * @code
  * gcc Ejemplo023.c -o Ejemplo023 -lm
@@ -68,36 +79,21 @@
 
 #define N 100000
 
-/**
- * @brief Punto de entrada. Genera valores y los agrupa por casilleros.
- * @param argc No usado.
- * @param argv No usado.
- * @return 0 si finaliza correctamente.
- */
 int main(int argc, char *argv[])
 {
-    /*
-      n   : número de elementos a generar (1..N)
-      i,j : índices auxiliares
-      nd  : número de divisiones/casilleros (≈ sqrt(n))
+    (void)argc;
+    (void)argv;
 
-      c[] : arreglo de enteros usado en dos zonas:
-            - c[0..nd-1]      = conteos por casillero (histograma)
-            - c[nd..2*nd-1]   = posiciones iniciales/prefijos (índices de escritura en xc)
-     */
-    int n, i, j, nd, c[N];
+    /* n: cantidad de datos, nd: número de casilleros */
+    int n, i, j, k, id_min, nd, c[N];
 
-    /*
-      min, max : rango de generación
-      x[]      : arreglo original “desordenado”
-      xc[]     : arreglo reordenado por casilleros
-      rango    : max - min
-      Dx       : ancho de cada casillero (rango/nd)
-     */
+    /* Rango [min, max] */
     float min, max;
-    float x[N], rango, Dx, xc[N];
 
-    /* Leer n */
+    /* x[]: arreglo original, xc[]: arreglo tras distribución y ordenamiento */
+    float x[N], rango, Dx, xc[N], aux;
+
+    /* Leer n con validación */
     do {
         printf("Ingrese el numero de elementos: ");
         scanf("%d", &n);
@@ -110,105 +106,155 @@ int main(int argc, char *argv[])
     scanf("%f", &min);
 
     /*
-      Si el usuario capturó min > max, se intercambian.
-      WARNING: este intercambio por multiplicación/división puede fallar si min==0 o max==0.
+      Asegurar min <= max. El código contempla casos con cero para evitar división entre cero
+      en el intercambio por multiplicación/división.
     */
     if (min > max)
     {
-        max *= min;
-        min = max / min;
-        max /= min;
+        if (!min)           /* min == 0 */
+        {
+            min = max;
+            max = 0;
+        }
+        else if (!max)      /* max == 0 */
+        {
+            max = min;
+            min = 0;
+        }
+        else
+        {
+            /* Intercambio por multiplicación/división */
+            max *= min;
+            min = max / min;
+            max /= min;
+        }
     }
 
     srand(time(NULL));
 
-    /* Generar arreglo original y (por simplicidad) inicializar c[i]=0 para i<n */
+    /* Generar datos aleatorios y limpiar c[i] (solo una parte; nd <= n así que alcanza) */
     printf("Desordenado.\n");
     for (i = 0; i < n; i++)
     {
-        /* Genera valores en [min, max] (puede incluir max si rand()==RAND_MAX) */
+        /* Escalamiento lineal de rand() a [min, max] */
         x[i] = ((max - min) * rand()) / RAND_MAX + min;
 
-        /* Inicialización (basta con 0..2*nd-1, pero aquí se inicializa 0..n-1) */
+        /* Inicializar contadores a cero (al menos hasta n) */
         c[i] = 0;
 
         printf("x[%02d] = %f\n", i + 1, x[i]);
     }
 
-    /* Definir número de casilleros */
+    /* Definir buckets como sqrt(n) */
     nd = (int)sqrt((double)n);
 
-    /* Calcular rango y ancho de casillero */
+    /* Tamaño de bucket */
     rango = max - min;
     Dx = rango / nd;
 
     printf("ND = %d\tRango = %f\tDx = %f\n", nd, rango, Dx);
 
-    /* Mostrar intervalos de los casilleros */
+    /* Mostrar intervalos por bucket (solo informativo) */
     for (i = 0; i < nd; i++)
         printf("%d. [%f, %f]\n", i, min + i*Dx, min + (i+1)*Dx);
 
     /*
-      1) Conteo por casillero:
-         j = floor((x[i]-min)/Dx)
-         c[j]++
+      1) Conteo por casillero (histograma):
+         j = floor((x[i]-min)/Dx), pero si x[i]==max forzamos j=nd-1.
     */
     printf("Desordenado con numero de casillero.\n");
     for (i = 0; i < n; i++)
     {
-        j = (int)((x[i] - min) / Dx);
-
-        /*
-          WARNING: si x[i] == max, j puede ser nd. Para robustez:
-          if (j >= nd) j = nd - 1;
-        */
-
+        j = (x[i] == max ? nd - 1 : (int)((x[i] - min) / Dx));
         printf("x[%02d] = %f\t%d\n", i + 1, x[i], j);
-        c[j]++;
+        c[j]++; /* c[j] = cantidad de elementos del bucket j */
     }
 
     /*
-      2) Prefijos / posiciones iniciales:
-         Se construye en la zona c[nd..2*nd-1]:
-           c[nd]     = 0
-           c[nd+1]   = c[0]
-           c[nd+2]   = c[0] + c[1]
-           ...
-         donde c[nd+k] es el índice de inicio para escribir el casillero k en xc[].
-     */
+      2) Prefijos:
+         Construye posiciones iniciales del bucket i en xc[].
+         - c[i + nd]     guarda la posición "corriente" de escritura del bucket i.
+         - c[i + 2*nd]   guarda una copia del prefijo (inicio fijo del bucket i).
+    */
     for (i = 1; i < nd; i++)
-        c[i + nd] = c[i + nd - 1] + c[i - 1];
+    {
+        c[i + nd]    = c[i + nd - 1] + c[i - 1]; /* prefijo */
+        c[i + 2*nd]  = c[i + nd];                /* copia del prefijo */
+    }
 
-    /* Mostrar conteos y prefijos */
+    /* Mostrar resumen por bucket: intervalo, conteo, prefijo */
     for (i = 0; i < nd; i++)
         printf("%d. [%+f, %+f]\t%d\t%d\n",
                i, min + i*Dx, min + (i+1)*Dx, c[i], c[i + nd]);
 
     /*
       3) Distribución a xc:
-         - Se vuelve a calcular el casillero j para cada x[i]
-         - Se coloca x[i] en la siguiente posición libre del casillero j:
-             xc[ c[nd + j] ] = x[i]
-           y se incrementa esa posición para el siguiente elemento del mismo casillero.
-     */
+         Se inserta cada x[i] en xc según su prefijo, incrementando la posición de escritura.
+    */
     for (i = 0; i < n; i++)
     {
-        j = (int)((x[i] - min) / Dx);
-
-        /* WARNING: clamp recomendado para evitar j==nd */
-        /* if (j >= nd) j = nd - 1; */
-
+        j = (x[i] == max ? nd - 1 : (int)((x[i] - min) / Dx));
         xc[c[j + nd]] = x[i];
-        c[j + nd]++;
+        c[j + nd]++; /* avanzar posición de escritura del bucket */
     }
 
-    /* Mostrar arreglo reordenado por casilleros */
+    /* Imprimir xc con su bucket (informativo) */
     for (i = 0; i < n; i++)
     {
         j = (int)((xc[i] - min) / Dx);
-        /* if (j >= nd) j = nd - 1; */
         printf("x[%02d] = %f\t%d\n", i + 1, xc[i], j);
     }
+
+    /*
+      4) Ordenar internamente cada bucket.
+         El inicio del bucket i está en c[i + 2*nd].
+         El tamaño del bucket i está en c[i].
+    */
+    for (i = 0; i < nd; i++)
+    {
+        switch (c[i])
+        {
+            case 0:
+            case 1:
+                /* 0 o 1 elemento: ya está ordenado */
+                break;
+
+            case 2:
+                /* 2 elementos: una sola comparación */
+                if (xc[c[i + 2*nd]] > xc[c[i + 2*nd] + 1])
+                {
+                    aux = xc[c[i + 2*nd]];
+                    xc[c[i + 2*nd]] = xc[c[i + 2*nd] + 1];
+                    xc[c[i + 2*nd] + 1] = aux;
+                }
+                break;
+
+            default:
+                /*
+                  >= 3 elementos: Selection Sort dentro del segmento del bucket
+                  [start, start + c[i] - 1], con start = c[i + 2*nd].
+                */
+                for (j = 0; j < (c[i] - 1); j++)
+                {
+                    for (k = j + 1, id_min = j; k < c[i]; k++)
+                        if (xc[id_min + c[i + 2*nd]] > xc[k + c[i + 2*nd]])
+                            id_min = k;
+
+                    if (id_min != j)
+                    {
+                        aux = xc[j + c[i + 2*nd]];
+                        xc[j + c[i + 2*nd]] = xc[id_min + c[i + 2*nd]];
+                        xc[id_min + c[i + 2*nd]] = aux;
+                    }
+                }
+                break;
+        }
+    }
+
+    /* Resultado final */
+    printf("Ordenado.\n");
+    for (i = 0; i < n; i++)
+        printf("x[%02d] = %f\n", i + 1, xc[i]);
 
     return 0;
 }
