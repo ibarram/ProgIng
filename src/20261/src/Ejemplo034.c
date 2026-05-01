@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		}
 		printf("P_%d = %d\n", i, V[j]);
 	}
-	for(i=0, ncv=0; i<np; i++)
+	for(i=0, ncv=0, nbv=0; i<np; i++)
 		if(V[i])
 		{
 			BIT_SET(ncv, i);
