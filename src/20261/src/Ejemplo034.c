@@ -52,12 +52,12 @@ int main(int argc, char *argv[])
 	for(i=0; i<np; i++)
 	{
 		j = (1<<i)-1;
-		for(k=j+1, V[j]=msgP[j]; k<(n+np); k++)
+		for(k=j+1, V[i]=msgP[j]; k<(n+np); k++)
 		{
 			if(((k-j)/(j+1)+1)%2)
-				V[j]^=msgP[k];
+				V[i]^=msgP[k];
 		}
-		printf("P_%d = %d\n", i, V[j]);
+		printf("P_%d = %d\n", i, V[i]);
 	}
 	for(i=0, ncv=0, nbv=0; i<np; i++)
 		if(V[i])
@@ -65,7 +65,6 @@ int main(int argc, char *argv[])
 			BIT_SET(ncv, i);
 			if(!nbv)
 				nbv = (int)V[i];
-			printf("%d\t%d\t%d\n", i, V[i], nbv);
 		}
 	ncv--;
 	printf("%d\t", nbv);
