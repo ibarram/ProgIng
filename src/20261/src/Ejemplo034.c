@@ -67,10 +67,8 @@ int main(int argc, char *argv[])
 				nbv = (int)V[i];
 		}
 	ncv--;
-	printf("%d\t", nbv);
 	aux = log2(nbv);
 	nbv = aux;
-	printf("%d\t%f\n", nbv, aux);
 	printf("NC_V = %d\tNB_V = %d\n", ncv, nbv);
 	/*
 	for(i=0, V=P; i<n; i++)
