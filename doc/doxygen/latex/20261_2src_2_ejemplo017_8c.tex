@@ -33,7 +33,7 @@ Este programa aproxima el seno inverso (arcoseno):\+   \[\arcsin(x)
 En lugar de calcular factoriales grandes, la implementación construye cada término de forma incremental:\+
 \begin{DoxyItemize}
 \item {\ttfamily num} acumula la potencia $x^{2i+1}$ a partir de la anterior ( $\times x^2$).
-\item {\ttfamily \doxylink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}} acumula el coeficiente $C_i=\frac{(2i)!}{4^i(i!)^2}$ mediante la recurrencia:\+   \[  C_i = C_{i-1}\cdot\frac{2i-1}{2i}.
+\item {\ttfamily \doxylink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}} acumula el coeficiente $C_i=\frac{(2i)!}{4^i(i!)^2}$ mediante la recurrencia:\+   \[  C_i = C_{i-1}\cdot\frac{2i-1}{2i}.
 \]
 \end{DoxyItemize}
 
@@ -47,7 +47,7 @@ Cada iteración suma:\+   \[\frac{C_i\,x^{2i+1}}{2i+1}.
 \begin{DoxyParagraph}{Salida estándar}
 Imprime la aproximación:\+ 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\doxymbox{\hyperlink{_ejemplo033_8c_a6a85029730d5a524d90a17887b2ec009}{asen}}(x)\ =\ valor}
+\DoxyCodeLine{\doxymbox{\hyperlink{20252_2_ejemplo033_8c_a6a85029730d5a524d90a17887b2ec009}{asen}}(x)\ =\ valor}
 
 \end{DoxyCode}
 
@@ -117,7 +117,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source_l00059
 \DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ fct\ :\ coeficiente\ acumulado\ C\_i\ =\ (2i)!\ /\ (4\string^i\ (i!)\string^2)}}
 \DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ */}}
 \DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ den;}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ asx,\ num,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ asx,\ num,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
 \DoxyCodeLine{00075\ }
 \DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
 \DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
@@ -138,14 +138,14 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source_l00059
 \DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ (2*0+1)\ =\ 1}}
 \DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ \ =>\ arcsin(x)\ ≈\ x}}
 \DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ */}}
-\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1,\ asx\ =\ x,\ num\ =\ x,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1,\ asx\ =\ x,\ num\ =\ x,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ i\ <\ n;\ i++)}
 \DoxyCodeLine{00096\ \ \ \ \ \{}
 \DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Actualizar\ coeficiente:}}
 \DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ C\_i\ =\ C\_\{i-\/1\}\ *\ (2i-\/1)/(2i)}}
 \DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Se\ usa\ 2*i\ -\/\ 1.0f\ para\ forzar\ división\ en\ punto\ flotante.}}
 \DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ ((2*i\ -\/\ 1.0f)\ /\ (2*i));}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ ((2*i\ -\/\ 1.0f)\ /\ (2*i));}
 \DoxyCodeLine{00103\ }
 \DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Actualizar\ potencia:}}
@@ -157,7 +157,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo017_8c_source_l00059
 \DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ den\ =\ (2*i\ +\ 1);}
 \DoxyCodeLine{00112\ }
 \DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sumar\ término:\ (C\_i\ *\ x\string^(2i+1))\ /\ (2i+1)\ */}}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ asx\ +=\ (\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ num\ /\ den);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ asx\ +=\ (\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ num\ /\ den);}
 \DoxyCodeLine{00115\ \ \ \ \ \}}
 \DoxyCodeLine{00116\ }
 \DoxyCodeLine{00117\ \ \ \ \ printf(\textcolor{stringliteral}{"{}asen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ asx);}

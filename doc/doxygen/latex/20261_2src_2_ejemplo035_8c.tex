@@ -1,0 +1,296 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo035.c File Reference}
+\hypertarget{20261_2src_2_ejemplo035_8c}{}\label{20261_2src_2_ejemplo035_8c}\index{src/20261/src/Ejemplo035.c@{src/20261/src/Ejemplo035.c}}
+
+
+Cifrado/\+descifrado XOR sobre letras (A–Z, a–z) usando una clave numérica.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo035.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo035_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~100
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\+\_\+\+GET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\+\_\+\+SET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\+\_\+\+CLEAR}}(x,  n)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cifrado/\+descifrado XOR sobre letras (A–Z, a–z) usando una clave numérica. 
+
+Este programa implementa un cifrado didáctico:\+
+\begin{DoxyItemize}
+\item Solo modifica letras del alfabeto:\+
+\begin{DoxyItemize}
+\item \textquotesingle{}A\textquotesingle{}..\textquotesingle{}Z\textquotesingle{} -\/\texorpdfstring{$>$}{>} valores 0..25
+\item \textquotesingle{}a\textquotesingle{}..\textquotesingle{}z\textquotesingle{} -\/\texorpdfstring{$>$}{>} valores 26..51
+\end{DoxyItemize}
+\item A ese valor se le aplica XOR con una clave {\ttfamily cl\+\_\+c} (un byte).
+\item Después se “re-\/mapea” al rango de letras:\+
+\begin{DoxyItemize}
+\item 0..25 -\/\texorpdfstring{$>$}{>} \textquotesingle{}A\textquotesingle{}..\textquotesingle{}Z\textquotesingle{}
+\item 26..51 -\/\texorpdfstring{$>$}{>} \textquotesingle{}a\textquotesingle{}..\textquotesingle{}z\textquotesingle{}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+El programa imprime trazas numéricas por carácter para mostrar la transformación.
+
+\begin{DoxyParagraph}{Entrada estándar}
+1) Una línea de texto (hasta N-\/1 caracteres) terminada con ENTER. 2) Una clave entera (se trunca a 1 byte al convertirla a char).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item Mensaje original {\ttfamily MSG}
+\item Mensaje cifrado {\ttfamily MSG E}
+\item Mensaje descifrado {\ttfamily MSG D}
+\item Trazas por carácter con valores intermedios.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Solo letras A–Z /\+ a–z se cifran; otros caracteres se dejan igual.
+\item Es un ejemplo didáctico; no es criptografía segura.
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo035.c\ -\/o\ Ejemplo035}
+\DoxyCodeLine{./Ejemplo035}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo035_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo035_8c_a3a8ea58898cb58fc96013383d39f482c}\index{Ejemplo035.c@{Ejemplo035.c}!BIT@{BIT}}
+\index{BIT@{BIT}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_a3a8ea58898cb58fc96013383d39f482c} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1<<(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00040}{40}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo035_8c_a9363128e451d6e93a10d34f29b3e5fc5}\index{Ejemplo035.c@{Ejemplo035.c}!BIT\_CLEAR@{BIT\_CLEAR}}
+\index{BIT\_CLEAR@{BIT\_CLEAR}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_CLEAR}{BIT\_CLEAR}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_a9363128e451d6e93a10d34f29b3e5fc5} 
+\+\#define BIT\+\_\+\+CLEAR(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{\string~BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00043}{43}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo035_8c_a7888567f1126d4ea16cd8ac4472ba16d}\index{Ejemplo035.c@{Ejemplo035.c}!BIT\_GET@{BIT\_GET}}
+\index{BIT\_GET@{BIT\_GET}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_GET}{BIT\_GET}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_a7888567f1126d4ea16cd8ac4472ba16d} 
+\+\#define BIT\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00041}{41}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo035_8c_ad858f7c97446fb3f7a0caef0baca2afd}\index{Ejemplo035.c@{Ejemplo035.c}!BIT\_SET@{BIT\_SET}}
+\index{BIT\_SET@{BIT\_SET}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_SET}{BIT\_SET}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_ad858f7c97446fb3f7a0caef0baca2afd} 
+\+\#define BIT\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ |=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00042}{42}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo035_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo035.c@{Ejemplo035.c}!N@{N}}
+\index{N@{N}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00039}{39}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo035_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo035.c@{Ejemplo035.c}!main@{main}}
+\index{main@{main}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source_l00045}{45}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00048\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{char}\ msg[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ msgE[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ msgD[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ cl\_c,\ E;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ cl\_I,\ n;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{/*\ Leer\ mensaje\ hasta\ ENTER\ */}}
+\DoxyCodeLine{00054\ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ msg[i]\ =\ (char)getchar();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00058\ \ \ \ \ \}\textcolor{keywordflow}{while}(i<\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\&\&msg[i-\/1]!=10);}
+\DoxyCodeLine{00059\ \ \ \ \ msg[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00060\ \ \ \ \ n\ =\ i-\/1;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{/*\ Leer\ clave\ como\ entero\ y\ convertirla\ a\ un\ byte\ (char)\ */}}
+\DoxyCodeLine{00063\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ clave:\ "{}});}
+\DoxyCodeLine{00064\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cl\_I);}
+\DoxyCodeLine{00065\ \ \ \ \ cl\_c\ =\ (char)cl\_I;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s\(\backslash\)n"{}},\ msg);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ CIFRADO\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ msgE[n]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%u\(\backslash\)t"{}},\ i,\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msg[i]);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ msgE[i]\ =\ msg[i];}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ E\ =\ 0;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Si\ es\ minúscula,\ mapear\ a\ 26..51\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(msgE[i]>=\textcolor{charliteral}{'a'}\ \&\&\ msgE[i]<=\textcolor{charliteral}{'z'})}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ 26;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ \string^=\ cl\_c;\ \textcolor{comment}{/*\ XOR\ con\ la\ clave\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Si\ es\ mayúscula,\ mapear\ a\ 0..25\ */}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(msgE[i]>=\textcolor{charliteral}{'A'}\ \&\&\ msgE[i]<=\textcolor{charliteral}{'Z'})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Re-\/mapeo\ a\ letra\ */}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]\ <\ 26)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]\ <\ 52)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ 26;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\ E:\ \%s\(\backslash\)n"{}},\ msgE);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ DESCIFRADO\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00118\ \ \ \ \ msgD[n]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%u\(\backslash\)t"{}},\ i,\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ msgD[i]\ =\ msgE[i];}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ E\ =\ 0;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(msgD[i]>=\textcolor{charliteral}{'a'}\ \&\&\ msgD[i]<=\textcolor{charliteral}{'z'})}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ 26;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(msgD[i]>=\textcolor{charliteral}{'A'}\ \&\&\ msgD[i]<=\textcolor{charliteral}{'Z'})}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]\ <\ 26)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]\ <\ 52)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ 26;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00159\ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\ D:\ \%s\(\backslash\)n"{}},\ msgD);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00163\ \}}
+
+\end{DoxyCode}

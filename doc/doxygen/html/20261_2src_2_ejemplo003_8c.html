@@ -172,7 +172,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   62</span><span class="comment">        Y = dulces que se ganan al vender 1 Pokémon (NO evolucionado)</span></div>
 <div class="line"><span class="lineno">   63</span><span class="comment">        P = número máximo de Pokémon que se pueden evolucionar (respuesta)</span></div>
 <div class="line"><span class="lineno">   64</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">   65</span>    <span class="keywordtype">int</span> <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, X, Y, P;</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordtype">int</span> <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, X, Y, <a class="code hl_define" href="20261_2src_2_ejemplo034_8c.html#a2748566f4c443ee77aa831e63dbb5ebe">P</a>;</div>
 <div class="line"><span class="lineno">   66</span> </div>
 <div class="line"><span class="lineno">   67</span>    <span class="comment">/* Lee: M N X Y (nota: el enunciado usualmente pide N M X Y). */</span></div>
 <div class="line"><span class="lineno">   68</span>    scanf(<span class="stringliteral">&quot;%d %d %d %d&quot;</span>, &amp;<a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, &amp;X, &amp;Y);</div>
@@ -187,12 +187,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   77</span><span class="comment"></span> </div>
 <div class="line"><span class="lineno">   78</span><span class="comment">      Además, P no puede ser mayor que M (no puedes evolucionar más Pokémon de los que tienes).</span></div>
 <div class="line"><span class="lineno">   79</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">   80</span>    P = (<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> + Y * <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a>) / (X + Y);</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_define" href="20261_2src_2_ejemplo034_8c.html#a2748566f4c443ee77aa831e63dbb5ebe">P</a> = (<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a> + Y * <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a>) / (X + Y);</div>
 <div class="line"><span class="lineno">   81</span> </div>
 <div class="line"><span class="lineno">   82</span>    <span class="comment">/* Imprime min(P, M). */</span></div>
-<div class="line"><span class="lineno">   83</span>    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, P &gt; <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a> ? <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a> : P);</div>
+<div class="line"><span class="lineno">   83</span>    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code hl_define" href="20261_2src_2_ejemplo034_8c.html#a2748566f4c443ee77aa831e63dbb5ebe">P</a> &gt; <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a> ? <a class="code hl_define" href="018___casilleros_8c.html#a52037c938e3c1b126c6277da5ca689d0">M</a> : <a class="code hl_define" href="20261_2src_2_ejemplo034_8c.html#a2748566f4c443ee77aa831e63dbb5ebe">P</a>);</div>
 <div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   85</span>}</div>
+<div class="ttc" id="a20261_2src_2_ejemplo034_8c_html_a2748566f4c443ee77aa831e63dbb5ebe"><div class="ttname"><a href="20261_2src_2_ejemplo034_8c.html#a2748566f4c443ee77aa831e63dbb5ebe">P</a></div><div class="ttdeci">#define P</div><div class="ttdef"><b>Definition</b> <a href="20261_2src_2_ejemplo034_8c_source.html#l00034">Ejemplo034.c:34</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,0 +1,104 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo039.c File Reference}
+\hypertarget{20261_2src_2_ejemplo039_8c}{}\label{20261_2src_2_ejemplo039_8c}\index{src/20261/src/Ejemplo039.c@{src/20261/src/Ejemplo039.c}}
+
+
+Suma dos números reales recibidos por línea de comandos.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo039.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo039_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Suma dos números reales recibidos por línea de comandos. 
+
+
+\begin{DoxyItemize}
+\item Requiere exactamente 2 argumentos numéricos:\+ argv\+[1]\+ = A argv\+[2]\+ = B
+\item Convierte con {\ttfamily atof()} y calcula C = A + B.
+\item Imprime con formato:\+ A(+/\+-\/)B=C
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./Ejemplo039\ A\ B}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1.00+2.00=3.00}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item Si {\ttfamily argc != 3} el programa termina con código 1 sin imprimir mensaje (se mantiene así).
+\item {\ttfamily atof()} no valida errores de conversión; para robustez se recomienda {\ttfamily strtod()}.
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo039.c\ -\/o\ Ejemplo039}
+\DoxyCodeLine{./Ejemplo039\ 1.25\ -\/3}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c_source}{Ejemplo039.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo039_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo039_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo039.c@{Ejemplo039.c}!main@{main}}
+\index{main@{main}!Ejemplo039.c@{Ejemplo039.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo039_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c_source_l00036}{36}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c_source}{Ejemplo039.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ A,\ B,\ C;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{/*\ Se\ esperan\ 2\ argumentos\ numéricos\ =>\ argc\ debe\ ser\ 3\ (incluye\ nombre\ del\ programa)\ */}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 3)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{/*\ Convertir\ cadenas\ a\ float\ */}}
+\DoxyCodeLine{00045\ \ \ \ \ A\ =\ (float)atof(argv[1]);}
+\DoxyCodeLine{00046\ \ \ \ \ B\ =\ (float)atof(argv[2]);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{/*\ Sumar\ */}}
+\DoxyCodeLine{00049\ \ \ \ \ C\ =\ A\ +\ B;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{/*\ Mostrar:\ A(+/-\/)B=C\ */}}
+\DoxyCodeLine{00052\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\%+.2f=\%.2f\(\backslash\)n"{}},\ A,\ B,\ C);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}

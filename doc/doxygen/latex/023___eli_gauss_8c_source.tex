@@ -9,7 +9,7 @@
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00005}\doxymbox{\hyperlink{023___eli_gauss_8c_a0ddf1224851353fc92bfbff6f499fa97}{00005}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00006}00006\ \{}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00007}00007\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j,\ k;}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}][\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ b[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ x[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}];}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}][\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ b[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}],\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ x[\doxymbox{\hyperlink{023___eli_gauss_8c_af7b1400a617718754e5de5c255467af5}{NV}}];}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{do}\{}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00010}00010\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ variables:\ "{}});}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
@@ -33,10 +33,10 @@
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00029}00029\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{for}(i=1;\ i<n;\ i++)}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00031}00031\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][0]/A[0][0];}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][0]/A[0][0];}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[0][j]);}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[0];}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[0][j]);}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[0];}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00036}00036\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00037}00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
@@ -47,10 +47,10 @@
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00043}00043\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{for}(i=2;\ i<n;\ i++)}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00045}00045\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][1]/A[1][1];}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[i][1]/A[1][1];}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j=0;\ j<n;\ j++)}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[1][j]);}
-\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[1];}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ A[i][j]-\/=(\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*A[1][j]);}
+\DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ b[i]-\/=\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}*b[1];}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00050}00050\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00051}00051\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{023___eli_gauss_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}

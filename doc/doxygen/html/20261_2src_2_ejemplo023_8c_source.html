@@ -92,153 +92,194 @@ $(function(){initNavTree('20261_2src_2_ejemplo023_8c_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="20261_2src_2_ejemplo023_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="20261_2src_2_ejemplo023_8c.html#a0240ac851181b84ac374872dc5434ee4">   69</a></span><span class="preprocessor">#define N 100000</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="20261_2src_2_ejemplo023_8c.html#a0ddf1224851353fc92bfbff6f499fa97">   77</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_ejemplo__035_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">      n   : número de elementos a generar (1..N)</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">      i,j : índices auxiliares</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">      nd  : número de divisiones/casilleros (≈ sqrt(n))</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"></span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">      c[] : arreglo de enteros usado en dos zonas:</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">            - c[0..nd-1]      = conteos por casillero (histograma)</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">            - c[nd..2*nd-1]   = posiciones iniciales/prefijos (índices de escritura en xc)</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">int</span> n, i, j, nd, c[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="20261_2src_2_ejemplo023_8c.html#a0240ac851181b84ac374872dc5434ee4">   80</a></span><span class="preprocessor">#define N 100000</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="20261_2src_2_ejemplo023_8c.html#a0ddf1224851353fc92bfbff6f499fa97">   82</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_ejemplo__035_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    (void)argc;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    (void)argv;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">/* n: cantidad de datos, nd: número de casilleros */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">int</span> n, i, j, k, id_min, nd, c[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">      min, max : rango de generación</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">      x[]      : arreglo original “desordenado”</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">      xc[]     : arreglo reordenado por casilleros</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">      rango    : max - min</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">      Dx       : ancho de cada casillero (rango/nd)</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">float</span> <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">float</span> x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], rango, Dx, xc[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">/* Leer n */</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        printf(<span class="stringliteral">&quot;Ingrese el numero de elementos: &quot;</span>);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    } <span class="keywordflow">while</span> (n &lt; 1 || n &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">/* Leer rango */</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    printf(<span class="stringliteral">&quot;Ingrese el valor maximo: &quot;</span>);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    printf(<span class="stringliteral">&quot;Ingrese el valor minimo: &quot;</span>);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">      Si el usuario capturó min &gt; max, se intercambian.</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">      WARNING: este intercambio por multiplicación/división puede fallar si min==0 o max==0.</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> *= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> / <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> /= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    srand(time(NULL));</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">/* Generar arreglo original y (por simplicidad) inicializar c[i]=0 para i&lt;n */</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    printf(<span class="stringliteral">&quot;Desordenado.\n&quot;</span>);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="comment">/* Genera valores en [min, max] (puede incluir max si rand()==RAND_MAX) */</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        x[i] = ((<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) * rand()) / RAND_MAX + <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="comment">/* Inicialización (basta con 0..2*nd-1, pero aquí se inicializa 0..n-1) */</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        c[i] = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">/* Rango [min, max] */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">float</span> <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">/* x[]: arreglo original, xc[]: arreglo tras distribución y ordenamiento */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">float</span> x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], rango, Dx, xc[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], aux;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">/* Leer n con validación */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        printf(<span class="stringliteral">&quot;Ingrese el numero de elementos: &quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    } <span class="keywordflow">while</span> (n &lt; 1 || n &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">/* Leer rango */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    printf(<span class="stringliteral">&quot;Ingrese el valor maximo: &quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    printf(<span class="stringliteral">&quot;Ingrese el valor minimo: &quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">      Asegurar min &lt;= max. El código contempla casos con cero para evitar división entre cero</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">      en el intercambio por multiplicación/división.</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>)           <span class="comment">/* min == 0 */</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> = 0;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)      <span class="comment">/* max == 0 */</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="comment">/* Intercambio por multiplicación/división */</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> *= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> / <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> /= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    srand(time(NULL));</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, x[i]);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">/* Definir número de casilleros */</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    nd = (int)sqrt((<span class="keywordtype">double</span>)n);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">/* Calcular rango y ancho de casillero */</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    rango = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    Dx = rango / nd;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">/* Generar datos aleatorios y limpiar c[i] (solo una parte; nd &lt;= n así que alcanza) */</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    printf(<span class="stringliteral">&quot;Desordenado.\n&quot;</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="comment">/* Escalamiento lineal de rand() a [min, max] */</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        x[i] = ((<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) * rand()) / RAND_MAX + <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">/* Inicializar contadores a cero (al menos hasta n) */</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        c[i] = 0;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    printf(<span class="stringliteral">&quot;ND = %d\tRango = %f\tDx = %f\n&quot;</span>, nd, rango, Dx);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">/* Mostrar intervalos de los casilleros */</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        printf(<span class="stringliteral">&quot;%d. [%f, %f]\n&quot;</span>, i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, x[i]);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">/* Definir buckets como sqrt(n) */</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    nd = (int)sqrt((<span class="keywordtype">double</span>)n);</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">      1) Conteo por casillero:</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">         j = floor((x[i]-min)/Dx)</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">         c[j]++</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    printf(<span class="stringliteral">&quot;Desordenado con numero de casillero.\n&quot;</span>);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        j = (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="comment">/* Tamaño de bucket */</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    rango = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    Dx = rango / nd;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    printf(<span class="stringliteral">&quot;ND = %d\tRango = %f\tDx = %f\n&quot;</span>, nd, rango, Dx);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">/* Mostrar intervalos por bucket (solo informativo) */</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        printf(<span class="stringliteral">&quot;%d. [%f, %f]\n&quot;</span>, i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">          WARNING: si x[i] == max, j puede ser nd. Para robustez:</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">          if (j &gt;= nd) j = nd - 1;</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, x[i], j);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        c[j]++;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">      2) Prefijos / posiciones iniciales:</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">         Se construye en la zona c[nd..2*nd-1]:</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">           c[nd]     = 0</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">           c[nd+1]   = c[0]</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">           c[nd+2]   = c[0] + c[1]</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">           ...</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">         donde c[nd+k] es el índice de inicio para escribir el casillero k en xc[].</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">      1) Conteo por casillero (histograma):</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">         j = floor((x[i]-min)/Dx), pero si x[i]==max forzamos j=nd-1.</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    printf(<span class="stringliteral">&quot;Desordenado con numero de casillero.\n&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        j = (x[i] == <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> ? nd - 1 : (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, x[i], j);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        c[j]++; <span class="comment">/* c[j] = cantidad de elementos del bucket j */</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">      2) Prefijos:</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">         Construye posiciones iniciales del bucket i en xc[].</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">         - c[i + nd]     guarda la posición &quot;corriente&quot; de escritura del bucket i.</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">         - c[i + 2*nd]   guarda una copia del prefijo (inicio fijo del bucket i).</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">for</span> (i = 1; i &lt; nd; i++)</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        c[i + nd] = c[i + nd - 1] + c[i - 1];</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">/* Mostrar conteos y prefijos */</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        printf(<span class="stringliteral">&quot;%d. [%+f, %+f]\t%d\t%d\n&quot;</span>,</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>               i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx, c[i], c[i + nd]);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">      3) Distribución a xc:</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">         - Se vuelve a calcular el casillero j para cada x[i]</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">         - Se coloca x[i] en la siguiente posición libre del casillero j:</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">             xc[ c[nd + j] ] = x[i]</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">           y se incrementa esa posición para el siguiente elemento del mismo casillero.</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        c[i + nd]    = c[i + nd - 1] + c[i - 1]; <span class="comment">/* prefijo */</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        c[i + 2*nd]  = c[i + nd];                <span class="comment">/* copia del prefijo */</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="comment">/* Mostrar resumen por bucket: intervalo, conteo, prefijo */</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        printf(<span class="stringliteral">&quot;%d. [%+f, %+f]\t%d\t%d\n&quot;</span>,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>               i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx, c[i], c[i + nd]);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">      3) Distribución a xc:</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">         Se inserta cada x[i] en xc según su prefijo, incrementando la posición de escritura.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        j = (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="comment">/* WARNING: clamp recomendado para evitar j==nd */</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="comment">/* if (j &gt;= nd) j = nd - 1; */</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        j = (x[i] == <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> ? nd - 1 : (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx));</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        xc[c[j + nd]] = x[i];</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        c[j + nd]++; <span class="comment">/* avanzar posición de escritura del bucket */</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        xc[c[j + nd]] = x[i];</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        c[j + nd]++;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">/* Mostrar arreglo reordenado por casilleros */</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        j = (int)((xc[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">/* if (j &gt;= nd) j = nd - 1; */</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, xc[i], j);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">/* Imprimir xc con su bucket (informativo) */</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        j = (int)((xc[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, xc[i], j);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">      4) Ordenar internamente cada bucket.</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">         El inicio del bucket i está en c[i + 2*nd].</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment">         El tamaño del bucket i está en c[i].</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">switch</span> (c[i])</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                <span class="comment">/* 0 o 1 elemento: ya está ordenado */</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="comment">/* 2 elementos: una sola comparación */</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">if</span> (xc[c[i + 2*nd]] &gt; xc[c[i + 2*nd] + 1])</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    aux = xc[c[i + 2*nd]];</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    xc[c[i + 2*nd]] = xc[c[i + 2*nd] + 1];</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    xc[c[i + 2*nd] + 1] = aux;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="comment">/*</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment">                  &gt;= 3 elementos: Selection Sort dentro del segmento del bucket</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">                  [start, start + c[i] - 1], con start = c[i + 2*nd].</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">                */</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="keywordflow">for</span> (j = 0; j &lt; (c[i] - 1); j++)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                    <span class="keywordflow">for</span> (k = j + 1, id_min = j; k &lt; c[i]; k++)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                        <span class="keywordflow">if</span> (xc[id_min + c[i + 2*nd]] &gt; xc[k + c[i + 2*nd]])</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                            id_min = k;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (id_min != j)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                    {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                        aux = xc[j + c[i + 2*nd]];</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                        xc[j + c[i + 2*nd]] = xc[id_min + c[i + 2*nd]];</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                        xc[id_min + c[i + 2*nd]] = aux;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="comment">/* Resultado final */</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    printf(<span class="stringliteral">&quot;Ordenado.\n&quot;</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, xc[i]);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>}</div>
 </div>
 <div class="ttc" id="a012__aleatorio_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00005">012_aleatorio.c:5</a></div></div>
 <div class="ttc" id="a012__aleatorio_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00006">012_aleatorio.c:6</a></div></div>

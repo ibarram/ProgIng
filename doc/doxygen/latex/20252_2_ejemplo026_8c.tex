@@ -1,0 +1,250 @@
+\doxysection{src/\+20252/\+\+Ejemplo026.c File Reference}
+\hypertarget{20252_2_ejemplo026_8c}{}\label{20252_2_ejemplo026_8c}\index{src/20252/Ejemplo026.c@{src/20252/Ejemplo026.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo026.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{20252_2_ejemplo026_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\+\_\+\+GET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\+\_\+\+SET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\+\_\+\+CLEAR}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\+\_\+\+TOGGLE}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_aae726527b0f579536565bfd00dcd5c41}{BIT\+\_\+\+WRITE}}(x,  n,  v)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a9a55da2561fedca5a6a7a1e28032331b}{ES\+\_\+\+PAR}}(x)
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{20252_2_ejemplo026_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20252_2_ejemplo026_8c_a3a8ea58898cb58fc96013383d39f482c}\index{Ejemplo026.c@{Ejemplo026.c}!BIT@{BIT}}
+\index{BIT@{BIT}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a3a8ea58898cb58fc96013383d39f482c} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1<<(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00006}{6}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_a9363128e451d6e93a10d34f29b3e5fc5}\index{Ejemplo026.c@{Ejemplo026.c}!BIT\_CLEAR@{BIT\_CLEAR}}
+\index{BIT\_CLEAR@{BIT\_CLEAR}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_CLEAR}{BIT\_CLEAR}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a9363128e451d6e93a10d34f29b3e5fc5} 
+\+\#define BIT\+\_\+\+CLEAR(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{\string~BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00009}{9}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_a7888567f1126d4ea16cd8ac4472ba16d}\index{Ejemplo026.c@{Ejemplo026.c}!BIT\_GET@{BIT\_GET}}
+\index{BIT\_GET@{BIT\_GET}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_GET}{BIT\_GET}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a7888567f1126d4ea16cd8ac4472ba16d} 
+\+\#define BIT\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00007}{7}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_ad858f7c97446fb3f7a0caef0baca2afd}\index{Ejemplo026.c@{Ejemplo026.c}!BIT\_SET@{BIT\_SET}}
+\index{BIT\_SET@{BIT\_SET}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_SET}{BIT\_SET}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_ad858f7c97446fb3f7a0caef0baca2afd} 
+\+\#define BIT\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ |=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00008}{8}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_a313efcb9b1da105b05edfe888760db3b}\index{Ejemplo026.c@{Ejemplo026.c}!BIT\_TOGGLE@{BIT\_TOGGLE}}
+\index{BIT\_TOGGLE@{BIT\_TOGGLE}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_TOGGLE}{BIT\_TOGGLE}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a313efcb9b1da105b05edfe888760db3b} 
+\+\#define BIT\+\_\+\+TOGGLE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \string^=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00010}{10}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_aae726527b0f579536565bfd00dcd5c41}\index{Ejemplo026.c@{Ejemplo026.c}!BIT\_WRITE@{BIT\_WRITE}}
+\index{BIT\_WRITE@{BIT\_WRITE}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_WRITE}{BIT\_WRITE}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_aae726527b0f579536565bfd00dcd5c41} 
+\+\#define BIT\+\_\+\+WRITE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{, }\item[{}]{v}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((v)?\doxymbox{\hyperlink{026___binarios_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(x,n):\doxymbox{\hyperlink{026___binarios_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\_CLEAR}}(x,n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00011}{11}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_a9a55da2561fedca5a6a7a1e28032331b}\index{Ejemplo026.c@{Ejemplo026.c}!ES\_PAR@{ES\_PAR}}
+\index{ES\_PAR@{ES\_PAR}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{ES\_PAR}{ES\_PAR}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a9a55da2561fedca5a6a7a1e28032331b} 
+\+\#define ES\+\_\+\+PAR(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(!\doxymbox{\hyperlink{026___binarios_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,0))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00012}{12}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+\Hypertarget{20252_2_ejemplo026_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo026.c@{Ejemplo026.c}!N@{N}}
+\index{N@{N}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~50}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00013}{13}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo026_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo026_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo026.c@{Ejemplo026.c}!main@{main}}
+\index{main@{main}!Ejemplo026.c@{Ejemplo026.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo026_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source_l00015}{15}} of file \doxymbox{\hyperlink{20252_2_ejemplo026_8c_source}{Ejemplo026.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}\ str[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ strP[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ strR[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ c,\ p,\ v;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k,\ l,\ nc,\ cc,\ cb,\ np,\ p2,\ p2f,\ cc2,\ cb2;}
+\DoxyCodeLine{00019\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00020\ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ c\ =\ getchar();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ str[i]\ =\ c;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00025\ \ \ \ \ \}\textcolor{keywordflow}{while}(c!=10\&\&i<(\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}-\/1));}
+\DoxyCodeLine{00026\ \ \ \ \ nc\ =\ i-\/1;}
+\DoxyCodeLine{00027\ \ \ \ \ str[nc]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00028\ \ \ \ \ np\ =\ (int)(log2(nc+log2(nc)+1)+1);}
+\DoxyCodeLine{00029\ \ \ \ \ printf(\textcolor{stringliteral}{"{}NP\ =\ \%d\(\backslash\)n"{}},\ np);}
+\DoxyCodeLine{00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\ (\%d,\ \%d)\(\backslash\)n"{}},\ str,\ nc,\ np);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=0,\ p2=1;\ i<(nc+np);\ i++)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i+1)==p2)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ p2<<=1;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ str[j++];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ strP[i]\ =\ c;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ p2f=1;\ k<np;\ k++)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p2f\&(i+1))}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strP[p2f-\/1]\string^=c;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p2f<<=1;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ strP[nc+np]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00051\ \ \ \ \ cc\ =\ rand()\%(nc+np);}
+\DoxyCodeLine{00052\ \ \ \ \ cb\ =\ rand()\%8;}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(strP[cc],cb);}
+\DoxyCodeLine{00054\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strP);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ j=0,\ l=0,\ p2=1;\ i<(nc+np);\ i++)}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i+1)==p2)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ strR[nc+1+l]\ =\ strP[i];}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ l++;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ p2\ <<=\ 1;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ strP[i];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ strR[j++]\ =\ c;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(k=0,\ p2f=1;\ k<np;\ k++)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p2f\&(i+1))}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strR[nc+1+k]\string^=c;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p2f<<=1;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ strR[nc]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00076\ \ \ \ \ strR[nc+np+1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00077\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\ (\%d,\ \%d)\(\backslash\)n"{}},\ strR,\ cc,\ cb);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ cc2=0;\ i<np;\ i++)}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)t"{}},\ strR[nc+1+i]);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo026_8c_aae726527b0f579536565bfd00dcd5c41}{BIT\_WRITE}}(cc2,i,strR[nc+1+i]);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strR[nc+1+i])}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ cb2\ =\ log2(strR[nc+1+i]);}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ printf(\textcolor{stringliteral}{"{}(\%d,\ \%d)\(\backslash\)n"{}},\ cc2-\/1,\ cb2);}
+\DoxyCodeLine{00086\ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo026_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(strP[cc2-\/1],cb2);}
+\DoxyCodeLine{00087\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ strP);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}

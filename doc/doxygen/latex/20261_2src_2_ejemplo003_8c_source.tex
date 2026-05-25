@@ -19,7 +19,7 @@
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ Y\ =\ dulces\ que\ se\ ganan\ al\ vender\ 1\ Pokémon\ (NO\ evolucionado)}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ P\ =\ número\ máximo\ de\ Pokémon\ que\ se\ pueden\ evolucionar\ (respuesta)}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00064}00064\ \textcolor{comment}{\ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ X,\ Y,\ P;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ X,\ Y,\ \doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}};}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00066}00066\ }
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00067}00067\ \ \ \ \ \textcolor{comment}{/*\ Lee:\ M\ N\ X\ Y\ (nota:\ el\ enunciado\ usualmente\ pide\ N\ M\ X\ Y).\ */}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00068}00068\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d\ \%d\ \%d\ \%d"{}},\ \&\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}},\ \&\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}},\ \&X,\ \&Y);}
@@ -34,10 +34,10 @@
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00077}00077\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ Además,\ P\ no\ puede\ ser\ mayor\ que\ M\ (no\ puedes\ evolucionar\ más\ Pokémon\ de\ los\ que\ tienes).}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00079}00079\ \textcolor{comment}{\ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00080}00080\ \ \ \ \ P\ =\ (\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ +\ Y\ *\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}})\ /\ (X\ +\ Y);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00080}00080\ \ \ \ \ \doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}}\ =\ (\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ +\ Y\ *\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}})\ /\ (X\ +\ Y);}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00081}00081\ }
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00082}00082\ \ \ \ \ \textcolor{comment}{/*\ Imprime\ min(P,\ M).\ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00083}00083\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ P\ >\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ ?\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ :\ P);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00083}00083\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}}\ >\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ ?\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\ :\ \doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}});}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo003_8c_source_l00085}00085\ \}}
 

@@ -90,7 +90,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo012_8c_source_l00041
 \DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ den;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ denominador\ impar:\ 1,3,5,...\ */}}
 \DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ valor\ para\ evaluar\ ln(x)\ */}}
 \DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ lnx;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ acumulador\ de\ la\ serie\ */}}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ f\ =\ (x-\/1)/(x+1)\ */}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ f\ =\ (x-\/1)/(x+1)\ */}}
 \DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ num;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ potencia:\ f\string^\{den\}\ */}}
 \DoxyCodeLine{00052\ }
 \DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ >=\ 1\ */}}
@@ -110,7 +110,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo012_8c_source_l00041
 \DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ y\ la\ serie\ es:}}
 \DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ ln(x)\ =\ 2\ *\ sum\_\{i=0\}\string^\{n-\/1\}\ f\string^\{2i+1\}/(2i+1)}}
 \DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ */}}
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ (x\ -\/\ 1)\ /\ (x\ +\ 1),\ lnx\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ (x\ -\/\ 1)\ /\ (x\ +\ 1),\ lnx\ =\ 0;\ i\ <\ n;\ i++)}
 \DoxyCodeLine{00071\ \ \ \ \ \{}
 \DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ den\ =\ 2*i\ +\ 1;\ \ \textcolor{comment}{/*\ 1,\ 3,\ 5,\ ...\ */}}
 \DoxyCodeLine{00073\ }
@@ -119,7 +119,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo012_8c_source_l00041
 \DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ num\ =\ fct\ *\ fct\ *\ ...\ *\ fct\ \ (den\ factores)}}
 \DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
 \DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ num\ =\ 1;\ j\ <\ den;\ j++)}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};}
 \DoxyCodeLine{00080\ }
 \DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Sumar\ el\ término:\ f\string^\{den\}/den\ */}}
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ lnx\ +=\ num\ /\ den;}

@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {5.3}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261 Directory Reference}{25}{section.5.3}%
 \contentsline {section}{\numberline {5.4}src Directory Reference}{25}{section.5.4}%
 \contentsline {section}{\numberline {5.5}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src Directory Reference}{26}{section.5.5}%
-\contentsline {section}{\numberline {5.6}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}template Directory Reference}{27}{section.5.6}%
+\contentsline {section}{\numberline {5.6}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}template Directory Reference}{28}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Data Structure Documentation}{29}{chapter.6}%
 \contentsline {section}{\numberline {6.1}contacto Struct Reference}{29}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Detailed Description}{29}{subsection.6.1.1}%
@@ -255,408 +255,563 @@
 \contentsline {subsection}{\numberline {7.70.1}Function Documentation}{93}{subsection.7.70.1}%
 \contentsline {subsubsection}{\numberline {7.70.1.1}main()}{93}{subsubsection.7.70.1.1}%
 \contentsline {section}{\numberline {7.71}Ejemplo\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}037.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{94}{section.7.71}%
-\contentsline {section}{\numberline {7.72}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo024.c File Reference}{96}{section.7.72}%
-\contentsline {subsection}{\numberline {7.72.1}Macro Definition Documentation}{97}{subsection.7.72.1}%
-\contentsline {subsubsection}{\numberline {7.72.1.1}BIT}{97}{subsubsection.7.72.1.1}%
-\contentsline {subsubsection}{\numberline {7.72.1.2}BIT\_CLEAR}{97}{subsubsection.7.72.1.2}%
-\contentsline {subsubsection}{\numberline {7.72.1.3}BIT\_GET}{97}{subsubsection.7.72.1.3}%
-\contentsline {subsubsection}{\numberline {7.72.1.4}BIT\_SET}{97}{subsubsection.7.72.1.4}%
-\contentsline {subsubsection}{\numberline {7.72.1.5}BIT\_TOGGLE}{97}{subsubsection.7.72.1.5}%
-\contentsline {subsubsection}{\numberline {7.72.1.6}BIT\_WRITE}{97}{subsubsection.7.72.1.6}%
-\contentsline {subsubsection}{\numberline {7.72.1.7}ES\_PAR}{97}{subsubsection.7.72.1.7}%
-\contentsline {subsection}{\numberline {7.72.2}Function Documentation}{98}{subsection.7.72.2}%
-\contentsline {subsubsection}{\numberline {7.72.2.1}main()}{98}{subsubsection.7.72.2.1}%
-\contentsline {section}{\numberline {7.73}Ejemplo024.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{98}{section.7.73}%
-\contentsline {section}{\numberline {7.74}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo025.c File Reference}{98}{section.7.74}%
-\contentsline {subsection}{\numberline {7.74.1}Macro Definition Documentation}{99}{subsection.7.74.1}%
-\contentsline {subsubsection}{\numberline {7.74.1.1}BIT}{99}{subsubsection.7.74.1.1}%
-\contentsline {subsubsection}{\numberline {7.74.1.2}BIT\_CLEAR}{99}{subsubsection.7.74.1.2}%
-\contentsline {subsubsection}{\numberline {7.74.1.3}BIT\_GET}{99}{subsubsection.7.74.1.3}%
-\contentsline {subsubsection}{\numberline {7.74.1.4}BIT\_SET}{100}{subsubsection.7.74.1.4}%
-\contentsline {subsubsection}{\numberline {7.74.1.5}BIT\_TOGGLE}{100}{subsubsection.7.74.1.5}%
-\contentsline {subsubsection}{\numberline {7.74.1.6}BIT\_WRITE}{100}{subsubsection.7.74.1.6}%
-\contentsline {subsubsection}{\numberline {7.74.1.7}ES\_PAR}{100}{subsubsection.7.74.1.7}%
-\contentsline {subsubsection}{\numberline {7.74.1.8}N}{100}{subsubsection.7.74.1.8}%
-\contentsline {subsection}{\numberline {7.74.2}Function Documentation}{100}{subsection.7.74.2}%
-\contentsline {subsubsection}{\numberline {7.74.2.1}main()}{100}{subsubsection.7.74.2.1}%
-\contentsline {section}{\numberline {7.75}Ejemplo025.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{101}{section.7.75}%
-\contentsline {section}{\numberline {7.76}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo026.c File Reference}{101}{section.7.76}%
-\contentsline {subsection}{\numberline {7.76.1}Macro Definition Documentation}{102}{subsection.7.76.1}%
-\contentsline {subsubsection}{\numberline {7.76.1.1}BIT}{102}{subsubsection.7.76.1.1}%
-\contentsline {subsubsection}{\numberline {7.76.1.2}BIT\_CLEAR}{102}{subsubsection.7.76.1.2}%
-\contentsline {subsubsection}{\numberline {7.76.1.3}BIT\_GET}{102}{subsubsection.7.76.1.3}%
-\contentsline {subsubsection}{\numberline {7.76.1.4}BIT\_SET}{103}{subsubsection.7.76.1.4}%
-\contentsline {subsubsection}{\numberline {7.76.1.5}BIT\_TOGGLE}{103}{subsubsection.7.76.1.5}%
-\contentsline {subsubsection}{\numberline {7.76.1.6}BIT\_WRITE}{103}{subsubsection.7.76.1.6}%
-\contentsline {subsubsection}{\numberline {7.76.1.7}ES\_PAR}{103}{subsubsection.7.76.1.7}%
-\contentsline {subsubsection}{\numberline {7.76.1.8}N}{103}{subsubsection.7.76.1.8}%
-\contentsline {subsection}{\numberline {7.76.2}Function Documentation}{103}{subsection.7.76.2}%
-\contentsline {subsubsection}{\numberline {7.76.2.1}main()}{103}{subsubsection.7.76.2.1}%
-\contentsline {section}{\numberline {7.77}Ejemplo026.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{104}{section.7.77}%
-\contentsline {section}{\numberline {7.78}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo027.c File Reference}{106}{section.7.78}%
-\contentsline {subsection}{\numberline {7.78.1}Function Documentation}{106}{subsection.7.78.1}%
-\contentsline {subsubsection}{\numberline {7.78.1.1}main()}{106}{subsubsection.7.78.1.1}%
-\contentsline {section}{\numberline {7.79}Ejemplo027.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{106}{section.7.79}%
-\contentsline {section}{\numberline {7.80}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo028.c File Reference}{107}{section.7.80}%
-\contentsline {subsection}{\numberline {7.80.1}Macro Definition Documentation}{107}{subsection.7.80.1}%
-\contentsline {subsubsection}{\numberline {7.80.1.1}N}{107}{subsubsection.7.80.1.1}%
-\contentsline {subsubsection}{\numberline {7.80.1.2}NC}{107}{subsubsection.7.80.1.2}%
-\contentsline {subsection}{\numberline {7.80.2}Function Documentation}{108}{subsection.7.80.2}%
-\contentsline {subsubsection}{\numberline {7.80.2.1}main()}{108}{subsubsection.7.80.2.1}%
-\contentsline {section}{\numberline {7.81}Ejemplo028.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{109}{section.7.81}%
-\contentsline {section}{\numberline {7.82}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo029.c File Reference}{110}{section.7.82}%
-\contentsline {subsection}{\numberline {7.82.1}Function Documentation}{110}{subsection.7.82.1}%
-\contentsline {subsubsection}{\numberline {7.82.1.1}exp1()}{110}{subsubsection.7.82.1.1}%
-\contentsline {subsubsection}{\numberline {7.82.1.2}exp3()}{111}{subsubsection.7.82.1.2}%
-\contentsline {subsubsection}{\numberline {7.82.1.3}exp4()}{112}{subsubsection.7.82.1.3}%
-\contentsline {subsubsection}{\numberline {7.82.1.4}exp5()}{112}{subsubsection.7.82.1.4}%
-\contentsline {subsubsection}{\numberline {7.82.1.5}factorial()}{113}{subsubsection.7.82.1.5}%
-\contentsline {subsubsection}{\numberline {7.82.1.6}factorial2()}{114}{subsubsection.7.82.1.6}%
-\contentsline {subsubsection}{\numberline {7.82.1.7}fct()}{114}{subsubsection.7.82.1.7}%
-\contentsline {subsubsection}{\numberline {7.82.1.8}main()}{115}{subsubsection.7.82.1.8}%
-\contentsline {subsubsection}{\numberline {7.82.1.9}potencia()}{116}{subsubsection.7.82.1.9}%
-\contentsline {subsubsection}{\numberline {7.82.1.10}potencia2()}{116}{subsubsection.7.82.1.10}%
-\contentsline {section}{\numberline {7.83}Ejemplo029.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{117}{section.7.83}%
-\contentsline {section}{\numberline {7.84}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo030.c File Reference}{119}{section.7.84}%
-\contentsline {subsection}{\numberline {7.84.1}Function Documentation}{119}{subsection.7.84.1}%
-\contentsline {subsubsection}{\numberline {7.84.1.1}buscar()}{119}{subsubsection.7.84.1.1}%
-\contentsline {subsubsection}{\numberline {7.84.1.2}main()}{120}{subsubsection.7.84.1.2}%
-\contentsline {section}{\numberline {7.85}Ejemplo030.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{120}{section.7.85}%
-\contentsline {section}{\numberline {7.86}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo031.c File Reference}{121}{section.7.86}%
-\contentsline {subsection}{\numberline {7.86.1}Function Documentation}{121}{subsection.7.86.1}%
-\contentsline {subsubsection}{\numberline {7.86.1.1}main()}{121}{subsubsection.7.86.1.1}%
-\contentsline {section}{\numberline {7.87}Ejemplo031.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{121}{section.7.87}%
-\contentsline {section}{\numberline {7.88}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo032.c File Reference}{122}{section.7.88}%
-\contentsline {subsection}{\numberline {7.88.1}Function Documentation}{122}{subsection.7.88.1}%
-\contentsline {subsubsection}{\numberline {7.88.1.1}main()}{122}{subsubsection.7.88.1.1}%
-\contentsline {section}{\numberline {7.89}Ejemplo032.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{122}{section.7.89}%
-\contentsline {section}{\numberline {7.90}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo033.c File Reference}{123}{section.7.90}%
-\contentsline {subsection}{\numberline {7.90.1}Macro Definition Documentation}{123}{subsection.7.90.1}%
-\contentsline {subsubsection}{\numberline {7.90.1.1}N}{123}{subsubsection.7.90.1.1}%
-\contentsline {subsection}{\numberline {7.90.2}Function Documentation}{123}{subsection.7.90.2}%
-\contentsline {subsubsection}{\numberline {7.90.2.1}asen()}{123}{subsubsection.7.90.2.1}%
-\contentsline {subsubsection}{\numberline {7.90.2.2}main()}{124}{subsubsection.7.90.2.2}%
-\contentsline {subsubsection}{\numberline {7.90.2.3}validar()}{125}{subsubsection.7.90.2.3}%
-\contentsline {subsubsection}{\numberline {7.90.2.4}validar2()}{125}{subsubsection.7.90.2.4}%
-\contentsline {section}{\numberline {7.91}Ejemplo033.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{126}{section.7.91}%
-\contentsline {section}{\numberline {7.92}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo034.c File Reference}{127}{section.7.92}%
-\contentsline {subsection}{\numberline {7.92.1}Macro Definition Documentation}{127}{subsection.7.92.1}%
-\contentsline {subsubsection}{\numberline {7.92.1.1}NC}{127}{subsubsection.7.92.1.1}%
-\contentsline {subsubsection}{\numberline {7.92.1.2}NE}{127}{subsubsection.7.92.1.2}%
-\contentsline {subsubsection}{\numberline {7.92.1.3}NM}{128}{subsubsection.7.92.1.3}%
-\contentsline {subsection}{\numberline {7.92.2}Function Documentation}{128}{subsection.7.92.2}%
-\contentsline {subsubsection}{\numberline {7.92.2.1}main()}{128}{subsubsection.7.92.2.1}%
-\contentsline {section}{\numberline {7.93}Ejemplo034.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{128}{section.7.93}%
-\contentsline {section}{\numberline {7.94}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo035.c File Reference}{129}{section.7.94}%
-\contentsline {subsection}{\numberline {7.94.1}Function Documentation}{129}{subsection.7.94.1}%
-\contentsline {subsubsection}{\numberline {7.94.1.1}main()}{129}{subsubsection.7.94.1.1}%
-\contentsline {section}{\numberline {7.95}Ejemplo035.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{130}{section.7.95}%
-\contentsline {section}{\numberline {7.96}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo036.c File Reference}{130}{section.7.96}%
-\contentsline {subsection}{\numberline {7.96.1}Function Documentation}{131}{subsection.7.96.1}%
-\contentsline {subsubsection}{\numberline {7.96.1.1}main()}{131}{subsubsection.7.96.1.1}%
-\contentsline {section}{\numberline {7.97}Ejemplo036.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{131}{section.7.97}%
-\contentsline {section}{\numberline {7.98}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo037.c File Reference}{132}{section.7.98}%
-\contentsline {subsection}{\numberline {7.98.1}Function Documentation}{132}{subsection.7.98.1}%
-\contentsline {subsubsection}{\numberline {7.98.1.1}main()}{132}{subsubsection.7.98.1.1}%
-\contentsline {section}{\numberline {7.99}Ejemplo037.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{133}{section.7.99}%
-\contentsline {section}{\numberline {7.100}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo038.c File Reference}{133}{section.7.100}%
-\contentsline {subsection}{\numberline {7.100.1}Function Documentation}{133}{subsection.7.100.1}%
-\contentsline {subsubsection}{\numberline {7.100.1.1}main()}{133}{subsubsection.7.100.1.1}%
-\contentsline {section}{\numberline {7.101}Ejemplo038.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{134}{section.7.101}%
-\contentsline {section}{\numberline {7.102}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo039.c File Reference}{134}{section.7.102}%
-\contentsline {subsection}{\numberline {7.102.1}Function Documentation}{135}{subsection.7.102.1}%
-\contentsline {subsubsection}{\numberline {7.102.1.1}capturar()}{135}{subsubsection.7.102.1.1}%
-\contentsline {subsubsection}{\numberline {7.102.1.2}crearMat()}{136}{subsubsection.7.102.1.2}%
-\contentsline {subsubsection}{\numberline {7.102.1.3}imprimir()}{136}{subsubsection.7.102.1.3}%
-\contentsline {subsubsection}{\numberline {7.102.1.4}main()}{136}{subsubsection.7.102.1.4}%
-\contentsline {subsubsection}{\numberline {7.102.1.5}multiplicar()}{137}{subsubsection.7.102.1.5}%
-\contentsline {section}{\numberline {7.103}Ejemplo039.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{138}{section.7.103}%
-\contentsline {section}{\numberline {7.104}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo040.c File Reference}{140}{section.7.104}%
-\contentsline {subsection}{\numberline {7.104.1}Function Documentation}{140}{subsection.7.104.1}%
-\contentsline {subsubsection}{\numberline {7.104.1.1}capturar()}{140}{subsubsection.7.104.1.1}%
-\contentsline {subsubsection}{\numberline {7.104.1.2}capturarM()}{141}{subsubsection.7.104.1.2}%
-\contentsline {subsubsection}{\numberline {7.104.1.3}crearMat()}{141}{subsubsection.7.104.1.3}%
-\contentsline {subsubsection}{\numberline {7.104.1.4}crearMatC()}{141}{subsubsection.7.104.1.4}%
-\contentsline {subsubsection}{\numberline {7.104.1.5}crearMatD()}{142}{subsubsection.7.104.1.5}%
-\contentsline {subsubsection}{\numberline {7.104.1.6}imprimir()}{143}{subsubsection.7.104.1.6}%
-\contentsline {subsubsection}{\numberline {7.104.1.7}imprimirM()}{143}{subsubsection.7.104.1.7}%
-\contentsline {subsubsection}{\numberline {7.104.1.8}liberar()}{143}{subsubsection.7.104.1.8}%
-\contentsline {subsubsection}{\numberline {7.104.1.9}main()}{144}{subsubsection.7.104.1.9}%
-\contentsline {subsubsection}{\numberline {7.104.1.10}multiplicar()}{145}{subsubsection.7.104.1.10}%
-\contentsline {subsubsection}{\numberline {7.104.1.11}multiplicarM()}{146}{subsubsection.7.104.1.11}%
-\contentsline {section}{\numberline {7.105}Ejemplo040.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{147}{section.7.105}%
-\contentsline {section}{\numberline {7.106}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo041.c File Reference}{149}{section.7.106}%
-\contentsline {subsection}{\numberline {7.106.1}Function Documentation}{149}{subsection.7.106.1}%
-\contentsline {subsubsection}{\numberline {7.106.1.1}main()}{149}{subsubsection.7.106.1.1}%
-\contentsline {section}{\numberline {7.107}Ejemplo041.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{150}{section.7.107}%
-\contentsline {section}{\numberline {7.108}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo042.c File Reference}{150}{section.7.108}%
-\contentsline {subsection}{\numberline {7.108.1}Macro Definition Documentation}{150}{subsection.7.108.1}%
-\contentsline {subsubsection}{\numberline {7.108.1.1}N}{150}{subsubsection.7.108.1.1}%
-\contentsline {subsection}{\numberline {7.108.2}Function Documentation}{151}{subsection.7.108.2}%
-\contentsline {subsubsection}{\numberline {7.108.2.1}main()}{151}{subsubsection.7.108.2.1}%
-\contentsline {section}{\numberline {7.109}Ejemplo042.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{151}{section.7.109}%
-\contentsline {section}{\numberline {7.110}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo043.c File Reference}{151}{section.7.110}%
-\contentsline {subsection}{\numberline {7.110.1}Macro Definition Documentation}{152}{subsection.7.110.1}%
-\contentsline {subsubsection}{\numberline {7.110.1.1}N}{152}{subsubsection.7.110.1.1}%
-\contentsline {subsection}{\numberline {7.110.2}Function Documentation}{152}{subsection.7.110.2}%
-\contentsline {subsubsection}{\numberline {7.110.2.1}main()}{152}{subsubsection.7.110.2.1}%
-\contentsline {section}{\numberline {7.111}Ejemplo043.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{153}{section.7.111}%
-\contentsline {section}{\numberline {7.112}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo044.c File Reference}{153}{section.7.112}%
-\contentsline {subsection}{\numberline {7.112.1}Macro Definition Documentation}{154}{subsection.7.112.1}%
-\contentsline {subsubsection}{\numberline {7.112.1.1}N}{154}{subsubsection.7.112.1.1}%
-\contentsline {subsection}{\numberline {7.112.2}Function Documentation}{154}{subsection.7.112.2}%
-\contentsline {subsubsection}{\numberline {7.112.2.1}main()}{154}{subsubsection.7.112.2.1}%
-\contentsline {section}{\numberline {7.113}Ejemplo044.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{154}{section.7.113}%
-\contentsline {section}{\numberline {7.114}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo045.c File Reference}{155}{section.7.114}%
-\contentsline {subsection}{\numberline {7.114.1}Macro Definition Documentation}{155}{subsection.7.114.1}%
-\contentsline {subsubsection}{\numberline {7.114.1.1}N}{155}{subsubsection.7.114.1.1}%
-\contentsline {subsection}{\numberline {7.114.2}Function Documentation}{155}{subsection.7.114.2}%
-\contentsline {subsubsection}{\numberline {7.114.2.1}main()}{155}{subsubsection.7.114.2.1}%
-\contentsline {section}{\numberline {7.115}Ejemplo045.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{156}{section.7.115}%
-\contentsline {section}{\numberline {7.116}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo001.c File Reference}{158}{section.7.116}%
-\contentsline {subsection}{\numberline {7.116.1}Function Documentation}{158}{subsection.7.116.1}%
-\contentsline {subsubsection}{\numberline {7.116.1.1}main()}{158}{subsubsection.7.116.1.1}%
-\contentsline {section}{\numberline {7.117}Ejemplo001.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{158}{section.7.117}%
-\contentsline {section}{\numberline {7.118}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo001.c File Reference}{159}{section.7.118}%
-\contentsline {subsection}{\numberline {7.118.1}Detailed Description}{159}{subsection.7.118.1}%
-\contentsline {subsection}{\numberline {7.118.2}Function Documentation}{159}{subsection.7.118.2}%
-\contentsline {subsubsection}{\numberline {7.118.2.1}main()}{159}{subsubsection.7.118.2.1}%
-\contentsline {section}{\numberline {7.119}Ejemplo001.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{160}{section.7.119}%
-\contentsline {section}{\numberline {7.120}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo002.c File Reference}{160}{section.7.120}%
-\contentsline {subsection}{\numberline {7.120.1}Function Documentation}{160}{subsection.7.120.1}%
-\contentsline {subsubsection}{\numberline {7.120.1.1}main()}{160}{subsubsection.7.120.1.1}%
-\contentsline {section}{\numberline {7.121}Ejemplo002.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{161}{section.7.121}%
-\contentsline {section}{\numberline {7.122}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo002.c File Reference}{161}{section.7.122}%
-\contentsline {subsection}{\numberline {7.122.1}Detailed Description}{161}{subsection.7.122.1}%
-\contentsline {subsection}{\numberline {7.122.2}Function Documentation}{162}{subsection.7.122.2}%
-\contentsline {subsubsection}{\numberline {7.122.2.1}main()}{162}{subsubsection.7.122.2.1}%
-\contentsline {section}{\numberline {7.123}Ejemplo002.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{163}{section.7.123}%
-\contentsline {section}{\numberline {7.124}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo003.c File Reference}{164}{section.7.124}%
-\contentsline {subsection}{\numberline {7.124.1}Function Documentation}{164}{subsection.7.124.1}%
-\contentsline {subsubsection}{\numberline {7.124.1.1}main()}{164}{subsubsection.7.124.1.1}%
-\contentsline {section}{\numberline {7.125}Ejemplo003.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{164}{section.7.125}%
-\contentsline {section}{\numberline {7.126}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo003.c File Reference}{165}{section.7.126}%
-\contentsline {subsection}{\numberline {7.126.1}Detailed Description}{165}{subsection.7.126.1}%
-\contentsline {subsection}{\numberline {7.126.2}Function Documentation}{166}{subsection.7.126.2}%
-\contentsline {subsubsection}{\numberline {7.126.2.1}main()}{166}{subsubsection.7.126.2.1}%
-\contentsline {section}{\numberline {7.127}Ejemplo003.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{167}{section.7.127}%
-\contentsline {section}{\numberline {7.128}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo004.c File Reference}{168}{section.7.128}%
-\contentsline {subsection}{\numberline {7.128.1}Function Documentation}{168}{subsection.7.128.1}%
-\contentsline {subsubsection}{\numberline {7.128.1.1}main()}{168}{subsubsection.7.128.1.1}%
-\contentsline {section}{\numberline {7.129}Ejemplo004.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{168}{section.7.129}%
-\contentsline {section}{\numberline {7.130}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo004.c File Reference}{169}{section.7.130}%
-\contentsline {subsection}{\numberline {7.130.1}Detailed Description}{169}{subsection.7.130.1}%
-\contentsline {subsection}{\numberline {7.130.2}Function Documentation}{170}{subsection.7.130.2}%
-\contentsline {subsubsection}{\numberline {7.130.2.1}main()}{170}{subsubsection.7.130.2.1}%
-\contentsline {section}{\numberline {7.131}Ejemplo004.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{170}{section.7.131}%
-\contentsline {section}{\numberline {7.132}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo005.c File Reference}{171}{section.7.132}%
-\contentsline {subsection}{\numberline {7.132.1}Function Documentation}{171}{subsection.7.132.1}%
-\contentsline {subsubsection}{\numberline {7.132.1.1}main()}{171}{subsubsection.7.132.1.1}%
-\contentsline {section}{\numberline {7.133}Ejemplo005.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{172}{section.7.133}%
-\contentsline {section}{\numberline {7.134}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo005.c File Reference}{172}{section.7.134}%
-\contentsline {subsection}{\numberline {7.134.1}Detailed Description}{173}{subsection.7.134.1}%
-\contentsline {subsection}{\numberline {7.134.2}Function Documentation}{173}{subsection.7.134.2}%
-\contentsline {subsubsection}{\numberline {7.134.2.1}main()}{173}{subsubsection.7.134.2.1}%
-\contentsline {section}{\numberline {7.135}Ejemplo005.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{174}{section.7.135}%
-\contentsline {section}{\numberline {7.136}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo006.c File Reference}{175}{section.7.136}%
-\contentsline {subsection}{\numberline {7.136.1}Function Documentation}{175}{subsection.7.136.1}%
-\contentsline {subsubsection}{\numberline {7.136.1.1}main()}{175}{subsubsection.7.136.1.1}%
-\contentsline {section}{\numberline {7.137}Ejemplo006.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{175}{section.7.137}%
-\contentsline {section}{\numberline {7.138}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo006.c File Reference}{176}{section.7.138}%
-\contentsline {subsection}{\numberline {7.138.1}Detailed Description}{176}{subsection.7.138.1}%
-\contentsline {subsection}{\numberline {7.138.2}Function Documentation}{177}{subsection.7.138.2}%
-\contentsline {subsubsection}{\numberline {7.138.2.1}main()}{177}{subsubsection.7.138.2.1}%
-\contentsline {section}{\numberline {7.139}Ejemplo006.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{178}{section.7.139}%
-\contentsline {section}{\numberline {7.140}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo007.c File Reference}{180}{section.7.140}%
-\contentsline {subsection}{\numberline {7.140.1}Function Documentation}{180}{subsection.7.140.1}%
-\contentsline {subsubsection}{\numberline {7.140.1.1}main()}{180}{subsubsection.7.140.1.1}%
-\contentsline {section}{\numberline {7.141}Ejemplo007.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{181}{section.7.141}%
-\contentsline {section}{\numberline {7.142}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo007.c File Reference}{181}{section.7.142}%
-\contentsline {subsection}{\numberline {7.142.1}Detailed Description}{182}{subsection.7.142.1}%
-\contentsline {subsection}{\numberline {7.142.2}Function Documentation}{182}{subsection.7.142.2}%
-\contentsline {subsubsection}{\numberline {7.142.2.1}main()}{182}{subsubsection.7.142.2.1}%
-\contentsline {section}{\numberline {7.143}Ejemplo007.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{183}{section.7.143}%
-\contentsline {section}{\numberline {7.144}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo008.c File Reference}{184}{section.7.144}%
-\contentsline {subsection}{\numberline {7.144.1}Function Documentation}{184}{subsection.7.144.1}%
-\contentsline {subsubsection}{\numberline {7.144.1.1}main()}{184}{subsubsection.7.144.1.1}%
-\contentsline {section}{\numberline {7.145}Ejemplo008.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{185}{section.7.145}%
-\contentsline {section}{\numberline {7.146}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo008.c File Reference}{185}{section.7.146}%
-\contentsline {subsection}{\numberline {7.146.1}Detailed Description}{185}{subsection.7.146.1}%
-\contentsline {subsection}{\numberline {7.146.2}Function Documentation}{186}{subsection.7.146.2}%
-\contentsline {subsubsection}{\numberline {7.146.2.1}main()}{186}{subsubsection.7.146.2.1}%
-\contentsline {section}{\numberline {7.147}Ejemplo008.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{186}{section.7.147}%
-\contentsline {section}{\numberline {7.148}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo009.c File Reference}{187}{section.7.148}%
-\contentsline {subsection}{\numberline {7.148.1}Function Documentation}{187}{subsection.7.148.1}%
-\contentsline {subsubsection}{\numberline {7.148.1.1}main()}{187}{subsubsection.7.148.1.1}%
-\contentsline {section}{\numberline {7.149}Ejemplo009.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{188}{section.7.149}%
-\contentsline {section}{\numberline {7.150}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo009.c File Reference}{188}{section.7.150}%
-\contentsline {subsection}{\numberline {7.150.1}Detailed Description}{189}{subsection.7.150.1}%
-\contentsline {subsection}{\numberline {7.150.2}Function Documentation}{189}{subsection.7.150.2}%
-\contentsline {subsubsection}{\numberline {7.150.2.1}main()}{189}{subsubsection.7.150.2.1}%
-\contentsline {section}{\numberline {7.151}Ejemplo009.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{190}{section.7.151}%
-\contentsline {section}{\numberline {7.152}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo010.c File Reference}{191}{section.7.152}%
-\contentsline {subsection}{\numberline {7.152.1}Function Documentation}{191}{subsection.7.152.1}%
-\contentsline {subsubsection}{\numberline {7.152.1.1}main()}{191}{subsubsection.7.152.1.1}%
-\contentsline {section}{\numberline {7.153}Ejemplo010.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{192}{section.7.153}%
-\contentsline {section}{\numberline {7.154}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo010.c File Reference}{192}{section.7.154}%
-\contentsline {subsection}{\numberline {7.154.1}Detailed Description}{193}{subsection.7.154.1}%
-\contentsline {subsection}{\numberline {7.154.2}Function Documentation}{193}{subsection.7.154.2}%
-\contentsline {subsubsection}{\numberline {7.154.2.1}main()}{193}{subsubsection.7.154.2.1}%
-\contentsline {section}{\numberline {7.155}Ejemplo010.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{194}{section.7.155}%
-\contentsline {section}{\numberline {7.156}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo011.c File Reference}{194}{section.7.156}%
-\contentsline {subsection}{\numberline {7.156.1}Function Documentation}{195}{subsection.7.156.1}%
-\contentsline {subsubsection}{\numberline {7.156.1.1}main()}{195}{subsubsection.7.156.1.1}%
-\contentsline {section}{\numberline {7.157}Ejemplo011.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{195}{section.7.157}%
-\contentsline {section}{\numberline {7.158}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo011.c File Reference}{196}{section.7.158}%
-\contentsline {subsection}{\numberline {7.158.1}Detailed Description}{196}{subsection.7.158.1}%
-\contentsline {subsection}{\numberline {7.158.2}Function Documentation}{197}{subsection.7.158.2}%
-\contentsline {subsubsection}{\numberline {7.158.2.1}main()}{197}{subsubsection.7.158.2.1}%
-\contentsline {section}{\numberline {7.159}Ejemplo011.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{198}{section.7.159}%
-\contentsline {section}{\numberline {7.160}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo012.c File Reference}{198}{section.7.160}%
-\contentsline {subsection}{\numberline {7.160.1}Function Documentation}{199}{subsection.7.160.1}%
-\contentsline {subsubsection}{\numberline {7.160.1.1}main()}{199}{subsubsection.7.160.1.1}%
-\contentsline {section}{\numberline {7.161}Ejemplo012.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{200}{section.7.161}%
-\contentsline {section}{\numberline {7.162}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo012.c File Reference}{200}{section.7.162}%
-\contentsline {subsection}{\numberline {7.162.1}Detailed Description}{201}{subsection.7.162.1}%
-\contentsline {subsection}{\numberline {7.162.2}Function Documentation}{201}{subsection.7.162.2}%
-\contentsline {subsubsection}{\numberline {7.162.2.1}main()}{201}{subsubsection.7.162.2.1}%
-\contentsline {section}{\numberline {7.163}Ejemplo012.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{202}{section.7.163}%
-\contentsline {section}{\numberline {7.164}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo013.c File Reference}{203}{section.7.164}%
-\contentsline {subsection}{\numberline {7.164.1}Macro Definition Documentation}{203}{subsection.7.164.1}%
-\contentsline {subsubsection}{\numberline {7.164.1.1}N}{203}{subsubsection.7.164.1.1}%
-\contentsline {subsection}{\numberline {7.164.2}Function Documentation}{204}{subsection.7.164.2}%
-\contentsline {subsubsection}{\numberline {7.164.2.1}main()}{204}{subsubsection.7.164.2.1}%
-\contentsline {section}{\numberline {7.165}Ejemplo013.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{204}{section.7.165}%
-\contentsline {section}{\numberline {7.166}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo013.c File Reference}{205}{section.7.166}%
-\contentsline {subsection}{\numberline {7.166.1}Detailed Description}{206}{subsection.7.166.1}%
-\contentsline {subsection}{\numberline {7.166.2}Function Documentation}{206}{subsection.7.166.2}%
-\contentsline {subsubsection}{\numberline {7.166.2.1}main()}{206}{subsubsection.7.166.2.1}%
-\contentsline {section}{\numberline {7.167}Ejemplo013.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{207}{section.7.167}%
-\contentsline {section}{\numberline {7.168}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo014.c File Reference}{208}{section.7.168}%
-\contentsline {subsection}{\numberline {7.168.1}Macro Definition Documentation}{208}{subsection.7.168.1}%
-\contentsline {subsubsection}{\numberline {7.168.1.1}N}{208}{subsubsection.7.168.1.1}%
-\contentsline {subsection}{\numberline {7.168.2}Function Documentation}{208}{subsection.7.168.2}%
-\contentsline {subsubsection}{\numberline {7.168.2.1}main()}{208}{subsubsection.7.168.2.1}%
-\contentsline {section}{\numberline {7.169}Ejemplo014.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{209}{section.7.169}%
-\contentsline {section}{\numberline {7.170}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo014.c File Reference}{210}{section.7.170}%
-\contentsline {subsection}{\numberline {7.170.1}Detailed Description}{211}{subsection.7.170.1}%
-\contentsline {subsection}{\numberline {7.170.2}Function Documentation}{211}{subsection.7.170.2}%
-\contentsline {subsubsection}{\numberline {7.170.2.1}main()}{211}{subsubsection.7.170.2.1}%
-\contentsline {section}{\numberline {7.171}Ejemplo014.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{212}{section.7.171}%
-\contentsline {section}{\numberline {7.172}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo015.c File Reference}{213}{section.7.172}%
-\contentsline {subsection}{\numberline {7.172.1}Macro Definition Documentation}{213}{subsection.7.172.1}%
-\contentsline {subsubsection}{\numberline {7.172.1.1}N}{213}{subsubsection.7.172.1.1}%
-\contentsline {subsection}{\numberline {7.172.2}Function Documentation}{213}{subsection.7.172.2}%
-\contentsline {subsubsection}{\numberline {7.172.2.1}main()}{213}{subsubsection.7.172.2.1}%
-\contentsline {section}{\numberline {7.173}Ejemplo015.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{214}{section.7.173}%
-\contentsline {section}{\numberline {7.174}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo015.c File Reference}{215}{section.7.174}%
-\contentsline {subsection}{\numberline {7.174.1}Detailed Description}{215}{subsection.7.174.1}%
-\contentsline {subsection}{\numberline {7.174.2}Function Documentation}{216}{subsection.7.174.2}%
-\contentsline {subsubsection}{\numberline {7.174.2.1}main()}{216}{subsubsection.7.174.2.1}%
-\contentsline {section}{\numberline {7.175}Ejemplo015.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{217}{section.7.175}%
-\contentsline {section}{\numberline {7.176}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo016.c File Reference}{217}{section.7.176}%
-\contentsline {subsection}{\numberline {7.176.1}Macro Definition Documentation}{218}{subsection.7.176.1}%
-\contentsline {subsubsection}{\numberline {7.176.1.1}N}{218}{subsubsection.7.176.1.1}%
-\contentsline {subsection}{\numberline {7.176.2}Function Documentation}{218}{subsection.7.176.2}%
-\contentsline {subsubsection}{\numberline {7.176.2.1}main()}{218}{subsubsection.7.176.2.1}%
-\contentsline {section}{\numberline {7.177}Ejemplo016.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{219}{section.7.177}%
-\contentsline {section}{\numberline {7.178}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo016.c File Reference}{220}{section.7.178}%
-\contentsline {subsection}{\numberline {7.178.1}Detailed Description}{220}{subsection.7.178.1}%
-\contentsline {subsection}{\numberline {7.178.2}Function Documentation}{221}{subsection.7.178.2}%
-\contentsline {subsubsection}{\numberline {7.178.2.1}main()}{221}{subsubsection.7.178.2.1}%
-\contentsline {section}{\numberline {7.179}Ejemplo016.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{221}{section.7.179}%
-\contentsline {section}{\numberline {7.180}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo017.c File Reference}{222}{section.7.180}%
-\contentsline {subsection}{\numberline {7.180.1}Macro Definition Documentation}{223}{subsection.7.180.1}%
-\contentsline {subsubsection}{\numberline {7.180.1.1}N}{223}{subsubsection.7.180.1.1}%
-\contentsline {subsection}{\numberline {7.180.2}Function Documentation}{223}{subsection.7.180.2}%
-\contentsline {subsubsection}{\numberline {7.180.2.1}main()}{223}{subsubsection.7.180.2.1}%
-\contentsline {section}{\numberline {7.181}Ejemplo017.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{224}{section.7.181}%
-\contentsline {section}{\numberline {7.182}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo017.c File Reference}{225}{section.7.182}%
-\contentsline {subsection}{\numberline {7.182.1}Detailed Description}{226}{subsection.7.182.1}%
-\contentsline {subsection}{\numberline {7.182.2}Function Documentation}{226}{subsection.7.182.2}%
-\contentsline {subsubsection}{\numberline {7.182.2.1}main()}{226}{subsubsection.7.182.2.1}%
-\contentsline {section}{\numberline {7.183}Ejemplo017.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{228}{section.7.183}%
-\contentsline {section}{\numberline {7.184}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo018.c File Reference}{229}{section.7.184}%
-\contentsline {subsection}{\numberline {7.184.1}Macro Definition Documentation}{229}{subsection.7.184.1}%
-\contentsline {subsubsection}{\numberline {7.184.1.1}N}{229}{subsubsection.7.184.1.1}%
-\contentsline {subsection}{\numberline {7.184.2}Function Documentation}{229}{subsection.7.184.2}%
-\contentsline {subsubsection}{\numberline {7.184.2.1}main()}{229}{subsubsection.7.184.2.1}%
-\contentsline {section}{\numberline {7.185}Ejemplo018.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{230}{section.7.185}%
-\contentsline {section}{\numberline {7.186}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo018.c File Reference}{231}{section.7.186}%
-\contentsline {subsection}{\numberline {7.186.1}Detailed Description}{232}{subsection.7.186.1}%
-\contentsline {subsection}{\numberline {7.186.2}Macro Definition Documentation}{232}{subsection.7.186.2}%
-\contentsline {subsubsection}{\numberline {7.186.2.1}N}{232}{subsubsection.7.186.2.1}%
-\contentsline {subsection}{\numberline {7.186.3}Function Documentation}{232}{subsection.7.186.3}%
-\contentsline {subsubsection}{\numberline {7.186.3.1}main()}{232}{subsubsection.7.186.3.1}%
-\contentsline {section}{\numberline {7.187}Ejemplo018.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{233}{section.7.187}%
-\contentsline {section}{\numberline {7.188}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo019.c File Reference}{234}{section.7.188}%
-\contentsline {subsection}{\numberline {7.188.1}Macro Definition Documentation}{234}{subsection.7.188.1}%
-\contentsline {subsubsection}{\numberline {7.188.1.1}N}{234}{subsubsection.7.188.1.1}%
-\contentsline {subsection}{\numberline {7.188.2}Function Documentation}{235}{subsection.7.188.2}%
-\contentsline {subsubsection}{\numberline {7.188.2.1}main()}{235}{subsubsection.7.188.2.1}%
-\contentsline {section}{\numberline {7.189}Ejemplo019.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{235}{section.7.189}%
-\contentsline {section}{\numberline {7.190}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo019.c File Reference}{236}{section.7.190}%
-\contentsline {subsection}{\numberline {7.190.1}Detailed Description}{237}{subsection.7.190.1}%
-\contentsline {subsection}{\numberline {7.190.2}Macro Definition Documentation}{238}{subsection.7.190.2}%
-\contentsline {subsubsection}{\numberline {7.190.2.1}N}{238}{subsubsection.7.190.2.1}%
-\contentsline {subsection}{\numberline {7.190.3}Function Documentation}{238}{subsection.7.190.3}%
-\contentsline {subsubsection}{\numberline {7.190.3.1}main()}{238}{subsubsection.7.190.3.1}%
-\contentsline {section}{\numberline {7.191}Ejemplo019.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{239}{section.7.191}%
-\contentsline {section}{\numberline {7.192}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo020.c File Reference}{240}{section.7.192}%
-\contentsline {subsection}{\numberline {7.192.1}Macro Definition Documentation}{240}{subsection.7.192.1}%
-\contentsline {subsubsection}{\numberline {7.192.1.1}M}{240}{subsubsection.7.192.1.1}%
-\contentsline {subsubsection}{\numberline {7.192.1.2}N}{240}{subsubsection.7.192.1.2}%
-\contentsline {subsection}{\numberline {7.192.2}Function Documentation}{240}{subsection.7.192.2}%
-\contentsline {subsubsection}{\numberline {7.192.2.1}main()}{240}{subsubsection.7.192.2.1}%
-\contentsline {section}{\numberline {7.193}Ejemplo020.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{241}{section.7.193}%
-\contentsline {section}{\numberline {7.194}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo020.c File Reference}{241}{section.7.194}%
-\contentsline {subsection}{\numberline {7.194.1}Detailed Description}{242}{subsection.7.194.1}%
-\contentsline {subsection}{\numberline {7.194.2}Macro Definition Documentation}{243}{subsection.7.194.2}%
-\contentsline {subsubsection}{\numberline {7.194.2.1}N}{243}{subsubsection.7.194.2.1}%
-\contentsline {subsection}{\numberline {7.194.3}Function Documentation}{243}{subsection.7.194.3}%
-\contentsline {subsubsection}{\numberline {7.194.3.1}main()}{243}{subsubsection.7.194.3.1}%
-\contentsline {section}{\numberline {7.195}Ejemplo020.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{244}{section.7.195}%
-\contentsline {section}{\numberline {7.196}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo021.c File Reference}{245}{section.7.196}%
-\contentsline {subsection}{\numberline {7.196.1}Macro Definition Documentation}{245}{subsection.7.196.1}%
-\contentsline {subsubsection}{\numberline {7.196.1.1}M}{245}{subsubsection.7.196.1.1}%
-\contentsline {subsubsection}{\numberline {7.196.1.2}N}{246}{subsubsection.7.196.1.2}%
-\contentsline {subsection}{\numberline {7.196.2}Function Documentation}{246}{subsection.7.196.2}%
-\contentsline {subsubsection}{\numberline {7.196.2.1}main()}{246}{subsubsection.7.196.2.1}%
-\contentsline {section}{\numberline {7.197}Ejemplo021.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{246}{section.7.197}%
-\contentsline {section}{\numberline {7.198}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo021.c File Reference}{247}{section.7.198}%
-\contentsline {subsection}{\numberline {7.198.1}Detailed Description}{247}{subsection.7.198.1}%
-\contentsline {subsection}{\numberline {7.198.2}Macro Definition Documentation}{248}{subsection.7.198.2}%
-\contentsline {subsubsection}{\numberline {7.198.2.1}N}{248}{subsubsection.7.198.2.1}%
-\contentsline {subsection}{\numberline {7.198.3}Function Documentation}{248}{subsection.7.198.3}%
-\contentsline {subsubsection}{\numberline {7.198.3.1}main()}{248}{subsubsection.7.198.3.1}%
-\contentsline {section}{\numberline {7.199}Ejemplo021.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{249}{section.7.199}%
-\contentsline {section}{\numberline {7.200}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo022.c File Reference}{251}{section.7.200}%
-\contentsline {subsection}{\numberline {7.200.1}Macro Definition Documentation}{251}{subsection.7.200.1}%
-\contentsline {subsubsection}{\numberline {7.200.1.1}N}{251}{subsubsection.7.200.1.1}%
-\contentsline {subsection}{\numberline {7.200.2}Function Documentation}{251}{subsection.7.200.2}%
-\contentsline {subsubsection}{\numberline {7.200.2.1}main()}{251}{subsubsection.7.200.2.1}%
-\contentsline {section}{\numberline {7.201}Ejemplo022.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{252}{section.7.201}%
-\contentsline {section}{\numberline {7.202}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo022.c File Reference}{253}{section.7.202}%
-\contentsline {subsection}{\numberline {7.202.1}Detailed Description}{253}{subsection.7.202.1}%
-\contentsline {subsection}{\numberline {7.202.2}Macro Definition Documentation}{254}{subsection.7.202.2}%
-\contentsline {subsubsection}{\numberline {7.202.2.1}N}{254}{subsubsection.7.202.2.1}%
-\contentsline {subsection}{\numberline {7.202.3}Function Documentation}{254}{subsection.7.202.3}%
-\contentsline {subsubsection}{\numberline {7.202.3.1}main()}{254}{subsubsection.7.202.3.1}%
-\contentsline {section}{\numberline {7.203}Ejemplo022.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{255}{section.7.203}%
-\contentsline {section}{\numberline {7.204}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo023.c File Reference}{256}{section.7.204}%
-\contentsline {subsection}{\numberline {7.204.1}Macro Definition Documentation}{257}{subsection.7.204.1}%
-\contentsline {subsubsection}{\numberline {7.204.1.1}N}{257}{subsubsection.7.204.1.1}%
-\contentsline {subsection}{\numberline {7.204.2}Function Documentation}{257}{subsection.7.204.2}%
-\contentsline {subsubsection}{\numberline {7.204.2.1}main()}{257}{subsubsection.7.204.2.1}%
-\contentsline {section}{\numberline {7.205}Ejemplo023.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{258}{section.7.205}%
-\contentsline {section}{\numberline {7.206}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo023.c File Reference}{259}{section.7.206}%
-\contentsline {subsection}{\numberline {7.206.1}Detailed Description}{259}{subsection.7.206.1}%
-\contentsline {subsection}{\numberline {7.206.2}Macro Definition Documentation}{260}{subsection.7.206.2}%
-\contentsline {subsubsection}{\numberline {7.206.2.1}N}{260}{subsubsection.7.206.2.1}%
-\contentsline {subsection}{\numberline {7.206.3}Function Documentation}{260}{subsection.7.206.3}%
-\contentsline {subsubsection}{\numberline {7.206.3.1}main()}{260}{subsubsection.7.206.3.1}%
-\contentsline {section}{\numberline {7.207}Ejemplo023.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{262}{section.7.207}%
-\contentsline {section}{\numberline {7.208}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}template/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Template.c File Reference}{264}{section.7.208}%
-\contentsline {subsection}{\numberline {7.208.1}Function Documentation}{264}{subsection.7.208.1}%
-\contentsline {subsubsection}{\numberline {7.208.1.1}main()}{264}{subsubsection.7.208.1.1}%
-\contentsline {section}{\numberline {7.209}Template.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{264}{section.7.209}%
+\contentsline {section}{\numberline {7.72}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo041.c File Reference}{96}{section.7.72}%
+\contentsline {subsection}{\numberline {7.72.1}Function Documentation}{96}{subsection.7.72.1}%
+\contentsline {subsubsection}{\numberline {7.72.1.1}main()}{96}{subsubsection.7.72.1.1}%
+\contentsline {section}{\numberline {7.73}Ejemplo041.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{97}{section.7.73}%
+\contentsline {section}{\numberline {7.74}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo042.c File Reference}{97}{section.7.74}%
+\contentsline {subsection}{\numberline {7.74.1}Macro Definition Documentation}{97}{subsection.7.74.1}%
+\contentsline {subsubsection}{\numberline {7.74.1.1}N}{97}{subsubsection.7.74.1.1}%
+\contentsline {subsection}{\numberline {7.74.2}Function Documentation}{98}{subsection.7.74.2}%
+\contentsline {subsubsection}{\numberline {7.74.2.1}main()}{98}{subsubsection.7.74.2.1}%
+\contentsline {section}{\numberline {7.75}Ejemplo042.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{98}{section.7.75}%
+\contentsline {section}{\numberline {7.76}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo043.c File Reference}{98}{section.7.76}%
+\contentsline {subsection}{\numberline {7.76.1}Macro Definition Documentation}{99}{subsection.7.76.1}%
+\contentsline {subsubsection}{\numberline {7.76.1.1}N}{99}{subsubsection.7.76.1.1}%
+\contentsline {subsection}{\numberline {7.76.2}Function Documentation}{99}{subsection.7.76.2}%
+\contentsline {subsubsection}{\numberline {7.76.2.1}main()}{99}{subsubsection.7.76.2.1}%
+\contentsline {section}{\numberline {7.77}Ejemplo043.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{100}{section.7.77}%
+\contentsline {section}{\numberline {7.78}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo044.c File Reference}{100}{section.7.78}%
+\contentsline {subsection}{\numberline {7.78.1}Macro Definition Documentation}{101}{subsection.7.78.1}%
+\contentsline {subsubsection}{\numberline {7.78.1.1}N}{101}{subsubsection.7.78.1.1}%
+\contentsline {subsection}{\numberline {7.78.2}Function Documentation}{101}{subsection.7.78.2}%
+\contentsline {subsubsection}{\numberline {7.78.2.1}main()}{101}{subsubsection.7.78.2.1}%
+\contentsline {section}{\numberline {7.79}Ejemplo044.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{101}{section.7.79}%
+\contentsline {section}{\numberline {7.80}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo045.c File Reference}{102}{section.7.80}%
+\contentsline {subsection}{\numberline {7.80.1}Macro Definition Documentation}{102}{subsection.7.80.1}%
+\contentsline {subsubsection}{\numberline {7.80.1.1}N}{102}{subsubsection.7.80.1.1}%
+\contentsline {subsection}{\numberline {7.80.2}Function Documentation}{102}{subsection.7.80.2}%
+\contentsline {subsubsection}{\numberline {7.80.2.1}main()}{102}{subsubsection.7.80.2.1}%
+\contentsline {section}{\numberline {7.81}Ejemplo045.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{103}{section.7.81}%
+\contentsline {section}{\numberline {7.82}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo001.c File Reference}{105}{section.7.82}%
+\contentsline {subsection}{\numberline {7.82.1}Function Documentation}{105}{subsection.7.82.1}%
+\contentsline {subsubsection}{\numberline {7.82.1.1}main()}{105}{subsubsection.7.82.1.1}%
+\contentsline {section}{\numberline {7.83}Ejemplo001.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{105}{section.7.83}%
+\contentsline {section}{\numberline {7.84}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo001.c File Reference}{106}{section.7.84}%
+\contentsline {subsection}{\numberline {7.84.1}Detailed Description}{106}{subsection.7.84.1}%
+\contentsline {subsection}{\numberline {7.84.2}Function Documentation}{106}{subsection.7.84.2}%
+\contentsline {subsubsection}{\numberline {7.84.2.1}main()}{106}{subsubsection.7.84.2.1}%
+\contentsline {section}{\numberline {7.85}Ejemplo001.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{107}{section.7.85}%
+\contentsline {section}{\numberline {7.86}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo002.c File Reference}{107}{section.7.86}%
+\contentsline {subsection}{\numberline {7.86.1}Function Documentation}{107}{subsection.7.86.1}%
+\contentsline {subsubsection}{\numberline {7.86.1.1}main()}{107}{subsubsection.7.86.1.1}%
+\contentsline {section}{\numberline {7.87}Ejemplo002.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{108}{section.7.87}%
+\contentsline {section}{\numberline {7.88}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo002.c File Reference}{108}{section.7.88}%
+\contentsline {subsection}{\numberline {7.88.1}Detailed Description}{108}{subsection.7.88.1}%
+\contentsline {subsection}{\numberline {7.88.2}Function Documentation}{109}{subsection.7.88.2}%
+\contentsline {subsubsection}{\numberline {7.88.2.1}main()}{109}{subsubsection.7.88.2.1}%
+\contentsline {section}{\numberline {7.89}Ejemplo002.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{110}{section.7.89}%
+\contentsline {section}{\numberline {7.90}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo003.c File Reference}{111}{section.7.90}%
+\contentsline {subsection}{\numberline {7.90.1}Function Documentation}{111}{subsection.7.90.1}%
+\contentsline {subsubsection}{\numberline {7.90.1.1}main()}{111}{subsubsection.7.90.1.1}%
+\contentsline {section}{\numberline {7.91}Ejemplo003.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{111}{section.7.91}%
+\contentsline {section}{\numberline {7.92}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo003.c File Reference}{112}{section.7.92}%
+\contentsline {subsection}{\numberline {7.92.1}Detailed Description}{112}{subsection.7.92.1}%
+\contentsline {subsection}{\numberline {7.92.2}Function Documentation}{113}{subsection.7.92.2}%
+\contentsline {subsubsection}{\numberline {7.92.2.1}main()}{113}{subsubsection.7.92.2.1}%
+\contentsline {section}{\numberline {7.93}Ejemplo003.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{114}{section.7.93}%
+\contentsline {section}{\numberline {7.94}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo004.c File Reference}{115}{section.7.94}%
+\contentsline {subsection}{\numberline {7.94.1}Function Documentation}{115}{subsection.7.94.1}%
+\contentsline {subsubsection}{\numberline {7.94.1.1}main()}{115}{subsubsection.7.94.1.1}%
+\contentsline {section}{\numberline {7.95}Ejemplo004.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{115}{section.7.95}%
+\contentsline {section}{\numberline {7.96}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo004.c File Reference}{116}{section.7.96}%
+\contentsline {subsection}{\numberline {7.96.1}Detailed Description}{116}{subsection.7.96.1}%
+\contentsline {subsection}{\numberline {7.96.2}Function Documentation}{117}{subsection.7.96.2}%
+\contentsline {subsubsection}{\numberline {7.96.2.1}main()}{117}{subsubsection.7.96.2.1}%
+\contentsline {section}{\numberline {7.97}Ejemplo004.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{117}{section.7.97}%
+\contentsline {section}{\numberline {7.98}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo005.c File Reference}{118}{section.7.98}%
+\contentsline {subsection}{\numberline {7.98.1}Function Documentation}{118}{subsection.7.98.1}%
+\contentsline {subsubsection}{\numberline {7.98.1.1}main()}{118}{subsubsection.7.98.1.1}%
+\contentsline {section}{\numberline {7.99}Ejemplo005.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{119}{section.7.99}%
+\contentsline {section}{\numberline {7.100}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo005.c File Reference}{119}{section.7.100}%
+\contentsline {subsection}{\numberline {7.100.1}Detailed Description}{120}{subsection.7.100.1}%
+\contentsline {subsection}{\numberline {7.100.2}Function Documentation}{120}{subsection.7.100.2}%
+\contentsline {subsubsection}{\numberline {7.100.2.1}main()}{120}{subsubsection.7.100.2.1}%
+\contentsline {section}{\numberline {7.101}Ejemplo005.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{121}{section.7.101}%
+\contentsline {section}{\numberline {7.102}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo006.c File Reference}{122}{section.7.102}%
+\contentsline {subsection}{\numberline {7.102.1}Function Documentation}{122}{subsection.7.102.1}%
+\contentsline {subsubsection}{\numberline {7.102.1.1}main()}{122}{subsubsection.7.102.1.1}%
+\contentsline {section}{\numberline {7.103}Ejemplo006.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{122}{section.7.103}%
+\contentsline {section}{\numberline {7.104}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo006.c File Reference}{123}{section.7.104}%
+\contentsline {subsection}{\numberline {7.104.1}Detailed Description}{123}{subsection.7.104.1}%
+\contentsline {subsection}{\numberline {7.104.2}Function Documentation}{124}{subsection.7.104.2}%
+\contentsline {subsubsection}{\numberline {7.104.2.1}main()}{124}{subsubsection.7.104.2.1}%
+\contentsline {section}{\numberline {7.105}Ejemplo006.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{125}{section.7.105}%
+\contentsline {section}{\numberline {7.106}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo007.c File Reference}{127}{section.7.106}%
+\contentsline {subsection}{\numberline {7.106.1}Function Documentation}{127}{subsection.7.106.1}%
+\contentsline {subsubsection}{\numberline {7.106.1.1}main()}{127}{subsubsection.7.106.1.1}%
+\contentsline {section}{\numberline {7.107}Ejemplo007.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{128}{section.7.107}%
+\contentsline {section}{\numberline {7.108}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo007.c File Reference}{128}{section.7.108}%
+\contentsline {subsection}{\numberline {7.108.1}Detailed Description}{129}{subsection.7.108.1}%
+\contentsline {subsection}{\numberline {7.108.2}Function Documentation}{129}{subsection.7.108.2}%
+\contentsline {subsubsection}{\numberline {7.108.2.1}main()}{129}{subsubsection.7.108.2.1}%
+\contentsline {section}{\numberline {7.109}Ejemplo007.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{130}{section.7.109}%
+\contentsline {section}{\numberline {7.110}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo008.c File Reference}{131}{section.7.110}%
+\contentsline {subsection}{\numberline {7.110.1}Function Documentation}{131}{subsection.7.110.1}%
+\contentsline {subsubsection}{\numberline {7.110.1.1}main()}{131}{subsubsection.7.110.1.1}%
+\contentsline {section}{\numberline {7.111}Ejemplo008.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{132}{section.7.111}%
+\contentsline {section}{\numberline {7.112}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo008.c File Reference}{132}{section.7.112}%
+\contentsline {subsection}{\numberline {7.112.1}Detailed Description}{132}{subsection.7.112.1}%
+\contentsline {subsection}{\numberline {7.112.2}Function Documentation}{133}{subsection.7.112.2}%
+\contentsline {subsubsection}{\numberline {7.112.2.1}main()}{133}{subsubsection.7.112.2.1}%
+\contentsline {section}{\numberline {7.113}Ejemplo008.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{133}{section.7.113}%
+\contentsline {section}{\numberline {7.114}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo009.c File Reference}{134}{section.7.114}%
+\contentsline {subsection}{\numberline {7.114.1}Function Documentation}{134}{subsection.7.114.1}%
+\contentsline {subsubsection}{\numberline {7.114.1.1}main()}{134}{subsubsection.7.114.1.1}%
+\contentsline {section}{\numberline {7.115}Ejemplo009.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{135}{section.7.115}%
+\contentsline {section}{\numberline {7.116}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo009.c File Reference}{135}{section.7.116}%
+\contentsline {subsection}{\numberline {7.116.1}Detailed Description}{136}{subsection.7.116.1}%
+\contentsline {subsection}{\numberline {7.116.2}Function Documentation}{136}{subsection.7.116.2}%
+\contentsline {subsubsection}{\numberline {7.116.2.1}main()}{136}{subsubsection.7.116.2.1}%
+\contentsline {section}{\numberline {7.117}Ejemplo009.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{137}{section.7.117}%
+\contentsline {section}{\numberline {7.118}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo010.c File Reference}{138}{section.7.118}%
+\contentsline {subsection}{\numberline {7.118.1}Function Documentation}{138}{subsection.7.118.1}%
+\contentsline {subsubsection}{\numberline {7.118.1.1}main()}{138}{subsubsection.7.118.1.1}%
+\contentsline {section}{\numberline {7.119}Ejemplo010.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{139}{section.7.119}%
+\contentsline {section}{\numberline {7.120}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo010.c File Reference}{139}{section.7.120}%
+\contentsline {subsection}{\numberline {7.120.1}Detailed Description}{140}{subsection.7.120.1}%
+\contentsline {subsection}{\numberline {7.120.2}Function Documentation}{140}{subsection.7.120.2}%
+\contentsline {subsubsection}{\numberline {7.120.2.1}main()}{140}{subsubsection.7.120.2.1}%
+\contentsline {section}{\numberline {7.121}Ejemplo010.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{141}{section.7.121}%
+\contentsline {section}{\numberline {7.122}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo011.c File Reference}{141}{section.7.122}%
+\contentsline {subsection}{\numberline {7.122.1}Function Documentation}{142}{subsection.7.122.1}%
+\contentsline {subsubsection}{\numberline {7.122.1.1}main()}{142}{subsubsection.7.122.1.1}%
+\contentsline {section}{\numberline {7.123}Ejemplo011.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{142}{section.7.123}%
+\contentsline {section}{\numberline {7.124}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo011.c File Reference}{143}{section.7.124}%
+\contentsline {subsection}{\numberline {7.124.1}Detailed Description}{143}{subsection.7.124.1}%
+\contentsline {subsection}{\numberline {7.124.2}Function Documentation}{144}{subsection.7.124.2}%
+\contentsline {subsubsection}{\numberline {7.124.2.1}main()}{144}{subsubsection.7.124.2.1}%
+\contentsline {section}{\numberline {7.125}Ejemplo011.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{145}{section.7.125}%
+\contentsline {section}{\numberline {7.126}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo012.c File Reference}{145}{section.7.126}%
+\contentsline {subsection}{\numberline {7.126.1}Function Documentation}{146}{subsection.7.126.1}%
+\contentsline {subsubsection}{\numberline {7.126.1.1}main()}{146}{subsubsection.7.126.1.1}%
+\contentsline {section}{\numberline {7.127}Ejemplo012.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{147}{section.7.127}%
+\contentsline {section}{\numberline {7.128}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo012.c File Reference}{147}{section.7.128}%
+\contentsline {subsection}{\numberline {7.128.1}Detailed Description}{148}{subsection.7.128.1}%
+\contentsline {subsection}{\numberline {7.128.2}Function Documentation}{148}{subsection.7.128.2}%
+\contentsline {subsubsection}{\numberline {7.128.2.1}main()}{148}{subsubsection.7.128.2.1}%
+\contentsline {section}{\numberline {7.129}Ejemplo012.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{149}{section.7.129}%
+\contentsline {section}{\numberline {7.130}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo013.c File Reference}{150}{section.7.130}%
+\contentsline {subsection}{\numberline {7.130.1}Macro Definition Documentation}{150}{subsection.7.130.1}%
+\contentsline {subsubsection}{\numberline {7.130.1.1}N}{150}{subsubsection.7.130.1.1}%
+\contentsline {subsection}{\numberline {7.130.2}Function Documentation}{151}{subsection.7.130.2}%
+\contentsline {subsubsection}{\numberline {7.130.2.1}main()}{151}{subsubsection.7.130.2.1}%
+\contentsline {section}{\numberline {7.131}Ejemplo013.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{151}{section.7.131}%
+\contentsline {section}{\numberline {7.132}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo013.c File Reference}{152}{section.7.132}%
+\contentsline {subsection}{\numberline {7.132.1}Detailed Description}{153}{subsection.7.132.1}%
+\contentsline {subsection}{\numberline {7.132.2}Function Documentation}{153}{subsection.7.132.2}%
+\contentsline {subsubsection}{\numberline {7.132.2.1}main()}{153}{subsubsection.7.132.2.1}%
+\contentsline {section}{\numberline {7.133}Ejemplo013.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{154}{section.7.133}%
+\contentsline {section}{\numberline {7.134}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo014.c File Reference}{155}{section.7.134}%
+\contentsline {subsection}{\numberline {7.134.1}Macro Definition Documentation}{155}{subsection.7.134.1}%
+\contentsline {subsubsection}{\numberline {7.134.1.1}N}{155}{subsubsection.7.134.1.1}%
+\contentsline {subsection}{\numberline {7.134.2}Function Documentation}{155}{subsection.7.134.2}%
+\contentsline {subsubsection}{\numberline {7.134.2.1}main()}{155}{subsubsection.7.134.2.1}%
+\contentsline {section}{\numberline {7.135}Ejemplo014.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{156}{section.7.135}%
+\contentsline {section}{\numberline {7.136}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo014.c File Reference}{157}{section.7.136}%
+\contentsline {subsection}{\numberline {7.136.1}Detailed Description}{158}{subsection.7.136.1}%
+\contentsline {subsection}{\numberline {7.136.2}Function Documentation}{158}{subsection.7.136.2}%
+\contentsline {subsubsection}{\numberline {7.136.2.1}main()}{158}{subsubsection.7.136.2.1}%
+\contentsline {section}{\numberline {7.137}Ejemplo014.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{159}{section.7.137}%
+\contentsline {section}{\numberline {7.138}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo015.c File Reference}{160}{section.7.138}%
+\contentsline {subsection}{\numberline {7.138.1}Macro Definition Documentation}{160}{subsection.7.138.1}%
+\contentsline {subsubsection}{\numberline {7.138.1.1}N}{160}{subsubsection.7.138.1.1}%
+\contentsline {subsection}{\numberline {7.138.2}Function Documentation}{160}{subsection.7.138.2}%
+\contentsline {subsubsection}{\numberline {7.138.2.1}main()}{160}{subsubsection.7.138.2.1}%
+\contentsline {section}{\numberline {7.139}Ejemplo015.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{161}{section.7.139}%
+\contentsline {section}{\numberline {7.140}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo015.c File Reference}{162}{section.7.140}%
+\contentsline {subsection}{\numberline {7.140.1}Detailed Description}{162}{subsection.7.140.1}%
+\contentsline {subsection}{\numberline {7.140.2}Function Documentation}{163}{subsection.7.140.2}%
+\contentsline {subsubsection}{\numberline {7.140.2.1}main()}{163}{subsubsection.7.140.2.1}%
+\contentsline {section}{\numberline {7.141}Ejemplo015.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{164}{section.7.141}%
+\contentsline {section}{\numberline {7.142}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo016.c File Reference}{164}{section.7.142}%
+\contentsline {subsection}{\numberline {7.142.1}Macro Definition Documentation}{165}{subsection.7.142.1}%
+\contentsline {subsubsection}{\numberline {7.142.1.1}N}{165}{subsubsection.7.142.1.1}%
+\contentsline {subsection}{\numberline {7.142.2}Function Documentation}{165}{subsection.7.142.2}%
+\contentsline {subsubsection}{\numberline {7.142.2.1}main()}{165}{subsubsection.7.142.2.1}%
+\contentsline {section}{\numberline {7.143}Ejemplo016.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{166}{section.7.143}%
+\contentsline {section}{\numberline {7.144}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo016.c File Reference}{167}{section.7.144}%
+\contentsline {subsection}{\numberline {7.144.1}Detailed Description}{167}{subsection.7.144.1}%
+\contentsline {subsection}{\numberline {7.144.2}Function Documentation}{168}{subsection.7.144.2}%
+\contentsline {subsubsection}{\numberline {7.144.2.1}main()}{168}{subsubsection.7.144.2.1}%
+\contentsline {section}{\numberline {7.145}Ejemplo016.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{168}{section.7.145}%
+\contentsline {section}{\numberline {7.146}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo017.c File Reference}{169}{section.7.146}%
+\contentsline {subsection}{\numberline {7.146.1}Macro Definition Documentation}{170}{subsection.7.146.1}%
+\contentsline {subsubsection}{\numberline {7.146.1.1}N}{170}{subsubsection.7.146.1.1}%
+\contentsline {subsection}{\numberline {7.146.2}Function Documentation}{170}{subsection.7.146.2}%
+\contentsline {subsubsection}{\numberline {7.146.2.1}main()}{170}{subsubsection.7.146.2.1}%
+\contentsline {section}{\numberline {7.147}Ejemplo017.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{171}{section.7.147}%
+\contentsline {section}{\numberline {7.148}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo017.c File Reference}{172}{section.7.148}%
+\contentsline {subsection}{\numberline {7.148.1}Detailed Description}{173}{subsection.7.148.1}%
+\contentsline {subsection}{\numberline {7.148.2}Function Documentation}{173}{subsection.7.148.2}%
+\contentsline {subsubsection}{\numberline {7.148.2.1}main()}{173}{subsubsection.7.148.2.1}%
+\contentsline {section}{\numberline {7.149}Ejemplo017.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{175}{section.7.149}%
+\contentsline {section}{\numberline {7.150}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo018.c File Reference}{176}{section.7.150}%
+\contentsline {subsection}{\numberline {7.150.1}Macro Definition Documentation}{176}{subsection.7.150.1}%
+\contentsline {subsubsection}{\numberline {7.150.1.1}N}{176}{subsubsection.7.150.1.1}%
+\contentsline {subsection}{\numberline {7.150.2}Function Documentation}{176}{subsection.7.150.2}%
+\contentsline {subsubsection}{\numberline {7.150.2.1}main()}{176}{subsubsection.7.150.2.1}%
+\contentsline {section}{\numberline {7.151}Ejemplo018.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{177}{section.7.151}%
+\contentsline {section}{\numberline {7.152}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo018.c File Reference}{178}{section.7.152}%
+\contentsline {subsection}{\numberline {7.152.1}Detailed Description}{179}{subsection.7.152.1}%
+\contentsline {subsection}{\numberline {7.152.2}Macro Definition Documentation}{179}{subsection.7.152.2}%
+\contentsline {subsubsection}{\numberline {7.152.2.1}N}{179}{subsubsection.7.152.2.1}%
+\contentsline {subsection}{\numberline {7.152.3}Function Documentation}{179}{subsection.7.152.3}%
+\contentsline {subsubsection}{\numberline {7.152.3.1}main()}{179}{subsubsection.7.152.3.1}%
+\contentsline {section}{\numberline {7.153}Ejemplo018.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{180}{section.7.153}%
+\contentsline {section}{\numberline {7.154}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo019.c File Reference}{181}{section.7.154}%
+\contentsline {subsection}{\numberline {7.154.1}Macro Definition Documentation}{181}{subsection.7.154.1}%
+\contentsline {subsubsection}{\numberline {7.154.1.1}N}{181}{subsubsection.7.154.1.1}%
+\contentsline {subsection}{\numberline {7.154.2}Function Documentation}{182}{subsection.7.154.2}%
+\contentsline {subsubsection}{\numberline {7.154.2.1}main()}{182}{subsubsection.7.154.2.1}%
+\contentsline {section}{\numberline {7.155}Ejemplo019.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{182}{section.7.155}%
+\contentsline {section}{\numberline {7.156}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo019.c File Reference}{183}{section.7.156}%
+\contentsline {subsection}{\numberline {7.156.1}Detailed Description}{184}{subsection.7.156.1}%
+\contentsline {subsection}{\numberline {7.156.2}Macro Definition Documentation}{185}{subsection.7.156.2}%
+\contentsline {subsubsection}{\numberline {7.156.2.1}N}{185}{subsubsection.7.156.2.1}%
+\contentsline {subsection}{\numberline {7.156.3}Function Documentation}{185}{subsection.7.156.3}%
+\contentsline {subsubsection}{\numberline {7.156.3.1}main()}{185}{subsubsection.7.156.3.1}%
+\contentsline {section}{\numberline {7.157}Ejemplo019.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{186}{section.7.157}%
+\contentsline {section}{\numberline {7.158}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo020.c File Reference}{187}{section.7.158}%
+\contentsline {subsection}{\numberline {7.158.1}Macro Definition Documentation}{187}{subsection.7.158.1}%
+\contentsline {subsubsection}{\numberline {7.158.1.1}M}{187}{subsubsection.7.158.1.1}%
+\contentsline {subsubsection}{\numberline {7.158.1.2}N}{187}{subsubsection.7.158.1.2}%
+\contentsline {subsection}{\numberline {7.158.2}Function Documentation}{187}{subsection.7.158.2}%
+\contentsline {subsubsection}{\numberline {7.158.2.1}main()}{187}{subsubsection.7.158.2.1}%
+\contentsline {section}{\numberline {7.159}Ejemplo020.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{188}{section.7.159}%
+\contentsline {section}{\numberline {7.160}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo020.c File Reference}{188}{section.7.160}%
+\contentsline {subsection}{\numberline {7.160.1}Detailed Description}{189}{subsection.7.160.1}%
+\contentsline {subsection}{\numberline {7.160.2}Macro Definition Documentation}{190}{subsection.7.160.2}%
+\contentsline {subsubsection}{\numberline {7.160.2.1}N}{190}{subsubsection.7.160.2.1}%
+\contentsline {subsection}{\numberline {7.160.3}Function Documentation}{190}{subsection.7.160.3}%
+\contentsline {subsubsection}{\numberline {7.160.3.1}main()}{190}{subsubsection.7.160.3.1}%
+\contentsline {section}{\numberline {7.161}Ejemplo020.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{191}{section.7.161}%
+\contentsline {section}{\numberline {7.162}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo021.c File Reference}{192}{section.7.162}%
+\contentsline {subsection}{\numberline {7.162.1}Macro Definition Documentation}{192}{subsection.7.162.1}%
+\contentsline {subsubsection}{\numberline {7.162.1.1}M}{192}{subsubsection.7.162.1.1}%
+\contentsline {subsubsection}{\numberline {7.162.1.2}N}{193}{subsubsection.7.162.1.2}%
+\contentsline {subsection}{\numberline {7.162.2}Function Documentation}{193}{subsection.7.162.2}%
+\contentsline {subsubsection}{\numberline {7.162.2.1}main()}{193}{subsubsection.7.162.2.1}%
+\contentsline {section}{\numberline {7.163}Ejemplo021.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{193}{section.7.163}%
+\contentsline {section}{\numberline {7.164}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo021.c File Reference}{194}{section.7.164}%
+\contentsline {subsection}{\numberline {7.164.1}Detailed Description}{194}{subsection.7.164.1}%
+\contentsline {subsection}{\numberline {7.164.2}Macro Definition Documentation}{195}{subsection.7.164.2}%
+\contentsline {subsubsection}{\numberline {7.164.2.1}N}{195}{subsubsection.7.164.2.1}%
+\contentsline {subsection}{\numberline {7.164.3}Function Documentation}{195}{subsection.7.164.3}%
+\contentsline {subsubsection}{\numberline {7.164.3.1}main()}{195}{subsubsection.7.164.3.1}%
+\contentsline {section}{\numberline {7.165}Ejemplo021.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{196}{section.7.165}%
+\contentsline {section}{\numberline {7.166}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo022.c File Reference}{198}{section.7.166}%
+\contentsline {subsection}{\numberline {7.166.1}Macro Definition Documentation}{198}{subsection.7.166.1}%
+\contentsline {subsubsection}{\numberline {7.166.1.1}N}{198}{subsubsection.7.166.1.1}%
+\contentsline {subsection}{\numberline {7.166.2}Function Documentation}{198}{subsection.7.166.2}%
+\contentsline {subsubsection}{\numberline {7.166.2.1}main()}{198}{subsubsection.7.166.2.1}%
+\contentsline {section}{\numberline {7.167}Ejemplo022.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{199}{section.7.167}%
+\contentsline {section}{\numberline {7.168}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo022.c File Reference}{200}{section.7.168}%
+\contentsline {subsection}{\numberline {7.168.1}Detailed Description}{200}{subsection.7.168.1}%
+\contentsline {subsection}{\numberline {7.168.2}Macro Definition Documentation}{201}{subsection.7.168.2}%
+\contentsline {subsubsection}{\numberline {7.168.2.1}N}{201}{subsubsection.7.168.2.1}%
+\contentsline {subsection}{\numberline {7.168.3}Function Documentation}{201}{subsection.7.168.3}%
+\contentsline {subsubsection}{\numberline {7.168.3.1}main()}{201}{subsubsection.7.168.3.1}%
+\contentsline {section}{\numberline {7.169}Ejemplo022.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{202}{section.7.169}%
+\contentsline {section}{\numberline {7.170}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo023.c File Reference}{203}{section.7.170}%
+\contentsline {subsection}{\numberline {7.170.1}Macro Definition Documentation}{204}{subsection.7.170.1}%
+\contentsline {subsubsection}{\numberline {7.170.1.1}N}{204}{subsubsection.7.170.1.1}%
+\contentsline {subsection}{\numberline {7.170.2}Function Documentation}{204}{subsection.7.170.2}%
+\contentsline {subsubsection}{\numberline {7.170.2.1}main()}{204}{subsubsection.7.170.2.1}%
+\contentsline {section}{\numberline {7.171}Ejemplo023.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{205}{section.7.171}%
+\contentsline {section}{\numberline {7.172}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo023.c File Reference}{206}{section.7.172}%
+\contentsline {subsection}{\numberline {7.172.1}Detailed Description}{206}{subsection.7.172.1}%
+\contentsline {subsection}{\numberline {7.172.2}Macro Definition Documentation}{207}{subsection.7.172.2}%
+\contentsline {subsubsection}{\numberline {7.172.2.1}N}{207}{subsubsection.7.172.2.1}%
+\contentsline {subsection}{\numberline {7.172.3}Function Documentation}{208}{subsection.7.172.3}%
+\contentsline {subsubsection}{\numberline {7.172.3.1}main()}{208}{subsubsection.7.172.3.1}%
+\contentsline {section}{\numberline {7.173}Ejemplo023.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{210}{section.7.173}%
+\contentsline {section}{\numberline {7.174}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo024.c File Reference}{212}{section.7.174}%
+\contentsline {subsection}{\numberline {7.174.1}Macro Definition Documentation}{213}{subsection.7.174.1}%
+\contentsline {subsubsection}{\numberline {7.174.1.1}BIT}{213}{subsubsection.7.174.1.1}%
+\contentsline {subsubsection}{\numberline {7.174.1.2}BIT\_CLEAR}{213}{subsubsection.7.174.1.2}%
+\contentsline {subsubsection}{\numberline {7.174.1.3}BIT\_GET}{213}{subsubsection.7.174.1.3}%
+\contentsline {subsubsection}{\numberline {7.174.1.4}BIT\_SET}{213}{subsubsection.7.174.1.4}%
+\contentsline {subsubsection}{\numberline {7.174.1.5}BIT\_TOGGLE}{213}{subsubsection.7.174.1.5}%
+\contentsline {subsubsection}{\numberline {7.174.1.6}BIT\_WRITE}{213}{subsubsection.7.174.1.6}%
+\contentsline {subsubsection}{\numberline {7.174.1.7}ES\_PAR}{213}{subsubsection.7.174.1.7}%
+\contentsline {subsection}{\numberline {7.174.2}Function Documentation}{214}{subsection.7.174.2}%
+\contentsline {subsubsection}{\numberline {7.174.2.1}main()}{214}{subsubsection.7.174.2.1}%
+\contentsline {section}{\numberline {7.175}Ejemplo024.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{214}{section.7.175}%
+\contentsline {section}{\numberline {7.176}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo024.c File Reference}{214}{section.7.176}%
+\contentsline {subsection}{\numberline {7.176.1}Detailed Description}{215}{subsection.7.176.1}%
+\contentsline {subsection}{\numberline {7.176.2}Macro Definition Documentation}{216}{subsection.7.176.2}%
+\contentsline {subsubsection}{\numberline {7.176.2.1}N}{216}{subsubsection.7.176.2.1}%
+\contentsline {subsection}{\numberline {7.176.3}Function Documentation}{216}{subsection.7.176.3}%
+\contentsline {subsubsection}{\numberline {7.176.3.1}main()}{216}{subsubsection.7.176.3.1}%
+\contentsline {section}{\numberline {7.177}Ejemplo024.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{217}{section.7.177}%
+\contentsline {section}{\numberline {7.178}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo025.c File Reference}{218}{section.7.178}%
+\contentsline {subsection}{\numberline {7.178.1}Macro Definition Documentation}{219}{subsection.7.178.1}%
+\contentsline {subsubsection}{\numberline {7.178.1.1}BIT}{219}{subsubsection.7.178.1.1}%
+\contentsline {subsubsection}{\numberline {7.178.1.2}BIT\_CLEAR}{219}{subsubsection.7.178.1.2}%
+\contentsline {subsubsection}{\numberline {7.178.1.3}BIT\_GET}{219}{subsubsection.7.178.1.3}%
+\contentsline {subsubsection}{\numberline {7.178.1.4}BIT\_SET}{220}{subsubsection.7.178.1.4}%
+\contentsline {subsubsection}{\numberline {7.178.1.5}BIT\_TOGGLE}{220}{subsubsection.7.178.1.5}%
+\contentsline {subsubsection}{\numberline {7.178.1.6}BIT\_WRITE}{220}{subsubsection.7.178.1.6}%
+\contentsline {subsubsection}{\numberline {7.178.1.7}ES\_PAR}{220}{subsubsection.7.178.1.7}%
+\contentsline {subsubsection}{\numberline {7.178.1.8}N}{220}{subsubsection.7.178.1.8}%
+\contentsline {subsection}{\numberline {7.178.2}Function Documentation}{220}{subsection.7.178.2}%
+\contentsline {subsubsection}{\numberline {7.178.2.1}main()}{220}{subsubsection.7.178.2.1}%
+\contentsline {section}{\numberline {7.179}Ejemplo025.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{221}{section.7.179}%
+\contentsline {section}{\numberline {7.180}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo025.c File Reference}{221}{section.7.180}%
+\contentsline {subsection}{\numberline {7.180.1}Detailed Description}{222}{subsection.7.180.1}%
+\contentsline {subsection}{\numberline {7.180.2}Macro Definition Documentation}{223}{subsection.7.180.2}%
+\contentsline {subsubsection}{\numberline {7.180.2.1}N}{223}{subsubsection.7.180.2.1}%
+\contentsline {subsection}{\numberline {7.180.3}Function Documentation}{223}{subsection.7.180.3}%
+\contentsline {subsubsection}{\numberline {7.180.3.1}main()}{223}{subsubsection.7.180.3.1}%
+\contentsline {section}{\numberline {7.181}Ejemplo025.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{224}{section.7.181}%
+\contentsline {section}{\numberline {7.182}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo026.c File Reference}{225}{section.7.182}%
+\contentsline {subsection}{\numberline {7.182.1}Macro Definition Documentation}{226}{subsection.7.182.1}%
+\contentsline {subsubsection}{\numberline {7.182.1.1}BIT}{226}{subsubsection.7.182.1.1}%
+\contentsline {subsubsection}{\numberline {7.182.1.2}BIT\_CLEAR}{226}{subsubsection.7.182.1.2}%
+\contentsline {subsubsection}{\numberline {7.182.1.3}BIT\_GET}{226}{subsubsection.7.182.1.3}%
+\contentsline {subsubsection}{\numberline {7.182.1.4}BIT\_SET}{226}{subsubsection.7.182.1.4}%
+\contentsline {subsubsection}{\numberline {7.182.1.5}BIT\_TOGGLE}{226}{subsubsection.7.182.1.5}%
+\contentsline {subsubsection}{\numberline {7.182.1.6}BIT\_WRITE}{226}{subsubsection.7.182.1.6}%
+\contentsline {subsubsection}{\numberline {7.182.1.7}ES\_PAR}{227}{subsubsection.7.182.1.7}%
+\contentsline {subsubsection}{\numberline {7.182.1.8}N}{227}{subsubsection.7.182.1.8}%
+\contentsline {subsection}{\numberline {7.182.2}Function Documentation}{227}{subsection.7.182.2}%
+\contentsline {subsubsection}{\numberline {7.182.2.1}main()}{227}{subsubsection.7.182.2.1}%
+\contentsline {section}{\numberline {7.183}Ejemplo026.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{228}{section.7.183}%
+\contentsline {section}{\numberline {7.184}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo026.c File Reference}{229}{section.7.184}%
+\contentsline {subsection}{\numberline {7.184.1}Detailed Description}{229}{subsection.7.184.1}%
+\contentsline {subsection}{\numberline {7.184.2}Macro Definition Documentation}{230}{subsection.7.184.2}%
+\contentsline {subsubsection}{\numberline {7.184.2.1}mx}{230}{subsubsection.7.184.2.1}%
+\contentsline {subsubsection}{\numberline {7.184.2.2}N}{230}{subsubsection.7.184.2.2}%
+\contentsline {subsection}{\numberline {7.184.3}Function Documentation}{230}{subsection.7.184.3}%
+\contentsline {subsubsection}{\numberline {7.184.3.1}main()}{230}{subsubsection.7.184.3.1}%
+\contentsline {section}{\numberline {7.185}Ejemplo026.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{231}{section.7.185}%
+\contentsline {section}{\numberline {7.186}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo027.c File Reference}{233}{section.7.186}%
+\contentsline {subsection}{\numberline {7.186.1}Function Documentation}{233}{subsection.7.186.1}%
+\contentsline {subsubsection}{\numberline {7.186.1.1}main()}{233}{subsubsection.7.186.1.1}%
+\contentsline {section}{\numberline {7.187}Ejemplo027.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{233}{section.7.187}%
+\contentsline {section}{\numberline {7.188}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo027.c File Reference}{234}{section.7.188}%
+\contentsline {subsection}{\numberline {7.188.1}Detailed Description}{234}{subsection.7.188.1}%
+\contentsline {subsection}{\numberline {7.188.2}Macro Definition Documentation}{235}{subsection.7.188.2}%
+\contentsline {subsubsection}{\numberline {7.188.2.1}mx}{235}{subsubsection.7.188.2.1}%
+\contentsline {subsubsection}{\numberline {7.188.2.2}N}{235}{subsubsection.7.188.2.2}%
+\contentsline {subsection}{\numberline {7.188.3}Function Documentation}{235}{subsection.7.188.3}%
+\contentsline {subsubsection}{\numberline {7.188.3.1}main()}{235}{subsubsection.7.188.3.1}%
+\contentsline {section}{\numberline {7.189}Ejemplo027.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{236}{section.7.189}%
+\contentsline {section}{\numberline {7.190}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo028.c File Reference}{237}{section.7.190}%
+\contentsline {subsection}{\numberline {7.190.1}Macro Definition Documentation}{238}{subsection.7.190.1}%
+\contentsline {subsubsection}{\numberline {7.190.1.1}N}{238}{subsubsection.7.190.1.1}%
+\contentsline {subsubsection}{\numberline {7.190.1.2}NC}{238}{subsubsection.7.190.1.2}%
+\contentsline {subsection}{\numberline {7.190.2}Function Documentation}{238}{subsection.7.190.2}%
+\contentsline {subsubsection}{\numberline {7.190.2.1}main()}{238}{subsubsection.7.190.2.1}%
+\contentsline {section}{\numberline {7.191}Ejemplo028.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{239}{section.7.191}%
+\contentsline {section}{\numberline {7.192}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo028.c File Reference}{240}{section.7.192}%
+\contentsline {subsection}{\numberline {7.192.1}Detailed Description}{241}{subsection.7.192.1}%
+\contentsline {subsection}{\numberline {7.192.2}Macro Definition Documentation}{241}{subsection.7.192.2}%
+\contentsline {subsubsection}{\numberline {7.192.2.1}M}{241}{subsubsection.7.192.2.1}%
+\contentsline {subsubsection}{\numberline {7.192.2.2}N}{241}{subsubsection.7.192.2.2}%
+\contentsline {subsection}{\numberline {7.192.3}Function Documentation}{241}{subsection.7.192.3}%
+\contentsline {subsubsection}{\numberline {7.192.3.1}main()}{241}{subsubsection.7.192.3.1}%
+\contentsline {section}{\numberline {7.193}Ejemplo028.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{242}{section.7.193}%
+\contentsline {section}{\numberline {7.194}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo029.c File Reference}{243}{section.7.194}%
+\contentsline {subsection}{\numberline {7.194.1}Function Documentation}{243}{subsection.7.194.1}%
+\contentsline {subsubsection}{\numberline {7.194.1.1}exp1()}{243}{subsubsection.7.194.1.1}%
+\contentsline {subsubsection}{\numberline {7.194.1.2}exp3()}{244}{subsubsection.7.194.1.2}%
+\contentsline {subsubsection}{\numberline {7.194.1.3}exp4()}{245}{subsubsection.7.194.1.3}%
+\contentsline {subsubsection}{\numberline {7.194.1.4}exp5()}{245}{subsubsection.7.194.1.4}%
+\contentsline {subsubsection}{\numberline {7.194.1.5}factorial()}{246}{subsubsection.7.194.1.5}%
+\contentsline {subsubsection}{\numberline {7.194.1.6}factorial2()}{247}{subsubsection.7.194.1.6}%
+\contentsline {subsubsection}{\numberline {7.194.1.7}fct()}{247}{subsubsection.7.194.1.7}%
+\contentsline {subsubsection}{\numberline {7.194.1.8}main()}{248}{subsubsection.7.194.1.8}%
+\contentsline {subsubsection}{\numberline {7.194.1.9}potencia()}{249}{subsubsection.7.194.1.9}%
+\contentsline {subsubsection}{\numberline {7.194.1.10}potencia2()}{249}{subsubsection.7.194.1.10}%
+\contentsline {section}{\numberline {7.195}Ejemplo029.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{250}{section.7.195}%
+\contentsline {section}{\numberline {7.196}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo029.c File Reference}{252}{section.7.196}%
+\contentsline {subsection}{\numberline {7.196.1}Detailed Description}{252}{subsection.7.196.1}%
+\contentsline {subsection}{\numberline {7.196.2}Macro Definition Documentation}{252}{subsection.7.196.2}%
+\contentsline {subsubsection}{\numberline {7.196.2.1}M}{252}{subsubsection.7.196.2.1}%
+\contentsline {subsubsection}{\numberline {7.196.2.2}N}{253}{subsubsection.7.196.2.2}%
+\contentsline {subsection}{\numberline {7.196.3}Function Documentation}{253}{subsection.7.196.3}%
+\contentsline {subsubsection}{\numberline {7.196.3.1}main()}{253}{subsubsection.7.196.3.1}%
+\contentsline {section}{\numberline {7.197}Ejemplo029.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{254}{section.7.197}%
+\contentsline {section}{\numberline {7.198}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo030.c File Reference}{255}{section.7.198}%
+\contentsline {subsection}{\numberline {7.198.1}Function Documentation}{255}{subsection.7.198.1}%
+\contentsline {subsubsection}{\numberline {7.198.1.1}buscar()}{255}{subsubsection.7.198.1.1}%
+\contentsline {subsubsection}{\numberline {7.198.1.2}main()}{256}{subsubsection.7.198.1.2}%
+\contentsline {section}{\numberline {7.199}Ejemplo030.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{256}{section.7.199}%
+\contentsline {section}{\numberline {7.200}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo030.c File Reference}{257}{section.7.200}%
+\contentsline {subsection}{\numberline {7.200.1}Detailed Description}{257}{subsection.7.200.1}%
+\contentsline {subsection}{\numberline {7.200.2}Macro Definition Documentation}{258}{subsection.7.200.2}%
+\contentsline {subsubsection}{\numberline {7.200.2.1}N}{258}{subsubsection.7.200.2.1}%
+\contentsline {subsection}{\numberline {7.200.3}Function Documentation}{258}{subsection.7.200.3}%
+\contentsline {subsubsection}{\numberline {7.200.3.1}main()}{258}{subsubsection.7.200.3.1}%
+\contentsline {section}{\numberline {7.201}Ejemplo030.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{259}{section.7.201}%
+\contentsline {section}{\numberline {7.202}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo031.c File Reference}{260}{section.7.202}%
+\contentsline {subsection}{\numberline {7.202.1}Function Documentation}{261}{subsection.7.202.1}%
+\contentsline {subsubsection}{\numberline {7.202.1.1}main()}{261}{subsubsection.7.202.1.1}%
+\contentsline {section}{\numberline {7.203}Ejemplo031.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{261}{section.7.203}%
+\contentsline {section}{\numberline {7.204}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo031.c File Reference}{261}{section.7.204}%
+\contentsline {subsection}{\numberline {7.204.1}Detailed Description}{262}{subsection.7.204.1}%
+\contentsline {subsection}{\numberline {7.204.2}Macro Definition Documentation}{262}{subsection.7.204.2}%
+\contentsline {subsubsection}{\numberline {7.204.2.1}N}{262}{subsubsection.7.204.2.1}%
+\contentsline {subsection}{\numberline {7.204.3}Function Documentation}{263}{subsection.7.204.3}%
+\contentsline {subsubsection}{\numberline {7.204.3.1}main()}{263}{subsubsection.7.204.3.1}%
+\contentsline {section}{\numberline {7.205}Ejemplo031.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{264}{section.7.205}%
+\contentsline {section}{\numberline {7.206}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo032.c File Reference}{266}{section.7.206}%
+\contentsline {subsection}{\numberline {7.206.1}Function Documentation}{267}{subsection.7.206.1}%
+\contentsline {subsubsection}{\numberline {7.206.1.1}main()}{267}{subsubsection.7.206.1.1}%
+\contentsline {section}{\numberline {7.207}Ejemplo032.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{267}{section.7.207}%
+\contentsline {section}{\numberline {7.208}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo032.c File Reference}{267}{section.7.208}%
+\contentsline {subsection}{\numberline {7.208.1}Detailed Description}{268}{subsection.7.208.1}%
+\contentsline {subsection}{\numberline {7.208.2}Macro Definition Documentation}{269}{subsection.7.208.2}%
+\contentsline {subsubsection}{\numberline {7.208.2.1}BIT}{269}{subsubsection.7.208.2.1}%
+\contentsline {subsubsection}{\numberline {7.208.2.2}BIT\_CLEAR}{269}{subsubsection.7.208.2.2}%
+\contentsline {subsubsection}{\numberline {7.208.2.3}BIT\_GET}{269}{subsubsection.7.208.2.3}%
+\contentsline {subsubsection}{\numberline {7.208.2.4}BIT\_SET}{269}{subsubsection.7.208.2.4}%
+\contentsline {subsubsection}{\numberline {7.208.2.5}BIT\_TOGGLE}{269}{subsubsection.7.208.2.5}%
+\contentsline {subsubsection}{\numberline {7.208.2.6}BIT\_WRITE}{269}{subsubsection.7.208.2.6}%
+\contentsline {subsection}{\numberline {7.208.3}Function Documentation}{269}{subsection.7.208.3}%
+\contentsline {subsubsection}{\numberline {7.208.3.1}main()}{269}{subsubsection.7.208.3.1}%
+\contentsline {section}{\numberline {7.209}Ejemplo032.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{271}{section.7.209}%
+\contentsline {section}{\numberline {7.210}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo033.c File Reference}{272}{section.7.210}%
+\contentsline {subsection}{\numberline {7.210.1}Macro Definition Documentation}{272}{subsection.7.210.1}%
+\contentsline {subsubsection}{\numberline {7.210.1.1}N}{272}{subsubsection.7.210.1.1}%
+\contentsline {subsection}{\numberline {7.210.2}Function Documentation}{272}{subsection.7.210.2}%
+\contentsline {subsubsection}{\numberline {7.210.2.1}asen()}{272}{subsubsection.7.210.2.1}%
+\contentsline {subsubsection}{\numberline {7.210.2.2}main()}{273}{subsubsection.7.210.2.2}%
+\contentsline {subsubsection}{\numberline {7.210.2.3}validar()}{274}{subsubsection.7.210.2.3}%
+\contentsline {subsubsection}{\numberline {7.210.2.4}validar2()}{275}{subsubsection.7.210.2.4}%
+\contentsline {section}{\numberline {7.211}Ejemplo033.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{275}{section.7.211}%
+\contentsline {section}{\numberline {7.212}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo033.c File Reference}{276}{section.7.212}%
+\contentsline {subsection}{\numberline {7.212.1}Detailed Description}{277}{subsection.7.212.1}%
+\contentsline {subsection}{\numberline {7.212.2}Macro Definition Documentation}{277}{subsection.7.212.2}%
+\contentsline {subsubsection}{\numberline {7.212.2.1}BIT}{277}{subsubsection.7.212.2.1}%
+\contentsline {subsubsection}{\numberline {7.212.2.2}BIT\_GET}{277}{subsubsection.7.212.2.2}%
+\contentsline {subsubsection}{\numberline {7.212.2.3}BIT\_TOGGLE\_BYTE}{278}{subsubsection.7.212.2.3}%
+\contentsline {subsubsection}{\numberline {7.212.2.4}N}{278}{subsubsection.7.212.2.4}%
+\contentsline {subsection}{\numberline {7.212.3}Function Documentation}{278}{subsection.7.212.3}%
+\contentsline {subsubsection}{\numberline {7.212.3.1}main()}{278}{subsubsection.7.212.3.1}%
+\contentsline {section}{\numberline {7.213}Ejemplo033.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{279}{section.7.213}%
+\contentsline {section}{\numberline {7.214}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo034.c File Reference}{280}{section.7.214}%
+\contentsline {subsection}{\numberline {7.214.1}Macro Definition Documentation}{280}{subsection.7.214.1}%
+\contentsline {subsubsection}{\numberline {7.214.1.1}NC}{280}{subsubsection.7.214.1.1}%
+\contentsline {subsubsection}{\numberline {7.214.1.2}NE}{280}{subsubsection.7.214.1.2}%
+\contentsline {subsubsection}{\numberline {7.214.1.3}NM}{280}{subsubsection.7.214.1.3}%
+\contentsline {subsection}{\numberline {7.214.2}Function Documentation}{280}{subsection.7.214.2}%
+\contentsline {subsubsection}{\numberline {7.214.2.1}main()}{280}{subsubsection.7.214.2.1}%
+\contentsline {section}{\numberline {7.215}Ejemplo034.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{281}{section.7.215}%
+\contentsline {section}{\numberline {7.216}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo034.c File Reference}{282}{section.7.216}%
+\contentsline {subsection}{\numberline {7.216.1}Detailed Description}{282}{subsection.7.216.1}%
+\contentsline {subsection}{\numberline {7.216.2}Macro Definition Documentation}{283}{subsection.7.216.2}%
+\contentsline {subsubsection}{\numberline {7.216.2.1}BIT}{283}{subsubsection.7.216.2.1}%
+\contentsline {subsubsection}{\numberline {7.216.2.2}BIT\_GET}{283}{subsubsection.7.216.2.2}%
+\contentsline {subsubsection}{\numberline {7.216.2.3}BIT\_SET}{283}{subsubsection.7.216.2.3}%
+\contentsline {subsubsection}{\numberline {7.216.2.4}BIT\_TOGGLE}{283}{subsubsection.7.216.2.4}%
+\contentsline {subsubsection}{\numberline {7.216.2.5}IS\_POW2\_POS}{283}{subsubsection.7.216.2.5}%
+\contentsline {subsubsection}{\numberline {7.216.2.6}N}{283}{subsubsection.7.216.2.6}%
+\contentsline {subsubsection}{\numberline {7.216.2.7}P}{283}{subsubsection.7.216.2.7}%
+\contentsline {subsection}{\numberline {7.216.3}Function Documentation}{284}{subsection.7.216.3}%
+\contentsline {subsubsection}{\numberline {7.216.3.1}main()}{284}{subsubsection.7.216.3.1}%
+\contentsline {section}{\numberline {7.217}Ejemplo034.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{286}{section.7.217}%
+\contentsline {section}{\numberline {7.218}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo034\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}2.c File Reference}{288}{section.7.218}%
+\contentsline {subsection}{\numberline {7.218.1}Detailed Description}{289}{subsection.7.218.1}%
+\contentsline {subsection}{\numberline {7.218.2}Macro Definition Documentation}{289}{subsection.7.218.2}%
+\contentsline {subsubsection}{\numberline {7.218.2.1}BIT}{289}{subsubsection.7.218.2.1}%
+\contentsline {subsubsection}{\numberline {7.218.2.2}BIT\_GET}{289}{subsubsection.7.218.2.2}%
+\contentsline {subsubsection}{\numberline {7.218.2.3}BIT\_SET}{290}{subsubsection.7.218.2.3}%
+\contentsline {subsubsection}{\numberline {7.218.2.4}BIT\_TOGGLE}{290}{subsubsection.7.218.2.4}%
+\contentsline {subsubsection}{\numberline {7.218.2.5}IS\_POW2\_POS}{290}{subsubsection.7.218.2.5}%
+\contentsline {subsubsection}{\numberline {7.218.2.6}N}{290}{subsubsection.7.218.2.6}%
+\contentsline {subsubsection}{\numberline {7.218.2.7}P}{290}{subsubsection.7.218.2.7}%
+\contentsline {subsection}{\numberline {7.218.3}Function Documentation}{290}{subsection.7.218.3}%
+\contentsline {subsubsection}{\numberline {7.218.3.1}main()}{290}{subsubsection.7.218.3.1}%
+\contentsline {section}{\numberline {7.219}Ejemplo034\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}2.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{292}{section.7.219}%
+\contentsline {section}{\numberline {7.220}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo035.c File Reference}{295}{section.7.220}%
+\contentsline {subsection}{\numberline {7.220.1}Function Documentation}{295}{subsection.7.220.1}%
+\contentsline {subsubsection}{\numberline {7.220.1.1}main()}{295}{subsubsection.7.220.1.1}%
+\contentsline {section}{\numberline {7.221}Ejemplo035.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{295}{section.7.221}%
+\contentsline {section}{\numberline {7.222}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo035.c File Reference}{296}{section.7.222}%
+\contentsline {subsection}{\numberline {7.222.1}Detailed Description}{296}{subsection.7.222.1}%
+\contentsline {subsection}{\numberline {7.222.2}Macro Definition Documentation}{297}{subsection.7.222.2}%
+\contentsline {subsubsection}{\numberline {7.222.2.1}BIT}{297}{subsubsection.7.222.2.1}%
+\contentsline {subsubsection}{\numberline {7.222.2.2}BIT\_CLEAR}{297}{subsubsection.7.222.2.2}%
+\contentsline {subsubsection}{\numberline {7.222.2.3}BIT\_GET}{297}{subsubsection.7.222.2.3}%
+\contentsline {subsubsection}{\numberline {7.222.2.4}BIT\_SET}{298}{subsubsection.7.222.2.4}%
+\contentsline {subsubsection}{\numberline {7.222.2.5}N}{298}{subsubsection.7.222.2.5}%
+\contentsline {subsection}{\numberline {7.222.3}Function Documentation}{298}{subsection.7.222.3}%
+\contentsline {subsubsection}{\numberline {7.222.3.1}main()}{298}{subsubsection.7.222.3.1}%
+\contentsline {section}{\numberline {7.223}Ejemplo035.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{299}{section.7.223}%
+\contentsline {section}{\numberline {7.224}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo036.c File Reference}{301}{section.7.224}%
+\contentsline {subsection}{\numberline {7.224.1}Function Documentation}{301}{subsection.7.224.1}%
+\contentsline {subsubsection}{\numberline {7.224.1.1}main()}{301}{subsubsection.7.224.1.1}%
+\contentsline {section}{\numberline {7.225}Ejemplo036.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{302}{section.7.225}%
+\contentsline {section}{\numberline {7.226}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo036.c File Reference}{302}{section.7.226}%
+\contentsline {subsection}{\numberline {7.226.1}Detailed Description}{303}{subsection.7.226.1}%
+\contentsline {subsection}{\numberline {7.226.2}Function Documentation}{304}{subsection.7.226.2}%
+\contentsline {subsubsection}{\numberline {7.226.2.1}exp1()}{304}{subsubsection.7.226.2.1}%
+\contentsline {subsubsection}{\numberline {7.226.2.2}exp3()}{305}{subsubsection.7.226.2.2}%
+\contentsline {subsubsection}{\numberline {7.226.2.3}exp4()}{306}{subsubsection.7.226.2.3}%
+\contentsline {subsubsection}{\numberline {7.226.2.4}facto()}{307}{subsubsection.7.226.2.4}%
+\contentsline {subsubsection}{\numberline {7.226.2.5}fct()}{308}{subsubsection.7.226.2.5}%
+\contentsline {subsubsection}{\numberline {7.226.2.6}main()}{309}{subsubsection.7.226.2.6}%
+\contentsline {subsubsection}{\numberline {7.226.2.7}pot()}{310}{subsubsection.7.226.2.7}%
+\contentsline {subsubsection}{\numberline {7.226.2.8}pot2()}{311}{subsubsection.7.226.2.8}%
+\contentsline {section}{\numberline {7.227}Ejemplo036.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{312}{section.7.227}%
+\contentsline {section}{\numberline {7.228}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo037.c File Reference}{313}{section.7.228}%
+\contentsline {subsection}{\numberline {7.228.1}Function Documentation}{314}{subsection.7.228.1}%
+\contentsline {subsubsection}{\numberline {7.228.1.1}main()}{314}{subsubsection.7.228.1.1}%
+\contentsline {section}{\numberline {7.229}Ejemplo037.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{314}{section.7.229}%
+\contentsline {section}{\numberline {7.230}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo037.c File Reference}{314}{section.7.230}%
+\contentsline {subsection}{\numberline {7.230.1}Detailed Description}{315}{subsection.7.230.1}%
+\contentsline {subsection}{\numberline {7.230.2}Function Documentation}{316}{subsection.7.230.2}%
+\contentsline {subsubsection}{\numberline {7.230.2.1}main()}{316}{subsubsection.7.230.2.1}%
+\contentsline {subsubsection}{\numberline {7.230.2.2}OddD()}{316}{subsubsection.7.230.2.2}%
+\contentsline {subsubsection}{\numberline {7.230.2.3}SoddD()}{317}{subsubsection.7.230.2.3}%
+\contentsline {section}{\numberline {7.231}Ejemplo037.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{318}{section.7.231}%
+\contentsline {section}{\numberline {7.232}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo038.c File Reference}{319}{section.7.232}%
+\contentsline {subsection}{\numberline {7.232.1}Function Documentation}{320}{subsection.7.232.1}%
+\contentsline {subsubsection}{\numberline {7.232.1.1}main()}{320}{subsubsection.7.232.1.1}%
+\contentsline {section}{\numberline {7.233}Ejemplo038.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{320}{section.7.233}%
+\contentsline {section}{\numberline {7.234}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo038.c File Reference}{321}{section.7.234}%
+\contentsline {subsection}{\numberline {7.234.1}Detailed Description}{321}{subsection.7.234.1}%
+\contentsline {subsection}{\numberline {7.234.2}Function Documentation}{321}{subsection.7.234.2}%
+\contentsline {subsubsection}{\numberline {7.234.2.1}main()}{321}{subsubsection.7.234.2.1}%
+\contentsline {section}{\numberline {7.235}Ejemplo038.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{322}{section.7.235}%
+\contentsline {section}{\numberline {7.236}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo039.c File Reference}{322}{section.7.236}%
+\contentsline {subsection}{\numberline {7.236.1}Function Documentation}{322}{subsection.7.236.1}%
+\contentsline {subsubsection}{\numberline {7.236.1.1}capturar()}{322}{subsubsection.7.236.1.1}%
+\contentsline {subsubsection}{\numberline {7.236.1.2}crearMat()}{323}{subsubsection.7.236.1.2}%
+\contentsline {subsubsection}{\numberline {7.236.1.3}imprimir()}{323}{subsubsection.7.236.1.3}%
+\contentsline {subsubsection}{\numberline {7.236.1.4}main()}{324}{subsubsection.7.236.1.4}%
+\contentsline {subsubsection}{\numberline {7.236.1.5}multiplicar()}{325}{subsubsection.7.236.1.5}%
+\contentsline {section}{\numberline {7.237}Ejemplo039.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{326}{section.7.237}%
+\contentsline {section}{\numberline {7.238}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo039.c File Reference}{327}{section.7.238}%
+\contentsline {subsection}{\numberline {7.238.1}Detailed Description}{328}{subsection.7.238.1}%
+\contentsline {subsection}{\numberline {7.238.2}Function Documentation}{328}{subsection.7.238.2}%
+\contentsline {subsubsection}{\numberline {7.238.2.1}main()}{328}{subsubsection.7.238.2.1}%
+\contentsline {section}{\numberline {7.239}Ejemplo039.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{328}{section.7.239}%
+\contentsline {section}{\numberline {7.240}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20252/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo040.c File Reference}{329}{section.7.240}%
+\contentsline {subsection}{\numberline {7.240.1}Function Documentation}{329}{subsection.7.240.1}%
+\contentsline {subsubsection}{\numberline {7.240.1.1}capturar()}{329}{subsubsection.7.240.1.1}%
+\contentsline {subsubsection}{\numberline {7.240.1.2}capturarM()}{330}{subsubsection.7.240.1.2}%
+\contentsline {subsubsection}{\numberline {7.240.1.3}crearMat()}{330}{subsubsection.7.240.1.3}%
+\contentsline {subsubsection}{\numberline {7.240.1.4}crearMatC()}{331}{subsubsection.7.240.1.4}%
+\contentsline {subsubsection}{\numberline {7.240.1.5}crearMatD()}{331}{subsubsection.7.240.1.5}%
+\contentsline {subsubsection}{\numberline {7.240.1.6}imprimir()}{332}{subsubsection.7.240.1.6}%
+\contentsline {subsubsection}{\numberline {7.240.1.7}imprimirM()}{332}{subsubsection.7.240.1.7}%
+\contentsline {subsubsection}{\numberline {7.240.1.8}liberar()}{332}{subsubsection.7.240.1.8}%
+\contentsline {subsubsection}{\numberline {7.240.1.9}main()}{333}{subsubsection.7.240.1.9}%
+\contentsline {subsubsection}{\numberline {7.240.1.10}multiplicar()}{334}{subsubsection.7.240.1.10}%
+\contentsline {subsubsection}{\numberline {7.240.1.11}multiplicarM()}{335}{subsubsection.7.240.1.11}%
+\contentsline {section}{\numberline {7.241}Ejemplo040.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{336}{section.7.241}%
+\contentsline {section}{\numberline {7.242}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}20261/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Ejemplo040.c File Reference}{338}{section.7.242}%
+\contentsline {subsection}{\numberline {7.242.1}Detailed Description}{338}{subsection.7.242.1}%
+\contentsline {subsection}{\numberline {7.242.2}Macro Definition Documentation}{339}{subsection.7.242.2}%
+\contentsline {subsubsection}{\numberline {7.242.2.1}N}{339}{subsubsection.7.242.2.1}%
+\contentsline {subsection}{\numberline {7.242.3}Function Documentation}{339}{subsection.7.242.3}%
+\contentsline {subsubsection}{\numberline {7.242.3.1}main()}{339}{subsubsection.7.242.3.1}%
+\contentsline {section}{\numberline {7.243}Ejemplo040.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{340}{section.7.243}%
+\contentsline {section}{\numberline {7.244}src/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}template/\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}Template.c File Reference}{341}{section.7.244}%
+\contentsline {subsection}{\numberline {7.244.1}Function Documentation}{341}{subsection.7.244.1}%
+\contentsline {subsubsection}{\numberline {7.244.1.1}main()}{341}{subsubsection.7.244.1.1}%
+\contentsline {section}{\numberline {7.245}Template.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}c}{341}{section.7.245}%

@@ -75,7 +75,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "001__cod__prioridad_8c.html",
-"20261_2src_2_ejemplo013_8c.html#a0ddf1224851353fc92bfbff6f499fa97"
+"20252_2_ejemplo028_8c.html#a0ddf1224851353fc92bfbff6f499fa97",
+"_ejemplo041_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

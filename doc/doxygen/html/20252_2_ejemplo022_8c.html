@@ -153,7 +153,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="20252_2_ejemplo022_8c_source.html#l00005">5</a> of file <a class="el" href="20252_2_ejemplo022_8c_source.html">Ejemplo022.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
 <div class="line"><span class="lineno">    7</span>    <span class="keywordtype">int</span> n, i, j, k;</div>
-<div class="line"><span class="lineno">    8</span>    <span class="keywordtype">float</span> A[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], b[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>, x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordtype">float</span> A[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], b[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>, x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
 <div class="line"><span class="lineno">    9</span>    <span class="keywordflow">do</span>{</div>
 <div class="line"><span class="lineno">   10</span>        printf(<span class="stringliteral">&quot;Ingrese el numero de incognitas: &quot;</span>);</div>
 <div class="line"><span class="lineno">   11</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
@@ -181,9 +181,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>    <span class="keywordflow">for</span>(i=1; i&lt;n; i++)</div>
 <div class="line"><span class="lineno">   34</span>        <span class="keywordflow">for</span>(j=i; j&lt;n; j++)</div>
 <div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span>(k=0, <a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>=A[j][i-1]/A[i-1][i-1]; k&lt;n; k++)</div>
-<div class="line"><span class="lineno">   37</span>                A[j][k]-=(<a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>*A[i-1][k]);</div>
-<div class="line"><span class="lineno">   38</span>            b[j]-=(<a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>*b[i-1]);</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span>(k=0, <a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>=A[j][i-1]/A[i-1][i-1]; k&lt;n; k++)</div>
+<div class="line"><span class="lineno">   37</span>                A[j][k]-=(<a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>*A[i-1][k]);</div>
+<div class="line"><span class="lineno">   38</span>            b[j]-=(<a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>*b[i-1]);</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
 <div class="line"><span class="lineno">   40</span>    <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">   41</span><span class="comment">    for(i=0; i&lt;n; i++)</span></div>
@@ -205,14 +205,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   58</span>}</div>
 <div class="ttc" id="a012__aleatorio_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00005">012_aleatorio.c:5</a></div></div>
-<div class="ttc" id="a_ejemplo029_8c_html_a3b0c9965e3b03dbc43b1c6843a0bc3df"><div class="ttname"><a href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a></div><div class="ttdeci">double fct(double x, int n)</div><div class="ttdef"><b>Definition</b> <a href="_ejemplo029_8c_source.html#l00034">Ejemplo029.c:34</a></div></div>
+<div class="ttc" id="a20252_2_ejemplo029_8c_html_a3b0c9965e3b03dbc43b1c6843a0bc3df"><div class="ttname"><a href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a></div><div class="ttdeci">double fct(double x, int n)</div><div class="ttdef"><b>Definition</b> <a href="20252_2_ejemplo029_8c_source.html#l00034">Ejemplo029.c:34</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="20252_2_ejemplo022_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#a20252_2_ejemplo022_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" loading="lazy" alt=""/></div>
 <map name="a20252_2_ejemplo022_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="a20252_2_ejemplo022_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
 <area shape="rect" title=" " alt="" coords="5,29,55,55"/>
-<area shape="rect" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df" title=" " alt="" coords="103,29,141,55"/>
+<area shape="rect" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df" title=" " alt="" coords="103,29,141,55"/>
 <area shape="poly" title=" " alt="" coords="55,40,90,41,85,43,55,45"/>
 <area shape="poly" title=" " alt="" coords="105,28,102,21,104,12,111,5,122,3,134,6,141,15,136,14,131,10,122,8,113,10,108,14,107,20,110,30"/>
 </map>

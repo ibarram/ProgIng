@@ -1,0 +1,499 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo036.c File Reference}
+\hypertarget{20261_2src_2_ejemplo036_8c}{}\label{20261_2src_2_ejemplo036_8c}\index{src/20261/src/Ejemplo036.c@{src/20261/src/Ejemplo036.c}}
+
+
+Comparación de implementaciones de potencia, factorial y aproximación de exp(x).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo036.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo036_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8}{exp1}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Aproxima exp(x) con n términos de la serie de Taylor (k=0..n-\/1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c}{exp3}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Aproxima exp(x) sumando términos desde 0 hasta n (incluye el término n). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972}{exp4}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Aproxima exp(x) sumando términos desde 0 hasta n (incluye el término n). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}{pot}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Calcula x\texorpdfstring{$^\wedge$}{\string^}n de forma iterativa. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Calcula x\texorpdfstring{$^\wedge$}{\string^}n de forma recursiva. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto}} (int n)
+\begin{DoxyCompactList}\small\item\em Calcula n! de forma iterativa. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}{fct}} (float x, int n)
+\begin{DoxyCompactList}\small\item\em Calcula el término $\frac{x^n}{n!}$ de forma recursiva. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Punto de entrada. Lee x y n, calcula y muestra potencia, factorial y aproximaciones de exp(x). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comparación de implementaciones de potencia, factorial y aproximación de exp(x). 
+
+Este programa ilustra distintas formas de calcular:\+
+\begin{DoxyItemize}
+\item Potencia:\+ x\texorpdfstring{$^\wedge$}{\string^}n
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}{pot()}} :\+ iterativa (for)
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2()}} :\+ recursiva
+\end{DoxyItemize}
+\item Factorial:\+ n!
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto()}} :\+ iterativa
+\end{DoxyItemize}
+\item Aproximación de exp(x) con serie de Taylor (Maclaurin):\+   \[    e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}
+\]
+\begin{DoxyItemize}
+\item {\ttfamily exp1(x,n)} :\+ suma n términos (k=0..n-\/1) usando potencia iterativa y factorial iterativo
+\item {\ttfamily exp3(x,n)} :\+ suma n+1 términos (k=0..n) de forma recursiva usando {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2()}} y {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto()}}
+\item {\ttfamily exp4(x,n)} :\+ suma n+1 términos (k=0..n) recursiva usando {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}{fct()}} que genera x\texorpdfstring{$^\wedge$}{\string^}n/\+n!
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily x} (float):\+ valor real
+\item {\ttfamily n} (int):\+ número de términos /\+ exponente (n \texorpdfstring{$>$}{>}= 0)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item x\texorpdfstring{$^\wedge$}{\string^}n calculado por dos métodos
+\item n! (factorial)
+\item exp(x) aproximado por tres métodos
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}{pot}}:\+ O(n), {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2}}:\+ O(n)
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto}}:\+ O(n)
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8}{exp1}}:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2) (por potencia+factorial dentro del ciclo)
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c}{exp3}}:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2) (recursión + llamadas repetidas a pot2/\+facto)
+\item {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972}{exp4}}:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2) (recursión + {\ttfamily \doxylink{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}{fct}} recursivo)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item Las funciones recursivas pueden desbordar pila si n es muy grande.
+\item Para aproximar exp(x) con buena precisión se requieren más términos, especialmente si \texorpdfstring{$\vert$}{|}x\texorpdfstring{$\vert$}{|} es grande.
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo036.c\ -\/o\ Ejemplo036}
+\DoxyCodeLine{./Ejemplo036}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo036_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8}\index{Ejemplo036.c@{Ejemplo036.c}!exp1@{exp1}}
+\index{exp1@{exp1}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{exp1()}{exp1()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8} 
+float exp1 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Aproxima exp(x) con n términos de la serie de Taylor (k=0..n-\/1). 
+
+Implementa:\+   \[e^x \approx \sum_{k=0}^{n-1}\frac{x^k}{k!}
+\]
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Valor real. \\
+\hline
+{\em n} & Número de términos (n\texorpdfstring{$>$}{>}=0). Si n=0, la suma queda 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aproximación de exp(x). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00174}{174}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{float}\ ex;}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0,\ ex\ =\ 0.0f;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ ex\ +=\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}{pot}}(x,\ i)\ /\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto}}(i);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return}\ ex;}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c}\index{Ejemplo036.c@{Ejemplo036.c}!exp3@{exp3}}
+\index{exp3@{exp3}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{exp3()}{exp3()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c} 
+float exp3 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Aproxima exp(x) sumando términos desde 0 hasta n (incluye el término n). 
+
+Implementa:\+   \[e^x \approx \sum_{k=0}^{n}\frac{x^k}{k!}
+\] usando recursión:\+   \[exp3(x,n) = exp3(x,n-1) + \frac{x^n}{n!},\quad exp3(x,0)=1
+\]
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Valor real. \\
+\hline
+{\em n} & Entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aproximación de exp(x). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00156}{156}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{return}\ n\ ?\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c}{exp3}}(x,\ n-\/1)\ +\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2}}(x,\ n)\ /\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto}}(n)\ :\ 1.0f;}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972}\index{Ejemplo036.c@{Ejemplo036.c}!exp4@{exp4}}
+\index{exp4@{exp4}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{exp4()}{exp4()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972} 
+float exp4 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Aproxima exp(x) sumando términos desde 0 hasta n (incluye el término n). 
+
+Implementa:\+   \[e^x \approx \sum_{k=0}^{n}\frac{x^k}{k!}
+\] usando recursión:\+   \[exp4(x,n) = exp4(x,n-1) + fct(x,n),\quad exp4(x,0)=1
+\]
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Valor real. \\
+\hline
+{\em n} & Entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aproximación de exp(x). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00134}{134}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ n\ ?\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972}{exp4}}(x,\ n-\/1)\ +\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}{fct}}(x,\ n)\ :\ 1.0f;}
+\DoxyCodeLine{00137\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}\index{Ejemplo036.c@{Ejemplo036.c}!facto@{facto}}
+\index{facto@{facto}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{facto()}{facto()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8} 
+float facto (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calcula n! de forma iterativa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n! como float. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00221}{221}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00222\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{float}\ fn;}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0,\ fn\ =\ 1.0f;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ fn\ *=\ (i\ +\ 1);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordflow}{return}\ fn;}
+\DoxyCodeLine{00230\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}\index{Ejemplo036.c@{Ejemplo036.c}!fct@{fct}}
+\index{fct@{fct}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{fct()}{fct()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075} 
+float fct (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el término $\frac{x^n}{n!}$ de forma recursiva. 
+
+Se usa la recurrencia:\+   \[fct(x,n) = fct(x,n-1)\cdot \frac{x}{n}, \quad fct(x,0)=1
+\]
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Valor real. \\
+\hline
+{\em n} & Entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor de $x^n/n!$. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00112}{112}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ n\ ?\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075}{fct}}(x,\ n-\/1)\ *\ (x\ /\ n)\ :\ 1.0f;}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=109pt]{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{20261_2src_2_ejemplo036_8c_ab474d57f22db312588779a8423dff075_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo036.c@{Ejemplo036.c}!main@{main}}
+\index{main@{main}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Punto de entrada. Lee x y n, calcula y muestra potencia, factorial y aproximaciones de exp(x). 
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00060}{60}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00063\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ xn,\ xn2,\ fn,\ ex,\ ex2,\ ex3;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ x:\ "{}});}
+\DoxyCodeLine{00069\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&x);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*\ n\ debe\ ser\ >=\ 0\ para\ potencia,\ factorial\ y\ serie\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ de\ n:\ "{}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00075\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 0);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{/*\ x\string^n\ por\ dos\ métodos\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ xn\ \ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}{pot}}(x,\ n);\ \ \ \textcolor{comment}{/*\ iterativo\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ xn2\ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2}}(x,\ n);\ \ \textcolor{comment}{/*\ recursivo\ */}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{/*\ n!\ */}}
+\DoxyCodeLine{00082\ \ \ \ \ fn\ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a0df0cc2dd381926aef78c76ceb903fc8}{facto}}(n);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{/*\ exp(x)\ por\ tres\ métodos\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ ex\ \ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_aa92b28610ab25943ec0fea1785eeddc8}{exp1}}(x,\ n);\ \ \textcolor{comment}{/*\ suma\ k=0..n-\/1\ (n\ términos)\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ ex2\ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a61f654e06f7acb3b4ac04977f042795c}{exp3}}(x,\ n);\ \ \textcolor{comment}{/*\ suma\ k=0..n\ \ \ (n+1\ términos)\ */}}
+\DoxyCodeLine{00087\ \ \ \ \ ex3\ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_aac2909aa40da9e395e1503b9688e5972}{exp4}}(x,\ n);\ \ \textcolor{comment}{/*\ suma\ k=0..n\ \ \ (n+1\ términos)\ */}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f\string^\%d\ =\ \%f\(\backslash\)n"{}},\ x,\ n,\ xn);}
+\DoxyCodeLine{00090\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f\string^\%d\ =\ \%f\(\backslash\)n"{}},\ x,\ n,\ xn2);}
+\DoxyCodeLine{00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d!\ =\ \%f\(\backslash\)n"{}},\ n,\ fn);}
+\DoxyCodeLine{00092\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex);}
+\DoxyCodeLine{00093\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex2);}
+\DoxyCodeLine{00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}exp(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ ex3);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{20261_2src_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6}\index{Ejemplo036.c@{Ejemplo036.c}!pot@{pot}}
+\index{pot@{pot}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{pot()}{pot()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6} 
+float pot (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calcula x\texorpdfstring{$^\wedge$}{\string^}n de forma iterativa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Base. \\
+\hline
+{\em n} & Exponente entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+x\texorpdfstring{$^\wedge$}{\string^}n. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00204}{204}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{float}\ px;}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0,\ px\ =\ 1.0f;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ px\ *=\ x;}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{return}\ px;}
+\DoxyCodeLine{00213\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{20261_2src_2_ejemplo036_8c_a05eedb2825c7f71eb6b434aa7f369fa6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}\index{Ejemplo036.c@{Ejemplo036.c}!pot2@{pot2}}
+\index{pot2@{pot2}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{pot2()}{pot2()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e} 
+float pot2 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calcula x\texorpdfstring{$^\wedge$}{\string^}n de forma recursiva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Base. \\
+\hline
+{\em n} & Exponente entero n\texorpdfstring{$>$}{>}=0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+x\texorpdfstring{$^\wedge$}{\string^}n. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source_l00192}{192}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{return}\ (n\ ?\ \doxymbox{\hyperlink{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e}{pot2}}(x,\ n-\/1)\ *\ x\ :\ 1.0f);}
+\DoxyCodeLine{00195\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=115pt]{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{20261_2src_2_ejemplo036_8c_a063e87787e9180491b5173ef0cfa636e_icgraph}
+\end{center}
+\end{figure}

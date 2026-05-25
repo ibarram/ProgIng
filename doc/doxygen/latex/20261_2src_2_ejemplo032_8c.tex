@@ -1,0 +1,275 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo032.c File Reference}
+\hypertarget{20261_2src_2_ejemplo032_8c}{}\label{20261_2src_2_ejemplo032_8c}\index{src/20261/src/Ejemplo032.c@{src/20261/src/Ejemplo032.c}}
+
+
+Demostración de macros para manipulación de bits en un entero.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo032.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo032_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\+\_\+\+GET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\+\_\+\+SET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\+\_\+\+CLEAR}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\+\_\+\+TOGGLE}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_aae726527b0f579536565bfd00dcd5c41}{BIT\+\_\+\+WRITE}}(x,  n,  v)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Demostración de macros para manipulación de bits en un entero. 
+
+El programa:\+ 1) Lee un entero {\ttfamily x}. 2) Imprime su representación binaria (desde el bit más significativo). 3) Permite aplicar operaciones sobre un bit {\ttfamily nb}:\+
+\begin{DoxyItemize}
+\item SET:\+ poner el bit en 1
+\item CLEAR:\+ poner el bit en 0
+\item TOGGLE:\+ invertir el bit
+\item WRITE:\+ escribir 0 o 1 según el valor {\ttfamily v}
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily x} (int)
+\item {\ttfamily nb} (int):\+ índice del bit (0..(bits-\/1))
+\item {\ttfamily v} (int):\+ valor 0/\+1 (solo para WRITE)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item Representación binaria después de cada operación y el valor decimal de {\ttfamily x}.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(w) por impresión, donde w = número de bits del entero. Memoria:\+ O(1).
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item Se valida que {\ttfamily nb} esté dentro del rango permitido para evitar desplazamientos inválidos.
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo032.c\ -\/o\ Ejemplo032}
+\DoxyCodeLine{./Ejemplo032}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo032_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo032_8c_a3a8ea58898cb58fc96013383d39f482c}\index{Ejemplo032.c@{Ejemplo032.c}!BIT@{BIT}}
+\index{BIT@{BIT}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_a3a8ea58898cb58fc96013383d39f482c} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1U\ <<\ (n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00039}{39}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo032_8c_a9363128e451d6e93a10d34f29b3e5fc5}\index{Ejemplo032.c@{Ejemplo032.c}!BIT\_CLEAR@{BIT\_CLEAR}}
+\index{BIT\_CLEAR@{BIT\_CLEAR}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_CLEAR}{BIT\_CLEAR}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_a9363128e451d6e93a10d34f29b3e5fc5} 
+\+\#define BIT\+\_\+\+CLEAR(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&=\ \string~(int)\doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00042}{42}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}\index{Ejemplo032.c@{Ejemplo032.c}!BIT\_GET@{BIT\_GET}}
+\index{BIT\_GET@{BIT\_GET}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_GET}{BIT\_GET}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d} 
+\+\#define BIT\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((unsigned)(x)\ \&\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))\ !=\ 0U)}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00040}{40}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo032_8c_ad858f7c97446fb3f7a0caef0baca2afd}\index{Ejemplo032.c@{Ejemplo032.c}!BIT\_SET@{BIT\_SET}}
+\index{BIT\_SET@{BIT\_SET}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_SET}{BIT\_SET}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_ad858f7c97446fb3f7a0caef0baca2afd} 
+\+\#define BIT\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ |=\ \ (int)\doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00041}{41}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo032_8c_a313efcb9b1da105b05edfe888760db3b}\index{Ejemplo032.c@{Ejemplo032.c}!BIT\_TOGGLE@{BIT\_TOGGLE}}
+\index{BIT\_TOGGLE@{BIT\_TOGGLE}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_TOGGLE}{BIT\_TOGGLE}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_a313efcb9b1da105b05edfe888760db3b} 
+\+\#define BIT\+\_\+\+TOGGLE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \string^=\ \ (int)\doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00043}{43}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo032_8c_aae726527b0f579536565bfd00dcd5c41}\index{Ejemplo032.c@{Ejemplo032.c}!BIT\_WRITE@{BIT\_WRITE}}
+\index{BIT\_WRITE@{BIT\_WRITE}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_WRITE}{BIT\_WRITE}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_aae726527b0f579536565bfd00dcd5c41} 
+\+\#define BIT\+\_\+\+WRITE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{, }\item[{}]{v}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((v)\ ?\ \doxymbox{\hyperlink{026___binarios_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(x,n)\ :\ \doxymbox{\hyperlink{026___binarios_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\_CLEAR}}(x,n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00044}{44}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo032_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo032_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo032.c@{Ejemplo032.c}!main@{main}}
+\index{main@{main}!Ejemplo032.c@{Ejemplo032.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo032_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source_l00046}{46}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_source}{Ejemplo032.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00049\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ i,\ nbits,\ nb,\ v;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ nbits\ =\ 8\ *\ (int)\textcolor{keyword}{sizeof}(x);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ printf(\textcolor{stringliteral}{"{}X\ =\ "{}});}
+\DoxyCodeLine{00056\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&x);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{/*\ Imprimir\ bits\ de\ x\ */}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ nbits\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,\ i)\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00061\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ SET\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Bit\ set.\(\backslash\)n"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Numero\ de\ bit\ (0..\%d):\ "{}},\ nbits\ -\/\ 1);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{00068\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (nb\ <\ 0\ ||\ nb\ >=\ nbits);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(x,\ nb);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ nbits\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,\ i)\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00074\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{/*\ CLEAR\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Bit\ clear.\(\backslash\)n"{}});}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Numero\ de\ bit\ (0..\%d):\ "{}},\ nbits\ -\/\ 1);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{00082\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (nb\ <\ 0\ ||\ nb\ >=\ nbits);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a9363128e451d6e93a10d34f29b3e5fc5}{BIT\_CLEAR}}(x,\ nb);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ nbits\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,\ i)\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00088\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00089\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{/*\ TOGGLE\ */}}
+\DoxyCodeLine{00092\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Bit\ toggle.\(\backslash\)n"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Numero\ de\ bit\ (0..\%d):\ "{}},\ nbits\ -\/\ 1);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{00096\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (nb\ <\ 0\ ||\ nb\ >=\ nbits);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(x,\ nb);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ nbits\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,\ i)\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00102\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00103\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{/*\ WRITE\ */}}
+\DoxyCodeLine{00106\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Bit\ write.\(\backslash\)n"{}});}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Numero\ de\ bit\ (0..\%d):\ "{}},\ nbits\ -\/\ 1);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{00110\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (nb\ <\ 0\ ||\ nb\ >=\ nbits);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Valor\ del\ bit\ (0/1):\ "{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&v);}
+\DoxyCodeLine{00115\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (v\ !=\ 0\ \&\&\ v\ !=\ 1);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_aae726527b0f579536565bfd00dcd5c41}{BIT\_WRITE}}(x,\ nb,\ v);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ nbits\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ \doxymbox{\hyperlink{20261_2src_2_ejemplo032_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,\ i)\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00121\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00125\ \}}
+
+\end{DoxyCode}

@@ -43,13 +43,16 @@
 
 int main(int argc, char *argv[])
 {
+    (void)argc;
+    (void)argv;
+
 	/*
 	  msg  : mensaje original (solo datos)
 	  msgP : mensaje con espacios de paridad insertados (datos + paridades)
 	  V    : vector de verificación de paridad por cada bit de paridad i
 	  msgV : reservado (no se usa en esta versión; se conserva por estructura original)
 	*/
-	char msg[N], msgP[N+P], msgV[N];
+	char msg[N], msgP[N+P];
 
 	/*
 	  ERROR CORREGIDO:
@@ -59,8 +62,8 @@ int main(int argc, char *argv[])
 	*/
 	unsigned char V[P];
 
-	int i, j, k, n, np, nc, nb, l2, ncv, nbv;
-	float l2f, aux;
+	int i, j, k, n, np, nc, nb, ncv, nbv;
+	float aux;
 
 	srand((unsigned)time(NULL));
 

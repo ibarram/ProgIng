@@ -1,0 +1,251 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo037.c File Reference}
+\hypertarget{20261_2src_2_ejemplo037_8c}{}\label{20261_2src_2_ejemplo037_8c}\index{src/20261/src/Ejemplo037.c@{src/20261/src/Ejemplo037.c}}
+
+
+Calcula la suma de Odd\+D(k) en un intervalo \+[A,B]\+ usando recursión.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo037.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo037_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099}{OddD}} (int X)
+\begin{DoxyCompactList}\small\item\em Devuelve el “componente impar” de X. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76}{SoddD}} (int A, int B)
+\begin{DoxyCompactList}\small\item\em Suma Odd\+D(k) para k en \+[A,B]\+ (intervalo inclusivo). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calcula la suma de Odd\+D(k) en un intervalo \+[A,B]\+ usando recursión. 
+
+El programa lee un entero {\ttfamily n} (número de casos) y, por cada caso, lee dos enteros {\ttfamily A} y {\ttfamily B}. Luego imprime:\+ Suma = Sodd\+D(\+A,\+B)
+
+Donde:\+
+\begin{DoxyItemize}
+\item {\ttfamily Odd\+D(\+X)} devuelve el "{}componente impar"{} de X:\+ divide X entre 2 repetidamente hasta que sea impar. Ejemplo:\+ Odd\+D(12)=3, Odd\+D(40)=5, Odd\+D(8)=1.
+\item {\ttfamily Sodd\+D(\+A,\+B)} suma Odd\+D(k) para k desde A hasta B (intervalo inclusivo).
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{n}
+\DoxyCodeLine{A1\ B1}
+\DoxyCodeLine{A2\ B2}
+\DoxyCodeLine{...}
+\DoxyCodeLine{An\ Bn}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+Por cada caso:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Suma\ =\ <valor>}
+
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Precondiciones}
+
+\begin{DoxyItemize}
+\item Se asume A y B enteros. Si A \texorpdfstring{$>$}{>} B, se intercambian para evitar recursión infinita.
+\item {\ttfamily Odd\+D(\+X)} está definido en este ejemplo solo para X \texorpdfstring{$>$}{>} 0 (para X \texorpdfstring{$<$}{<}= 0 devuelve 0).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+
+\begin{DoxyItemize}
+\item {\ttfamily Odd\+D(\+X)}:\+ O(log2(\+X)) en promedio (divisiones entre 2).
+\item {\ttfamily Sodd\+D(\+A,\+B)}:\+ O(\texorpdfstring{$\vert$}{|}\+B-\/\+A\texorpdfstring{$\vert$}{|}) llamadas recursivas (puede desbordar la pila si el rango es grande).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+Para rangos muy grandes, esta versión recursiva puede provocar stack overflow.
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo037.c\ -\/o\ Ejemplo037}
+\DoxyCodeLine{./Ejemplo037}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source}{Ejemplo037.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo037_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo037.c@{Ejemplo037.c}!main@{main}}
+\index{main@{main}!Ejemplo037.c@{Ejemplo037.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source_l00053}{53}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source}{Ejemplo037.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00056\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ A,\ B,\ i,\ S;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*\ Lee\ el\ número\ de\ casos\ */}}
+\DoxyCodeLine{00061\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Lee\ el\ intervalo\ [A,B]\ */}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&A);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&B);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Calcula\ suma\ de\ OddD\ en\ el\ intervalo\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ S\ =\ \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76}{SoddD}}(A,\ B);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Suma\ =\ \%d\(\backslash\)n"{}},\ S);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{20261_2src_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099}\index{Ejemplo037.c@{Ejemplo037.c}!OddD@{OddD}}
+\index{OddD@{OddD}!Ejemplo037.c@{Ejemplo037.c}}
+\doxysubsubsection{\texorpdfstring{OddD()}{OddD()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099} 
+int OddD (\begin{DoxyParamCaption}\item[{int}]{X}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve el “componente impar” de X. 
+
+
+\begin{DoxyItemize}
+\item Si X \texorpdfstring{$<$}{<}= 0:\+ devuelve 0 (convención de este ejemplo).
+\item Si X es potencia de 2:\+ devuelve 1 rápidamente.
+\item Si X es impar:\+ devuelve X.
+\item Si X es par:\+ devuelve OddD(X/\+2).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Entero. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Componente impar de X (o 0 si X\texorpdfstring{$<$}{<}=0). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source_l00117}{117}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source}{Ejemplo037.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{/*\ Evita\ recursión\ infinita\ y\ define\ comportamiento\ para\ no-\/positivos\ */}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (X\ <=\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{/*\ Si\ X\ es\ potencia\ de\ 2\ (1,2,4,8,...)\ su\ componente\ impar\ es\ 1\ */}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{if}\ ((X\ \&\ (X\ -\/\ 1))\ ==\ 0)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{/*\ Si\ es\ impar,\ termina;\ si\ es\ par,\ divide\ entre\ 2\ y\ continúa\ */}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{return}\ (X\ \%\ 2)\ ?\ X\ :\ \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099}{OddD}}(X\ /\ 2);}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76}\index{Ejemplo037.c@{Ejemplo037.c}!SoddD@{SoddD}}
+\index{SoddD@{SoddD}!Ejemplo037.c@{Ejemplo037.c}}
+\doxysubsubsection{\texorpdfstring{SoddD()}{SoddD()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76} 
+int SoddD (\begin{DoxyParamCaption}\item[{int}]{A}{, }\item[{int}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Suma Odd\+D(k) para k en \+[A,B]\+ (intervalo inclusivo). 
+
+Implementación recursiva:\+ Sodd\+D(\+A,\+B) = Odd\+D(\+A) + SoddD(A+1,B), si A \texorpdfstring{$<$}{<} B Sodd\+D(\+A,\+B) = Odd\+D(\+A), si A == B
+
+Se agrega una corrección mínima:\+
+\begin{DoxyItemize}
+\item si A \texorpdfstring{$>$}{>} B, se intercambian para evitar recursión infinita.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Límite inferior (puede venir mayor que B, se corrige). \\
+\hline
+{\em B} & Límite superior. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Suma de Odd\+D(k) para k en \+[A,B]\+. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source_l00093}{93}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_source}{Ejemplo037.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{/*\ Corrección\ mínima:\ si\ el\ usuario\ da\ A>B,\ se\ intercambia\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (A\ >\ B)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tmp\ =\ A;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ A\ =\ B;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ B\ =\ tmp;}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a34321150021d750a737fafd46e3b7099}{OddD}}(A)\ +\ (A\ ==\ B\ ?\ 0\ :\ \doxymbox{\hyperlink{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76}{SoddD}}(A\ +\ 1,\ B));}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{20261_2src_2_ejemplo037_8c_a7e977d4e275e6a93fda5567c54659c76_icgraph}
+\end{center}
+\end{figure}

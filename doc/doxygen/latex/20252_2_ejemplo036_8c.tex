@@ -1,0 +1,71 @@
+\doxysection{src/\+20252/\+\+Ejemplo036.c File Reference}
+\hypertarget{20252_2_ejemplo036_8c}{}\label{20252_2_ejemplo036_8c}\index{src/20252/Ejemplo036.c@{src/20252/Ejemplo036.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo036.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo036_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo036_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo036.c@{Ejemplo036.c}!main@{main}}
+\index{main@{main}!Ejemplo036.c@{Ejemplo036.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo036_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo036_8c_source}{Ejemplo036.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ *px;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{char}\ *py;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{double}\ *pz;}
+\DoxyCodeLine{00008\ \ \ \ \ x\ =\ 20;}
+\DoxyCodeLine{00009\ \ \ \ \ px\ =\ \&x;}
+\DoxyCodeLine{00010\ \ \ \ \ py\ =\ (\textcolor{keywordtype}{char}*)\&x;}
+\DoxyCodeLine{00011\ \ \ \ \ pz\ =\ (\textcolor{keywordtype}{double}*)\&x;}
+\DoxyCodeLine{00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00013\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&x\ =\ \%p\(\backslash\)n"{}},\ \&x);}
+\DoxyCodeLine{00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{00015\ \ \ \ \ printf(\textcolor{stringliteral}{"{}*px\ =\ \%d\(\backslash\)n"{}},\ *px);}
+\DoxyCodeLine{00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}pz\ =\ \%p\(\backslash\)n"{}},\ pz);}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ px+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ py+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}pz\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ pz+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00022\ \ \ \ \ (*px)++;}
+\DoxyCodeLine{00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00024\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{00025\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{00028\ \ \ \ \ py++;}
+\DoxyCodeLine{00029\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00031\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{00032\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{00033\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{00035\ \ \ \ \ py++;}
+\DoxyCodeLine{00036\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

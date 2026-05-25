@@ -1,0 +1,189 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo030.c File Reference}
+\hypertarget{20261_2src_2_ejemplo030_8c}{}\label{20261_2src_2_ejemplo030_8c}\index{src/20261/src/Ejemplo030.c@{src/20261/src/Ejemplo030.c}}
+
+
+Resolución de un sistema lineal Ax=b por eliminación de Gauss (sin pivoteo) y sustitución hacia atrás.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo030.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo030_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resolución de un sistema lineal Ax=b por eliminación de Gauss (sin pivoteo) y sustitución hacia atrás. 
+
+El programa resuelve el sistema:\+ A x = b para {\ttfamily n} variables (n \texorpdfstring{$<$}{<} N) usando:\+
+
+1) Eliminación hacia adelante (triangularización):\+ Para cada pivote i, elimina A\+[j]\+\+[i]\+ para j\texorpdfstring{$>$}{>}i:\+ fct = A\+[j]\+\+[i]\+ /\+ A\+[i]\+\+[i]\+ fila\+\_\+j = fila\+\_\+j -\/ fct \texorpdfstring{$\ast$}{*} fila\+\_\+i b\+[j]\+ = b\+[j]\+ -\/ fct \texorpdfstring{$\ast$}{*} b\+[i]\+
+
+2) Muestra la matriz aumentada resultante \+[A\texorpdfstring{$\vert$}{|}b]\+ (ya triangular superior).
+
+3) Sustitución hacia atrás:\+ Recorre i = n-\/1 .. 0 y calcula x\+[i]\+.
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily n} (int):\+ número de variables, 1 \texorpdfstring{$<$}{<}= n \texorpdfstring{$<$}{<} N
+\item Matriz A (float):\+ n×n valores
+\item Vector b (float):\+ n valores
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item Matriz aumentada triangularizada (impresa con 4 decimales)
+\item Solución x\+[i]\+
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+
+\begin{DoxyItemize}
+\item Eliminación:\+ O(n\texorpdfstring{$^\wedge$}{\string^}3)
+\item Sustitución:\+ O(n\texorpdfstring{$^\wedge$}{\string^}2)
+\item Memoria:\+ O(\+N\texorpdfstring{$^\wedge$}{\string^}2)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item No hay pivoteo parcial:\+ si A\+[i]\+\+[i]\+ == 0 (o muy pequeño), puede haber división por cero o inestabilidad numérica. En implementación robusta se usa pivoteo.
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo030.c\ -\/o\ Ejemplo030}
+\DoxyCodeLine{./Ejemplo030}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_source}{Ejemplo030.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo030_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo030_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo030.c@{Ejemplo030.c}!N@{N}}
+\index{N@{N}!Ejemplo030.c@{Ejemplo030.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo030_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~10}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_source_l00047}{47}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_source}{Ejemplo030.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo030_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo030.c@{Ejemplo030.c}!main@{main}}
+\index{main@{main}!Ejemplo030.c@{Ejemplo030.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_source_l00049}{49}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo030_8c_source}{Ejemplo030.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00052\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i,\ j,\ k;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ b[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}},\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ con\ validación\ (nota:\ aquí\ exige\ n\ <\ N)\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ variables:\ "{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00061\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (1\ >\ n\ ||\ n\ >=\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ Capturar\ A\ y\ b;\ inicializar\ x\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ n;\ j++)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i\ +\ 1,\ j\ +\ 1);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&A[i][j]);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}b[\%d]\ =\ "{}},\ i\ +\ 1);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&b[i]);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ x[i]\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ Eliminación\ hacia\ adelante:}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ Convierte\ A\ en\ una\ matriz\ triangular\ superior.}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n\ -\/\ 1;\ i++)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ i\ +\ 1;\ j\ <\ n;\ j++)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ factor\ =\ A[j][i]/A[i][i]\ */}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (k\ =\ 0,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ A[j][i]\ /\ A[i][i];\ k\ <\ n;\ k++)}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ A[j][k]\ -\/=\ (\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ A[i][k]);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ b[j]\ -\/=\ (\doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *\ b[i]);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{/*\ Imprimir\ matriz\ aumentada\ [A|b]\ ya\ triangularizada\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ n;\ j++)}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%+.4f\(\backslash\)t"{}},\ A[i][j]);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%+.4f\(\backslash\)n"{}},\ b[i]);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ \ Sustitución\ hacia\ atrás:}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ Recorre\ desde\ la\ última\ ecuación\ hacia\ la\ primera.}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ Nota:\ el\ código\ resta\ x[j]*A[i][j]\ para\ todo\ j\ !=\ i.}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ \ Como\ x[j]\ para\ j<i\ aún\ vale\ 0\ en\ ese\ momento,\ no\ afecta\ el\ resultado.}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ n\ -\/\ 1;\ i\ >\ -\/1;\ i-\/-\/)}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ x[i]\ =\ b[i];}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ n;\ j++)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ j)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x[i]\ -\/=\ x[j]\ *\ A[i][j];}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ x[i]\ /=\ A[i][i];}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{/*\ Imprimir\ solución\ */}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%d]\ =\ \%f\(\backslash\)n"{}},\ i\ +\ 1,\ x[i]);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{20261_2src_2_ejemplo030_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

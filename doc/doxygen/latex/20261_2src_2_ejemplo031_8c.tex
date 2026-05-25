@@ -1,0 +1,272 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo031.c File Reference}
+\hypertarget{20261_2src_2_ejemplo031_8c}{}\label{20261_2src_2_ejemplo031_8c}\index{src/20261/src/Ejemplo031.c@{src/20261/src/Ejemplo031.c}}
+
+
+Generación de datos aleatorios y transformación por centrado/\+normalización (min–max o z-\/score).  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo031.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{20261_2src_2_ejemplo031_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~10000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generación de datos aleatorios y transformación por centrado/\+normalización (min–max o z-\/score). 
+
+Este programa genera un arreglo {\ttfamily x\+[]\+} con {\ttfamily n} valores aleatorios en el rango \+[mn\+\_\+X, mx\+\_\+X]\+ y calcula estadísticas básicas:\+ mínimo, máximo, media y varianza (poblacional).
+
+Posteriormente genera un arreglo {\ttfamily z\+[]\+} aplicando una transformación opcional:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Centrar}}:\+ restar un valor de referencia {\ttfamily a}
+\item {\bfseries{Normalizar}}:\+ dividir entre un factor de escala {\ttfamily b}
+\end{DoxyItemize}
+
+De modo que:\+   \[z_i = \frac{x_i - a}{b}
+\]
+
+Métodos disponibles:\+ 1) {\bfseries{Máximo–\+Mínimo}}
+\begin{DoxyItemize}
+\item Centrar:\+ a = min
+\item Normalizar:\+ b = (max -\/ min)
+\item Con ambas opciones:\+ z = (x -\/ min)/\+(max-\/min)
+\end{DoxyItemize}
+
+2) {\bfseries{z-\/score}}
+\begin{DoxyItemize}
+\item Centrar:\+ a = media
+\item Normalizar:\+ b = sqrt(varianza)
+\item Con ambas opciones:\+ z = (x -\/ media)/\+std
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily n} (int):\+ número de elementos, 1 \texorpdfstring{$<$}{<}= n \texorpdfstring{$<$}{<}= N
+\item {\ttfamily mx\+\_\+X} (float):\+ valor máximo del rango de generación
+\item {\ttfamily mn\+\_\+X} (float):\+ valor mínimo del rango de generación
+\item {\ttfamily op1} (int):\+ ¿\+Quieres centrar? (0/\+1)
+\item {\ttfamily op2} (int):\+ ¿\+Quieres normalizar? (0/\+1)
+\item {\ttfamily op3} (int):\+ método (1=Max–\+Min, 2=z-\/score) si op1 u op2 son 1
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item Máximo, mínimo, media y varianza
+\item Tabla con:\+ índice, x\+[i]\+ y z\+[i]\+
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n). Memoria:\+ O(\+N).
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item Si {\ttfamily \doxylink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}==\doxylink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}} (rango 0) o {\ttfamily varianza==0}, entonces {\ttfamily b} puede ser 0 y la división no es válida. (Este ejemplo asume datos suficientemente variados; en uso robusto conviene validar {\ttfamily b}.)
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo031.c\ -\/o\ Ejemplo031\ -\/lm}
+\DoxyCodeLine{./Ejemplo031}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_source}{Ejemplo031.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo031_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo031_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo031.c@{Ejemplo031.c}!N@{N}}
+\index{N@{N}!Ejemplo031.c@{Ejemplo031.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo031_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~10000}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_source_l00060}{60}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_source}{Ejemplo031.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo031_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo031_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo031.c@{Ejemplo031.c}!main@{main}}
+\index{main@{main}!Ejemplo031.c@{Ejemplo031.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo031_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_source_l00062}{62}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo031_8c_source}{Ejemplo031.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00065\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ x[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ z[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ mx\_X,\ mn\_X;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ rango\ de\ generación\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}},\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}},\ varianza;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ a,\ b;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ parámetros\ de\ la\ transformación\ z=(x-\/a)/b\ */}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ n;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ bandera;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ máscara\ de\ bits\ para\ elegir\ a\ y\ b\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ op1,\ op2,\ op3\ =\ 0;\ \ \ \ \ \textcolor{comment}{/*\ op3\ se\ inicializa\ para\ evitar\ uso\ sin\ definir\ */}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ srand((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})time(NULL));}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{/*\ Leer\ n\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00082\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1\ ||\ n\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{/*\ Leer\ rango\ [mn\_X,\ mx\_X]\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ maximo:\ "{}});}
+\DoxyCodeLine{00086\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&mx\_X);}
+\DoxyCodeLine{00087\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ valor\ minimo:\ "{}});}
+\DoxyCodeLine{00088\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&mn\_X);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ \ Asegurar\ mn\_X\ <=\ mx\_X.}}
+\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ \ El\ intercambio\ usa\ multiplicación/división\ con\ casos\ especiales\ para\ ceros.}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (mx\_X\ <\ mn\_X)}
+\DoxyCodeLine{00095\ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mx\_X\ \&\&\ mn\_X)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ mx\_X\ *=\ mn\_X;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ mn\_X\ =\ mx\_X\ /\ mn\_X;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ mx\_X\ /=\ mn\_X;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mx\_X)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ mn\_X\ =\ mx\_X;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ mx\_X\ =\ 0;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mn\_X)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ mx\_X\ =\ mn\_X;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ mn\_X\ =\ 0;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ mx\_X\ =\ mn\_X\ +\ 1;\ \textcolor{comment}{/*\ ambos\ eran\ 0:\ fuerza\ un\ rango\ no\ degenerado\ */}}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{/*\ Opciones\ del\ usuario\ */}}
+\DoxyCodeLine{00117\ \ \ \ \ printf(\textcolor{stringliteral}{"{}¿Quieres\ centrar?:\ "{}});}
+\DoxyCodeLine{00118\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op1);}
+\DoxyCodeLine{00119\ \ \ \ \ printf(\textcolor{stringliteral}{"{}¿Quieres\ normalizar?:\ "{}});}
+\DoxyCodeLine{00120\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op2);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (op1\ ||\ op2)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Menu:\(\backslash\)n"{}});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}1.\ Maximo-\/Minimo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}2.\ z-\/score.\(\backslash\)n"{}});}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Opción:\ "{}});}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op3);}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00132\ \textcolor{comment}{\ \ \ \ \ \ 'bandera'\ codifica\ qué\ usar\ para\ (a,b):}}
+\DoxyCodeLine{00133\ \textcolor{comment}{\ \ \ \ \ \ \ \ bit\ 0\ (1):\ \ a\ =\ min}}
+\DoxyCodeLine{00134\ \textcolor{comment}{\ \ \ \ \ \ \ \ bit\ 2\ (4):\ \ a\ =\ media}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ \ \ \ \ \ \ \ bit\ 1\ (2):\ \ b\ =\ max-\/min}}
+\DoxyCodeLine{00136\ \textcolor{comment}{\ \ \ \ \ \ \ \ bit\ 3\ (8):\ \ b\ =\ sqrt(varianza)}}
+\DoxyCodeLine{00137\ \textcolor{comment}{}}
+\DoxyCodeLine{00138\ \textcolor{comment}{\ \ \ \ \ \ Se\ arma\ a\ partir\ de\ (op1,\ op2,\ op3)\ con\ una\ tabla\ compacta\ (switch).}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{switch}\ (8*op1\ +\ 4*op2\ +\ op3)}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ 5:\ bandera\ =\ \ 2;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ normalizar\ con\ max-\/min,\ sin\ centrar\ */}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ 6:\ bandera\ =\ \ 8;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ normalizar\ con\ std,\ sin\ centrar\ */}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ 9:\ bandera\ =\ \ 1;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ centrar\ con\ min\ */}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ bandera\ =\ \ 4;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ centrar\ con\ media\ */}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 13:\ bandera\ =\ \ 3;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ (x-\/min)/(max-\/min)\ */}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 14:\ bandera\ =\ 12;\ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{/*\ (x-\/media)/std\ */}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ bandera\ =\ \ 0;}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{/*\ Generar\ datos\ aleatorios\ */}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ x[i]\ =\ (((mx\_X\ -\/\ mn\_X)\ *\ rand())\ /\ RAND\_MAX)\ +\ mn\_X;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{/*\ Calcular\ min\ y\ max\ */}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1,\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ =\ x[0],\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ x[0];\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00157\ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ <\ x[i])\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ =\ x[i];}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ >\ x[i])\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}}\ =\ x[i];}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{/*\ Calcular\ media\ y\ varianza\ poblacional:\ Var\ =\ E[x\string^2]\ -\/\ (E[x])\string^2\ */}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1,\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}\ =\ x[0],\ varianza\ =\ x[0]*x[0];\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}\ +=\ x[i];}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ varianza\ +=\ (x[i]\ *\ x[i]);}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}\ /=\ n;}
+\DoxyCodeLine{00169\ \ \ \ \ varianza\ /=\ n;}
+\DoxyCodeLine{00170\ \ \ \ \ varianza\ -\/=\ (\doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}}\ *\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{/*\ Elegir\ a\ (offset)\ según\ bandera\ */}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (bandera\ \&\ 1)\ \ \ \ \ \ \ a\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bandera\ \&\ 4)\ \ a\ =\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}};}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a\ =\ 0;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{/*\ Elegir\ b\ (escala)\ según\ bandera\ */}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}\ (bandera\ \&\ 2)\ \ \ \ \ \ \ b\ =\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}\ -\/\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bandera\ \&\ 8)\ \ b\ =\ sqrtf(varianza);}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b\ =\ 1;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{/*\ Transformación\ */}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ z[i]\ =\ (x[i]\ -\/\ a)\ /\ b;}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{/*\ Reporte\ */}}
+\DoxyCodeLine{00187\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Maximo:\ \%f\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}});}
+\DoxyCodeLine{00188\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Minimo:\ \%f\(\backslash\)n"{}},\ \doxymbox{\hyperlink{012__aleatorio_8c_a3f06f0e9f7beb8214afeea0b18ef8377}{min}});}
+\DoxyCodeLine{00189\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Media:\ \%f\(\backslash\)n"{}},\ \doxymbox{\hyperlink{_ejemplo__035_8c_ab9f2a2d26f5b6cf9701dd51d2dc2614c}{media}});}
+\DoxyCodeLine{00190\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Varianza:\ \%f\(\backslash\)n"{}},\ varianza);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)t\%f\(\backslash\)t\%f\(\backslash\)n"{}},\ i\ +\ 1,\ x[i],\ z[i]);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00196\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{20261_2src_2_ejemplo031_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}

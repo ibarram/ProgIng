@@ -1,0 +1,31 @@
+\doxysection{Ejemplo039.\+c}
+\hypertarget{20261_2src_2_ejemplo039_8c_source}{}\label{20261_2src_2_ejemplo039_8c_source}\index{src/20261/src/Ejemplo039.c@{src/20261/src/Ejemplo039.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00034}00034\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00036}\doxymbox{\hyperlink{20261_2src_2_ejemplo039_8c_a0ddf1224851353fc92bfbff6f499fa97}{00036}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{float}\ A,\ B,\ C;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00040}00040\ \ \ \ \ \textcolor{comment}{/*\ Se\ esperan\ 2\ argumentos\ numéricos\ =>\ argc\ debe\ ser\ 3\ (incluye\ nombre\ del\ programa)\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 3)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00044}00044\ \ \ \ \ \textcolor{comment}{/*\ Convertir\ cadenas\ a\ float\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00045}00045\ \ \ \ \ A\ =\ (float)atof(argv[1]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00046}00046\ \ \ \ \ B\ =\ (float)atof(argv[2]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00048}00048\ \ \ \ \ \textcolor{comment}{/*\ Sumar\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00049}00049\ \ \ \ \ C\ =\ A\ +\ B;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00051}00051\ \ \ \ \ \textcolor{comment}{/*\ Mostrar:\ A(+/-\/)B=C\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00052}00052\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.2f\%+.2f=\%.2f\(\backslash\)n"{}},\ A,\ B,\ C);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo039_8c_source_l00055}00055\ \}}
+
+\end{DoxyCode}

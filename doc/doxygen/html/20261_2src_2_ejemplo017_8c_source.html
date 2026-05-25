@@ -111,7 +111,7 @@ $(function(){initNavTree('20261_2src_2_ejemplo017_8c_source.html','',''); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">      fct : coeficiente acumulado C_i = (2i)! / (4^i (i!)^2)</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> n, i, den;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">float</span> x, asx, num, <a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">float</span> x, asx, num, <a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">/* Leer n &gt;= 1 */</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">do</span> {</div>
@@ -132,14 +132,14 @@ $(function(){initNavTree('20261_2src_2_ejemplo017_8c_source.html','',''); });
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">        (2*0+1) = 1</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">      =&gt; arcsin(x) ≈ x</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">for</span> (i = 1, asx = x, num = x, <a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> = 1; i &lt; n; i++)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">for</span> (i = 1, asx = x, num = x, <a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> = 1; i &lt; n; i++)</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">/*</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">          Actualizar coeficiente:</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">            C_i = C_{i-1} * (2i-1)/(2i)</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">          Se usa 2*i - 1.0f para forzar división en punto flotante.</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> *= ((2*i - 1.0f) / (2*i));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> *= ((2*i - 1.0f) / (2*i));</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="comment">/*</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">          Actualizar potencia:</span></div>
@@ -151,14 +151,14 @@ $(function(){initNavTree('20261_2src_2_ejemplo017_8c_source.html','',''); });
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        den = (2*i + 1);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="comment">/* Sumar término: (C_i * x^(2i+1)) / (2i+1) */</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        asx += (<a class="code hl_function" href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> * num / den);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        asx += (<a class="code hl_function" href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a> * num / den);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    printf(<span class="stringliteral">&quot;asen(%f) = %f\n&quot;</span>, x, asx);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
 </div>
-<div class="ttc" id="a_ejemplo029_8c_html_a3b0c9965e3b03dbc43b1c6843a0bc3df"><div class="ttname"><a href="_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a></div><div class="ttdeci">double fct(double x, int n)</div><div class="ttdef"><b>Definition</b> <a href="_ejemplo029_8c_source.html#l00034">Ejemplo029.c:34</a></div></div>
+<div class="ttc" id="a20252_2_ejemplo029_8c_html_a3b0c9965e3b03dbc43b1c6843a0bc3df"><div class="ttname"><a href="20252_2_ejemplo029_8c.html#a3b0c9965e3b03dbc43b1c6843a0bc3df">fct</a></div><div class="ttdeci">double fct(double x, int n)</div><div class="ttdef"><b>Definition</b> <a href="20252_2_ejemplo029_8c_source.html#l00034">Ejemplo029.c:34</a></div></div>
 <div class="ttc" id="a_ejemplo__035_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="_ejemplo__035_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition</b> <a href="_ejemplo__035_8c_source.html#l00015">Ejemplo_035.c:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

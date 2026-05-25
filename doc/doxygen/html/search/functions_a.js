@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['validar_0',['validar',['../_ejemplo033_8c.html#a1e92a5cdc2b951433cf56d4a26d52f9a',1,'Ejemplo033.c']]],
-  ['validar2_1',['validar2',['../_ejemplo033_8c.html#aba27e65a67c107a11ea2088f75cc039d',1,'Ejemplo033.c']]]
+  ['soddd_0',['SoddD',['../20261_2src_2_ejemplo037_8c.html#a7e977d4e275e6a93fda5567c54659c76',1,'Ejemplo037.c']]],
+  ['str2float_1',['str2float',['../032___par_entrada_8c.html#acb9c030c74798a489dbc6e5aee1f34ba',1,'032_ParEntrada.c']]],
+  ['str2int_2',['str2int',['../032___par_entrada_8c.html#aecd6dd5ef59eb63bafa51bd24885788a',1,'032_ParEntrada.c']]],
+  ['sumar_3',['sumar',['../_ejemplo__035_8c.html#a44f2b2d1e708be5a883f08704fffd99e',1,'Ejemplo_035.c']]]
 ];

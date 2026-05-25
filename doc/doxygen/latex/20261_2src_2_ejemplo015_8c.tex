@@ -79,7 +79,7 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo015_8c_source_l00035
 \DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ signo;}
 \DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
 \DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ sx;\ \ \ \textcolor{comment}{/*\ acumulador\ */}}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \textcolor{comment}{/*\ término\ positivo:\ x\string^(2i+1)/(2i+1)!\ */}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \textcolor{comment}{/*\ término\ positivo:\ x\string^(2i+1)/(2i+1)!\ */}}
 \DoxyCodeLine{00045\ }
 \DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
@@ -98,10 +98,10 @@ Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo015_8c_source_l00035
 \DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ Se\ implementa\ con\ j=0..2i:}}
 \DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ multiplica\ x/(j+1)}}
 \DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ j\ <\ (2*i\ +\ 1);\ j++)}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (j\ +\ 1));}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ 1;\ j\ <\ (2*i\ +\ 1);\ j++)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (j\ +\ 1));}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
 \DoxyCodeLine{00067\ \ \ \ \ \}}
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00069\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}

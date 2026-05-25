@@ -1,0 +1,61 @@
+\doxysection{src/\+20252/\+\+Ejemplo035.c File Reference}
+\hypertarget{20252_2_ejemplo035_8c}{}\label{20252_2_ejemplo035_8c}\index{src/20252/Ejemplo035.c@{src/20252/Ejemplo035.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo035.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo035_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structdato__s}{dato\+\_\+s}}
+\item 
+union \doxymbox{\hyperlink{uniondato__u}{dato\+\_\+u}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo035_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo035.c@{Ejemplo035.c}!main@{main}}
+\index{main@{main}!Ejemplo035.c@{Ejemplo035.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo035_8c_source_l00015}{15}} of file \doxymbox{\hyperlink{20252_2_ejemplo035_8c_source}{Ejemplo035.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{structdato__s}{dato\_s}}\ x;}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{uniondato__u}{dato\_u}}\ y;}
+\DoxyCodeLine{00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sizeof(char)\ =\ \%ld\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sizeof(int)\ =\ \%ld\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sizeof(float)\ =\ \%ld\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00022\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sizeof(dato\_s)\ =\ \%ld\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(x));}
+\DoxyCodeLine{00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Sizeof(dato\_u)\ =\ \%ld\(\backslash\)n"{}},\ \textcolor{keyword}{sizeof}(y));}
+\DoxyCodeLine{00024\ \ \ \ \ x.\doxymbox{\hyperlink{structdato__s_a434a1175c92602d871a0770de22727b8}{a}}\ =\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ y.\doxymbox{\hyperlink{uniondato__u_a2dcb9c9aa7774e54eb5a933ee3b10e4f}{a}}\ =\ 1;}
+\DoxyCodeLine{00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x.a\ =\ \%d\(\backslash\)n"{}},\ x.\doxymbox{\hyperlink{structdato__s_a434a1175c92602d871a0770de22727b8}{a}});}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}y.a\ =\ \%d\(\backslash\)n"{}},\ y.\doxymbox{\hyperlink{uniondato__u_a2dcb9c9aa7774e54eb5a933ee3b10e4f}{a}});}
+\DoxyCodeLine{00028\ \ \ \ \ x.\doxymbox{\hyperlink{structdato__s_ab12dbd69951395b60b7bd0b506deb040}{b}}\ =\ 2;}
+\DoxyCodeLine{00029\ \ \ \ \ y.\doxymbox{\hyperlink{uniondato__u_ab809099189c20cf8593c02fee898ee9c}{b}}\ =\ 2;}
+\DoxyCodeLine{00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x.a\ =\ \%d\(\backslash\)n"{}},\ x.\doxymbox{\hyperlink{structdato__s_a434a1175c92602d871a0770de22727b8}{a}});}
+\DoxyCodeLine{00031\ \ \ \ \ printf(\textcolor{stringliteral}{"{}y.a\ =\ \%d\(\backslash\)n"{}},\ y.\doxymbox{\hyperlink{uniondato__u_a2dcb9c9aa7774e54eb5a933ee3b10e4f}{a}});}
+\DoxyCodeLine{00032\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x.b\ =\ \%d\(\backslash\)n"{}},\ x.\doxymbox{\hyperlink{structdato__s_ab12dbd69951395b60b7bd0b506deb040}{b}});}
+\DoxyCodeLine{00033\ \ \ \ \ printf(\textcolor{stringliteral}{"{}y.b\ =\ \%d\(\backslash\)n"{}},\ y.\doxymbox{\hyperlink{uniondato__u_ab809099189c20cf8593c02fee898ee9c}{b}});}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

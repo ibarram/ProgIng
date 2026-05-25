@@ -1,0 +1,56 @@
+\doxysection{src/\+20252/\+\+Ejemplo037.c File Reference}
+\hypertarget{20252_2_ejemplo037_8c}{}\label{20252_2_ejemplo037_8c}\index{src/20252/Ejemplo037.c@{src/20252/Ejemplo037.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo037.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo037_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo037_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo037.c@{Ejemplo037.c}!main@{main}}
+\index{main@{main}!Ejemplo037.c@{Ejemplo037.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo037_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo037_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{20252_2_ejemplo037_8c_source}{Ejemplo037.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{double}\ *x,\ m;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ i;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ elementos:\ "{}});}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00011\ \ \ \ \ \}\textcolor{keywordflow}{while}(n<1);}
+\DoxyCodeLine{00012\ \ \ \ \ x\ =\ (\textcolor{keywordtype}{double}*)malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}(x==NULL)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{for}(i=0,\ m=0;\ i<n;\ i++)}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}x[\%d]\ =\ "{}},\ i+1);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%lf"{}},\ x+i);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ m\ +=\ x[i];}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ m/=n;}
+\DoxyCodeLine{00022\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Media\ =\ \%lf\(\backslash\)n"{}},\ m);}
+\DoxyCodeLine{00023\ \ \ \ \ free(x);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}

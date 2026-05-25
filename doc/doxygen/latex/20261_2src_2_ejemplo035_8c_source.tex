@@ -1,0 +1,135 @@
+\doxysection{Ejemplo035.\+c}
+\hypertarget{20261_2src_2_ejemplo035_8c_source}{}\label{20261_2src_2_ejemplo035_8c_source}\index{src/20261/src/Ejemplo035.c@{src/20261/src/Ejemplo035.c}}
+\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00037}00037\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00039}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a0240ac851181b84ac374872dc5434ee4}{00039}}\ \textcolor{preprocessor}{\#define\ N\ 100}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00040}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a3a8ea58898cb58fc96013383d39f482c}{00040}}\ \textcolor{preprocessor}{\#define\ BIT(n)\ \ \ \ \ \ \ \ \ \ \ \ \ \ (1<<(n))}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00041}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a7888567f1126d4ea16cd8ac4472ba16d}{00041}}\ \textcolor{preprocessor}{\#define\ BIT\_GET(x,n)\ \ \ \ \ \ \ \ ((x)\ \&\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00042}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_ad858f7c97446fb3f7a0caef0baca2afd}{00042}}\ \textcolor{preprocessor}{\#define\ BIT\_SET(x,n)\ \ \ \ \ \ \ \ ((x)\ |=\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00043}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a9363128e451d6e93a10d34f29b3e5fc5}{00043}}\ \textcolor{preprocessor}{\#define\ BIT\_CLEAR(x,n)\ \ \ \ \ \ ((x)\ \&=\ \string~BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00045}\doxymbox{\hyperlink{20261_2src_2_ejemplo035_8c_a0ddf1224851353fc92bfbff6f499fa97}{00045}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00047}00047\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00048}00048\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{char}\ msg[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ msgE[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ msgD[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ cl\_c,\ E;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ cl\_I,\ n;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{/*\ Leer\ mensaje\ hasta\ ENTER\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00054}00054\ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ msg[i]\ =\ (char)getchar();}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00058}00058\ \ \ \ \ \}\textcolor{keywordflow}{while}(i<\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\&\&msg[i-\/1]!=10);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00059}00059\ \ \ \ \ msg[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00060}00060\ \ \ \ \ n\ =\ i-\/1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00062}00062\ \ \ \ \ \textcolor{comment}{/*\ Leer\ clave\ como\ entero\ y\ convertirla\ a\ un\ byte\ (char)\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00063}00063\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ la\ clave:\ "{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00064}00064\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&cl\_I);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00065}00065\ \ \ \ \ cl\_c\ =\ (char)cl\_I;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00067}00067\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s\(\backslash\)n"{}},\ msg);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ CIFRADO\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00070}00070\ \ \ \ \ msgE[n]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%u\(\backslash\)t"{}},\ i,\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msg[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ msgE[i]\ =\ msg[i];}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ E\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Si\ es\ minúscula,\ mapear\ a\ 26..51\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(msgE[i]>=\textcolor{charliteral}{'a'}\ \&\&\ msgE[i]<=\textcolor{charliteral}{'z'})}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ 26;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ \string^=\ cl\_c;\ \textcolor{comment}{/*\ XOR\ con\ la\ clave\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Si\ es\ mayúscula,\ mapear\ a\ 0..25\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(msgE[i]>=\textcolor{charliteral}{'A'}\ \&\&\ msgE[i]<=\textcolor{charliteral}{'Z'})}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Re-\/mapeo\ a\ letra\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]\ <\ 26)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]\ <\ 52)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ -\/=\ 26;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ msgE[i]\ +=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00115}00115\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\ E:\ \%s\(\backslash\)n"{}},\ msgE);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00117}00117\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ DESCIFRADO\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00118}00118\ \ \ \ \ msgD[n]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00120}00120\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%u\(\backslash\)t"{}},\ i,\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgE[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ msgD[i]\ =\ msgE[i];}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ E\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(msgD[i]>=\textcolor{charliteral}{'a'}\ \&\&\ msgD[i]<=\textcolor{charliteral}{'z'})}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ 26;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(msgD[i]>=\textcolor{charliteral}{'A'}\ \&\&\ msgD[i]<=\textcolor{charliteral}{'Z'})}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ \string^=\ cl\_c;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ E\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]\ <\ 26)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(E\ \&\&\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]\ <\ 52)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ -\/=\ 26;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ msgD[i]\ +=\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%u\(\backslash\)t"{}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgD[i]);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00160}00160\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\ D:\ \%s\(\backslash\)n"{}},\ msgD);}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo035_8c_source_l00163}00163\ \}}
+
+\end{DoxyCode}

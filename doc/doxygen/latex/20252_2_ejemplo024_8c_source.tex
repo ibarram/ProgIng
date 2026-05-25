@@ -1,0 +1,30 @@
+\doxysection{Ejemplo024.\+c}
+\hypertarget{20252_2_ejemplo024_8c_source}{}\label{20252_2_ejemplo024_8c_source}\index{src/20252/Ejemplo024.c@{src/20252/Ejemplo024.c}}
+\doxymbox{\hyperlink{20252_2_ejemplo024_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00003}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a3a8ea58898cb58fc96013383d39f482c}{00003}}\ \textcolor{preprocessor}{\#define\ BIT(n)\ \ \ \ \ \ \ \ \ \ \ \ \ \ (1<<(n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00004}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a7888567f1126d4ea16cd8ac4472ba16d}{00004}}\ \textcolor{preprocessor}{\#define\ BIT\_GET(x,n)\ \ \ \ \ \ \ \ ((x)\ \&\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00005}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_ad858f7c97446fb3f7a0caef0baca2afd}{00005}}\ \textcolor{preprocessor}{\#define\ BIT\_SET(x,n)\ \ \ \ \ \ \ \ ((x)\ |=\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00006}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a9363128e451d6e93a10d34f29b3e5fc5}{00006}}\ \textcolor{preprocessor}{\#define\ BIT\_CLEAR(x,n)\ \ \ \ \ \ ((x)\ \&=\ \string~BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00007}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a313efcb9b1da105b05edfe888760db3b}{00007}}\ \textcolor{preprocessor}{\#define\ BIT\_TOGGLE(x,n)\ \ \ \ \ ((x)\ \string^=\ BIT(n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00008}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_aae726527b0f579536565bfd00dcd5c41}{00008}}\ \textcolor{preprocessor}{\#define\ BIT\_WRITE(x,n,v)\ \ \ \ ((v)?BIT\_SET(x,n):BIT\_CLEAR(x,n))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00009}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a9a55da2561fedca5a6a7a1e28032331b}{00009}}\ \textcolor{preprocessor}{\#define\ ES\_PAR(x)\ \ \ \ \ \ \ \ \ \ \ (!BIT\_GET(x,0))}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00011}\doxymbox{\hyperlink{20252_2_ejemplo024_8c_a0ddf1224851353fc92bfbff6f499fa97}{00011}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ nb,\ i;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00014}00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ "{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00015}00015\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}b\ =\ "{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00017}00017\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&nb);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{for}(i=7;\ i>-\/1;\ i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d"{}},\ \doxymbox{\hyperlink{20252_2_ejemplo024_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\_GET}}(x,i)?1:0);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00020}00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00021}00021\ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo024_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(x,\ nb);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00022}00022\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo024_8c_source_l00024}00024\ \}}
+
+\end{DoxyCode}

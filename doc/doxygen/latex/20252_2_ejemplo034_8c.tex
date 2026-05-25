@@ -1,0 +1,114 @@
+\doxysection{src/\+20252/\+\+Ejemplo034.c File Reference}
+\hypertarget{20252_2_ejemplo034_8c}{}\label{20252_2_ejemplo034_8c}\index{src/20252/Ejemplo034.c@{src/20252/Ejemplo034.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo034.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo034_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcontacto}{contacto}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo034_8c_a845196f46a897dd3c2996fc3e45f2161}{NM}}~50
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo034_8c_a5af9139e882aef6c820ae908589a40d6}{NE}}~20
+\item 
+\+\#define \doxymbox{\hyperlink{20252_2_ejemplo034_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo034_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{20252_2_ejemplo034_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20252_2_ejemplo034_8c_a1fa2460e32327ade49189c95740bc1b5}\index{Ejemplo034.c@{Ejemplo034.c}!NC@{NC}}
+\index{NC@{NC}!Ejemplo034.c@{Ejemplo034.c}}
+\doxysubsubsection{\texorpdfstring{NC}{NC}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo034_8c_a1fa2460e32327ade49189c95740bc1b5} 
+\+\#define NC~10}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source_l00005}{5}} of file \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source}{Ejemplo034.\+c}}.
+
+\Hypertarget{20252_2_ejemplo034_8c_a5af9139e882aef6c820ae908589a40d6}\index{Ejemplo034.c@{Ejemplo034.c}!NE@{NE}}
+\index{NE@{NE}!Ejemplo034.c@{Ejemplo034.c}}
+\doxysubsubsection{\texorpdfstring{NE}{NE}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo034_8c_a5af9139e882aef6c820ae908589a40d6} 
+\+\#define NE~20}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source_l00004}{4}} of file \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source}{Ejemplo034.\+c}}.
+
+\Hypertarget{20252_2_ejemplo034_8c_a845196f46a897dd3c2996fc3e45f2161}\index{Ejemplo034.c@{Ejemplo034.c}!NM@{NM}}
+\index{NM@{NM}!Ejemplo034.c@{Ejemplo034.c}}
+\doxysubsubsection{\texorpdfstring{NM}{NM}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo034_8c_a845196f46a897dd3c2996fc3e45f2161} 
+\+\#define NM~50}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source}{Ejemplo034.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo034_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo034_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo034.c@{Ejemplo034.c}!main@{main}}
+\index{main@{main}!Ejemplo034.c@{Ejemplo034.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo034_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source_l00014}{14}} of file \doxymbox{\hyperlink{20252_2_ejemplo034_8c_source}{Ejemplo034.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{structcontacto}{contacto}}\ agenda[\doxymbox{\hyperlink{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}}];}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ op,\ i,\ n;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ c;}
+\DoxyCodeLine{00019\ \ \ \ \ n\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nombre:\ "{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ getchar();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ agenda[n].\doxymbox{\hyperlink{structcontacto_ac1d92c5aa0bbfd86734ea3f645b76460}{nombre}}[i++]\ =\ c;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{while}(c!=10);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ agenda[n].\doxymbox{\hyperlink{structcontacto_ac1d92c5aa0bbfd86734ea3f645b76460}{nombre}}[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ scanf("{}\%s"{},\ agenda[n].nombre);}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \&(agenda[i].nombre[])\ -\/>\ agenda[i].nombre}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Telefono:\ "{}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%ld"{}},\ \&(agenda[n].telefono));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Correo\ electronico:\ "{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ agenda[n].email);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ n++;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingresar\ otro\ contacto:\ "{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&op);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ getchar();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{while}(c!=10);}
+\DoxyCodeLine{00040\ \ \ \ \ \}\textcolor{keywordflow}{while}(op\&\&(n<\doxymbox{\hyperlink{027___paridad_8c_a1fa2460e32327ade49189c95740bc1b5}{NC}}));}
+\DoxyCodeLine{00041\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Agenda.\(\backslash\)n"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s,\ \%ld,\ \%s\(\backslash\)n"{}},\ agenda[i].nombre,\ agenda[i].telefono,\ agenda[i].email);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

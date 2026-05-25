@@ -13,3 +13,29 @@
 \_form#8=49x30:\[\frac{C_i\,x^{2i+1}}{2i+1}.
 \]
 \_form#9=39x14:$|x|\to 1$
+\_form#10=58x15:\[     nd = \lfloor \sqrt{n} \rfloor
+\]
+\_form#11=99x26:\[     Dx = \frac{max - min}{nd}
+\]
+\_form#12=95x31:\[     j = \left\lfloor \frac{x[i]-min}{Dx} \right\rfloor
+\]
+\_form#13=63x24:\[z_i = \frac{x_i - a}{b}
+\]
+\_form#14=149x13:\[P = m_0 \oplus m_1 \oplus \cdots \oplus m_{n-1}
+\]
+\_form#15=174x15:\[V = P \oplus m'_0 \oplus m'_1 \oplus \cdots \oplus m'_{n-1}
+\]
+\_form#16=65x36:\[    e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}
+\]
+\_form#17=14x18:$\frac{x^n}{n!}$
+\_form#18=239x24:\[fct(x,n) = fct(x,n-1)\cdot \frac{x}{n}, \quad fct(x,0)=1
+\]
+\_form#19=31x14:$x^n/n!$
+\_form#20=65x36:\[e^x \approx \sum_{k=0}^{n}\frac{x^k}{k!}
+\]
+\_form#21=306x14:\[exp4(x,n) = exp4(x,n-1) + fct(x,n),\quad exp4(x,0)=1
+\]
+\_form#22=275x28:\[exp3(x,n) = exp3(x,n-1) + \frac{x^n}{n!},\quad exp3(x,0)=1
+\]
+\_form#23=65x38:\[e^x \approx \sum_{k=0}^{n-1}\frac{x^k}{k!}
+\]

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['str2float_0',['str2float',['../032___par_entrada_8c.html#acb9c030c74798a489dbc6e5aee1f34ba',1,'032_ParEntrada.c']]],
-  ['str2int_1',['str2int',['../032___par_entrada_8c.html#aecd6dd5ef59eb63bafa51bd24885788a',1,'032_ParEntrada.c']]],
-  ['sumar_2',['sumar',['../_ejemplo__035_8c.html#a44f2b2d1e708be5a883f08704fffd99e',1,'Ejemplo_035.c']]]
+  ['pot_0',['pot',['../20261_2src_2_ejemplo036_8c.html#a05eedb2825c7f71eb6b434aa7f369fa6',1,'Ejemplo036.c']]],
+  ['pot2_1',['pot2',['../20261_2src_2_ejemplo036_8c.html#a063e87787e9180491b5173ef0cfa636e',1,'Ejemplo036.c']]],
+  ['potencia_2',['potencia',['../20252_2_ejemplo029_8c.html#a86313a83edd6077f525961630514b553',1,'Ejemplo029.c']]],
+  ['potencia2_3',['potencia2',['../20252_2_ejemplo029_8c.html#a87e6f4b821fe36b0134abe30cd753187',1,'Ejemplo029.c']]]
 ];

@@ -1,0 +1,153 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo028.c File Reference}
+\hypertarget{20261_2src_2_ejemplo028_8c}{}\label{20261_2src_2_ejemplo028_8c}\index{src/20261/src/Ejemplo028.c@{src/20261/src/Ejemplo028.c}}
+
+
+Resta de matrices:\+ C = A -\/ B para matrices reales de tamaño n×m.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Ejemplo028.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo028_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~10
+\item 
+\+\#define \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resta de matrices:\+ C = A -\/ B para matrices reales de tamaño n×m. 
+
+El programa:\+ 1) Lee las dimensiones n (renglones) y m (columnas), limitadas por N y M. 2) Captura los elementos de A y B. 3) Calcula C\+[i]\+\+[j]\+ = A\+[i]\+\+[j]\+ -\/ B\+[i]\+\+[j]\+. 4) Imprime C.
+
+\begin{DoxyParagraph}{Entrada estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily n} (int):\+ renglones, 1 \texorpdfstring{$<$}{<}= n \texorpdfstring{$<$}{<}= N
+\item {\ttfamily m} (int):\+ columnas, 1 \texorpdfstring{$<$}{<}= m \texorpdfstring{$<$}{<}= M
+\item {\ttfamily A\+[i]\+\+[j]\+} (float):\+ n\texorpdfstring{$\ast$}{*}m valores
+\item {\ttfamily B\+[i]\+\+[j]\+} (float):\+ n\texorpdfstring{$\ast$}{*}m valores
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+
+\begin{DoxyItemize}
+\item {\ttfamily C\+[i]\+\+[j]\+} (float):\+ n\texorpdfstring{$\ast$}{*}m valores
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Complejidad}
+Tiempo:\+ O(n\texorpdfstring{$\ast$}{*}m). Memoria:\+ O(\+N\texorpdfstring{$\ast$}{*}\+M).
+\end{DoxyParagraph}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo028.c\ -\/o\ Ejemplo028}
+\DoxyCodeLine{./Ejemplo028}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source}{Ejemplo028.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{20261_2src_2_ejemplo028_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{20261_2src_2_ejemplo028_8c_a52037c938e3c1b126c6277da5ca689d0}\index{Ejemplo028.c@{Ejemplo028.c}!M@{M}}
+\index{M@{M}!Ejemplo028.c@{Ejemplo028.c}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo028_8c_a52037c938e3c1b126c6277da5ca689d0} 
+\+\#define M~10}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source_l00034}{34}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source}{Ejemplo028.\+c}}.
+
+\Hypertarget{20261_2src_2_ejemplo028_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo028.c@{Ejemplo028.c}!N@{N}}
+\index{N@{N}!Ejemplo028.c@{Ejemplo028.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo028_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~10}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source_l00033}{33}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source}{Ejemplo028.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo028_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo028_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo028.c@{Ejemplo028.c}!main@{main}}
+\index{main@{main}!Ejemplo028.c@{Ejemplo028.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo028_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source_l00036}{36}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo028_8c_source}{Ejemplo028.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00039\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ m,\ i,\ j;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ A[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ B[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}],\ C[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}][\doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}];}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{/*\ Leer\ dimensiones\ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ rengles:\ "{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00048\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (n\ <\ 1\ ||\ n\ >\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ columnas:\ "{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&m);}
+\DoxyCodeLine{00053\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (m\ <\ 1\ ||\ m\ >\ \doxymbox{\hyperlink{018___casilleros_8c_a52037c938e3c1b126c6277da5ca689d0}{M}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{/*\ Capturar\ A\ */}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ m;\ j++)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}A[\%d][\%d]\ =\ "{}},\ i\ +\ 1,\ j\ +\ 1);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&A[i][j]);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ Capturar\ B\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ m;\ j++)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}B[\%d][\%d]\ =\ "{}},\ i\ +\ 1,\ j\ +\ 1);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&B[i][j]);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*\ C\ =\ A\ -\/\ B\ */}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ m;\ j++)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ C[i][j]\ =\ A[i][j]\ -\/\ B[i][j];}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{/*\ Imprimir\ C\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ m;\ j++)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}C[\%d][\%d]\ =\ \%f\(\backslash\)n"{}},\ i\ +\ 1,\ j\ +\ 1,\ C[i][j]);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

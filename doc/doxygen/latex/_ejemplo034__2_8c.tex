@@ -1,0 +1,370 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo034\+\_\+2.c File Reference}
+\hypertarget{_ejemplo034__2_8c}{}\label{_ejemplo034__2_8c}\index{src/20261/src/Ejemplo034\_2.c@{src/20261/src/Ejemplo034\_2.c}}
+
+
+Inserción de bytes de paridad en posiciones potencia de 2 (Hamming por bytes) y detección de un error de 1 bit.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for Ejemplo034\+\_\+2.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{_ejemplo034__2_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~100
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}}~7
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_a7888567f1126d4ea16cd8ac4472ba16d}{BIT\+\_\+\+GET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\+\_\+\+SET}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\+\_\+\+TOGGLE}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{_ejemplo034__2_8c_ab7f59983a1b78453639f04967e396f38}{IS\+\_\+\+POW2\+\_\+\+POS}}(pos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_ejemplo034__2_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inserción de bytes de paridad en posiciones potencia de 2 (Hamming por bytes) y detección de un error de 1 bit. 
+
+Este programa implementa una codificación tipo Hamming sobre un mensaje ASCII, pero trabajando a nivel de {\bfseries{bytes}} (caracteres) y usando XOR (\texorpdfstring{$^\wedge$}{\string^}) como operación de paridad.
+
+Flujo general:\+ 1) Lee un mensaje {\ttfamily msg} hasta ENTER. 2) Calcula el número mínimo de paridades {\ttfamily np} que satisface:\+ 2\texorpdfstring{$^\wedge$}{\string^}np \texorpdfstring{$>$}{>}= n + np + 1 3) Construye {\ttfamily msgP} (mensaje extendido) de longitud L = n + np:\+
+\begin{DoxyItemize}
+\item en posiciones potencia de 2 (1,2,4,8,...) coloca bytes de paridad (inicialmente 0)
+\item en el resto coloca los bytes del mensaje original. 4) Calcula las paridades usando el patrón de “bloques” del código original. 5) Simula un error:\+ invierte un bit aleatorio en un byte aleatorio del código. 6) Recalcula las paridades y construye:\+
+\item {\ttfamily NC\+\_\+V}:\+ byte con error (0-\/based)
+\item {\ttfamily NB\+\_\+V}:\+ bit con error (0..7)
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada estándar}
+Una línea de texto (hasta N-\/1 caracteres) terminada con ENTER.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida estándar}
+Mantiene exactamente la forma de impresión del original:\+
+\begin{DoxyItemize}
+\item MSG, MSG\+\_\+P, NC/\+\+NB, MSG\+\_\+E
+\item P\+\_\+i
+\item NC\+\_\+V y NB\+\_\+V
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyWarning}{Warning}
+
+\begin{DoxyItemize}
+\item La impresión {\ttfamily MSG\+\_\+P:\+ s} y {\ttfamily MSG\+\_\+E:\+ s} puede truncarse si aparecen bytes \textquotesingle{}\textbackslash{}0\textquotesingle{} dentro de {\ttfamily msgP}. Se conserva esta impresión por compatibilidad con el original.
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo034\_2.c\ -\/o\ Ejemplo034\_2\ -\/lm}
+\DoxyCodeLine{./Ejemplo034\_2}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{_ejemplo034__2_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_ejemplo034__2_8c_a3a8ea58898cb58fc96013383d39f482c}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!BIT@{BIT}}
+\index{BIT@{BIT}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a3a8ea58898cb58fc96013383d39f482c} 
+\+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(1U<<(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00050}{50}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_a7888567f1126d4ea16cd8ac4472ba16d}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!BIT\_GET@{BIT\_GET}}
+\index{BIT\_GET@{BIT\_GET}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_GET}{BIT\_GET}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a7888567f1126d4ea16cd8ac4472ba16d} 
+\+\#define BIT\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \&\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00051}{51}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_ad858f7c97446fb3f7a0caef0baca2afd}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!BIT\_SET@{BIT\_SET}}
+\index{BIT\_SET@{BIT\_SET}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_SET}{BIT\_SET}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_ad858f7c97446fb3f7a0caef0baca2afd} 
+\+\#define BIT\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ |=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00052}{52}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_a313efcb9b1da105b05edfe888760db3b}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!BIT\_TOGGLE@{BIT\_TOGGLE}}
+\index{BIT\_TOGGLE@{BIT\_TOGGLE}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{BIT\_TOGGLE}{BIT\_TOGGLE}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a313efcb9b1da105b05edfe888760db3b} 
+\+\#define BIT\+\_\+\+TOGGLE(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)\ \string^=\ \doxymbox{\hyperlink{026___binarios_8c_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00053}{53}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_ab7f59983a1b78453639f04967e396f38}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!IS\_POW2\_POS@{IS\_POW2\_POS}}
+\index{IS\_POW2\_POS@{IS\_POW2\_POS}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{IS\_POW2\_POS}{IS\_POW2\_POS}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_ab7f59983a1b78453639f04967e396f38} 
+\+\#define IS\+\_\+\+POW2\+\_\+\+POS(\begin{DoxyParamCaption}\item[{}]{pos}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((pos)\ \&\&\ (((pos)\ \&\ ((pos)-\/1U))\ ==\ 0U))}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00056}{56}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_a0240ac851181b84ac374872dc5434ee4}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!N@{N}}
+\index{N@{N}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a0240ac851181b84ac374872dc5434ee4} 
+\+\#define N~100}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00046}{46}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+\Hypertarget{_ejemplo034__2_8c_a2748566f4c443ee77aa831e63dbb5ebe}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!P@{P}}
+\index{P@{P}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a2748566f4c443ee77aa831e63dbb5ebe} 
+\+\#define P~7}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00047}{47}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_ejemplo034__2_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_ejemplo034__2_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo034\_2.c@{Ejemplo034\_2.c}!main@{main}}
+\index{main@{main}!Ejemplo034\_2.c@{Ejemplo034\_2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_ejemplo034__2_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_ejemplo034__2_8c_source_l00058}{58}} of file \doxymbox{\hyperlink{_ejemplo034__2_8c_source}{Ejemplo034\+\_\+2.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ (void)argc;}
+\DoxyCodeLine{00061\ \ \ \ \ (void)argv;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ msg\ \ :\ mensaje\ original\ (solo\ datos)}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ msgP\ :\ mensaje\ extendido\ (datos\ +\ bytes\ de\ paridad)}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ V\ \ \ \ :\ verificaciones\ de\ paridad\ (una\ por\ cada\ bit\ de\ paridad\ i)}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ Se\ usa\ unsigned\ char\ para\ que\ XOR\ sea\ estable\ y\ no\ haya\ signos\ negativos.}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ msg[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}],\ msgP[\doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}+\doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}}];}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ V[\doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}}];}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ n\ \ \ :\ longitud\ del\ mensaje\ original\ (bytes)}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ np\ \ :\ número\ de\ paridades}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ nc\ \ :\ índice\ (0-\/based)\ del\ byte\ donde\ se\ inyecta\ el\ error}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ \ nb\ \ :\ índice\ del\ bit\ (0..7)\ que\ se\ invierte\ para\ simular\ el\ error}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ \ ncv\ :\ síndrome\ (posición\ 1-\/based\ del\ byte\ con\ error,\ luego\ se\ convierte\ a\ 0-\/based\ con\ ncv-\/-\/)}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ \ nbv\ :\ máscara\ del\ bit\ alterado\ (potencia\ de\ 2),\ luego\ se\ convierte\ a\ índice\ con\ log2}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k,\ n,\ np,\ nc,\ nb,\ ncv,\ nbv;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ aux;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Lectura\ del\ mensaje\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00086\ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ msg[i]\ =\ getchar();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00090\ \ \ \ \ \}\textcolor{keywordflow}{while}(i\ <\ \doxymbox{\hyperlink{012__aleatorio_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\ \&\&\ msg[i-\/1]\ !=\ 10);\ \textcolor{comment}{/*\ 10\ ==\ '\(\backslash\)n'\ */}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ msg[i-\/1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00093\ \ \ \ \ n\ =\ i-\/1;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{/*\ Protección:\ mensaje\ vacío\ (evita\ rand()\%0\ y\ accesos\ inválidos)\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <=\ 0)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Cálculo\ correcto\ de\ np\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ \ Condición\ mínima\ de\ Hamming:}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ 2\string^np\ >=\ n\ +\ np\ +\ 1}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ \ \ Se\ acota\ con\ P\ para\ evitar\ desbordar\ el\ tamaño\ del\ arreglo\ msgP.}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00105\ \ \ \ \ np\ =\ 0;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{while}\ (((1U\ <<\ np)\ <\ (\textcolor{keywordtype}{unsigned})(n\ +\ np\ +\ 1))\ \&\&\ np\ <\ \doxymbox{\hyperlink{20261_2src_2_ejemplo034_8c_a2748566f4c443ee77aa831e63dbb5ebe}{P}})}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ np++;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ printf(\textcolor{stringliteral}{"{}n\ =\ \%d\(\backslash\)tnp\ =\ \%d\(\backslash\)n"{}},\ n,\ np);}
+\DoxyCodeLine{00110\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG:\ \%s\(\backslash\)n"{}},\ msg);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Construcción\ de\ msgP\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ \ \ Longitud\ del\ código:}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ \ \ \ \ L\ =\ n\ +\ np}}
+\DoxyCodeLine{00116\ \textcolor{comment}{}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ \ Recorremos\ posiciones\ 1-\/based\ (pos\ =\ i+1):}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ \ -\/\ si\ pos\ es\ potencia\ de\ 2\ =>\ posición\ de\ paridad\ =>\ msgP[i]\ =\ 0}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ \ -\/\ si\ no\ =>\ posición\ de\ dato\ =>\ copiar\ el\ siguiente\ byte\ del\ mensaje}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00121\ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ L\ =\ n\ +\ np;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ data\_idx\ =\ 0;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ L;\ i++)}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ i\ +\ 1;\ \textcolor{comment}{/*\ 1-\/based\ */}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ejemplo034__2_8c_ab7f59983a1b78453639f04967e396f38}{IS\_POW2\_POS}}((\textcolor{keywordtype}{unsigned})pos))}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msgP[i]\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ paridad\ */}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msgP[i]\ =\ msg[data\_idx++];\textcolor{comment}{/*\ dato\ */}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Terminador\ para\ imprimir\ con\ \%s\ (misma\ práctica\ del\ original)\ */}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ msgP[L]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00139\ \textcolor{comment}{\ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Cálculo\ de\ paridades\ (codificación)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00140\ \textcolor{comment}{\ \ \ \ \ \ Para\ cada\ bit\ de\ paridad\ i:}}
+\DoxyCodeLine{00141\ \textcolor{comment}{\ \ \ \ \ \ \ \ j\ =\ 2\string^i\ -\/\ 1\ \ (índice\ 0-\/based\ donde\ vive\ esa\ paridad)}}
+\DoxyCodeLine{00142\ \textcolor{comment}{\ \ \ \ \ \ Se\ aplica\ el\ patrón\ de\ bloques\ del\ código\ original:}}
+\DoxyCodeLine{00143\ \textcolor{comment}{\ \ \ \ \ \ \ \ incluir\ (j+1)\ bytes,\ saltar\ (j+1)\ bytes,\ incluir,\ ...}}
+\DoxyCodeLine{00144\ \textcolor{comment}{\ \ \ \ \ \ y\ se\ acumula\ XOR\ en\ msgP[j].}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ np;\ i++)}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ j\ =\ (1\ <<\ i)\ -\/\ 1;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (k\ =\ j;\ k\ <\ (n\ +\ np);\ k++)}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((k\ -\/\ j)\ /\ (j\ +\ 1)\ +\ 1)\ \%\ 2)}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msgP[j]\ \string^=\ msgP[k];}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\_P:\ \%s\(\backslash\)n"{}},\ msgP);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Simulación\ del\ error\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00157\ \ \ \ \ nc\ =\ rand()\ \%\ (n\ +\ np);}
+\DoxyCodeLine{00158\ \ \ \ \ nb\ =\ rand()\ \%\ 8;}
+\DoxyCodeLine{00159\ \ \ \ \ printf(\textcolor{stringliteral}{"{}NC\ =\ \%d\(\backslash\)tNB\ =\ \%d\(\backslash\)n"{}},\ nc,\ nb);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \doxymbox{\hyperlink{_ejemplo034__2_8c_a313efcb9b1da105b05edfe888760db3b}{BIT\_TOGGLE}}(msgP[nc],\ nb);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ printf(\textcolor{stringliteral}{"{}MSG\_E:\ \%s\(\backslash\)n"{}},\ msgP);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00166\ \textcolor{comment}{\ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Verificación\ de\ paridades\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00167\ \textcolor{comment}{\ \ \ \ \ \ V[i]\ acumula\ el\ XOR\ del\ grupo\ de\ paridad\ i\ (debe\ ser\ 0\ si\ todo\ es\ consistente).}}
+\DoxyCodeLine{00168\ \textcolor{comment}{\ \ \ \ \ \ Se\ conserva\ el\ mismo\ patrón\ de\ bloques\ (iniciando\ V[i]\ con\ msgP[j]).}}
+\DoxyCodeLine{00169\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ np;\ i++)}
+\DoxyCodeLine{00171\ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ j\ =\ (1\ <<\ i)\ -\/\ 1;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (k\ =\ j\ +\ 1,\ V[i]\ =\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})msgP[j];\ k\ <\ (n\ +\ np);\ k++)}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((k\ -\/\ j)\ /\ (j\ +\ 1)\ +\ 1)\ \%\ 2)}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ V[i]\ \string^=\ (\textcolor{keywordtype}{unsigned}\ char)msgP[k];}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}P\_\%d\ =\ \%d\(\backslash\)n"{}},\ i,\ (\textcolor{keywordtype}{int})V[i]);}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00184\ \textcolor{comment}{\ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Síndrome\ y\ bit\ de\ error\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00185\ \textcolor{comment}{\ \ \ \ \ \ -\/\ ncv\ se\ arma\ con\ los\ bits\ i\ para\ los\ cuales\ V[i]\ !=\ 0.}}
+\DoxyCodeLine{00186\ \textcolor{comment}{\ \ \ \ \ \ \ \ Eso\ da\ la\ posición\ 1-\/based\ del\ byte\ erróneo.}}
+\DoxyCodeLine{00187\ \textcolor{comment}{\ \ \ \ \ \ -\/\ nbv\ toma\ la\ máscara\ del\ bit\ (potencia\ de\ 2),\ del\ primer\ V[i]\ no\ nulo.}}
+\DoxyCodeLine{00188\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ ncv\ =\ 0,\ nbv\ =\ 0;\ i\ <\ np;\ i++)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (V[i])}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo034__2_8c_ad858f7c97446fb3f7a0caef0baca2afd}{BIT\_SET}}(ncv,\ i);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!nbv)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbv\ =\ (int)V[i];}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{/*\ Convertir\ a\ 0-\/based\ (como\ el\ original)\ */}}
+\DoxyCodeLine{00198\ \ \ \ \ ncv-\/-\/;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00201\ \textcolor{comment}{\ \ \ \ \ \ Convertir\ máscara\ (potencia\ de\ 2)\ a\ índice\ de\ bit\ con\ log2.}}
+\DoxyCodeLine{00202\ \textcolor{comment}{\ \ \ \ \ \ Protección:\ log2(0)\ no\ es\ válido\ (aunque\ aquí\ normalmente\ hay\ error\ inyectado).}}
+\DoxyCodeLine{00203\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordflow}{if}\ (nbv\ >\ 0)}
+\DoxyCodeLine{00205\ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ aux\ =\ (float)log2((\textcolor{keywordtype}{double})nbv);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ nbv\ =\ (int)aux;}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ nbv\ =\ 0;}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ printf(\textcolor{stringliteral}{"{}NC\_V\ =\ \%d\(\backslash\)tNB\_V\ =\ \%d\(\backslash\)n"{}},\ ncv,\ nbv);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{/*\ Bloque\ de\ validación\ del\ original\ se\ conserva\ comentado\ */}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00218\ \textcolor{comment}{\ \ \ \ for(i=0,\ V=P;\ i<n;\ i++)}}
+\DoxyCodeLine{00219\ \textcolor{comment}{\ \ \ \ \ \ \ \ V\string^=msgP[i];}}
+\DoxyCodeLine{00220\ \textcolor{comment}{\ \ \ \ printf("{}Validacion:\ \%c\ ("{},\ V);}}
+\DoxyCodeLine{00221\ \textcolor{comment}{\ \ \ \ for(i=7;\ i>-\/1;\ i-\/-\/)}}
+\DoxyCodeLine{00222\ \textcolor{comment}{\ \ \ \ \ \ \ \ printf("{}\%d\ "{},\ BIT\_GET(V,\ i)?1:0);}}
+\DoxyCodeLine{00223\ \textcolor{comment}{\ \ \ \ printf("{})\(\backslash\)n"{});}}
+\DoxyCodeLine{00224\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00227\ \}}
+
+\end{DoxyCode}

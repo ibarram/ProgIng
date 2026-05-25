@@ -15,7 +15,7 @@
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ signo;\ \ \ \textcolor{comment}{/*\ +1\ o\ -\/1\ alternando\ */}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{float}\ sx;\ \ \ \ \textcolor{comment}{/*\ acumulador\ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \textcolor{comment}{/*\ término\ positivo\ t\_i\ =\ x\string^(2i+1)/(2i+1)!\ */}}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}};\ \ \ \textcolor{comment}{/*\ término\ positivo\ t\_i\ =\ x\string^(2i+1)/(2i+1)!\ */}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ingrese\ el\ numero\ de\ terminos:\ "{}});}
@@ -33,14 +33,14 @@
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ sx\ +=\ (-\/1)\string^i\ *\ t\_i}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ t\_\{i+1\}\ =\ t\_i\ *\ (x\string^2)/[(2i+2)(2i+3)]}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00064}00064\ \textcolor{comment}{\ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ sx\ =\ 0,\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ x;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0,\ sx\ =\ 0,\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ =\ x;\ i\ <\ n;\ i++)}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00066}00066\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ signo\ =\ 1\ -\/\ 2*(i\ \%\ 2);\ \ \ \textcolor{comment}{/*\ +1\ si\ i\ par;\ -\/1\ si\ i\ impar\ */}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ sx\ +=\ (signo\ *\ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}});}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00070}00070\ }
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Actualizar\ al\ siguiente\ término\ positivo\ */}}
-\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (2*i\ +\ 2))\ *\ (x\ /\ (2*i\ +\ 3));}
+\DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{20252_2_ejemplo029_8c_a3b0c9965e3b03dbc43b1c6843a0bc3df}{fct}}\ *=\ (x\ /\ (2*i\ +\ 2))\ *\ (x\ /\ (2*i\ +\ 3));}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00073}00073\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00074}00074\ }
 \DoxyCodeLine{\Hypertarget{20261_2src_2_ejemplo016_8c_source_l00075}00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}sen(\%f)\ =\ \%f\(\backslash\)n"{}},\ x,\ sx);}

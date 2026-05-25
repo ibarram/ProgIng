@@ -1,0 +1,76 @@
+\doxysection{src/\+20261/\+src/\+\+Ejemplo038.c File Reference}
+\hypertarget{20261_2src_2_ejemplo038_8c}{}\label{20261_2src_2_ejemplo038_8c}\index{src/20261/src/Ejemplo038.c@{src/20261/src/Ejemplo038.c}}
+
+
+Imprime la cantidad de argumentos y lista argv\+[i]\+.  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo038.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{20261_2src_2_ejemplo038_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20261_2src_2_ejemplo038_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Imprime la cantidad de argumentos y lista argv\+[i]\+. 
+
+Programa demostrativo del uso de parámetros de línea de comandos:\+
+\begin{DoxyItemize}
+\item {\ttfamily argc}:\+ número de argumentos (incluye el nombre del programa).
+\item {\ttfamily argv}:\+ arreglo de cadenas con cada argumento.
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Entrada}
+Argumentos en la línea de comandos.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Salida}
+Imprime {\ttfamily argc} y luego cada {\ttfamily argv\+[i]\+}.
+\end{DoxyParagraph}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ Ejemplo038.c\ -\/o\ Ejemplo038}
+\DoxyCodeLine{./Ejemplo038\ uno\ dos\ tres}
+
+\end{DoxyCode}
+ 
+
+Definition in file \doxymbox{\hyperlink{20261_2src_2_ejemplo038_8c_source}{Ejemplo038.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{20261_2src_2_ejemplo038_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20261_2src_2_ejemplo038_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo038.c@{Ejemplo038.c}!main@{main}}
+\index{main@{main}!Ejemplo038.c@{Ejemplo038.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20261_2src_2_ejemplo038_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20261_2src_2_ejemplo038_8c_source_l00024}{24}} of file \doxymbox{\hyperlink{20261_2src_2_ejemplo038_8c_source}{Ejemplo038.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\#\ argumentos:\ \%d\(\backslash\)n"{}},\ argc);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ argc;\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d.\ \%s\(\backslash\)n"{}},\ i,\ argv[i]);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

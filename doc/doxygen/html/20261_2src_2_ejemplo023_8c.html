@@ -92,7 +92,7 @@ $(function(){initNavTree('20261_2src_2_ejemplo023_8c.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Clasificación por “casilleros” (bucket/distribution) de números reales en un rango [min, max].  
+<p>Ordenamiento tipo Bucket Sort (distribución por casilleros) + ordenamiento interno por selección.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
@@ -103,7 +103,7 @@ Include dependency graph for Ejemplo023.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="20261_2src_2_ejemplo023_8c__incl.png" border="0" usemap="#asrc_220261_2src_2_ejemplo023_8c" loading="lazy" alt=""/></div>
 <map name="asrc_220261_2src_2_ejemplo023_8c" id="asrc_220261_2src_2_ejemplo023_8c">
-<area shape="rect" title="Clasificación por “casilleros” (bucket/distribution) de números reales en un rango [min,..." alt="" coords="70,5,254,31"/>
+<area shape="rect" title="Ordenamiento tipo Bucket Sort (distribución por casilleros) + ordenamiento interno por selección." alt="" coords="70,5,254,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,66,105"/>
 <area shape="poly" title=" " alt="" coords="142,34,71,73,69,69,139,29"/>
 <area shape="rect" title=" " alt="" coords="89,79,152,105"/>
@@ -124,45 +124,67 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de entrada. Genera valores y los agrupa por casilleros.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Clasificación por “casilleros” (bucket/distribution) de números reales en un rango [min, max]. </p>
-<p>Este programa genera <span class="tt">n</span> números aleatorios (float) dentro del rango [min, max] y los reordena usando un enfoque tipo <b>bucket / distribution sort</b>:</p>
-<p>1) Se elige el número de divisiones (casilleros) como: nd = floor(sqrt(n))</p>
-<p>2) Se calcula el tamaño de casillero: rango = max - min Dx = rango / nd</p>
-<p>3) Para cada valor x[i] se calcula el índice del casillero: j = floor( (x[i] - min) / Dx )</p>
-<p>4) Se cuenta cuántos elementos caen en cada casillero (histograma).</p>
-<p>5) Se calcula un arreglo de posiciones iniciales (prefijos) y se construye un nuevo arreglo <span class="tt">xc[]</span> colocando cada elemento en su casillero correspondiente.</p>
-<p>El arreglo <span class="tt">xc</span> queda <b>agrupado por intervalos</b> (primero todos los del casillero 0, luego los del 1, etc.). <b>No ordena dentro de cada casillero</b>, por lo que NO es un ordenamiento total, sino una etapa típica de un bucket sort (faltaría ordenar cada bucket).</p>
+<div class="textblock"><p>Ordenamiento tipo Bucket Sort (distribución por casilleros) + ordenamiento interno por selección. </p>
+<p>Este programa genera <span class="tt">n</span> números aleatorios (float) en el rango [min, max] y los ordena usando una estrategia tipo <b>Bucket Sort</b>:</p>
+<p>1) Define el número de casilleros (buckets) como:   </p><p class="formulaDsp">
+<picture><source srcset="form_10_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     nd = \lfloor \sqrt{n} \rfloor
+\&zwj;]" src="form_10.png" width="58" height="15"/></picture>
+</p>
+<p>2) Divide el rango [min, max] en <span class="tt">nd</span> intervalos de ancho:   </p><p class="formulaDsp">
+<picture><source srcset="form_11_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     Dx = \frac{max - min}{nd}
+\&zwj;]" src="form_11.png" width="99" height="26"/></picture>
+</p>
+<p>3) Para cada valor <span class="tt">x[i]</span>, calcula el casillero:   </p><p class="formulaDsp">
+<picture><source srcset="form_12_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     j = \left\lfloor \frac{x[i]-min}{Dx} \right\rfloor
+\&zwj;]" src="form_12.png" width="95" height="31"/></picture>
+</p>
+<p> y se hace un ajuste para el caso <span class="tt">x[i] == <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span> para evitar <span class="tt">j == nd</span> (fuera de rango).</p>
+<p>4) Usa un arreglo auxiliar <span class="tt">c[]</span> como estructura compacta:</p><ul>
+<li><span class="tt">c[0 .. nd-1]</span> : conteo de elementos por casillero</li>
+<li><span class="tt">c[nd .. 2*nd-1]</span> : posiciones de escritura (inician como prefijos y luego se incrementan)</li>
+<li><span class="tt">c[2*nd .. 3*nd-1]</span> : copia de los prefijos (inicio fijo de cada casillero en <span class="tt">xc</span>)</li>
+</ul>
+<p>5) Distribuye los datos en un arreglo <span class="tt">xc[]</span> agrupado por casilleros.</p>
+<p>6) Finalmente <b>ordena cada casillero internamente</b>:</p><ul>
+<li>0 o 1 elemento: no hace nada</li>
+<li>2 elementos: una comparación e intercambio</li>
+<li>&gt;=3 elementos: Selection Sort dentro del segmento del casillero</li>
+</ul>
+<p>El resultado <span class="tt">xc[]</span> queda totalmente ordenado (ascendente) si cada casillero se ordena.</p>
 <dl class="section user"><dt>Entrada estándar</dt><dd><ul>
 <li><span class="tt">n</span> (int): número de elementos, 1 &lt;= n &lt;= N</li>
-<li><span class="tt"><a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span> (float): valor máximo del rango</li>
-<li><span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a></span> (float): valor mínimo del rango</li>
+<li><span class="tt"><a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span> (float): límite superior del rango</li>
+<li><span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a></span> (float): límite inferior del rango</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Salida estándar</dt><dd><ul>
-<li>Imprime los valores generados (“Desordenado”).</li>
-<li>Imprime el número de casilleros <span class="tt">nd</span>, rango y <span class="tt">Dx</span>.</li>
-<li>Imprime los intervalos de cada casillero.</li>
-<li>Imprime cada elemento con su índice de casillero.</li>
-<li>Imprime conteos y prefijos por casillero.</li>
-<li>Imprime el arreglo <span class="tt">xc</span> (reordenado por casilleros) con su casillero.</li>
+<dl class="section user"><dt>Salida estándar</dt><dd>Imprime (modo “didáctico”, muy verboso):<ul>
+<li>Arreglo desordenado.</li>
+<li>Configuración de buckets (<span class="tt">nd</span>, <span class="tt">rango</span>, <span class="tt">Dx</span>).</li>
+<li>Intervalos por casillero.</li>
+<li>Elementos con su casillero.</li>
+<li>Conteos/prefijos.</li>
+<li>Arreglo <span class="tt">xc</span> tras distribución.</li>
+<li>Arreglo <span class="tt">xc</span> ya ordenado.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Precondiciones</dt><dd><ul>
-<li>Se espera que <span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &lt;= <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span>. Si <span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span>, se intercambian.</li>
-<li><span class="tt">nd &gt; 0</span> y <span class="tt">Dx &gt; 0</span> (se cumple si <span class="tt">n &gt;= 1</span> y <span class="tt"><a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> &gt; <a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a></span>).</li>
+<li>Idealmente <span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &lt;= <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span>. Si <span class="tt"><a class="el" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span>, el código los intercambia.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Complejidad</dt><dd><ul>
-<li>Conteo por casilleros: O(n)</li>
-<li>Cálculo de prefijos: O(nd)</li>
-<li>Distribución a <span class="tt">xc</span>: O(n)</li>
+<li>Generación + distribución: O(n)</li>
+<li>Prefijos: O(nd)</li>
+<li>Ordenamiento por casillero (Selection Sort): peor caso O(n^2) si todo cae en un solo bucket, típico mejor si los datos se reparten.</li>
 <li>Memoria: O(N)</li>
 </ul>
 </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>1) El intercambio <span class="tt">min/max</span> se hace con multiplicación/división: si alguno es 0, puede fallar (división entre 0). Para robustez usa una variable auxiliar. 2) Cuando x[i] == max, el índice j puede resultar igual a nd (fuera del rango 0..nd-1). En código de producción conviene “clamp”: if (j &gt;= nd) j = nd - 1;</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><ul>
+<li><span class="tt">x[i] == <a class="el" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></span> se fuerza a <span class="tt">j = nd-1</span> para evitar <span class="tt">j == nd</span>.</li>
+<li><span class="tt">c[]</span> se declara con tamaño N y se indexa hasta ~ <span class="tt">3*nd</span>; como <span class="tt">nd = sqrt(n)</span>, se mantiene seguro para <span class="tt">n &lt;= 100000</span>.</li>
+</ul>
+</dd></dl>
 <div class="fragment"><div class="line">gcc Ejemplo023.c -o Ejemplo023 -lm</div>
 <div class="line">./Ejemplo023</div>
 </div><!-- fragment --> 
@@ -180,7 +202,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="20261_2src_2_ejemplo023_8c_source.html#l00069">69</a> of file <a class="el" href="20261_2src_2_ejemplo023_8c_source.html">Ejemplo023.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="20261_2src_2_ejemplo023_8c_source.html#l00080">80</a> of file <a class="el" href="20261_2src_2_ejemplo023_8c_source.html">Ejemplo023.c</a>.</p>
 
 </div>
 </div>
@@ -204,154 +226,185 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Punto de entrada. Genera valores y los agrupa por casilleros. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argc</td><td>No usado. </td></tr>
-    <tr><td class="paramname">argv</td><td>No usado. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 si finaliza correctamente. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="20261_2src_2_ejemplo023_8c_source.html#l00077">77</a> of file <a class="el" href="20261_2src_2_ejemplo023_8c_source.html">Ejemplo023.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>{</div>
-<div class="line"><span class="lineno">   79</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   80</span><span class="comment">      n   : número de elementos a generar (1..N)</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">      i,j : índices auxiliares</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">      nd  : número de divisiones/casilleros (≈ sqrt(n))</span></div>
-<div class="line"><span class="lineno">   83</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">   84</span><span class="comment">      c[] : arreglo de enteros usado en dos zonas:</span></div>
-<div class="line"><span class="lineno">   85</span><span class="comment">            - c[0..nd-1]      = conteos por casillero (histograma)</span></div>
-<div class="line"><span class="lineno">   86</span><span class="comment">            - c[nd..2*nd-1]   = posiciones iniciales/prefijos (índices de escritura en xc)</span></div>
-<div class="line"><span class="lineno">   87</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordtype">int</span> n, i, j, nd, c[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
+<p class="definition">Definition at line <a class="el" href="20261_2src_2_ejemplo023_8c_source.html#l00082">82</a> of file <a class="el" href="20261_2src_2_ejemplo023_8c_source.html">Ejemplo023.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    (void)argc;</div>
+<div class="line"><span class="lineno">   85</span>    (void)argv;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <span class="comment">/* n: cantidad de datos, nd: número de casilleros */</span></div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordtype">int</span> n, i, j, k, id_min, nd, c[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
 <div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   91</span><span class="comment">      min, max : rango de generación</span></div>
-<div class="line"><span class="lineno">   92</span><span class="comment">      x[]      : arreglo original “desordenado”</span></div>
-<div class="line"><span class="lineno">   93</span><span class="comment">      xc[]     : arreglo reordenado por casilleros</span></div>
-<div class="line"><span class="lineno">   94</span><span class="comment">      rango    : max - min</span></div>
-<div class="line"><span class="lineno">   95</span><span class="comment">      Dx       : ancho de cada casillero (rango/nd)</span></div>
-<div class="line"><span class="lineno">   96</span><span class="comment">     */</span></div>
-<div class="line"><span class="lineno">   97</span>    <span class="keywordtype">float</span> <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordtype">float</span> x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], rango, Dx, xc[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>];</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <span class="comment">/* Leer n */</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><span class="lineno">  102</span>        printf(<span class="stringliteral">&quot;Ingrese el numero de elementos: &quot;</span>);</div>
-<div class="line"><span class="lineno">  103</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
-<div class="line"><span class="lineno">  104</span>    } <span class="keywordflow">while</span> (n &lt; 1 || n &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <span class="comment">/* Leer rango */</span></div>
-<div class="line"><span class="lineno">  107</span>    printf(<span class="stringliteral">&quot;Ingrese el valor maximo: &quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>);</div>
-<div class="line"><span class="lineno">  109</span>    printf(<span class="stringliteral">&quot;Ingrese el valor minimo: &quot;</span>);</div>
-<div class="line"><span class="lineno">  110</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>);</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  113</span><span class="comment">      Si el usuario capturó min &gt; max, se intercambian.</span></div>
-<div class="line"><span class="lineno">  114</span><span class="comment">      WARNING: este intercambio por multiplicación/división puede fallar si min==0 o max==0.</span></div>
-<div class="line"><span class="lineno">  115</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)</div>
-<div class="line"><span class="lineno">  117</span>    {</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> *= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> / <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> /= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>    srand(time(NULL));</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>    <span class="comment">/* Generar arreglo original y (por simplicidad) inicializar c[i]=0 para i&lt;n */</span></div>
-<div class="line"><span class="lineno">  126</span>    printf(<span class="stringliteral">&quot;Desordenado.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="comment">/* Genera valores en [min, max] (puede incluir max si rand()==RAND_MAX) */</span></div>
-<div class="line"><span class="lineno">  130</span>        x[i] = ((<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) * rand()) / RAND_MAX + <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>        <span class="comment">/* Inicialización (basta con 0..2*nd-1, pero aquí se inicializa 0..n-1) */</span></div>
-<div class="line"><span class="lineno">  133</span>        c[i] = 0;</div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment">/* Rango [min, max] */</span></div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordtype">float</span> <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>, <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">/* x[]: arreglo original, xc[]: arreglo tras distribución y ordenamiento */</span></div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordtype">float</span> x[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], rango, Dx, xc[<a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>], aux;</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment">/* Leer n con validación */</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">   98</span>        printf(<span class="stringliteral">&quot;Ingrese el numero de elementos: &quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;n);</div>
+<div class="line"><span class="lineno">  100</span>    } <span class="keywordflow">while</span> (n &lt; 1 || n &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="comment">/* Leer rango */</span></div>
+<div class="line"><span class="lineno">  103</span>    printf(<span class="stringliteral">&quot;Ingrese el valor maximo: &quot;</span>);</div>
+<div class="line"><span class="lineno">  104</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>);</div>
+<div class="line"><span class="lineno">  105</span>    printf(<span class="stringliteral">&quot;Ingrese el valor minimo: &quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span>    scanf(<span class="stringliteral">&quot;%f&quot;</span>, &amp;<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>);</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  109</span><span class="comment">      Asegurar min &lt;= max. El código contempla casos con cero para evitar división entre cero</span></div>
+<div class="line"><span class="lineno">  110</span><span class="comment">      en el intercambio por multiplicación/división.</span></div>
+<div class="line"><span class="lineno">  111</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> &gt; <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)</div>
+<div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!<a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>)           <span class="comment">/* min == 0 */</span></div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>;</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> = 0;</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>)      <span class="comment">/* max == 0 */</span></div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = 0;</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <span class="comment">/* Intercambio por multiplicación/división */</span></div>
+<div class="line"><span class="lineno">  127</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> *= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  128</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> / <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> /= <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    srand(time(NULL));</div>
 <div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, x[i]);</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>    <span class="comment">/* Definir número de casilleros */</span></div>
-<div class="line"><span class="lineno">  139</span>    nd = (int)sqrt((<span class="keywordtype">double</span>)n);</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>    <span class="comment">/* Calcular rango y ancho de casillero */</span></div>
-<div class="line"><span class="lineno">  142</span>    rango = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
-<div class="line"><span class="lineno">  143</span>    Dx = rango / nd;</div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">/* Generar datos aleatorios y limpiar c[i] (solo una parte; nd &lt;= n así que alcanza) */</span></div>
+<div class="line"><span class="lineno">  136</span>    printf(<span class="stringliteral">&quot;Desordenado.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="comment">/* Escalamiento lineal de rand() a [min, max] */</span></div>
+<div class="line"><span class="lineno">  140</span>        x[i] = ((<a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) * rand()) / RAND_MAX + <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>        <span class="comment">/* Inicializar contadores a cero (al menos hasta n) */</span></div>
+<div class="line"><span class="lineno">  143</span>        c[i] = 0;</div>
 <div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    printf(<span class="stringliteral">&quot;ND = %d\tRango = %f\tDx = %f\n&quot;</span>, nd, rango, Dx);</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>    <span class="comment">/* Mostrar intervalos de los casilleros */</span></div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
-<div class="line"><span class="lineno">  149</span>        printf(<span class="stringliteral">&quot;%d. [%f, %f]\n&quot;</span>, i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx);</div>
+<div class="line"><span class="lineno">  145</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, x[i]);</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="comment">/* Definir buckets como sqrt(n) */</span></div>
+<div class="line"><span class="lineno">  149</span>    nd = (int)sqrt((<span class="keywordtype">double</span>)n);</div>
 <div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">      1) Conteo por casillero:</span></div>
-<div class="line"><span class="lineno">  153</span><span class="comment">         j = floor((x[i]-min)/Dx)</span></div>
-<div class="line"><span class="lineno">  154</span><span class="comment">         c[j]++</span></div>
-<div class="line"><span class="lineno">  155</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">  156</span>    printf(<span class="stringliteral">&quot;Desordenado con numero de casillero.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>        j = (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
+<div class="line"><span class="lineno">  151</span>    <span class="comment">/* Tamaño de bucket */</span></div>
+<div class="line"><span class="lineno">  152</span>    rango = <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>;</div>
+<div class="line"><span class="lineno">  153</span>    Dx = rango / nd;</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    printf(<span class="stringliteral">&quot;ND = %d\tRango = %f\tDx = %f\n&quot;</span>, nd, rango, Dx);</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="comment">/* Mostrar intervalos por bucket (solo informativo) */</span></div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><span class="lineno">  159</span>        printf(<span class="stringliteral">&quot;%d. [%f, %f]\n&quot;</span>, i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx);</div>
 <div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>        <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  162</span><span class="comment">          WARNING: si x[i] == max, j puede ser nd. Para robustez:</span></div>
-<div class="line"><span class="lineno">  163</span><span class="comment">          if (j &gt;= nd) j = nd - 1;</span></div>
-<div class="line"><span class="lineno">  164</span><span class="comment">        */</span></div>
-<div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, x[i], j);</div>
-<div class="line"><span class="lineno">  167</span>        c[j]++;</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  171</span><span class="comment">      2) Prefijos / posiciones iniciales:</span></div>
-<div class="line"><span class="lineno">  172</span><span class="comment">         Se construye en la zona c[nd..2*nd-1]:</span></div>
-<div class="line"><span class="lineno">  173</span><span class="comment">           c[nd]     = 0</span></div>
-<div class="line"><span class="lineno">  174</span><span class="comment">           c[nd+1]   = c[0]</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">           c[nd+2]   = c[0] + c[1]</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">           ...</span></div>
-<div class="line"><span class="lineno">  177</span><span class="comment">         donde c[nd+k] es el índice de inicio para escribir el casillero k en xc[].</span></div>
-<div class="line"><span class="lineno">  178</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  161</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  162</span><span class="comment">      1) Conteo por casillero (histograma):</span></div>
+<div class="line"><span class="lineno">  163</span><span class="comment">         j = floor((x[i]-min)/Dx), pero si x[i]==max forzamos j=nd-1.</span></div>
+<div class="line"><span class="lineno">  164</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  165</span>    printf(<span class="stringliteral">&quot;Desordenado con numero de casillero.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  167</span>    {</div>
+<div class="line"><span class="lineno">  168</span>        j = (x[i] == <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> ? nd - 1 : (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx));</div>
+<div class="line"><span class="lineno">  169</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, x[i], j);</div>
+<div class="line"><span class="lineno">  170</span>        c[j]++; <span class="comment">/* c[j] = cantidad de elementos del bucket j */</span></div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  174</span><span class="comment">      2) Prefijos:</span></div>
+<div class="line"><span class="lineno">  175</span><span class="comment">         Construye posiciones iniciales del bucket i en xc[].</span></div>
+<div class="line"><span class="lineno">  176</span><span class="comment">         - c[i + nd]     guarda la posición &quot;corriente&quot; de escritura del bucket i.</span></div>
+<div class="line"><span class="lineno">  177</span><span class="comment">         - c[i + 2*nd]   guarda una copia del prefijo (inicio fijo del bucket i).</span></div>
+<div class="line"><span class="lineno">  178</span><span class="comment">    */</span></div>
 <div class="line"><span class="lineno">  179</span>    <span class="keywordflow">for</span> (i = 1; i &lt; nd; i++)</div>
-<div class="line"><span class="lineno">  180</span>        c[i + nd] = c[i + nd - 1] + c[i - 1];</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>    <span class="comment">/* Mostrar conteos y prefijos */</span></div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
-<div class="line"><span class="lineno">  184</span>        printf(<span class="stringliteral">&quot;%d. [%+f, %+f]\t%d\t%d\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  185</span>               i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx, c[i], c[i + nd]);</div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  188</span><span class="comment">      3) Distribución a xc:</span></div>
-<div class="line"><span class="lineno">  189</span><span class="comment">         - Se vuelve a calcular el casillero j para cada x[i]</span></div>
-<div class="line"><span class="lineno">  190</span><span class="comment">         - Se coloca x[i] en la siguiente posición libre del casillero j:</span></div>
-<div class="line"><span class="lineno">  191</span><span class="comment">             xc[ c[nd + j] ] = x[i]</span></div>
-<div class="line"><span class="lineno">  192</span><span class="comment">           y se incrementa esa posición para el siguiente elemento del mismo casillero.</span></div>
-<div class="line"><span class="lineno">  193</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  180</span>    {</div>
+<div class="line"><span class="lineno">  181</span>        c[i + nd]    = c[i + nd - 1] + c[i - 1]; <span class="comment">/* prefijo */</span></div>
+<div class="line"><span class="lineno">  182</span>        c[i + 2*nd]  = c[i + nd];                <span class="comment">/* copia del prefijo */</span></div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>    <span class="comment">/* Mostrar resumen por bucket: intervalo, conteo, prefijo */</span></div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><span class="lineno">  187</span>        printf(<span class="stringliteral">&quot;%d. [%+f, %+f]\t%d\t%d\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  188</span>               i, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + i*Dx, <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a> + (i+1)*Dx, c[i], c[i + nd]);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  191</span><span class="comment">      3) Distribución a xc:</span></div>
+<div class="line"><span class="lineno">  192</span><span class="comment">         Se inserta cada x[i] en xc según su prefijo, incrementando la posición de escritura.</span></div>
+<div class="line"><span class="lineno">  193</span><span class="comment">    */</span></div>
 <div class="line"><span class="lineno">  194</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
 <div class="line"><span class="lineno">  195</span>    {</div>
-<div class="line"><span class="lineno">  196</span>        j = (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>        <span class="comment">/* WARNING: clamp recomendado para evitar j==nd */</span></div>
-<div class="line"><span class="lineno">  199</span>        <span class="comment">/* if (j &gt;= nd) j = nd - 1; */</span></div>
+<div class="line"><span class="lineno">  196</span>        j = (x[i] == <a class="code hl_define" href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a> ? nd - 1 : (int)((x[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx));</div>
+<div class="line"><span class="lineno">  197</span>        xc[c[j + nd]] = x[i];</div>
+<div class="line"><span class="lineno">  198</span>        c[j + nd]++; <span class="comment">/* avanzar posición de escritura del bucket */</span></div>
+<div class="line"><span class="lineno">  199</span>    }</div>
 <div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>        xc[c[j + nd]] = x[i];</div>
-<div class="line"><span class="lineno">  202</span>        c[j + nd]++;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-<div class="line"><span class="lineno">  204</span> </div>
-<div class="line"><span class="lineno">  205</span>    <span class="comment">/* Mostrar arreglo reordenado por casilleros */</span></div>
-<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  207</span>    {</div>
-<div class="line"><span class="lineno">  208</span>        j = (int)((xc[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
-<div class="line"><span class="lineno">  209</span>        <span class="comment">/* if (j &gt;= nd) j = nd - 1; */</span></div>
-<div class="line"><span class="lineno">  210</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, xc[i], j);</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  214</span>}</div>
+<div class="line"><span class="lineno">  201</span>    <span class="comment">/* Imprimir xc con su bucket (informativo) */</span></div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  203</span>    {</div>
+<div class="line"><span class="lineno">  204</span>        j = (int)((xc[i] - <a class="code hl_define" href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a>) / Dx);</div>
+<div class="line"><span class="lineno">  205</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\t%d\n&quot;</span>, i + 1, xc[i], j);</div>
+<div class="line"><span class="lineno">  206</span>    }</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  209</span><span class="comment">      4) Ordenar internamente cada bucket.</span></div>
+<div class="line"><span class="lineno">  210</span><span class="comment">         El inicio del bucket i está en c[i + 2*nd].</span></div>
+<div class="line"><span class="lineno">  211</span><span class="comment">         El tamaño del bucket i está en c[i].</span></div>
+<div class="line"><span class="lineno">  212</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nd; i++)</div>
+<div class="line"><span class="lineno">  214</span>    {</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">switch</span> (c[i])</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  219</span>                <span class="comment">/* 0 o 1 elemento: ya está ordenado */</span></div>
+<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  223</span>                <span class="comment">/* 2 elementos: una sola comparación */</span></div>
+<div class="line"><span class="lineno">  224</span>                <span class="keywordflow">if</span> (xc[c[i + 2*nd]] &gt; xc[c[i + 2*nd] + 1])</div>
+<div class="line"><span class="lineno">  225</span>                {</div>
+<div class="line"><span class="lineno">  226</span>                    aux = xc[c[i + 2*nd]];</div>
+<div class="line"><span class="lineno">  227</span>                    xc[c[i + 2*nd]] = xc[c[i + 2*nd] + 1];</div>
+<div class="line"><span class="lineno">  228</span>                    xc[c[i + 2*nd] + 1] = aux;</div>
+<div class="line"><span class="lineno">  229</span>                }</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  233</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  234</span><span class="comment">                  &gt;= 3 elementos: Selection Sort dentro del segmento del bucket</span></div>
+<div class="line"><span class="lineno">  235</span><span class="comment">                  [start, start + c[i] - 1], con start = c[i + 2*nd].</span></div>
+<div class="line"><span class="lineno">  236</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">for</span> (j = 0; j &lt; (c[i] - 1); j++)</div>
+<div class="line"><span class="lineno">  238</span>                {</div>
+<div class="line"><span class="lineno">  239</span>                    <span class="keywordflow">for</span> (k = j + 1, id_min = j; k &lt; c[i]; k++)</div>
+<div class="line"><span class="lineno">  240</span>                        <span class="keywordflow">if</span> (xc[id_min + c[i + 2*nd]] &gt; xc[k + c[i + 2*nd]])</div>
+<div class="line"><span class="lineno">  241</span>                            id_min = k;</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (id_min != j)</div>
+<div class="line"><span class="lineno">  244</span>                    {</div>
+<div class="line"><span class="lineno">  245</span>                        aux = xc[j + c[i + 2*nd]];</div>
+<div class="line"><span class="lineno">  246</span>                        xc[j + c[i + 2*nd]] = xc[id_min + c[i + 2*nd]];</div>
+<div class="line"><span class="lineno">  247</span>                        xc[id_min + c[i + 2*nd]] = aux;</div>
+<div class="line"><span class="lineno">  248</span>                    }</div>
+<div class="line"><span class="lineno">  249</span>                }</div>
+<div class="line"><span class="lineno">  250</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span>    }</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>    <span class="comment">/* Resultado final */</span></div>
+<div class="line"><span class="lineno">  255</span>    printf(<span class="stringliteral">&quot;Ordenado.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">for</span> (i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  257</span>        printf(<span class="stringliteral">&quot;x[%02d] = %f\n&quot;</span>, i + 1, xc[i]);</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  260</span>}</div>
 <div class="ttc" id="a012__aleatorio_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="012__aleatorio_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00005">012_aleatorio.c:5</a></div></div>
 <div class="ttc" id="a012__aleatorio_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="012__aleatorio_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00006">012_aleatorio.c:6</a></div></div>
 <div class="ttc" id="a012__aleatorio_8c_html_a3f06f0e9f7beb8214afeea0b18ef8377"><div class="ttname"><a href="012__aleatorio_8c.html#a3f06f0e9f7beb8214afeea0b18ef8377">min</a></div><div class="ttdeci">#define min</div><div class="ttdef"><b>Definition</b> <a href="012__aleatorio_8c_source.html#l00007">012_aleatorio.c:7</a></div></div>

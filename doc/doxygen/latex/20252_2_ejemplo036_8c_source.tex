@@ -1,0 +1,46 @@
+\doxysection{Ejemplo036.\+c}
+\hypertarget{20252_2_ejemplo036_8c_source}{}\label{20252_2_ejemplo036_8c_source}\index{src/20252/Ejemplo036.c@{src/20252/Ejemplo036.c}}
+\doxymbox{\hyperlink{20252_2_ejemplo036_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00003}\doxymbox{\hyperlink{20252_2_ejemplo036_8c_a0ddf1224851353fc92bfbff6f499fa97}{00003}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ejemplo__035_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ *px;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{char}\ *py;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00007}00007\ \ \ \ \ \textcolor{keywordtype}{double}\ *pz;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00008}00008\ \ \ \ \ x\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00009}00009\ \ \ \ \ px\ =\ \&x;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00010}00010\ \ \ \ \ py\ =\ (\textcolor{keywordtype}{char}*)\&x;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00011}00011\ \ \ \ \ pz\ =\ (\textcolor{keywordtype}{double}*)\&x;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00012}00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00013}00013\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\&x\ =\ \%p\(\backslash\)n"{}},\ \&x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00014}00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00015}00015\ \ \ \ \ printf(\textcolor{stringliteral}{"{}*px\ =\ \%d\(\backslash\)n"{}},\ *px);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00017}00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}pz\ =\ \%p\(\backslash\)n"{}},\ pz);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00019}00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ px+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00020}00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ py+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00021}00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}pz\ =\ \%p\ (\%ld)\(\backslash\)n"{}},\ pz+1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00022}00022\ \ \ \ \ (*px)++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00023}00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00024}00024\ \ \ \ \ printf(\textcolor{stringliteral}{"{}px\ =\ \%p\(\backslash\)n"{}},\ px);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00025}00025\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00026}00026\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00027}00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00028}00028\ \ \ \ \ py++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00029}00029\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00030}00030\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00031}00031\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00032}00032\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00033}00033\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00034}00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00035}00035\ \ \ \ \ py++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00036}00036\ \ \ \ \ (*py)++;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00037}00037\ \ \ \ \ printf(\textcolor{stringliteral}{"{}x\ =\ \%d\(\backslash\)n"{}},\ x);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00038}00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}py\ =\ \%p\(\backslash\)n"{}},\ py);}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{20252_2_ejemplo036_8c_source_l00040}00040\ \}}
+
+\end{DoxyCode}

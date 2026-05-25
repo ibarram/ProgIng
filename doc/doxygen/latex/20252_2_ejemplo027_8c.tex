@@ -1,0 +1,60 @@
+\doxysection{src/\+20252/\+\+Ejemplo027.c File Reference}
+\hypertarget{20252_2_ejemplo027_8c}{}\label{20252_2_ejemplo027_8c}\index{src/20252/Ejemplo027.c@{src/20252/Ejemplo027.c}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Ejemplo027.\+c:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{20252_2_ejemplo027_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{20252_2_ejemplo027_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{20252_2_ejemplo027_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{20252_2_ejemplo027_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{Ejemplo027.c@{Ejemplo027.c}!main@{main}}
+\index{main@{main}!Ejemplo027.c@{Ejemplo027.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{20252_2_ejemplo027_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{20252_2_ejemplo027_8c_source_l00003}{3}} of file \doxymbox{\hyperlink{20252_2_ejemplo027_8c_source}{Ejemplo027.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ n,\ a,\ ai,\ b,\ m,\ c,\ mr,\ i;}
+\DoxyCodeLine{00006\ \ \ \ \ printf(\textcolor{stringliteral}{"{}n\ =\ "{}});}
+\DoxyCodeLine{00007\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&n);}
+\DoxyCodeLine{00008\ \ \ \ \ printf(\textcolor{stringliteral}{"{}a\ =\ "{}});}
+\DoxyCodeLine{00009\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&a);}
+\DoxyCodeLine{00010\ \ \ \ \ printf(\textcolor{stringliteral}{"{}b\ =\ "{}});}
+\DoxyCodeLine{00011\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&b);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{for}(i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((a*i)\%n)==1)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ ai\ =\ i;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ai\ =\ \%d\(\backslash\)n"{}},\ ai);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}m\ =\ "{}});}
+\DoxyCodeLine{00019\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&m);}
+\DoxyCodeLine{00020\ \ \ \ \ c\ =\ (a*m+b)\%n;}
+\DoxyCodeLine{00021\ \ \ \ \ printf(\textcolor{stringliteral}{"{}c\ =\ \%d\(\backslash\)n"{}},\ c);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}(c>=b)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ mr\ =\ c-\/b;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ mr\ =\ n+c-\/b;}
+\DoxyCodeLine{00026\ \ \ \ \ mr\ =\ (ai*mr)\%n;}
+\DoxyCodeLine{00027\ \ \ \ \ printf(\textcolor{stringliteral}{"{}m\ =\ \%d\(\backslash\)n"{}},\ mr);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}

@@ -44,8 +44,11 @@
 
 int main(int argc, char *argv[])
 {
+    (void)argc;
+    (void)argv;
+
 	char msg[N], msgE[N], msgD[N], cl_c, E;
-	int i, j, cl_I, n;
+	int i, cl_I, n;
 
 	/* Leer mensaje hasta ENTER */
 	i = 0;
