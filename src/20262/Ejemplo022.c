@@ -42,14 +42,19 @@ int main(int argc, char *argv[])
 		X[i] = (((max-min)*rand())/RAND_MAX)+min;
 		printf("X[%d] = %f\n", i+1, X[i]);
 	}
-	for(i=0; i<n-1; i++)
-		for(j=i+1; j<n; j++)
-			if(X[i]>X[j])
-			{
-				aux = X[i];
-				X[i] = X[j];
-				X[j] = aux;
-			}
+	for(i=1; i<n; i++)
+	{
+		aux = X[i];
+		j=i-1;
+		while(aux<X[j])
+		{
+			X[j+1] = X[j];
+			j--;
+			if(j<0)
+				break;
+		}
+		X[j+1] = aux;
+	}
 	printf("Vector ordenado.\n");
 	for(i=0; i<n; i++)
 		printf("X[%d] = %f\n", i+1, X[i]);

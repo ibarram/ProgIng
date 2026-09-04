@@ -5,8 +5,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, n;
-	float X[N], max, min, aux;
+	int i, j, n, imin;
+	float X[N], max, min, vmin;
 	srand((unsigned)time(NULL));
 	do{
 		printf("Ingrese el numero de elementos: ");
@@ -43,13 +43,19 @@ int main(int argc, char *argv[])
 		printf("X[%d] = %f\n", i+1, X[i]);
 	}
 	for(i=0; i<n-1; i++)
-		for(j=i+1; j<n; j++)
-			if(X[i]>X[j])
+	{
+		for(j=i+1, imin=i, vmin=X[i]; j<n; j++)
+			if(X[j]<vmin)
 			{
-				aux = X[i];
-				X[i] = X[j];
-				X[j] = aux;
+				imin = j;
+				vmin = X[j];
 			}
+		if(i!=imin)
+		{
+			X[imin] = X[i];
+			X[i] = vmin;
+		}
+	}
 	printf("Vector ordenado.\n");
 	for(i=0; i<n; i++)
 		printf("X[%d] = %f\n", i+1, X[i]);
