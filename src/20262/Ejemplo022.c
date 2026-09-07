@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 	int i, j, n;
 	float X[N], max, min, aux;
 	srand((unsigned)time(NULL));
+	//srand(123);
 	do{
 		printf("Ingrese el numero de elementos: ");
 		scanf("%d", &n);
