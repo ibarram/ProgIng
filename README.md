@@ -136,7 +136,7 @@ El contenido se organiza en los siguientes ejes:
 
 - **Plataformas:** Microsoft Teams y CSAcademy  
 - **Entrega por correo:** `mibarram@gmail.com`  
-- **Asunto:** `PI 2026 1 T## NUA Apellidos`  
+- **Asunto:** `PI 2026 2 T## NUA Apellidos`  
 - **Formato:** reporte **PDF** con diagramas de flujo y simulaciones (cuando aplique)  
 - **Restricción:** **no** entregar ejecutables; **solo** código fuente y reporte  
 - **Fecha de entrega:** 1 semana (a partir de la asignación)
@@ -145,7 +145,7 @@ El contenido se organiza en los siguientes ejes:
 
 - **Plataforma:** Microsoft Teams  
 - **Entrega por correo:** `mibarram@gmail.com`  
-- **Asunto:** `PI 2026 1 P# NUA Apellidos`  
+- **Asunto:** `PI 2026 2 P# NUA Apellidos`  
 - **Modalidad:** equipo (máximo 3 integrantes)  
 - **Formato:** reporte **PDF** con diagramas de flujo, simulaciones, **tablas de resultados**  
 - **Restricción:** **no** ejecutables; **solo** código fuente y reporte  
@@ -155,7 +155,7 @@ El contenido se organiza en los siguientes ejes:
 
 - **Plataforma:** Microsoft Teams  
 - **Entrega por correo:** `mibarram@gmail.com`  
-- **Asunto:** `PI 2026 1 Py ## NUA Apellidos`  
+- **Asunto:** `PI 2026 2 Py ## NUA Apellidos`  
 - **Modalidad:** equipo (máximo 3 integrantes)  
 - **Entregables:**  
   - reporte **PDF** (diagramas de flujo, simulaciones, tablas y análisis),  
